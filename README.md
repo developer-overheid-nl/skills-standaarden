@@ -7,6 +7,19 @@ Claude Code plugin voor het werken met de 88 GitHub repositories van [Logius sta
 
 ## Installatie
 
+### Globaal installeren (aanbevolen)
+
+Voeg de marketplace toe en installeer de plugin. De skills zijn daarna beschikbaar in elke Claude Code sessie.
+
+```bash
+claude plugin marketplace add MinBZK/logius-standaarden-plugin
+claude plugin install logius-standaarden@logius-standaarden
+```
+
+### Per sessie laden
+
+Alternatief: laad de plugin alleen voor de huidige sessie via `--plugin-dir`:
+
 ```bash
 git clone https://github.com/MinBZK/logius-standaarden-plugin.git
 claude --plugin-dir ./logius-standaarden-plugin
@@ -66,7 +79,8 @@ Run een WCAG check op mijn document
 
 ```
 .claude-plugin/
-  plugin.json              # Plugin manifest met versie en upstream tracking
+  plugin.json              # Plugin manifest
+  marketplace.json         # Marketplace manifest voor globale installatie
 skills/
   ls/SKILL.md              # Meta/overzicht skill
   ls-api/
@@ -89,8 +103,6 @@ De hele plugin wordt als 1 eenheid geversioned (semver):
 - **Patch** (`1.0.1`): Typos, broken links, kleine correcties
 - **Minor** (`1.1.0`): Content sync met upstream standaard-wijzigingen, nieuwe voorbeelden
 - **Major** (`2.0.0`): Nieuwe skills, verwijderde skills, breaking changes in structuur
-
-Upstream tracking van de bronreposities staat in `plugin.json` onder `upstreamSync`.
 
 ## Vereisten
 
