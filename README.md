@@ -1,7 +1,7 @@
 # Logius Standaarden - Claude Code Plugin
 
 [![EUPL-1.2](https://img.shields.io/badge/licentie-EUPL--1.2-blue.svg)](LICENSE)
-[![versie](https://img.shields.io/badge/versie-1.0.0-green.svg)](CHANGELOG.md)
+[![versie](https://img.shields.io/badge/versie-1.1.0-green.svg)](CHANGELOG.md)
 
 Claude Code plugin voor het werken met de 88 GitHub repositories van [Logius standaarden](https://github.com/logius-standaarden) voor Nederlandse overheidsinteroperabiliteit.
 
@@ -9,11 +9,11 @@ Claude Code plugin voor het werken met de 88 GitHub repositories van [Logius sta
 
 ### Globaal installeren (aanbevolen)
 
-Voeg de marketplace toe en installeer de plugin. De skills zijn daarna beschikbaar in elke Claude Code sessie.
+Voeg de [overheid-plugins marketplace](https://github.com/MinBZK/overheid-claude-plugins) toe en installeer de plugin. De skills zijn daarna beschikbaar in elke Claude Code sessie.
 
 ```bash
-claude plugin marketplace add MinBZK/logius-standaarden-plugin
-claude plugin install logius-standaarden@logius-standaarden
+claude plugin marketplace add MinBZK/overheid-claude-plugins
+claude plugin install logius-standaarden@overheid-plugins
 ```
 
 ### Per sessie laden
@@ -80,7 +80,6 @@ Run een WCAG check op mijn document
 ```
 .claude-plugin/
   plugin.json              # Plugin manifest
-  marketplace.json         # Marketplace manifest voor globale installatie
 skills/
   ls/SKILL.md              # Meta/overzicht skill
   ls-api/
