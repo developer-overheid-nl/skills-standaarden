@@ -5,6 +5,18 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [1.1.0] - 2026-02-16
+
+### Gewijzigd
+
+- Marketplace gescheiden van plugin: marketplace.json is verplaatst naar [MinBZK/overheid-claude-plugins](https://github.com/MinBZK/overheid-claude-plugins)
+- Installatie-instructies bijgewerkt naar de nieuwe overheid-plugins marketplace
+
+### Verwijderd
+
+- `.claude-plugin/marketplace.json` - leeft voortaan in de marketplace-repo
+- Marketplace validatiestap uit CI workflow
+
 ## [1.0.0] - 2026-02-12
 
 ### Toegevoegd
