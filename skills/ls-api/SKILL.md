@@ -26,9 +26,9 @@ De API Design Rules (ADR) zijn de Nederlandse standaard voor het ontwerpen van R
 | [ADR-Beheermodel](https://github.com/logius-standaarden/ADR-Beheermodel) | Beheermodel specifiek voor de ADR standaard | [Lees online](https://logius-standaarden.github.io/ADR-Beheermodel/) |
 | [API-Standaarden-Beheermodel](https://github.com/logius-standaarden/API-Standaarden-Beheermodel) | Overkoepelend beheermodel voor alle API-standaarden | [Lees online](https://logius-standaarden.github.io/API-Standaarden-Beheermodel/) |
 | [API-mod-transport-security](https://github.com/logius-standaarden/API-mod-transport-security) | Module: Transport Security (TLS, certificaten) | [Lees online](https://logius-standaarden.github.io/API-mod-transport-security/) |
-| [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Module: HTTP Message Signing | [Lees online](https://logius-standaarden.github.io/API-mod-signing/) |
-| [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Module: Encryption (JWE) | [Lees online](https://logius-standaarden.github.io/API-mod-encryption/) |
-| [API-mod-geospatial](https://github.com/logius-standaarden/API-mod-geospatial) | Module: Geospatial (GeoJSON, CRS) | [Lees online](https://logius-standaarden.github.io/API-mod-geospatial/) |
+| [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Module: HTTP Message Signing — ⚠️ draft | [Lees online](https://logius-standaarden.github.io/API-mod-signing/) |
+| [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Module: Encryption (JWE) — ⚠️ draft | [Lees online](https://logius-standaarden.github.io/API-mod-encryption/) |
+| [API-mod-geospatial](https://github.com/logius-standaarden/API-mod-geospatial) | Module: Geospatial (GeoJSON, CRS) — ⚠️ draft | [Lees online](https://logius-standaarden.github.io/API-mod-geospatial/) |
 | [api-linter-impactanalyse](https://github.com/logius-standaarden/api-linter-impactanalyse) | Python tool: test Spectral regels tegen echte OpenAPI specs uit het API-register | - |
 | [zaakgericht-werken-api](https://github.com/logius-standaarden/zaakgericht-werken-api) | API-specificatie voor zaakgericht werken | - |
 
@@ -89,7 +89,7 @@ Geen technische details (stack traces, interne hints) in foutmeldingen.
 ### OpenAPI Documentatie
 
 - OpenAPI 3.0+ specificatie verplicht
-- Publiceer op standaardlocatie: `/openapi.json` en `/openapi.yaml`
+- Publiceer JSON op standaardlocatie: `/openapi.json` (VERPLICHT); YAML (`/openapi.yaml`) is OPTIONEEL
 - Contactinformatie verplicht (name, email, url)
 - CORS ondersteunen voor documentatie-toegang
 
@@ -111,15 +111,21 @@ Verplichte security headers in alle API-responses:
 | `X-Frame-Options: DENY` | Clickjacking bescherming |
 | `Access-Control-Allow-Origin` | CORS beleid |
 
-### Signing Module (JAdES)
+### Signing Module (JAdES) — ⚠️ DRAFT
+
+> **Let op:** Deze module is nog in **concept** (draft) en is nog niet goedgekeurd door het Technisch Overleg. De inhoud kan nog wijzigen.
 
 Voor end-to-end berichtintegriteit en authenticiteit. Gebruikt JAdES detached signatures met RSASSA-PSS (PS256), minimaal 256 bits. Signatures in `Payload-Signature` en `Message-Signature` HTTP headers. OpenAPI representatie met `format: jws-compact-detached`.
 
-### Encryption Module (JWE)
+### Encryption Module (JWE) — ⚠️ DRAFT
+
+> **Let op:** Deze module is nog in **concept** (draft) en is nog niet goedgekeurd door het Technisch Overleg. De inhoud kan nog wijzigen.
 
 Voor end-to-end versleuteling van request/response payloads wanneer transport-level encryptie niet voldoende is (bijv. bij niet-vertrouwde intermediairs).
 
-### Geospatial Module
+### Geospatial Module — ⚠️ DRAFT
+
+> **Let op:** Deze module is nog in **concept** (draft) en is nog niet goedgekeurd door het Technisch Overleg. De inhoud kan nog wijzigen.
 
 Verplicht bij geospatiale data. Regelt GeoJSON encodering, bounding box filtering, en coördinaatsystemen (CRS).
 
@@ -189,7 +195,7 @@ async def problem_json_handler(request: Request, exc: HTTPException):
 
 ## Implementatie Checklist
 
-- [ ] OpenAPI 3.0+ spec op `/openapi.json` en `/openapi.yaml`
+- [ ] OpenAPI 3.0+ spec op `/openapi.json` (VERPLICHT); `/openapi.yaml` is optioneel
 - [ ] Contactinformatie in spec
 - [ ] Major versie in URI-pad (`/v1`)
 - [ ] Volledige versie in `API-Version` response header
