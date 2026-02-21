@@ -144,6 +144,6 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Lint markdown bestanden
-        uses: DavidAnson/markdownlint-cli2-action@v19
+        uses: DavidAnson/markdownlint-cli2-action@v22
         with:
           globs: '**/*.md'
