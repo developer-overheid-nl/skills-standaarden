@@ -7,26 +7,44 @@ allowed-tools:
   - Bash(gh issue list *)
   - Bash(gh pr list *)
   - Bash(gh search *)
+  - Bash(curl -s *)
+  - WebFetch(*)
 ---
 
 # BOMOS - Beheer- en Ontwikkelmodel voor Open Standaarden
 
 **Agent-instructie:** Deze skill helpt bij het opzetten en beoordelen van beheermodellen voor open standaarden conform BOMOS. Gebruik het template en de checklist om een beheermodel op te stellen. Gebruik gh commando's om actuele content op te halen uit de BOMOS repos.
 
+## Versiemodel
+
+Net als andere Logius-standaarden kent BOMOS twee publicatiekanalen:
+
+- **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
+- **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
+
+BOMOS is geen interoperabiliteitsstandaard en staat niet op de 'pas-toe-of-leg-uit'-lijst van het Forum Standaardisatie. Het is een raamwerk voor het beheren van open standaarden.
+
 ## Repositories
+
+### Kerndocumenten (met vastgestelde versies)
+
+| Repository | Beschrijving | Vastgesteld | Draft |
+|-----------|-------------|------------|-------|
+| [BOMOS-Fundament](https://github.com/logius-standaarden/BOMOS-Fundament) | Kernmodel: activiteiten, rollen, structuur | [v3.0.1](https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/) | [Draft](https://logius-standaarden.github.io/BOMOS-Fundament/) |
+| [BOMOS-Verdieping](https://github.com/logius-standaarden/BOMOS-Verdieping) | Verdiepende beschrijving van BOMOS activiteiten | [v3.1.0](https://gitdocumentatie.logius.nl/publicatie/bomos/verdieping/) | [Draft](https://logius-standaarden.github.io/BOMOS-Verdieping/) |
+
+### Aanvullende modules en documenten (alleen werkversies)
 
 | Repository | Beschrijving | Publicatie |
 |-----------|-------------|-----------|
-| [BOMOS-Fundament](https://github.com/logius-standaarden/BOMOS-Fundament) | Kernmodel: activiteiten, rollen, structuur | [Lees online](https://logius-standaarden.github.io/BOMOS-Fundament/) |
-| [BOMOS-Verdieping](https://github.com/logius-standaarden/BOMOS-Verdieping) | Verdiepende beschrijving van BOMOS activiteiten | [Lees online](https://logius-standaarden.github.io/BOMOS-Verdieping/) |
-| [BOMOS-Aanvullende-Modules](https://github.com/logius-standaarden/BOMOS-Aanvullende-Modules) | Aanvullende modules voor specifieke aspecten | [Lees online](https://logius-standaarden.github.io/BOMOS-Aanvullende-Modules/) |
-| [BOMOS-LinkedData](https://github.com/logius-standaarden/BOMOS-LinkedData) | Module: beheer van Linked Data standaarden | [Lees online](https://logius-standaarden.github.io/BOMOS-LinkedData/) |
-| [BOMOS-OpenSource](https://github.com/logius-standaarden/BOMOS-OpenSource) | Module: open source governance | [Lees online](https://logius-standaarden.github.io/BOMOS-OpenSource/) |
-| [BOMOS-Stelsels](https://github.com/logius-standaarden/BOMOS-Stelsels) | Module: beheer van stelsels van standaarden | [Lees online](https://logius-standaarden.github.io/BOMOS-Stelsels/) |
-| [BOMOS-Beheermodel](https://github.com/logius-standaarden/BOMOS-Beheermodel) | Beheermodel voor BOMOS zelf | [Lees online](https://logius-standaarden.github.io/BOMOS-Beheermodel/) |
-| [BOMOS-voorbeeld-beheermodel](https://github.com/logius-standaarden/BOMOS-voorbeeld-beheermodel) | Voorbeelddocument voor een beheermodel | [Lees online](https://logius-standaarden.github.io/BOMOS-voorbeeld-beheermodel/) |
-| [BOMOS-Community](https://github.com/logius-standaarden/BOMOS-Community) | Community-aspecten van standaardenbeheer | [Lees online](https://logius-standaarden.github.io/BOMOS-Community/) |
-| [Logius-Beheermodel](https://github.com/logius-standaarden/Logius-Beheermodel) | Overkoepelend beheermodel van Logius | [Lees online](https://logius-standaarden.github.io/Logius-Beheermodel/) |
+| [BOMOS-Aanvullende-Modules](https://github.com/logius-standaarden/BOMOS-Aanvullende-Modules) | Aanvullende modules voor specifieke aspecten — **gearchiveerd** | - |
+| [BOMOS-LinkedData](https://github.com/logius-standaarden/BOMOS-LinkedData) | Module: beheer van Linked Data standaarden | [Draft](https://logius-standaarden.github.io/BOMOS-LinkedData/) |
+| [BOMOS-OpenSource](https://github.com/logius-standaarden/BOMOS-OpenSource) | Module: open source governance — **gearchiveerd** | [Draft (bevroren)](https://logius-standaarden.github.io/BOMOS-OpenSource/) |
+| [BOMOS-Stelsels](https://github.com/logius-standaarden/BOMOS-Stelsels) | Module: beheer van stelsels van standaarden | [Draft](https://logius-standaarden.github.io/BOMOS-Stelsels/) |
+| [BOMOS-Beheermodel](https://github.com/logius-standaarden/BOMOS-Beheermodel) | Beheermodel voor BOMOS zelf | [Draft](https://logius-standaarden.github.io/BOMOS-Beheermodel/) |
+| [BOMOS-voorbeeld-beheermodel](https://github.com/logius-standaarden/BOMOS-voorbeeld-beheermodel) | Voorbeelddocument voor een beheermodel | [Draft](https://logius-standaarden.github.io/BOMOS-voorbeeld-beheermodel/) |
+| [BOMOS-Community](https://github.com/logius-standaarden/BOMOS-Community) | Community-aspecten van standaardenbeheer | [Draft](https://logius-standaarden.github.io/BOMOS-Community/) |
+| [Logius-Beheermodel](https://github.com/logius-standaarden/Logius-Beheermodel) | Overkoepelend beheermodel van Logius | [Draft](https://logius-standaarden.github.io/Logius-Beheermodel/) |
 
 ## Wijzigingsbeheer Workflow
 
@@ -157,4 +175,4 @@ Een organisatie werkt conform BOMOS wanneer voor **elke** activiteit een bewuste
 
 ## Achtergrondinfo
 
-Zie [reference.md](reference.md) voor het activiteitenmodel, rollen, levensfasen, pressure cooker model, en praktijkvoorbeelden.
+Zie [reference.md](reference.md) voor het activiteitenmodel, rollen, levensfasen, pressure cooker model, en praktijkvoorbeelden. Zie [conflicts.md](conflicts.md) voor bekende discrepanties tussen GitHub-tags en gepubliceerde versies.

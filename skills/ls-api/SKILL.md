@@ -14,29 +14,38 @@ allowed-tools:
 
 # API Design Rules (NL GOV)
 
-**Agent-instructie:** Deze skill helpt bij het implementeren van APIs conform de NL GOV API Design Rules. Gebruik de Spectral linter om OpenAPI specs te valideren. De regels zijn verplicht onder 'pas-toe-of-leg-uit' van het Forum Standaardisatie.
+**Agent-instructie:** Deze skill helpt bij het implementeren van APIs conform de NL GOV API Design Rules. Gebruik de Spectral linter om OpenAPI specs te valideren. De regels zijn verplicht onder ['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules) van het Forum Standaardisatie.
 
 De API Design Rules (ADR) zijn de Nederlandse standaard voor het ontwerpen van RESTful APIs bij de overheid. Ze zijn verplicht onder het "pas-toe-of-leg-uit" regime van het Forum Standaardisatie. De standaard bevat concrete, toetsbare regels voor URI-ontwerp, HTTP-methoden, versiebeheer, beveiliging, foutafhandeling en meer.
 
+## Versiemodel
+
+De ADR kent twee publicatiekanalen (vergelijkbaar met W3C-standaarden):
+
+- **Vastgestelde versie (DEF)**: de officieel goedgekeurde versie, gepubliceerd op `gitdocumentatie.logius.nl`
+- **Werkversie (draft)**: de ontwikkeling richting de volgende release, gepubliceerd op `logius-standaarden.github.io`. De werkversie op GitHub Pages is de lopende ontwikkeling richting de volgende release. De ReSpec-configuratie toont daar nog '2.1.0' maar dit betreft werk-in-uitvoering.
+
+Modules hebben geen eigen vaststellingsproces — ze ontlenen hun status aan de standaard die ernaar verwijst. Als de ADR in een vastgestelde versie normatief naar een module verwijst, is die module daarmee ook vastgesteld. Zo is de Geospatial module v1.0.x normatief onderdeel van ADR v2.1.0 en daarmee vastgesteld. De inhoud van Transport Security is in ADR v2.1.0 ingebed als sectie 3.8 met eigen regels (`/core/transport/*`). De module v1.0 staat nog normatief vermeld in de leeswijzer van v2.1.0, maar de GitHub-repository is gearchiveerd.
+
 ## Repositories
 
-| Repository | Beschrijving | Publicatie |
-|-----------|-------------|-----------|
-| [API-Design-Rules](https://github.com/logius-standaarden/API-Design-Rules) | Hoofdspecificatie met alle ontwerp- en technische regels | [Lees online](https://logius-standaarden.github.io/API-Design-Rules/) |
-| [ADR-Beheermodel](https://github.com/logius-standaarden/ADR-Beheermodel) | Beheermodel specifiek voor de ADR standaard | [Lees online](https://logius-standaarden.github.io/ADR-Beheermodel/) |
-| [API-Standaarden-Beheermodel](https://github.com/logius-standaarden/API-Standaarden-Beheermodel) | Overkoepelend beheermodel voor alle API-standaarden | [Lees online](https://logius-standaarden.github.io/API-Standaarden-Beheermodel/) |
-| [API-mod-transport-security](https://github.com/logius-standaarden/API-mod-transport-security) | Module: Transport Security (TLS, certificaten) | [Lees online](https://logius-standaarden.github.io/API-mod-transport-security/) |
-| [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Module: HTTP Message Signing — ⚠️ draft | [Lees online](https://logius-standaarden.github.io/API-mod-signing/) |
-| [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Module: Encryption (JWE) — ⚠️ draft | [Lees online](https://logius-standaarden.github.io/API-mod-encryption/) |
-| [API-mod-geospatial](https://github.com/logius-standaarden/API-mod-geospatial) | Module: Geospatial (GeoJSON, CRS) — ⚠️ draft | [Lees online](https://logius-standaarden.github.io/API-mod-geospatial/) |
-| [api-linter-impactanalyse](https://github.com/logius-standaarden/api-linter-impactanalyse) | Python tool: test Spectral regels tegen echte OpenAPI specs uit het API-register | - |
-| [zaakgericht-werken-api](https://github.com/logius-standaarden/zaakgericht-werken-api) | API-specificatie voor zaakgericht werken | - |
+| Repository | Beschrijving | Vastgesteld | Draft |
+|-----------|-------------|------------|-------|
+| [API-Design-Rules](https://github.com/logius-standaarden/API-Design-Rules) | Hoofdspecificatie (ADR) | [v2.1.0](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.1.0/) | [Draft](https://logius-standaarden.github.io/API-Design-Rules/) |
+| [ADR-Beheermodel](https://github.com/logius-standaarden/ADR-Beheermodel) | Beheermodel voor de ADR standaard — **gearchiveerd**, vervangen door API-Standaarden-Beheermodel | [v1.0](https://gitdocumentatie.logius.nl/publicatie/api/adr-beheer/1.0/) | - |
+| [API-Standaarden-Beheermodel](https://github.com/logius-standaarden/API-Standaarden-Beheermodel) | Overkoepelend beheermodel API-standaarden | - | [Draft](https://logius-standaarden.github.io/API-Standaarden-Beheermodel/) |
+| [API-mod-geospatial](https://github.com/logius-standaarden/API-mod-geospatial) | Module: Geospatial (GeoJSON, CRS) — normatief in ADR v2.1.0 | [v1.0.3](https://gitdocumentatie.logius.nl/publicatie/api/mod-geo/1.0.3/) | [Draft](https://logius-standaarden.github.io/API-mod-geospatial/) |
+| [API-mod-transport-security](https://github.com/logius-standaarden/API-mod-transport-security) | Module: Transport Security — **gearchiveerd**; inhoud ingebed in ADR v2.1.0; normatief vermeld in leeswijzer; repo gearchiveerd | - | - |
+| [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Module: HTTP Message Signing — draft | - | [Draft](https://logius-standaarden.github.io/API-mod-signing/) |
+| [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Module: Encryption (JWE) — draft | - | [Draft](https://logius-standaarden.github.io/API-mod-encryption/) |
+| [api-linter-impactanalyse](https://github.com/logius-standaarden/api-linter-impactanalyse) | Python tool: test Spectral regels tegen echte OpenAPI specs uit het API-register | - | - |
+| [zaakgericht-werken-api](https://github.com/logius-standaarden/zaakgericht-werken-api) | API-specificatie voor zaakgericht werken | - | - |
 
 ## Technische Regels
 
 ### URI-ontwerp
 
-- Gebruik **kebab-case** voor padsegmenten: `/financiele-claims` (niet `/financieleClaims`)
+- Gebruik **kebab-case** voor padsegmenten: `/mijn-documenten` (niet `/mijnDocumenten`)
 - Gebruik **camelCase** voor query-parameters: `?sortOrder=desc`
 - Geen trailing slashes: `/api/v1/users` (niet `/api/v1/users/`)
 - Geen bestandsextensies (gebruik Accept-header voor content negotiation)
@@ -83,7 +92,7 @@ Geen technische details (stack traces, interne hints) in foutmeldingen.
 - Resources als **zelfstandige naamwoorden** (niet werkwoorden)
 - **Meervoud** voor collecties: `/users`, `/orders`
 - **Enkelvoud** voor individuele resources: `/users/{id}`
-- Definieer interfaces in het **Nederlands** tenzij er een officieel Engels glossary bestaat
+- Definieer interfaces in het **Nederlands** tenzij er een officieel Engelstalig begrippenkader bestaat
 - Verberg implementatiedetails (geen framework- of databasenamen)
 
 ### OpenAPI Documentatie
@@ -93,9 +102,11 @@ Geen technische details (stack traces, interne hints) in foutmeldingen.
 - Contactinformatie verplicht (name, email, url)
 - CORS ondersteunen voor documentatie-toegang
 
-## Beveiligingsmodules
+## Modules
 
 ### Transport Security (TLS)
+
+> **Let op:** De Transport Security module werd als aparte module normatief verwezen door ADR v2.0.0. Vanaf ADR v2.1.0 zijn de transport-security-eisen **ingebed in de hoofdspecificatie** (sectie 3.8, regels `/core/transport/*`) en is de [repository gearchiveerd](https://github.com/logius-standaarden/API-mod-transport-security). De module v1.0 staat nog normatief vermeld in de leeswijzer van ADR v2.1.0.
 
 Alle verbindingen MOETEN TLS gebruiken (wettelijk verplicht). Volg de laatste NCSC-richtlijnen.
 
@@ -111,23 +122,21 @@ Verplichte security headers in alle API-responses:
 | `X-Frame-Options: DENY` | Clickjacking bescherming |
 | `Access-Control-Allow-Origin` | CORS beleid |
 
-### Signing Module (JAdES) — ⚠️ DRAFT
+### Geospatial Module (v1.0.3 — vastgesteld)
+
+Normatief onderdeel van ADR v2.1.0. Verplicht bij geospatiale data. Regelt GeoJSON encodering, bounding box filtering, en coördinaatsystemen (CRS). Zie de [vastgestelde versie](https://gitdocumentatie.logius.nl/publicatie/api/mod-geo/1.0.3/).
+
+### Signing Module (JAdES) — draft
 
 > **Let op:** Deze module is nog in **concept** (draft) en is nog niet goedgekeurd door het Technisch Overleg. De inhoud kan nog wijzigen.
 
 Voor end-to-end berichtintegriteit en authenticiteit. Gebruikt JAdES detached signatures met RSASSA-PSS (PS256), minimaal 256 bits. Signatures in `Payload-Signature` en `Message-Signature` HTTP headers. OpenAPI representatie met `format: jws-compact-detached`.
 
-### Encryption Module (JWE) — ⚠️ DRAFT
+### Encryption Module (JWE) — draft
 
 > **Let op:** Deze module is nog in **concept** (draft) en is nog niet goedgekeurd door het Technisch Overleg. De inhoud kan nog wijzigen.
 
 Voor end-to-end versleuteling van request/response payloads wanneer transport-level encryptie niet voldoende is (bijv. bij niet-vertrouwde intermediairs).
-
-### Geospatial Module — ⚠️ DRAFT
-
-> **Let op:** Deze module is nog in **concept** (draft) en is nog niet goedgekeurd door het Technisch Overleg. De inhoud kan nog wijzigen.
-
-Verplicht bij geospatiale data. Regelt GeoJSON encodering, bounding box filtering, en coördinaatsystemen (CRS).
 
 ## Implementatievoorbeeld
 
@@ -210,7 +219,7 @@ async def problem_json_handler(request: Request, exc: HTTPException):
 
 ## Spectral Linter
 
-De Spectral linter valideert OpenAPI specs tegen 30+ ADR regels.
+De Spectral linter valideert OpenAPI specs tegen 15 ADR regels.
 
 ```bash
 # Haal spectral.yml op en lint een OpenAPI spec
@@ -227,16 +236,16 @@ gh api repos/logius-standaarden/API-Design-Rules/contents/linter/testcases --jq 
 ```
 
 Belangrijke Spectral regels:
-- `nlgov:version-in-uri` - Major versie in URI pad
+- `nlgov:include-major-version-in-uri` - Major versie in URI pad
 - `nlgov:paths-no-trailing-slash` - Geen trailing slashes
 - `nlgov:paths-kebab-case` - Kebab-case padsegmenten
-- `nlgov:query-params-camel-case` - camelCase query parameters
-- `nlgov:http-methods-only-standard` - Alleen standaard HTTP methoden
-- `nlgov:info-contact` - Contactinformatie aanwezig
-- `nlgov:api-version-header` - Version header in 2xx/3xx responses
-- `nlgov:error-response-problem-json` - Problem+json voor fouten
-- `nlgov:semver-version` - Semantic versioning formaat
+- `nlgov:query-keys-camel-case` - camelCase query parameters
+- `nlgov:http-methods` - Alleen standaard HTTP methoden
+- `nlgov:info-contact-fields-exist` - Contactinformatie aanwezig
+- `nlgov:missing-version-header` - Version header in 2xx/3xx responses
+- `nlgov:use-problem-schema` - Problem+json voor fouten
+- `nlgov:semver` - Semantic versioning formaat
 
 ## Achtergrondinfo
 
-Zie [reference.md](reference.md) voor Express.js/Go voorbeelden, impact analyse tool, en repo-exploratie commando's.
+Zie [reference.md](reference.md) voor Express.js/Go voorbeelden, impact analyse tool, en repo-exploratie commando's. Zie [conflicts.md](conflicts.md) voor bekende discrepanties tussen GitHub-tags en gepubliceerde versies.

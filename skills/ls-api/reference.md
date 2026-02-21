@@ -56,7 +56,7 @@ De impact analyse tool test Spectral regels tegen echte OpenAPI specs uit het AP
 ```bash
 gh repo clone logius-standaarden/api-linter-impactanalyse /tmp/api-linter
 cd /tmp/api-linter
-uv run run-spectral-for-single-rule.py --rule nlgov:paths-no-trailing-slash
+uv run scripts/run-spectral-for-single-rule.py --rule nlgov:paths-no-trailing-slash
 ```
 
 ## Repository Exploratie Commando's

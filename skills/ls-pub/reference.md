@@ -8,7 +8,7 @@ De [Tech Radar](https://logius-standaarden.github.io/tech-radar/) is een visuali
 |------|-----------|
 | **Adopt** | Bewezen technologie, actief aanbevolen voor gebruik |
 | **Trial** | Veelbelovend, wordt actief getest in projecten |
-| **Assess** | Interessant, wordt onderzocht en geevalueerd |
+| **Assess** | Interessant, wordt onderzocht en geëvalueerd |
 | **Hold** | Niet aanbevolen voor nieuw gebruik, wordt uitgefaseerd |
 
 ```bash
@@ -53,6 +53,7 @@ jobs:
   publish:
     needs: [build, check]
     uses: logius-standaarden/Automatisering/.github/workflows/publish.yml@main
+    secrets: inherit
 ```
 
 ## Handige Commando's
@@ -75,3 +76,13 @@ gh api repos/logius-standaarden/Automatisering/commits \
 # Welke repos gebruiken de centrale workflows
 gh search code "logius-standaarden/Automatisering" --owner logius-standaarden --filename "*.yml"
 ```
+
+## Gerelateerde Skills
+
+| Skill | Relatie |
+|-------|---------|
+| `/ls-api` | API Design Rules documentatie gebruikt ReSpec en de centrale workflows |
+| `/ls-dk` | Digikoppeling documentatie gebruikt ReSpec en de centrale workflows |
+| `/ls-fsc` | FSC documentatie gebruikt ReSpec en de centrale workflows |
+| `/ls-bomos` | BOMOS documentatie gebruikt ReSpec en de centrale workflows |
+| `/ls` | Overzicht alle standaarden |

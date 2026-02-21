@@ -15,16 +15,29 @@ allowed-tools:
 
 **Agent-instructie:** Deze skill helpt bij het implementeren van event-driven communicatie met CloudEvents NL GOV profiel. Gebruik de `cloudevents` SDK voor Python/JavaScript. Source moet URN nld-notatie gebruiken: `urn:nld:oin:<OIN>:systeem:<naam>`.
 
-De notificatiestandaarden definieren hoe overheidsorganisaties gebeurtenissen (events) kunnen publiceren en daarop kunnen abonneren. Gebaseerd op de internationale CNCF CloudEvents specificatie (v1.0) met een NL GOV profiel dat specifieke eisen stelt aan naamgeving, identificatie en het gebruik van context-attributen binnen de Nederlandse overheid.
+De notificatiestandaarden definiëren hoe overheidsorganisaties gebeurtenissen (events) kunnen publiceren en daarop kunnen abonneren. Gebaseerd op de internationale CNCF CloudEvents specificatie (v1.0.1) met een NL GOV profiel dat specifieke eisen stelt aan naamgeving, identificatie en het gebruik van context-attributen binnen de Nederlandse overheid.
+
+## Versiemodel
+
+Net als andere Logius-standaarden kennen de notificatiestandaarden twee publicatiekanalen (vergelijkbaar met W3C):
+
+- **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
+- **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
+
+Het NL GOV profiel voor CloudEvents heeft een **vastgestelde versie** (v1.1 DEF). De Guidelines zijn een toelichting zonder eigen publicatie. Notificatieservices is een werkrepository zonder publicatie. Abonneren heeft een **werkversie** (v0.0.1 WV) op gitdocumentatie maar is nog niet vastgesteld.
+
+Op het Forum Standaardisatie staat CloudEvents **v1.0** als verplicht (['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents), goedgekeurd OBDO 25-11-2025). Versie v1.1 is de meest recente DEF van Logius.
 
 ## Repositories
 
-| Repository | Beschrijving | Publicatie |
-|-----------|-------------|-----------|
-| [NL-GOV-profile-for-CloudEvents](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents) | Nederlands overheidsprofiel voor CloudEvents | [Lees online](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/) |
-| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | Richtlijnen voor gebruik van CloudEvents in NL | [Lees online](https://logius-standaarden.github.io/CloudEvents-NL-Guidelines/) |
-| [Notificatieservices](https://github.com/logius-standaarden/Notificatieservices) | Specificatie voor notificatieservices | [Lees online](https://logius-standaarden.github.io/Notificatieservices/) |
-| [Abonneren](https://github.com/logius-standaarden/Abonneren) | Specificatie voor het abonneren op notificaties | [Lees online](https://logius-standaarden.github.io/Abonneren/) |
+| Repository | Beschrijving | Vastgesteld | Draft |
+|-----------|-------------|------------|-------|
+| [NL-GOV-profile-for-CloudEvents](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents) | Nederlands overheidsprofiel voor CloudEvents (kernstandaard) | [v1.1](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl/) | [Draft](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/) |
+| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | Richtlijnen en toelichting bij het NL GOV profiel | - | [Draft](https://logius-standaarden.github.io/CloudEvents-NL-Guidelines/) |
+| [Notificatieservices](https://github.com/logius-standaarden/Notificatieservices) | API-specificatie voor notificatieservices (werkrepository, geen publicatie) | - | - |
+| [Abonneren](https://github.com/logius-standaarden/Abonneren) | API-specificatie voor het abonneren op notificaties | - | [WV v0.0.1](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/abonneren/)¹ |
+
+¹ Abonneren WV v0.0.1 is gepubliceerd op gitdocumentatie.logius.nl, wat normaal voor vastgestelde versies (DEF/VV) is. Dit is een uitzondering; de standaard is nog in ontwikkeling.
 
 ## CloudEvents NL GOV Profiel
 
@@ -80,7 +93,7 @@ Content-Type: application/json
 
 Het Abonneren-component beschrijft hoe afnemers zich kunnen registreren om specifieke events te ontvangen. Twee hoofdmodellen worden onderscheiden:
 
-**Push-model (aanbevolen):** Event-driven aflevering via webhooks. De notificatieservice stuurt events actief naar een door de afnemer opgegeven endpoint. Dit is het voorkeursmodel vanwege lage latency en efficienter resourcegebruik.
+**Push-model (aanbevolen):** Event-driven aflevering via webhooks. De notificatieservice stuurt events actief naar een door de afnemer opgegeven endpoint. Dit is het voorkeursmodel vanwege lage latency en efficiënter resourcegebruik.
 
 **Pull-model:** Polling-gebaseerde aflevering. De afnemer bevraagt periodiek de notificatieservice op nieuwe events. Geschikt voor situaties waar de afnemer geen inkomend endpoint kan aanbieden (bijv. vanwege firewallrestricties).
 
@@ -88,7 +101,7 @@ Het Abonneren-component beschrijft hoe afnemers zich kunnen registreren om speci
 
 Bij het werken met notificaties gelden strikte eisen op het gebied van beveiliging en privacy:
 
-- **Geen gevoelige data in context-attributen**: Context-attributen (zoals `source`, `type`, `subject`) zijn introspectable en worden gelogd door tussenliggende systemen. Plaats nooit persoonsgegevens of gevoelige informatie in deze velden. Gebruik hiervoor de versleutelde `data`-payload.
+- **Geen gevoelige data in context-attributen**: Context-attributen (zoals `source`, `type`, `subject`) zijn inspecteerbaar en worden gelogd door tussenliggende systemen. Plaats nooit persoonsgegevens of gevoelige informatie in deze velden. Gebruik hiervoor de versleutelde `data`-payload.
 - **Versleuteling van event data**: Wanneer de payload gevoelige gegevens bevat, moet deze versleuteld worden (end-to-end encryptie). De context-attributen blijven leesbaar voor routering.
 - **TLS verplicht**: Alle communicatie tussen bronnen, notificatieservices en afnemers moet plaatsvinden over TLS (minimaal versie 1.2).
 - **Claim Check Pattern**: Bij grote of gevoelige payloads kan het `dataref`-attribuut verwijzen naar een beveiligd endpoint. De afnemer haalt de payload separaat op met eigen autorisatie.
@@ -309,4 +322,5 @@ def deliver_event(webhook_url: str, event: dict, max_retries: int = 5):
 
 ## Achtergrondinfo
 
-Zie [reference.md](reference.md) voor het type systeem, kernconcepten, en aanbevolen technologieen.
+Zie [reference.md](reference.md) voor het type systeem, kernconcepten, en aanbevolen technologieën.
+Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.

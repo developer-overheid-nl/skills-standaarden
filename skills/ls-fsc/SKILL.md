@@ -13,19 +13,30 @@ allowed-tools:
 
 # Federated Service Connectivity (FSC)
 
-**Agent-instructie:** Deze skill helpt bij het implementeren van FSC (Federated Service Connectivity) voor federatieve dienstverlening. FSC gebruikt mTLS, OAuth 2.0 client_credentials en cryptografisch ondertekende contracten. Sinds 1/1/2025 verplicht bij Digikoppeling REST-API.
+**Agent-instructie:** Deze skill helpt bij het implementeren van FSC (Federated Service Connectivity) voor federatieve dienstverlening. FSC gebruikt mTLS, OAuth 2.0 client_credentials en cryptografisch ondertekende contracten. Vereist bij Digikoppeling REST-API (v3.0.1+); geen afzonderlijke vermelding op het Forum Standaardisatie.
+
+## Versiemodel
+
+Net als andere Logius-standaarden kent FSC twee publicatiekanalen (vergelijkbaar met W3C):
+
+- **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
+- **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
+
+FSC heeft **vastgestelde versies** voor fsc-core en fsc-logging. De overige modules hebben alleen werkversies; fsc-external-contract heeft een consultatieversie (CV). Modulestatus hangt samen met de core-specificatie maar wordt apart vastgesteld.
 
 ## Repositories
 
-| Repository | Beschrijving | Publicatie |
-|-----------|-------------|-----------|
-| [fsc-core](https://github.com/logius-standaarden/fsc-core) | Core specificatie: architectuur, protocol, componenten | [Lees online](https://logius-standaarden.github.io/fsc-core/) |
-| [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | Logging specificatie voor FSC transacties | [Lees online](https://logius-standaarden.github.io/fsc-logging/) |
-| [fsc-properties](https://github.com/logius-standaarden/fsc-properties) | Metadata-properties voor FSC services | [Lees online](https://logius-standaarden.github.io/fsc-properties/) |
-| [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | Regulated Area specificatie (governance zones) | [Lees online](https://logius-standaarden.github.io/fsc-regulated-area/) |
-| [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | External Contract specificatie (afspraken tussen partijen) | [Lees online](https://logius-standaarden.github.io/fsc-external-contract/) |
-| [fsc-extensie-template](https://github.com/logius-standaarden/fsc-extensie-template) | Template voor FSC extensies | [Lees online](https://logius-standaarden.github.io/fsc-extensie-template/) |
-| [fsc-test-suite](https://github.com/logius-standaarden/fsc-test-suite) | Integratietests en componenttests | - |
+| Repository | Beschrijving | Vastgesteld | Draft |
+|-----------|-------------|------------|-------|
+| [fsc-core](https://github.com/logius-standaarden/fsc-core) | Core specificatie: architectuur, protocol, componenten | [v1.1.2](https://gitdocumentatie.logius.nl/publicatie/fsc/core/) | [Draft](https://logius-standaarden.github.io/fsc-core/) |
+| [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | Module: logging specificatie voor FSC transacties | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) | [Draft](https://logius-standaarden.github.io/fsc-logging/) |
+| [fsc-properties](https://github.com/logius-standaarden/fsc-properties) | Module: metadata-properties voor FSC services | - | [Draft](https://logius-standaarden.github.io/fsc-properties/) |
+| [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | Module: Regulated Area specificatie (governance zones) | - | [Draft](https://logius-standaarden.github.io/fsc-regulated-area/) |
+| [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | Module: External Contract specificatie (afspraken tussen partijen) | [CV v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/)¹ | [Draft](https://logius-standaarden.github.io/fsc-external-contract/) |
+| [fsc-extensie-template](https://github.com/logius-standaarden/fsc-extensie-template) | Richtlijn voor nieuwe FSC extensies | - | [Draft](https://logius-standaarden.github.io/fsc-extensie-template/) |
+| [fsc-test-suite](https://github.com/logius-standaarden/fsc-test-suite) | Integratietests en componenttests | - | - |
+
+¹ CV = consultatieversie, nog niet definitief vastgesteld.
 
 ## Service Connectivity Flow
 
@@ -82,7 +93,7 @@ De Inway van de provider:
 
 1. Extraheert het JWT uit de `Fsc-Authorization` header
 2. Valideert de handtekening van het token
-3. Controleert de claims (`aud`, `svc`, `gth`, `cnf`)
+3. Controleert de claims (`aud`, `svc`, `gth`, `gid`, `cnf`)
 4. Verifieert dat het certificaat van de verbinding overeenkomt met de `cnf` thumbprint
 5. Stuurt het verzoek door naar de achterliggende service
 6. Retourneert de response aan de Outway
@@ -139,12 +150,12 @@ Het access token is een JSON Web Token (JWT) dat wordt uitgegeven door de Manage
 | `sub` | Subject: het PeerID van de consumer die de service afneemt |
 | `iss` | Issuer: het PeerID van de provider die het token uitgeeft |
 | `svc` | Service: de naam van de service waarvoor het token geldig is |
-| `aud` | Audience: het PeerID van de provider (ontvanger van het token) |
+| `aud` | Audience: de URL van de Inway van de provider |
 | `gth` | Grant Hash: de hash van het specifieke grant in het contract |
-| `gid` | Grant ID: identifier van het grant binnen het contract |
+| `gid` | Group ID: identifier van de Group waarbinnen het token geldig is |
 | `cnf` | Confirmation: object met `x5t#S256` (SHA-256 thumbprint van het client-certificaat) |
 | `exp` | Expiration: verloopdatum van het token |
-| `iat` | Issued At: tijdstip van uitgifte |
+| `nbf` | Not Before: tijdstip vanaf wanneer het token geldig is |
 
 De `cnf` claim bindt het token aan het specifieke certificaat van de consumer, waardoor token-diefstal wordt voorkomen (certificate-bound tokens).
 
@@ -153,14 +164,14 @@ De `cnf` claim bindt het token aan het specifieke certificaat van de consumer, w
   "sub": "PeerID-consumer",
   "iss": "PeerID-provider",
   "svc": "mijn-service",
-  "aud": "PeerID-provider",
+  "aud": "https://inway.provider.example.nl",
   "gth": "sha256-hash-van-grant",
-  "gid": "grant-identifier",
+  "gid": "nl-overheid-productie",
   "cnf": {
     "x5t#S256": "sha256-thumbprint-van-client-certificaat"
   },
   "exp": 1735689600,
-  "iat": 1735686000
+  "nbf": 1735686000
 }
 ```
 
@@ -305,7 +316,7 @@ async def proxy_request(service_name: str, path: str, request: Request):
         url=f"{inway_url}/{service_name}/{path}",
         headers={
             "Fsc-Authorization": f"Bearer {access_token}",
-            "Fsc-Transaction-Id": str(uuid.uuid4()),  # UUID V7 per request
+            "Fsc-Transaction-Id": str(uuid.uuid4()),  # Uniek per request
             **{k: v for k, v in request.headers.items()
                if k.lower() not in ("host", "fsc-authorization")},
         },
@@ -430,21 +441,21 @@ curl -s "https://directory.example.com:8443/services?name=brp-bevraging" \
 
 | HTTP Status | Fsc-Error-Code | Beschrijving | Actie |
 |------------|---------------|-------------|-------|
-| 401 | `ACCESS_TOKEN_MISSING` | Geen Fsc-Authorization header | Voeg token toe via Outway |
-| 401 | `ACCESS_TOKEN_INVALID` | Token handtekening ongeldig | Nieuw token ophalen |
-| 401 | `ACCESS_TOKEN_EXPIRED` | Token verlopen | Nieuw token ophalen |
-| 403 | `WRONG_GROUP_ID_IN_TOKEN` | Group ID in token matcht niet | Controleer groepsconfiguratie |
-| 404 | `SERVICE_NOT_FOUND` | Service niet geregistreerd | Controleer servicenaam in contract |
-| 500 | `TRANSACTION_LOG_WRITE_ERROR` | Transactielog schrijven mislukt | Probeer later opnieuw |
-| 502 | `SERVICE_UNREACHABLE` | Achterliggende service onbereikbaar | Probeer later opnieuw |
+| 401 | `ERROR_CODE_ACCESS_TOKEN_MISSING` | Geen Fsc-Authorization header | Voeg token toe via Outway |
+| 401 | `ERROR_CODE_ACCESS_TOKEN_INVALID` | Token handtekening ongeldig | Nieuw token ophalen |
+| 401 | `ERROR_CODE_ACCESS_TOKEN_EXPIRED` | Token verlopen | Nieuw token ophalen |
+| 403 | `ERROR_CODE_WRONG_GROUP_ID_IN_TOKEN` | Group ID in token matcht niet | Controleer groepsconfiguratie |
+| 404 | `ERROR_CODE_SERVICE_NOT_FOUND` | Service niet geregistreerd | Controleer servicenaam in contract |
+| 500 | `ERROR_CODE_TRANSACTION_LOG_WRITE_ERROR` | Transactielog schrijven mislukt | Probeer later opnieuw |
+| 502 | `ERROR_CODE_SERVICE_UNREACHABLE` | Achterliggende service onbereikbaar | Probeer later opnieuw |
 
 ### Error Response Formaat
 
 ```json
 {
-  "code": "ACCESS_TOKEN_EXPIRED",
-  "domain": "inway",
-  "details": "Token expired at 2024-01-15T10:30:00Z"
+  "code": "ERROR_CODE_ACCESS_TOKEN_EXPIRED",
+  "domain": "ERROR_DOMAIN_INWAY",
+  "message": "Token expired at 2024-01-15T10:30:00Z"
 }
 ```
 
@@ -454,38 +465,12 @@ De `Fsc-Error-Code` header wordt altijd meegegeven bij foutresponses, naast de H
 
 | HTTP Status | Fsc-Error-Code | Beschrijving |
 |------------|---------------|-------------|
-| 405 | `METHOD_UNSUPPORTED` | CONNECT methode niet ondersteund |
+| 405 | `ERROR_CODE_METHOD_UNSUPPORTED` | CONNECT methode niet ondersteund |
 
 ### Retry Strategie
 
-```python
-import time
-
-def call_service_via_fsc(service_name: str, path: str, max_retries: int = 3):
-    """Roep een FSC service aan met retry bij tijdelijke fouten."""
-    for attempt in range(max_retries):
-        response = outway.proxy_request(service_name, path)
-
-        error_code = response.headers.get("Fsc-Error-Code")
-        if not error_code:
-            return response  # Succes of applicatie-error
-
-        if error_code in ("ACCESS_TOKEN_EXPIRED", "ACCESS_TOKEN_INVALID"):
-            # Token vernieuwen en opnieuw proberen
-            token_cache.pop(service_name, None)
-            continue
-
-        if error_code in ("SERVICE_UNREACHABLE", "TRANSACTION_LOG_WRITE_ERROR"):
-            # Tijdelijke fout - exponential backoff
-            time.sleep(min(2 ** attempt * 5, 60))
-            continue
-
-        # Permanente fouten niet opnieuw proberen
-        break
-
-    return response
-```
+Zie [reference.md](reference.md) voor een Python implementatie van een retry-strategie met exponential backoff die onderscheid maakt tussen token-fouten (vernieuwen en opnieuw proberen), tijdelijke fouten (backoff) en permanente fouten (direct stoppen).
 
 ## Achtergrondinfo
 
-Zie [reference.md](reference.md) voor de componentarchitectuur, trust model, en gedetailleerde protocoldocumentatie.
+Zie [reference.md](reference.md) voor componentarchitectuur, trust model, retry-strategie code, en protocoldocumentatie. Zie [conflicts.md](conflicts.md) voor bekende discrepanties tussen GitHub-tags en gepubliceerde versies.

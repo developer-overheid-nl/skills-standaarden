@@ -51,10 +51,10 @@ De demo-omgeving simuleert een multi-organisatie opstelling met meerdere microse
 
 | Service | Beschrijving |
 |---------|--------------|
-| `currus` | Applicatieservice die verwerkingen uitvoert en logregels genereert |
+| `munera` | Fictieve "Mijn Gemeente"-omgeving waar burgers gemeentezaken kunnen regelen |
+| `currus` | API voor het beheren van parkeervergunningen |
+| `lamina` | API voor het beschikbaar stellen van registratiegegevens van voertuigen |
 | `grafana` | Visualisatie en dashboard voor het inzien van logregels |
-| `lamina` | Logboek-implementatie die logregels opslaat en beheert |
-| `munera` | Register-service met verwerkingsactiviteiten (Art. 30) |
 
 ### Demo starten
 
@@ -64,14 +64,14 @@ gh repo clone logius-standaarden/logboek-dataverwerkingen-demo /tmp/logboek-demo
 gh api repos/logius-standaarden/logboek-dataverwerkingen-demo/contents --jq '.[].name'
 
 # Docker compose configuratie ophalen
-gh api repos/logius-standaarden/logboek-dataverwerkingen-demo/contents/docker-compose.yml \
+gh api repos/logius-standaarden/logboek-dataverwerkingen-demo/contents/docker-compose.yaml \
   -H "Accept: application/vnd.github.raw"
 
 # Demo starten
 cd /tmp/logboek-demo && docker compose up -d
 
 # Of via Makefile
-make build && make run
+make build && make start
 ```
 
 ### Demo gebruiken
@@ -81,7 +81,7 @@ make build && make run
 gh repo clone logius-standaarden/logboek-dataverwerkingen-demo /tmp/logboek-demo
 cd /tmp/logboek-demo
 
-# Services starten (currus=logboek, grafana=dashboard, lamina=register, munera=applicatie)
+# Services starten (munera=Mijn Gemeente app, currus=parkeervergunningen, lamina=voertuigregistratie, grafana=dashboard)
 docker compose up -d
 
 # Status controleren

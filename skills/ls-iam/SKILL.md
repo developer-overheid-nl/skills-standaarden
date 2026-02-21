@@ -13,22 +13,35 @@ allowed-tools:
 
 # Identity & Access Management (IAM)
 
-**Agent-instructie:** Deze skill helpt bij het implementeren van authenticatie en autorisatie voor overheids-APIs. Gebruik de OAuth 2.0 NL en OIDC NL GOV profielen voor nieuwe implementaties. AuthZEN voor geexternaliseerde autorisatie.
+**Agent-instructie:** Deze skill helpt bij het implementeren van authenticatie en autorisatie voor overheids-APIs. Gebruik de OAuth 2.0 NL en OIDC NL GOV profielen voor nieuwe implementaties. AuthZEN voor geëxternaliseerde autorisatie.
 
 De IAM-standaarden van Logius definiëren profielen voor authenticatie en autorisatie bij Nederlandse overheids-APIs. Dit omvat OAuth 2.0, OpenID Connect, AuthZEN en aanvullende profielen specifiek voor de Nederlandse overheid. Deze standaarden waarborgen een consistent en veilig identiteits- en toegangsbeheer binnen het publieke domein.
 
+## Versiemodel
+
+Net als andere Logius-standaarden kennen deze standaarden twee publicatiekanalen (vergelijkbaar met W3C):
+
+- **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
+- **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
+
+De IAM-standaarden OAuth-NL-profiel, OIDC-NLGOV en OIN-Stelsel hebben **vastgestelde versies** op gitdocumentatie.logius.nl. OAuth-Beheermodel heeft eveneens een vastgestelde versie maar is **gearchiveerd**. De overige standaarden (AuthZEN, Authorization Decision Log, OAuth-Inleiding) hebben momenteel alleen werkversies.
+
+OpenID.NLGov (v1.0.1) en SAML zijn beide **verplicht** als onderdeel van de gecombineerde vermelding ["Authenticatie-standaarden (OpenID.NLGov en SAML)"](https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden) op het Forum Standaardisatie (sinds 21-09-2023). Voor **nieuwe implementaties** wordt OIDC NL GOV aanbevolen; bestaande SAML-koppelingen blijven ondersteund.
+
+Op het Forum Standaardisatie staat het OAuth-NL-profiel **v1.0** als verplicht (['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20)). Versie v1.1.0 is vastgesteld door Logius (DEF) maar is op het Forum [in procedure genomen](https://www.forumstandaardisatie.nl/intakeadvies-nl-gov-assurance-profile-oauth-20-versie-11) (intake goedgekeurd 24-09-2025, verkort expertonderzoek loopt).
+
 ## Repositories
 
-| Repository | Beschrijving | Publicatie |
-|-----------|-------------|-----------|
-| [OAuth-NL-profiel](https://github.com/logius-standaarden/OAuth-NL-profiel) | Nederlands profiel voor OAuth 2.0 | [Lees online](https://logius-standaarden.github.io/OAuth-NL-profiel/) |
-| [OIDC-NLGOV](https://github.com/logius-standaarden/OIDC-NLGOV) | OpenID Connect profiel voor NL overheid | [Lees online](https://logius-standaarden.github.io/OIDC-NLGOV/) |
-| [OAuth-Inleiding](https://github.com/logius-standaarden/OAuth-Inleiding) | Introductie en achtergrond OAuth | [Lees online](https://logius-standaarden.github.io/OAuth-Inleiding/) |
-| [OAuth-Beheermodel](https://github.com/logius-standaarden/OAuth-Beheermodel) | Beheermodel voor OAuth standaarden | [Lees online](https://logius-standaarden.github.io/OAuth-Beheermodel/) |
-| [authzen-nlgov](https://github.com/logius-standaarden/authzen-nlgov) | AuthZEN NL GOV profiel (autorisatiebeslissingen) | [Lees online](https://logius-standaarden.github.io/authzen-nlgov/) |
-| [authorization-decision-log](https://github.com/logius-standaarden/authorization-decision-log) | Logging van autorisatiebeslissingen | [Lees online](https://logius-standaarden.github.io/authorization-decision-log/) |
-| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | SAML specificatie voor NL overheid | [Lees online](https://logius-standaarden.github.io/st-saml-spec/) |
-| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Organisatie Identificatie Nummer (ook in `/ls-dk`) | [Lees online](https://logius-standaarden.github.io/OIN-Stelsel/) |
+| Repository | Beschrijving | Vastgesteld | Draft |
+|-----------|-------------|------------|-------|
+| [OAuth-NL-profiel](https://github.com/logius-standaarden/OAuth-NL-profiel) | Nederlands profiel voor OAuth 2.0 | [v1.1.0](https://gitdocumentatie.logius.nl/publicatie/api/oauth/) | [Draft](https://logius-standaarden.github.io/OAuth-NL-profiel/) |
+| [OIDC-NLGOV](https://github.com/logius-standaarden/OIDC-NLGOV) | OpenID Connect profiel voor NL overheid | [v1.0.1](https://gitdocumentatie.logius.nl/publicatie/api/oidc/) | [Draft](https://logius-standaarden.github.io/OIDC-NLGOV/) |
+| [OAuth-Inleiding](https://github.com/logius-standaarden/OAuth-Inleiding) | Introductie en achtergrond OAuth | - | [Draft](https://logius-standaarden.github.io/OAuth-Inleiding/) |
+| [OAuth-Beheermodel](https://github.com/logius-standaarden/OAuth-Beheermodel) | Beheermodel voor OAuth standaarden — **gearchiveerd** | [v1.0](https://gitdocumentatie.logius.nl/publicatie/api/oauth-beheer/) | - |
+| [authzen-nlgov](https://github.com/logius-standaarden/authzen-nlgov) | AuthZEN NL GOV profiel (autorisatiebeslissingen) | - | [Draft](https://logius-standaarden.github.io/authzen-nlgov/) |
+| [authorization-decision-log](https://github.com/logius-standaarden/authorization-decision-log) | Logging van autorisatiebeslissingen | - | [Draft](https://logius-standaarden.github.io/authorization-decision-log/) |
+| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | SAML specificatie — onderdeel van verplichte "Authenticatie-standaarden"; voor nieuwe implementaties wordt OIDC aanbevolen | - | [Draft](https://logius-standaarden.github.io/st-saml-spec/) |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Organisatie Identificatie Nummer (ook in `/ls-dk`) | [v2.2.1](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | [Draft](https://logius-standaarden.github.io/OIN-Stelsel/) |
 
 ---
 
@@ -434,4 +447,4 @@ curl -X POST https://auth.example.com/introspect \
 
 ## Achtergrondinfo
 
-Zie [reference.md](reference.md) voor SAML legacy info, OIN-stelsel, en gedetailleerde protocoldocumentatie.
+Zie [reference.md](reference.md) voor SAML-details, OIN-stelsel, en gedetailleerde protocoldocumentatie. Zie [conflicts.md](conflicts.md) voor bekende bronconflicten (GitHub-tags vs. publicatie, Forum Standaardisatie tegenstrijdigheden).
