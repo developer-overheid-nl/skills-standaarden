@@ -39,7 +39,6 @@ EXCLUDE_PATTERNS = [
     re.compile(r"https?://schemas\.xmlsoap\.org/"),
     re.compile(r"https?://docs\.oasis-open\.org/"),
     re.compile(r"https?://www\.oasis-open\.org/"),
-    re.compile(r"https?://urn:"),
     re.compile(r"https?://service\.example"),
     re.compile(r"https?://sender\.example"),
     re.compile(r"https?://receiver\.example"),

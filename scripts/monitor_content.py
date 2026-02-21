@@ -41,19 +41,19 @@ def fetch_with_retry(
     max_retries: int = 3,
 ) -> requests.Response | None:
     """HTTP GET met exponential backoff en Retry-After support."""
-    delays = [5, 10, 20]
     for attempt in range(max_retries):
+        delay = min(5 * (2 ** attempt), 60)
         try:
             resp = requests.get(url, headers=headers or {}, timeout=30)
             if resp.status_code in (429, 503):
                 retry_after = resp.headers.get("Retry-After")
-                wait = int(retry_after) if retry_after else delays[attempt]
+                wait = int(retry_after) if retry_after else delay
                 time.sleep(wait)
                 continue
             return resp
         except requests.RequestException:
             if attempt < max_retries - 1:
-                time.sleep(delays[attempt])
+                time.sleep(delay)
     return None
 
 
@@ -203,16 +203,18 @@ def detect_changes(
         changes.append("Repository is gearchiveerd")
 
     # HTTP resources - alleen vergelijken als de key ook in de vorige state bestond
+    body_hash_changed = False
     if "body_sha256" in current and "body_sha256" in prev_state:
         if current["body_sha256"] != prev_state["body_sha256"]:
             changes.append("Content is gewijzigd (body hash verschilt)")
+            body_hash_changed = True
     if "etag" in current and "etag" in prev_state:
         if current["etag"] != prev_state["etag"]:
-            if "body_sha256" not in current:  # Alleen als body hash niet al een change gaf
+            if not body_hash_changed:  # Alleen als body hash niet al een change gaf
                 changes.append("ETag gewijzigd")
     if "last_modified" in current and "last_modified" in prev_state:
         if current["last_modified"] != prev_state["last_modified"]:
-            if "body_sha256" not in current:
+            if not body_hash_changed:
                 changes.append("Last-Modified gewijzigd")
 
     return changes
@@ -389,9 +391,12 @@ def main() -> None:
 
         if changes and not is_first_run:
             change_text = "\n".join(f"- {c}" for c in changes)
+            # Gebruik de laatste 2-3 pad-segmenten voor een beschrijvende titel
+            url_parts = url.rstrip("/").split("/")
+            short_name = "/".join(url_parts[-min(3, len(url_parts)):])
             issues_to_create.append(
                 {
-                    "title": f"[monitoring] Content gewijzigd: {url.split('/')[-1]} ({skills})",
+                    "title": f"[monitoring] Content gewijzigd: {short_name} ({skills})",
                     "body": (
                         f"Wijzigingen gedetecteerd voor **{url}**:\n\n"
                         f"{change_text}\n\n"
@@ -403,8 +408,15 @@ def main() -> None:
                 }
             )
 
-    # Sla state op
-    save_checksums(args.checksums, new_checksums)
+    # Sla state op (niet bij --dry-run, zodat dezelfde wijzigingen opnieuw gedetecteerd worden)
+    if not args.dry_run:
+        if args.type != "all":
+            # Bij type-filter: merge met bestaande state i.p.v. overschrijven
+            merged = dict(checksums)
+            merged.update(new_checksums)
+            save_checksums(args.checksums, merged)
+        else:
+            save_checksums(args.checksums, new_checksums)
 
     if is_first_run:
         print(f"\nEerste run: baseline opgeslagen voor {len(new_checksums)} URLs")

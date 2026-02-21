@@ -21,8 +21,4 @@ exclude = [
   "docs\\.oasis-open\\.org",
   "www\\.oasis-open\\.org",
   "www\\.w3\\.org",
-  "urn:",
 ]
-
-# Gebruik GitHub token voor rate limits
-github_token = ""
