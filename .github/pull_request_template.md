@@ -2,15 +2,17 @@
 
 <!-- Wat wijzigt deze PR en waarom? -->
 
-## Type wijziging
+## Conventional Commits
 
-- [ ] Patch: typo, broken link, kleine correctie
-- [ ] Minor: content sync met upstream standaard, nieuw voorbeeld
-- [ ] Major: nieuwe/verwijderde skill, structuurwijziging
+Gebruik een van deze prefixes in de PR-titel zodat release-please de juiste
+versie-bump bepaalt:
+
+- `feat:` — nieuw feature → **minor** bump (1.2.0 → 1.3.0)
+- `fix:` — bugfix → **patch** bump (1.2.0 → 1.2.1)
+- `feat!:` of `fix!:` — breaking change → **major** bump (1.2.0 → 2.0.0)
+- `chore:`, `docs:`, `ci:`, `refactor:` — geen release
 
 ## Checklist
 
 - [ ] Skills laden correct (`claude --plugin-dir .`)
-- [ ] `plugin.json` versie bijgewerkt (indien nodig)
-- [ ] `CHANGELOG.md` bijgewerkt
 - [ ] Geen hardcoded paden of persoonlijke gegevens
