@@ -10,6 +10,7 @@ dev = ["pytest>=8.0", "responses>=0.25"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["scripts"]
 
 [tool.ruff]
 target-version = "py312"

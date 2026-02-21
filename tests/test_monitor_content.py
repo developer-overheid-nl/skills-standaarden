@@ -1,16 +1,10 @@
 """Tests voor scripts/monitor_content.py."""
 
 import hashlib
-import sys
-from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import call, patch
 
 import requests
 import responses
-
-# Voeg scripts/ toe aan sys.path zodat we monitor_content kunnen importeren
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-
 from monitor_content import (
     check_http_resource,
     detect_changes,
@@ -150,6 +144,23 @@ class TestDetectChanges:
         previous = {"state": {"body_sha256": "hash"}}
         assert detect_changes("https://example.com", current, previous) == []
 
+    def test_last_modified_zonder_body_change(self):
+        """Last-Modified change wordt gemeld als body hash niet gewijzigd is."""
+        current = {"body_sha256": "same", "last_modified": "Tue, 02 Jan 2024"}
+        previous = {"state": {"body_sha256": "same", "last_modified": "Mon, 01 Jan 2024"}}
+        changes = detect_changes("https://example.com", current, previous)
+        assert len(changes) == 1
+        assert "Last-Modified" in changes[0]
+
+    def test_last_modified_suppressie_bij_body_change(self):
+        """Last-Modified change wordt onderdrukt als body hash al gewijzigd is."""
+        current = {"body_sha256": "new", "last_modified": "Tue, 02 Jan 2024"}
+        previous = {"state": {"body_sha256": "old", "last_modified": "Mon, 01 Jan 2024"}}
+        changes = detect_changes("https://example.com", current, previous)
+        assert len(changes) == 1
+        assert "body hash" in changes[0]
+        assert not any("Last-Modified" in c for c in changes)
+
     def test_nieuwe_key_geen_change(self):
         """Key die niet in previous state zit triggert geen change."""
         current = {"latest_tag": "v1.0"}
@@ -207,7 +218,8 @@ class TestFetchWithRetry:
 
         resp = fetch_with_retry("https://test.com/page", max_retries=3)
         assert resp is None
-        assert mock_sleep.call_count == 2  # Laatste poging slaapt niet meer
+        # Exponential backoff: attempt 0 = 5s, attempt 1 = 10s, attempt 2 = geen sleep
+        assert mock_sleep.call_args_list == [call(5), call(10)]
 
     @responses.activate
     def test_404_geen_retry(self):
@@ -247,7 +259,8 @@ class TestCheckHttpResource:
         assert "500" in result["error"]
 
     @responses.activate
-    def test_geen_response(self):
+    @patch("monitor_content.time.sleep")
+    def test_geen_response(self, _mock_sleep):
         responses.add(
             responses.GET,
             "https://test.com/doc",
