@@ -32,6 +32,15 @@ jobs:
           SKILL_MAP[pub]="ls-pub"
 
           # Lees domeinen uit plugin.json
+          # NB: De 'upstreamSync' key ontbreekt momenteel in plugin.json.
+          # Deze workflow doet niets totdat die key wordt toegevoegd met het formaat:
+          #   "upstreamSync": {
+          #     "lastChecked": "2026-01-01",
+          #     "domains": {
+          #       "api": "API-Design-Rules@main",
+          #       "dk": "Digikoppeling-Architectuur@main"
+          #     }
+          #   }
           domains=$(python3 -c "
           import json
           data = json.load(open('.claude-plugin/plugin.json'))

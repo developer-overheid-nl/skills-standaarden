@@ -1,12 +1,12 @@
 # Identity & Access Management - Achtergrondinfo
 
-Deze referentiedocumentatie bevat aanvullende informatie over SAML legacy implementaties, het OIN-stelsel, en uitgebreide protocoldocumentatie voor OAuth en OpenID Connect. Voor praktische implementatie-informatie, zie [SKILL.md](SKILL.md).
+Deze referentiedocumentatie bevat aanvullende informatie over SAML-implementaties, het OIN-stelsel, en uitgebreide protocoldocumentatie voor OAuth en OpenID Connect. Voor praktische implementatie-informatie, zie [SKILL.md](SKILL.md).
 
 ---
 
 ## SAML
 
-Security Assertion Markup Language (SAML) is een legacy standaard voor federatieve authenticatie en autorisatie. Hoewel nieuwere implementaties de voorkeur geven aan OAuth 2.0 en OpenID Connect, is SAML nog steeds in gebruik bij:
+Security Assertion Markup Language (SAML) is samen met OpenID.NLGov (v1.0.1) **verplicht** als onderdeel van de gecombineerde vermelding ["Authenticatie-standaarden (OpenID.NLGov en SAML)"](https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden) op het Forum Standaardisatie (sinds 21-09-2023). Hoewel voor nieuwe implementaties OIDC NL GOV wordt aanbevolen, is SAML actief in gebruik bij:
 
 - **DigiD**: het authenticatiesysteem voor burgers
 - **eHerkenning**: het authenticatiesysteem voor bedrijven

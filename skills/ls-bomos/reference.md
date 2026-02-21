@@ -43,7 +43,7 @@ De operationele laag omvat het daadwerkelijke dagelijkse werk van standaardontwi
 
 ### 4. Implementatieondersteuning
 
-Deze laag ondersteunt organisaties bij de daadwerkelijke implementatie van de standaard. Hierbij is het cruciaal om een balans te vinden tussen activiteiten van de beheerorganisatie en die van commerciele partijen.
+Deze laag ondersteunt organisaties bij de daadwerkelijke implementatie van de standaard. Hierbij is het cruciaal om een balans te vinden tussen activiteiten van de beheerorganisatie en die van commerciële partijen.
 
 - **Helpdesk** - Minimale ondersteuning voor implementatievragen (laagdrempelig, altijd nodig)
 - **Opleidingen** - Zorgvuldig aanbieden: niet concurreren met de markt, alleen waar de markt niet voorziet
@@ -55,7 +55,7 @@ Deze laag ondersteunt organisaties bij de daadwerkelijke implementatie van de st
 
 De communicatielaag zorgt voor zichtbaarheid en betrokkenheid rond de standaard.
 
-- **Promotie** - Actieve promotie van de standaard bij potentiele gebruikers en stakeholders
+- **Promotie** - Actieve promotie van de standaard bij potentiële gebruikers en stakeholders
 - **Community management** - Opbouwen en onderhouden van een actieve community van gebruikers en ontwikkelaars
 - **Events** - Organiseren van bijeenkomsten, werkgroepen, en plugfests
 - **Distributie** - Publicatie en verspreiding van de standaard en bijbehorende documentatie
@@ -84,7 +84,7 @@ Een persoon kan meerdere rollen vervullen, en een rol kan door meerdere personen
 Elke standaard doorloopt een levenscyclus waarbij per fase andere accenten in het beheer worden gelegd:
 
 1. **Creatie/Ontwikkeling** - De standaard wordt ontworpen en de eerste versie wordt opgeleverd. Focus op inhoudelijke kwaliteit, brede consultatie, en draagvlak.
-2. **Introductie** - De standaard wordt gepubliceerd en bij de doelgroep geintroduceerd. Focus op promotie, early adopters, en implementatieondersteuning.
+2. **Introductie** - De standaard wordt gepubliceerd en bij de doelgroep geïntroduceerd. Focus op promotie, early adopters, en implementatieondersteuning.
 3. **Implementatie/Groei** - Brede adoptie komt op gang. Focus op helpdesk, opleidingen, validatie, en community building.
 4. **Volwassenheid** - De standaard is breed geadopteerd en stabiel. Focus op onderhoud, wijzigingsbeheer, en interoperabiliteit met aanpalende standaarden.
 5. **Uitfasering** - De standaard wordt vervangen of buiten gebruik gesteld. Focus op migratieondersteuning, communicatie, en archivering.
@@ -118,7 +118,7 @@ TOOI (Thesaurus en Ontologie voor OverheidsInformatie) gebruikt BOMOS als basis 
 
 ## Linked Data Module
 
-De Linked Data module biedt specifieke richtlijnen voor het beheer van semantische standaarden zoals ontologieen en vocabulaires. Deze module behandelt onderwerpen als URI-strategie, versiebeheer van ontologieen, en publicatie als Linked Data.
+De Linked Data module biedt specifieke richtlijnen voor het beheer van semantische standaarden zoals ontologieën en vocabulaires. Deze module behandelt onderwerpen als URI-strategie, versiebeheer van ontologieën, en publicatie als Linked Data.
 
 **Repository:** [BOMOS-LinkedData](https://github.com/logius-standaarden/BOMOS-LinkedData)
 

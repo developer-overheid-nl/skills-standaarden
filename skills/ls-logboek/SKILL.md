@@ -20,19 +20,27 @@ overheidsorganisaties. Het biedt een gestandaardiseerde manier om verwerkingsact
 en raadplegen, in lijn met de AVG/GDPR verantwoordingsplicht. De standaard is gebaseerd op
 OpenTelemetry en W3C Trace Context, waardoor verwerkingen over organisatiegrenzen heen traceerbaar zijn.
 
+## Versiemodel
+
+Net als andere Logius-standaarden kent Logboek Dataverwerkingen twee publicatiekanalen (vergelijkbaar met W3C):
+
+- **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
+- **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
+
+Logboek Dataverwerkingen heeft momenteel **alleen werkversies**. Er zijn nog geen vastgestelde versies gepubliceerd. Extensies ontlenen hun status aan de hoofdspecificatie. Logboek Dataverwerkingen is nog niet opgenomen op de lijst van het Forum Standaardisatie; de standaard is in ontwikkeling.
+
 ## Repositories
 
-| Repository                                                                                                                               | Beschrijving                               | Publicatie                                                                                           |
-|------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen)                                               | Hoofdspecificatie met REST API definitie   | [Lees online](https://logius-standaarden.github.io/logboek-dataverwerkingen/)                        |
-| [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding)                           | Introductie en achtergrond                 | [Lees online](https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/)              |
-| [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | Juridisch en beleidskader                  | [Lees online](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/) |
-| [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo)                                     | Docker demo-omgeving met meerdere services | -                                                                                                    |
-| [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen)                                                   | Extensie: leesoperaties op het logboek     | [Lees online](https://logius-standaarden.github.io/logboek-extensie-lezen/)                          |
-| [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513)                                               | Extensie: NEN 7513 (logging in de zorg)    | [Lees online](https://logius-standaarden.github.io/logboek-extensie-nen7513/)                        |
-| [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object)                                                 | Extensie: objectgegevens bij verwerkingen  | [Lees online](https://logius-standaarden.github.io/logboek-extensie-object/)                         |
-| [logboek-extensie-template](https://github.com/logius-standaarden/logboek-extensie-template)                                             | Template voor nieuwe extensies             | [Lees online](https://logius-standaarden.github.io/logboek-extensie-template/)                       |
-| [logboek-dataverwerkingen_Juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen_Juridisch-beleidskader) | Alternatieve juridisch beleidskader repo   | -                                                                                                    |
+| Repository | Beschrijving | Vastgesteld | Draft |
+|-----------|-------------|------------|-------|
+| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | Hoofdspecificatie met REST API definitie | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen/) |
+| [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding) | Introductie en achtergrond | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/) |
+| [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | Juridisch en beleidskader | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/) |
+| [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo) | Docker demo-omgeving met meerdere services | - | - |
+| [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | Extensie: leesoperaties op het logboek | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-lezen/) |
+| [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513) | Extensie: NEN 7513 (logging in de zorg) | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-nen7513/) |
+| [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object) | Extensie: objectgegevens bij verwerkingen | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-object/) |
+| [logboek-extensie-template](https://github.com/logius-standaarden/logboek-extensie-template) | Template voor nieuwe extensies | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-template/) |
 
 ## Architectuur
 
@@ -127,11 +135,11 @@ Resultaat:
 
 ## Protocol
 
-De standaard beveelt **OpenTelemetry Protocol (OTLP)** aan als transportprotocol voor het aanleveren van logregels aan het Logboek.
+De standaard schrijft geen specifiek transportprotocol voor, maar beveelt **OpenTelemetry Protocol (OTLP)** aan als transportprotocol voor het aanleveren van logregels aan het Logboek.
 
 **Vereisten:**
 
-- **TLS** is verplicht ondersteund voor alle communicatie met het Logboek.
+- Het Logboek **MOET** TLS kunnen afdwingen voor alle communicatie.
 - Het Logboek **MOET** elke schrijfactie bevestigen met een bevestigingsbericht (acknowledgement). De applicatie weet hierdoor zeker dat de logregel is opgeslagen.
 - OTLP ondersteunt zowel gRPC als HTTP/protobuf als transportlaag.
 - Bij gebruik van gRPC wordt bidirectionele streaming ondersteund voor hoge volumes.
@@ -186,7 +194,7 @@ resource = Resource.create({
 
 provider = TracerProvider(resource=resource)
 provider.add_span_processor(
-    BatchSpanProcessor(OTLPSpanExporter(endpoint="grpc://logboek:4317"))
+    BatchSpanProcessor(OTLPSpanExporter(endpoint="http://logboek:4317", insecure=True))
 )
 trace.set_tracer_provider(provider)
 tracer = trace.get_tracer("mijn-applicatie")
@@ -315,6 +323,8 @@ def verwerk_batch(bsn_lijst: list[str], verwerking_id: str):
 ### Error Logging met Exception Details
 
 ```python
+import traceback
+
 with tracer.start_as_current_span("verwerk-gegevens") as span:
     span.set_attribute("dpl.core.processing_activity_id", verwerking_url)
     span.set_attribute("dpl.core.data_subject_id", bsn)
@@ -346,3 +356,4 @@ Als een verplicht veld ontbreekt, MOET de software een standaardwaarde invullen 
 ## Achtergrondinfo
 
 Zie [reference.md](reference.md) voor de architectuurbeschrijving, W3C Trace Context details, Docker demo-omgeving, en extensie-details.
+Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.

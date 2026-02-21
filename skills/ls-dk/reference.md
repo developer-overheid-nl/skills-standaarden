@@ -20,7 +20,7 @@ De Digikoppeling-architectuur is gebaseerd op een drielagenmodel dat inhoud, log
 - **API Gateway**: Optionele component voor het ontsluiten van REST-API's. Biedt functionaliteit als rate limiting, caching en API-management.
 - **Message Broker / ESB**: Optionele intermediaire component voor berichtroutering, transformatie en orchestratie. Kan meerdere Digikoppeling-adapters aansturen.
 - **Digikoppeling Adapter**: De kerncomponent die het Digikoppeling-protocol implementeert. Vertaalt interne berichten naar het juiste koppelvlakformaat (ebMS2, WUS, REST-API) en vice versa.
-- **PKIoverheid Certificaten**: TLS-certificaten en optioneel signing/encryptie-certificaten uitgegeven onder de PKIoverheid-hierarchie. Worden gebruikt voor authenticatie, integriteit en vertrouwelijkheid.
+- **PKIoverheid Certificaten**: TLS-certificaten en optioneel signing/encryptie-certificaten uitgegeven onder de PKIoverheid-hiërarchie. Worden gebruikt voor authenticatie, integriteit en vertrouwelijkheid.
 - **Service Contract**: De formele beschrijving van de dienst. Bij WUS is dit een WSDL, bij ebMS2 een CPA (Collaboration Protocol Agreement), bij REST-API een OpenAPI-specificatie.
 
 ### Ontkoppelingsprincipe
@@ -42,7 +42,7 @@ De REST-API koppelvlakstandaard is de nieuwste toevoeging aan Digikoppeling en b
 - **HTTP-methoden**: GET (ophalen), POST (aanmaken), PUT (vervangen), PATCH (wijzigen), DELETE (verwijderen)
 - **Adressering**: RESTful URL-structuur met OIN in het endpoint of header
 - **Beveiliging**: TLS (transport), optioneel OAuth 2.0 voor autorisatie, PKIoverheid-certificaten voor authenticatie
-- **FSC-integratie**: Sinds 1 januari 2025 is het gebruik van Federated Service Connectivity (FSC) verplicht bij Digikoppeling REST-API. FSC verzorgt de federatieve autorisatie en logging van API-aanroepen tussen organisaties.
+- **FSC-integratie**: Het gebruik van Federated Service Connectivity (FSC) is verplicht bij Digikoppeling REST-API (vanaf v3.0.1). FSC verzorgt de federatieve autorisatie en logging van API-aanroepen tussen organisaties.
 
 REST-API is geschikt voor synchrone bevragingen, CRUD-operaties en scenario's waar snelheid en eenvoud belangrijk zijn.
 
@@ -96,7 +96,7 @@ De koppelvlakstandaard Grote Berichten biedt een oplossing voor het uitwisselen 
 #### PULL-variant (ontvanger haalt op bij verzender)
 
 1. Verzender plaatst het grote bestand op een beveiligde HTTP-server
-2. Verzender stuurt een regulier Digikoppeling-bericht (via WUS of ebMS2) met daarin de URL naar het bestand
+2. Verzender stuurt een regulier Digikoppeling-bericht (via REST-API, WUS of ebMS2) met daarin de URL naar het bestand
 3. Ontvanger ontvangt het bericht met de URL (de claim-check)
 4. Ontvanger downloadt het bestand via HTTPS van de opgegeven URL
 5. Bij onderbreking kan de download hervat worden dankzij BYTE-RANGE ondersteuning
@@ -112,7 +112,7 @@ De koppelvlakstandaard Grote Berichten biedt een oplossing voor het uitwisselen 
 
 - **Hervatbaarheid**: HTTP 1.1 BYTE-RANGE ondersteuning maakt het mogelijk om onderbroken transfers te hervatten zonder opnieuw te beginnen
 - **Beveiliging**: TLS voor transport, PKIoverheid-certificaten voor authenticatie, optioneel payload-encryptie
-- **Combinatie**: Grote Berichten is altijd een aanvulling op WUS of ebMS2 -- het reguliere bericht dat de claim-check bevat wordt via een van deze twee protocollen verstuurd
+- **Combinatie**: Grote Berichten is altijd een aanvulling op een ander koppelvlak (REST-API, WUS of ebMS2) -- het reguliere bericht dat de claim-check bevat wordt via een van deze protocollen verstuurd
 - **Geen maximum**: Er is geen bovengrens gedefinieerd voor de bestandsgrootte
 
 ## Beveiliging
@@ -177,7 +177,7 @@ gh api repos/logius-standaarden/Digikoppeling-Architectuur/commits --jq '.[:5] |
 gh api orgs/logius-standaarden/repos --paginate --jq '[.[] | select(.name | startswith("Digikoppeling"))] | sort_by(.name) | .[].name'
 
 # Inhoud van een document
-gh api repos/logius-standaarden/Digikoppeling-Architectuur/contents/ch01_Inleiding.md -H "Accept: application/vnd.github.raw"
+gh api repos/logius-standaarden/Digikoppeling-Architectuur/contents/1_dk_doel_document.md -H "Accept: application/vnd.github.raw"
 
 # Open issues over alle DK repos
 for repo in Digikoppeling-Architectuur Digikoppeling-Koppelvlakstandaard-REST-API Digikoppeling-Koppelvlakstandaard-ebMS2; do
@@ -187,3 +187,13 @@ done
 # OIN stelsel documentatie
 gh api repos/logius-standaarden/OIN-Stelsel/contents --jq '.[].name'
 ```
+
+## Gerelateerde Skills
+
+| Skill | Relatie |
+|-------|---------|
+| `/ls-fsc` | FSC is verplicht bij Digikoppeling REST-API (v3.0.1+) |
+| `/ls-iam` | OIN-Stelsel wordt gedeeld met IAM; OAuth/OIDC voor REST-API autorisatie |
+| `/ls-api` | REST-API koppelvlak is gebaseerd op de API Design Rules |
+| `/ls-pub` | ReSpec tooling voor Digikoppeling documentatie |
+| `/ls` | Overzicht alle standaarden |

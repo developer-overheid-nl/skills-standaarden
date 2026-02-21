@@ -10,6 +10,7 @@ Alle content in deze repo is in het **Nederlands**: skill descriptions, body tek
 - `skills/ls/SKILL.md` - Meta-skill (overzicht, routing)
 - `skills/ls-<domein>/SKILL.md` - Domein-skills (9 stuks)
 - `skills/ls-<domein>/reference.md` - Achtergrondinfo per domein (optioneel)
+- `skills/ls-<domein>/conflicts.md` - Bronconflicten en gemaakte keuzes per domein
 
 ## Conventies voor skills
 
@@ -33,6 +34,14 @@ Achtergrondkennis die niet direct nodig is voor code-generatie wordt verplaatst 
 - Handige commando's voor repo-exploratie
 
 De `SKILL.md` verwijst onderaan naar `reference.md` met een korte zin.
+
+### conflicts.md patroon
+Elk domein heeft een `conflicts.md` dat bronconflicten en bewuste keuzes documenteert:
+- Discrepanties tussen GitHub-tags en gepubliceerde versies op gitdocumentatie.logius.nl
+- Tegenstrijdige informatie tussen bronnen (bijv. Forum Standaardisatie vs. gitdocumentatie)
+- Bewuste keuzes met motivatie ("Keuze in SKILL.md" sectie)
+
+De conclusie-sectie heet altijd **"Keuze in SKILL.md"** en documenteert welke bron leidend is en wanneer het conflict opnieuw moet worden beoordeeld. De `SKILL.md` verwijst naar `conflicts.md` in de Achtergrondinfo-sectie.
 
 ### Description triggers
 Descriptions bevatten zowel Nederlandse als technische Engelse triggerwoorden zodat de skill bij relevante vragen wordt geactiveerd.

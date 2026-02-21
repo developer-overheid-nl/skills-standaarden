@@ -1,6 +1,6 @@
 ---
 name: ls-egov
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'Terugmelding', 'Terugmelden', 'Digimelding', 'basisfactuur', 'basisorder', 'e-procurement', 'inkoopstandaarden overheid', 'factuurstandaard', 'PEPPOLBIS', 'elektronisch bestellen'."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over 'Terugmelding', 'Terugmelden', 'Digimelding', 'basisfactuur', 'basisorder', 'e-procurement', 'inkoopstandaarden overheid', 'factuurstandaard', 'NLCIUS', 'Peppol BIS', 'PEPPOLBIS', 'elektronisch bestellen'."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -13,33 +13,37 @@ allowed-tools:
 
 # E-Government Services
 
-**Agent-instructie:** Deze skill helpt bij het implementeren van terugmeldingen op basisregistraties en e-facturatie voor de Rijksoverheid. Gebruik de Terugmelden-API (OpenAPI 3.1.0) voor meldingen. Basisfactuur Rijk volgt Peppol BIS 3 / NLCIUS.
+**Agent-instructie:** Deze skill helpt bij het implementeren van terugmeldingen op basisregistraties en e-facturatie voor de Rijksoverheid. Gebruik de Digimelding-Koppelvlakspecificatie voor meldingen. Basisfactuur Rijk volgt Peppol BIS 3 / NLCIUS.
 
 De E-Government standaarden omvatten diensten voor terugmelding op basisregistraties, Digimelding, en e-procurement (elektronisch bestellen en factureren) voor de Nederlandse overheid. Deze standaarden worden beheerd door Logius en vormen een essentieel onderdeel van de digitale overheidsdienstverlening.
 
+## Versiemodel
+
+Net als andere Logius-standaarden kennen deze standaarden twee publicatiekanalen (vergelijkbaar met W3C):
+
+- **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
+- **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
+
+De E-Government standaarden hebben momenteel **alleen werkversies**. Er zijn nog geen vastgestelde versies gepubliceerd.
+
 ## Repositories
 
-| Repository | Beschrijving | Publicatie |
-|-----------|-------------|-----------|
-| [Terugmelding](https://github.com/logius-standaarden/Terugmelding) | Standaard voor terugmelden op basisregistraties | [Lees online](https://logius-standaarden.github.io/Terugmelding/) |
-| [Terugmelden-API](https://github.com/logius-standaarden/Terugmelden-API) | REST API specificatie (OpenAPI 3.1.0) voor terugmelden | [Lees online](https://logius-standaarden.github.io/Terugmelden-API/) |
-| [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie) | Koppelvlakspecificatie voor Digimelding | [Lees online](https://logius-standaarden.github.io/Digimelding-Koppelvlakspecificatie/) |
-| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | Standaard basisfactuur voor de Rijksoverheid | [Lees online](https://logius-standaarden.github.io/basisfactuur-rijk/) |
-| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | Standaard basisorder voor de Rijksoverheid | [Lees online](https://logius-standaarden.github.io/basisorder-rijk/) |
-| [e-procurement](https://github.com/logius-standaarden/e-procurement) | Overkoepelende e-procurement standaarden | [Lees online](https://logius-standaarden.github.io/e-procurement/) |
+| Repository | Beschrijving | Vastgesteld | Draft |
+|-----------|-------------|------------|-------|
+| [Terugmelding](https://github.com/logius-standaarden/Terugmelding) | Standaard voor terugmelden op basisregistraties | - | [Draft](https://logius-standaarden.github.io/Terugmelding/) |
+| [Terugmelden-API](https://github.com/logius-standaarden/Terugmelden-API) | Werkrepository voor een toekomstige REST API koppelvlakspecificatie voor terugmelden (nog geen specificatie beschikbaar) | - | - |
+| [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie) | Koppelvlakspecificatie voor Digimelding | - | [Draft](https://logius-standaarden.github.io/Digimelding-Koppelvlakspecificatie/) |
+| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | Handreiking basisfactuur voor de Rijksoverheid | - | [Draft](https://logius-standaarden.github.io/basisfactuur-rijk/) |
+| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | Handreiking basisorder voor de Rijksoverheid | - | [Draft](https://logius-standaarden.github.io/basisorder-rijk/) |
+| [e-procurement](https://github.com/logius-standaarden/e-procurement) | Overkoepelende e-procurement standaarden | - | [Draft](https://logius-standaarden.github.io/e-procurement/) |
 
 ---
 
-## Terugmelden-API
+## Terugmelden-API (in ontwikkeling)
 
-De Terugmelden-API is een REST API gespecificeerd in **OpenAPI 3.1.0**. Deze API is gebaseerd op de Digimelding-functionaliteit en biedt een moderne interface voor het indienen en opvragen van terugmeldingen.
+De Terugmelden-API is een **beoogde** REST API voor het indienen en opvragen van terugmeldingen. De repository bevat nog geen uitgewerkte specificatie; de API is in conceptfase. De bestaande koppelvlakspecificatie voor terugmelden is de Digimelding-Koppelvlakspecificatie (SOAP/WUS).
 
-Kenmerken van de API:
-
-- RESTful architectuur conform de API Design Rules (ADR)
-- JSON-gebaseerde request/response berichten
-- OpenAPI 3.1.0 specificatie voor machineleesbare documentatie
-- Ondersteuning voor het aanmaken, opvragen en bijwerken van terugmeldingen
+> **Let op:** De onderstaande implementatievoorbeelden voor de REST API zijn **conceptueel/illustratief** en tonen hoe een toekomstige REST API eruit zou kunnen zien. Ze zijn niet gebaseerd op een gepubliceerde OpenAPI-specificatie.
 
 ---
 
@@ -101,6 +105,8 @@ E-Procurement (overkoepelend)
     └── UBL 2.1 Order
 ```
 
+**Forum Standaardisatie status:** NLCIUS is **verplicht** (['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/nlcius)). Peppol BIS is [**aanbevolen**](https://www.forumstandaardisatie.nl/open-standaarden/peppol-bis), niet verplicht. De overige e-government standaarden (Digimelding, Terugmelding, e-procurement) staan niet op de lijst.
+
 ---
 
 ## Implementatievoorbeelden
@@ -159,7 +165,7 @@ curl -X GET https://digimelding.example.com/api/v1/terugmeldingen/550e8400-e29b-
 import requests
 
 class DigimeldingClient:
-    """Client voor de Terugmelden-API (OpenAPI 3.1.0)."""
+    """Client voor de Terugmelden-API (conceptueel)."""
 
     def __init__(self, base_url: str, token: str):
         self.base_url = base_url
@@ -360,3 +366,4 @@ Bij afwijzing ontvangt de leverancier een e-mail met de specifieke ontbrekende v
 ## Achtergrondinfo
 
 Zie [reference.md](reference.md) voor kernbegrippen, annotatie-framework, best practices leveranciers, en e-procurement details.
+Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.

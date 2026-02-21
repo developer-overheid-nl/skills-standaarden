@@ -22,13 +22,13 @@ CloudEvents definieert de volgende datatypes voor attributen:
 - **NL GOV profiel** - Nederlandse aanscherping met verplichte attributen en URN-naamgeving
 - **Notificatieservice** - Dienst die events ontvangt van bronnen en doorstuurt naar abonnees
 - **Abonnement** - Registratie van een afnemer om specifieke events te ontvangen
-- **Event source** - De bron die een gebeurtenis genereert (geidentificeerd via OIN in URN-notatie)
+- **Event source** - De bron die een gebeurtenis genereert (geïdentificeerd via OIN in URN-notatie)
 - **Event subject** - Het onderwerp waarop de event betrekking heeft (bijv. BSN, zaak-ID)
 - **Pub/Sub** - Publish/Subscribe patroon voor losse koppeling tussen bron en afnemer
 - **Webhook** - HTTP callback voor het afleveren van events bij abonnees (push-model)
 - **Claim Check Pattern** - Patroon waarbij de payload extern wordt opgeslagen en het event alleen een referentie bevat
 
-## Aanbevolen technologieen
+## Aanbevolen technologieën
 
 | Technologie | Type | Toelichting |
 |-------------|------|-------------|
@@ -37,7 +37,7 @@ CloudEvents definieert de volgende datatypes voor attributen:
 | Apache Kafka | Event streaming | Geschikt voor hoge volumes en event replay |
 | NATS JetStream | Lightweight messaging | Lichtgewicht alternatief met persistence |
 
-## Niet aanbevolen technologieen
+## Niet aanbevolen technologieën
 
 | Technologie | Reden |
 |-------------|-------|
@@ -90,4 +90,5 @@ gh api repos/logius-standaarden/Notificatieservices/contents/openapi.yaml --jq '
 | `/ls-api` | Notificatie-APIs volgen de API Design Rules |
 | `/ls-fsc` | FSC kan CloudEvents transporteren |
 | `/ls-logboek` | Events kunnen verwerkingen triggeren die gelogd worden |
+| `/ls-pub` | ReSpec tooling voor notificatiedocumentatie |
 | `/ls` | Overzicht alle standaarden |

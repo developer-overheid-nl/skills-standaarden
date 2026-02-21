@@ -15,29 +15,43 @@ allowed-tools:
 
 **Agent-instructie:** Deze skill helpt bij het implementeren van Digikoppeling koppelvlakken. Gebruik de beslisboom om het juiste profiel te kiezen. De implementatievoorbeelden bevatten werkende code voor alle vier koppelvlakstandaarden.
 
-Digikoppeling is de Nederlandse standaard voor beveiligde elektronische gegevensuitwisseling tussen overheidsorganisaties. Het definieert de architectuur en koppelvlakspecificaties waarmee overheden op een gestandaardiseerde, veilige en betrouwbare manier berichten en gegevens uitwisselen. Digikoppeling is opgenomen op de "pas toe of leg uit"-lijst van het Forum Standaardisatie.
+Digikoppeling is de Nederlandse standaard voor beveiligde elektronische gegevensuitwisseling tussen overheidsorganisaties. Het definieert de architectuur en koppelvlakspecificaties waarmee overheden op een gestandaardiseerde, veilige en betrouwbare manier berichten en gegevens uitwisselen. Digikoppeling is opgenomen op de ["pas toe of leg uit"](https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling)-lijst van het Forum Standaardisatie.
+
+## Versiemodel
+
+Net als andere Logius-standaarden kent Digikoppeling twee publicatiekanalen:
+
+- **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
+- **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
 
 ## Repositories
 
-| Repository | Beschrijving | Publicatie |
-|-----------|-------------|-----------|
-| [Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur) | Overkoepelende architectuurbeschrijving | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Architectuur/) |
-| [Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API) | REST-API koppelvlakspecificatie | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API/) |
-| [Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2) | ebMS2 koppelvlakspecificatie | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/) |
-| [Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS) | WUS (WSDL/UDDI/SOAP) koppelvlakspecificatie | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS/) |
-| [Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB) | Grote Berichten koppelvlakspecificatie | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/) |
-| [Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften) | Beveiligingsstandaarden en -voorschriften | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/) |
-| [Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie) | Identificatie en authenticatie | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/) |
-| [Digikoppeling-Gebruik-en-achtergrond-certificaten](https://github.com/logius-standaarden/Digikoppeling-Gebruik-en-achtergrond-certificaten) | Gebruik van PKIoverheid-certificaten | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Gebruik-en-achtergrond-certificaten/) |
-| [Digikoppeling-Handreiking-Adressering-en-Routering](https://github.com/logius-standaarden/Digikoppeling-Handreiking-Adressering-en-Routering) | Handreiking voor adressering en routering | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Handreiking-Adressering-en-Routering/) |
-| [Digikoppeling-Best-Practices-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-ebMS2) | Best practices voor ebMS2 implementatie | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-ebMS2/) |
-| [Digikoppeling-Best-Practices-WUS](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-WUS) | Best practices voor WUS implementatie | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-WUS/) |
-| [Digikoppeling-Best-Practices-GB](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-GB) | Best practices voor Grote Berichten | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-GB/) |
-| [Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance](https://github.com/logius-standaarden/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance) | Overzicht documentatie en compliance | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance/) |
-| [Digikoppeling-Wat-is-Digikoppeling](https://github.com/logius-standaarden/Digikoppeling-Wat-is-Digikoppeling) | Introductie en uitleg | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Wat-is-Digikoppeling/) |
-| [Digikoppeling-Algemeen](https://github.com/logius-standaarden/Digikoppeling-Algemeen) | Algemene informatie en bronbestanden | - |
-| [Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel) | Beheermodel voor Digikoppeling | [Lees online](https://logius-standaarden.github.io/Digikoppeling-Beheermodel/) |
-| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Organisatie Identificatie Nummer stelsel | [Lees online](https://logius-standaarden.github.io/OIN-Stelsel/) |
+### Kernspecificaties (met vastgestelde versies)
+
+| Repository | Beschrijving | Vastgesteld | Draft |
+|-----------|-------------|------------|-------|
+| [Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur) | Overkoepelende architectuurbeschrijving | [v2.1.1](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Architectuur/) |
+| [Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API) | REST-API koppelvlakspecificatie | [v3.0.1](https://gitdocumentatie.logius.nl/publicatie/dk/restapi/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API/) |
+| [Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2) | ebMS2 koppelvlakspecificatie | [v3.3.2](https://gitdocumentatie.logius.nl/publicatie/dk/ebms/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/) |
+| [Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS) | WUS (WSDL/UDDI/SOAP) koppelvlakspecificatie | [v3.8.1](https://gitdocumentatie.logius.nl/publicatie/dk/wus/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS/) |
+| [Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB) | Grote Berichten koppelvlakspecificatie | [v3.8.1](https://gitdocumentatie.logius.nl/publicatie/dk/gb/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/) |
+| [Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften) | Beveiligingsstandaarden en -voorschriften | [v2.0.1](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/) |
+| [Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie) | Identificatie en authenticatie | [v1.5.0](https://gitdocumentatie.logius.nl/publicatie/dk/idauth/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/) |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Organisatie Identificatie Nummer stelsel | [v2.2.1](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | [Draft](https://logius-standaarden.github.io/OIN-Stelsel/) |
+| [Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel) | Beheermodel voor Digikoppeling | [v1.8](https://gitdocumentatie.logius.nl/publicatie/dk/beheer/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Beheermodel/) |
+
+### Aanvullende documenten
+
+| Repository | Beschrijving | Vastgesteld | Draft |
+|-----------|-------------|------------|-------|
+| [Digikoppeling-Gebruik-en-achtergrond-certificaten](https://github.com/logius-standaarden/Digikoppeling-Gebruik-en-achtergrond-certificaten) | Gebruik van PKIoverheid-certificaten | [v1.6.3](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Gebruik-en-achtergrond-certificaten/) |
+| [Digikoppeling-Handreiking-Adressering-en-Routering](https://github.com/logius-standaarden/Digikoppeling-Handreiking-Adressering-en-Routering) | Handreiking voor adressering en routering | [v1.1.0](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Handreiking-Adressering-en-Routering/) |
+| [Digikoppeling-Best-Practices-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-ebMS2) | Best practices voor ebMS2 implementatie | [v3.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-ebMS2/) |
+| [Digikoppeling-Best-Practices-WUS](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-WUS) | Best practices voor WUS implementatie | [v1.10.2](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-WUS/) |
+| [Digikoppeling-Best-Practices-GB](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-GB) | Best practices voor Grote Berichten | [v3.2.0](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-GB/) |
+| [Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance](https://github.com/logius-standaarden/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance) | Overzicht documentatie en compliance | [v1.12.2](https://gitdocumentatie.logius.nl/publicatie/dk/actueel/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance/) |
+| [Digikoppeling-Wat-is-Digikoppeling](https://github.com/logius-standaarden/Digikoppeling-Wat-is-Digikoppeling) | Introductie en uitleg | [v1.1.2](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Wat-is-Digikoppeling/) |
+| [Digikoppeling-Algemeen](https://github.com/logius-standaarden/Digikoppeling-Algemeen) | Digikoppeling Roadmap | [v2024-2025](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Algemeen/) |
 
 ## Profielkeuze
 
@@ -45,12 +59,12 @@ De keuze voor het juiste Digikoppeling-profiel hangt af van de functionele en ni
 
 ```
 Berichtgrootte > 20 MB?
-  JA  --> Grote Berichten (aanvullend op WUS of ebMS2)
+  JA  --> Grote Berichten (aanvullend op REST-API, WUS of ebMS2)
   NEE --> Ga verder
 
 Is snelheid/eenvoud belangrijk en past een synchrone request/response?
   JA  --> Is een REST-API beschikbaar/gewenst?
-            JA  --> REST-API profiel (met FSC sinds 1/1/2025)
+            JA  --> REST-API profiel (FSC verplicht, zie /ls-fsc)
             NEE --> WUS profiel (2W-be)
   NEE --> Ga verder
 
@@ -59,7 +73,7 @@ Is betrouwbare (reliable) aflevering vereist?
   NEE --> ebMS2 best-effort profiel (osb-be)
 
 Gaat het bericht via een niet-vertrouwde intermediair?
-  JA  --> Kies het signed (-S) of signed+encrypted (-SE/-E) variant van het gekozen profiel
+  JA  --> Kies de signed (-S) of signed+encrypted (-SE/-E) variant van het gekozen profiel
   NEE --> Basisprofiel volstaat
 ```
 
@@ -88,7 +102,7 @@ Gaat het bericht via een niet-vertrouwde intermediair?
 ### REST-API Koppelvlak met OIN (Python/FastAPI)
 
 ```python
-from fastapi import FastAPI, Request, Response, HTTPException
+from fastapi import FastAPI, Request, HTTPException
 from fastapi.responses import JSONResponse
 
 app = FastAPI(
@@ -138,7 +152,6 @@ async def problem_json_handler(request: Request, exc: HTTPException):
 
 ```python
 from zeep import Client
-from zeep.wsse.username import UsernameToken
 from zeep.transports import Transport
 from requests import Session
 
@@ -197,7 +210,8 @@ print(f"Naam: {response.Naam}")
 <?xml version="1.0" encoding="UTF-8"?>
 <soapenv:Envelope
     xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-    xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd">
+    xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
   <soapenv:Header>
     <eb:MessageHeader soapenv:mustUnderstand="1" eb:version="2.0">
       <eb:From>
@@ -345,4 +359,4 @@ Bij het profiel `osb-rm` gelden de volgende retry-regels:
 
 ## Achtergrondinfo
 
-Zie [reference.md](reference.md) voor de architectuur, beveiligingsstandaarden, en gedetailleerde protocol-beschrijvingen.
+Zie [reference.md](reference.md) voor de architectuur, beveiligingsstandaarden, en gedetailleerde protocol-beschrijvingen. Zie [conflicts.md](conflicts.md) voor bekende discrepanties tussen GitHub-tags en gepubliceerde versies.

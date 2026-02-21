@@ -8,7 +8,7 @@ FSC kent een componentmodel waarin organisaties (Peers) via proxies en managers 
 
 ### Peer
 
-Een **Peer** is een actor (organisatie) die deelneemt aan het FSC-netwerk. Een Peer kan services aanbieden (provider) en/of afnemen (consumer). Elke Peer wordt uniek geidentificeerd door een **PeerID**, afgeleid uit het subject van het X.509-certificaat dat de Peer gebruikt voor mTLS-verbindingen.
+Een **Peer** is een actor (organisatie) die deelneemt aan het FSC-netwerk. Een Peer kan services aanbieden (provider) en/of afnemen (consumer). Elke Peer wordt uniek geïdentificeerd door een **PeerID**, afgeleid uit het subject van het X.509-certificaat dat de Peer gebruikt voor mTLS-verbindingen.
 
 ### Group
 
@@ -121,6 +121,36 @@ curl -s --cert client.pem --key client-key.pem --cacert ca.pem \
 # Services opvragen bij Directory
 curl -s --cert client.pem --key client-key.pem --cacert ca.pem \
   https://directory.example.nl:8443/services | jq .
+```
+
+## Retry Strategie
+
+```python
+import time
+
+def call_service_via_fsc(service_name: str, path: str, max_retries: int = 3):
+    """Roep een FSC service aan met retry bij tijdelijke fouten."""
+    for attempt in range(max_retries):
+        response = outway.proxy_request(service_name, path)
+
+        error_code = response.headers.get("Fsc-Error-Code")
+        if not error_code:
+            return response  # Succes of applicatie-error
+
+        if error_code in ("ERROR_CODE_ACCESS_TOKEN_EXPIRED", "ERROR_CODE_ACCESS_TOKEN_INVALID"):
+            # Token vernieuwen en opnieuw proberen
+            token_cache.pop(service_name, None)
+            continue
+
+        if error_code in ("ERROR_CODE_SERVICE_UNREACHABLE", "ERROR_CODE_TRANSACTION_LOG_WRITE_ERROR"):
+            # Tijdelijke fout - exponential backoff
+            time.sleep(min(2 ** attempt * 5, 60))
+            continue
+
+        # Permanente fouten niet opnieuw proberen
+        break
+
+    return response
 ```
 
 ## Gerelateerde Skills
