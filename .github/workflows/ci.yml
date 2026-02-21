@@ -127,6 +127,17 @@ jobs:
       - name: Ruff format check
         run: uvx ruff@0.9.7 format --check scripts/ $( [ -d tests ] && echo tests/ )
 
+  test-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Installeer uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Draai tests
+        run: uv run --group dev pytest -v
+
   lint-markdown:
     runs-on: ubuntu-latest
     steps:

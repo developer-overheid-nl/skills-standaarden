@@ -5,6 +5,13 @@ description = "Logius Standaarden Claude Code Plugin - Nederlandse overheidsstan
 requires-python = ">=3.12"
 dependencies = ["requests>=2.31.0"]
 
+[dependency-groups]
+dev = ["pytest>=8.0", "responses>=0.25"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["scripts"]
+
 [tool.ruff]
 target-version = "py312"
 line-length = 100
