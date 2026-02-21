@@ -186,15 +186,15 @@ def detect_changes(
 
     prev_state = previous.get("state", {})
 
-    # GitHub repo specifiek
-    if "last_commit_sha" in current:
-        if current.get("last_commit_sha") != prev_state.get("last_commit_sha"):
+    # GitHub repo specifiek - alleen vergelijken als key ook in vorige state bestond
+    if "last_commit_sha" in current and "last_commit_sha" in prev_state:
+        if current["last_commit_sha"] != prev_state["last_commit_sha"]:
             changes.append(
                 f"Nieuwe commit: {current['last_commit_sha'][:7]} "
                 f"({current.get('last_commit_date', 'onbekend')})"
             )
-    if "latest_tag" in current:
-        if current.get("latest_tag") != prev_state.get("latest_tag"):
+    if "latest_tag" in current and "latest_tag" in prev_state:
+        if current["latest_tag"] != prev_state["latest_tag"]:
             changes.append(
                 f"Nieuwe tag: {current['latest_tag']} "
                 f"(was: {prev_state.get('latest_tag', 'geen')})"
@@ -202,16 +202,16 @@ def detect_changes(
     if current.get("archived") and not prev_state.get("archived"):
         changes.append("Repository is gearchiveerd")
 
-    # HTTP resources
-    if "body_sha256" in current:
-        if current.get("body_sha256") != prev_state.get("body_sha256"):
+    # HTTP resources - alleen vergelijken als de key ook in de vorige state bestond
+    if "body_sha256" in current and "body_sha256" in prev_state:
+        if current["body_sha256"] != prev_state["body_sha256"]:
             changes.append("Content is gewijzigd (body hash verschilt)")
-    if "etag" in current:
-        if current.get("etag") != prev_state.get("etag"):
+    if "etag" in current and "etag" in prev_state:
+        if current["etag"] != prev_state["etag"]:
             if "body_sha256" not in current:  # Alleen als body hash niet al een change gaf
                 changes.append("ETag gewijzigd")
-    if "last_modified" in current:
-        if current.get("last_modified") != prev_state.get("last_modified"):
+    if "last_modified" in current and "last_modified" in prev_state:
+        if current["last_modified"] != prev_state["last_modified"]:
             if "body_sha256" not in current:
                 changes.append("Last-Modified gewijzigd")
 
@@ -252,14 +252,23 @@ def manage_issue(
                 search_title,
                 "--json",
                 "number,title",
-                "--jq",
-                f'[.[] | select(.title | startswith("{search_title[:40]}"))][0].number // empty',
             ],
             capture_output=True,
             text=True,
         )
 
-        existing_number = result.stdout.strip()
+        # Zoek in de resultaten naar een issue met matchende titel-prefix
+        existing_number = ""
+        if result.returncode == 0 and result.stdout.strip():
+            try:
+                issues = json.loads(result.stdout)
+                prefix = title[:40]
+                for issue in issues:
+                    if issue.get("title", "").startswith(prefix):
+                        existing_number = str(issue["number"])
+                        break
+            except (json.JSONDecodeError, KeyError):
+                pass
 
         if existing_number:
             # Update bestaande issue met comment
@@ -364,7 +373,7 @@ def main() -> None:
                             f"- **Fout:** {current['error']}\n\n"
                             f"Controleer of de URL nog correct is."
                         ),
-                        "labels": "monitoring,broken-link",
+                        "labels": "monitoring,content-changed",
                     }
                 )
             continue

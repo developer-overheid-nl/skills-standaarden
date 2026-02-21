@@ -86,6 +86,21 @@ def clean_url(url: str) -> str:
     return url
 
 
+# Regex om GitHub repo-URLs te normaliseren naar base repo pad
+_GITHUB_REPO_BASE_RE = re.compile(
+    r"(https://github\.com/logius-standaarden/[A-Za-z0-9._-]+)"
+    r"(?:/(?:tags|tree|blob|issues|pulls|releases|actions|wiki|discussions|commit|compare)(?:/.*)?)?$"
+)
+
+
+def normalize_github_url(url: str) -> str:
+    """Normaliseer GitHub URL naar base repo pad (verwijder /tags, /tree/main, etc.)."""
+    match = _GITHUB_REPO_BASE_RE.match(url)
+    if match:
+        return match.group(1)
+    return url
+
+
 def extract_urls_from_file(
     filepath: Path,
 ) -> list[dict]:
@@ -111,6 +126,10 @@ def extract_urls_from_file(
         url_type = classify_url(url)
         if url_type is None:
             continue
+
+        # Normaliseer GitHub URLs naar base repo pad
+        if url_type == "github_repo":
+            url = normalize_github_url(url)
 
         results.append(
             {

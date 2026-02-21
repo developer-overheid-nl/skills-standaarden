@@ -5,6 +5,10 @@ on:
     - cron: '0 7 * * *'  # dagelijks 07:00 UTC
   workflow_dispatch:
 
+concurrency:
+  group: monitoring-content
+  cancel-in-progress: false
+
 permissions:
   contents: write
   issues: write
@@ -27,6 +31,14 @@ jobs:
             --skills-dir skills/ \
             --output /tmp/manifest.json \
             --format json
+
+      - name: Zorg dat labels bestaan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "monitoring" --color "0E8A16" --description "Automatische monitoring" --force 2>/dev/null || true
+          gh label create "content-changed" --color "FBCA04" --description "Content wijziging gedetecteerd" --force 2>/dev/null || true
+          gh label create "broken-link" --color "D93F0B" --description "Broken link gedetecteerd" --force 2>/dev/null || true
 
       - name: Controleer content wijzigingen
         env:

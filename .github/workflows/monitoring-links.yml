@@ -5,6 +5,10 @@ on:
     - cron: '0 6 * * *'  # dagelijks 06:00 UTC
   workflow_dispatch:
 
+concurrency:
+  group: monitoring-links
+  cancel-in-progress: false
+
 permissions:
   contents: read
   issues: write
@@ -24,6 +28,13 @@ jobs:
             --skills-dir skills/ \
             --output /tmp/urls.txt \
             --format lychee
+
+      - name: Zorg dat labels bestaan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "monitoring" --color "0E8A16" --description "Automatische monitoring" --force 2>/dev/null || true
+          gh label create "broken-link" --color "D93F0B" --description "Broken link gedetecteerd" --force 2>/dev/null || true
 
       - name: Link check met Lychee
         id: lychee
@@ -53,27 +64,31 @@ jobs:
             --jq '.[0].number // empty' 2>/dev/null || true)
 
           title="[monitoring] Broken links gedetecteerd ($(date -I))"
-          body="## Broken Links Rapport
 
-          Automatische link check van $(date -I) heeft broken links gevonden.
-
-          <details>
-          <summary>Lychee rapport</summary>
-
-          $(cat /tmp/lychee-report.md)
-
-          </details>
-
-          **Actie:** controleer de broken links en pas SKILL.md/reference.md aan indien nodig."
+          # Schrijf issue body naar bestand om shell-expansie van rapport-inhoud te voorkomen
+          {
+            echo "## Broken Links Rapport"
+            echo ""
+            echo "Automatische link check van $(date -I) heeft broken links gevonden."
+            echo ""
+            echo "<details>"
+            echo "<summary>Lychee rapport</summary>"
+            echo ""
+            cat /tmp/lychee-report.md
+            echo ""
+            echo "</details>"
+            echo ""
+            echo "**Actie:** controleer de broken links en pas SKILL.md/reference.md aan indien nodig."
+          } > /tmp/issue-body.md
 
           if [ -n "$existing" ]; then
             echo "Update bestaande issue #$existing"
-            gh issue comment "$existing" --body "$body"
+            gh issue comment "$existing" --body-file /tmp/issue-body.md
           else
             echo "Maak nieuwe issue aan"
             gh issue create \
               --title "$title" \
-              --body "$body" \
+              --body-file /tmp/issue-body.md \
               --label "monitoring,broken-link"
           fi
 
