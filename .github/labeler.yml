@@ -1,0 +1,40 @@
+skills:
+  - changed-files:
+      - any-glob-to-any-file: 'skills/**'
+
+plugin:
+  - changed-files:
+      - any-glob-to-any-file: '.claude-plugin/**'
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/workflows/ci.yml'
+          - '.github/workflows/labeler.yml'
+          - '.github/workflows/release-please.yml'
+          - '.github/dependabot.yml'
+          - '.github/labeler.yml'
+          - '.github/pull_request_template.md'
+          - '.pre-commit-config.yaml'
+          - '.github/CODEOWNERS'
+
+monitoring:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'scripts/monitor_content.py'
+          - '.github/monitoring/**'
+          - '.github/workflows/monitoring-*.yml'
+
+python:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'scripts/**/*.py'
+          - 'tests/**/*.py'
+          - 'pyproject.toml'
+          - 'uv.lock'
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '*.md'
+          - 'docs/**/*.md'
