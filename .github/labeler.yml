@@ -16,6 +16,7 @@ ci:
           - '.github/labeler.yml'
           - '.github/pull_request_template.md'
           - '.pre-commit-config.yaml'
+          - '.github/CODEOWNERS'
 
 monitoring:
   - changed-files:
@@ -30,6 +31,7 @@ python:
           - 'scripts/**/*.py'
           - 'tests/**/*.py'
           - 'pyproject.toml'
+          - 'uv.lock'
 
 documentation:
   - changed-files:
