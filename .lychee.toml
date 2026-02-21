@@ -1,0 +1,24 @@
+# Lychee link checker configuratie voor Logius Standaarden Plugin
+# Documentatie: https://github.com/lycheeverse/lychee
+
+# Retries en timeouts
+max_retries = 3
+retry_wait_time = 10
+timeout = 30
+max_concurrency = 8
+
+# Accepteer 200-299 + 403 (gitdocumentatie.logius.nl directory listings)
+accept = [200, 201, 202, 203, 204, 206, 207, 301, 302, 403]
+
+# Exclusiepatronen: voorbeeld-URLs, namespaces, lokale adressen
+exclude = [
+  "example\\.com",
+  "example\\.nl",
+  "example\\.org",
+  "localhost",
+  "127\\.0\\.0\\.1",
+  "schemas\\.xmlsoap\\.org",
+  "docs\\.oasis-open\\.org",
+  "www\\.oasis-open\\.org",
+  "www\\.w3\\.org",
+]

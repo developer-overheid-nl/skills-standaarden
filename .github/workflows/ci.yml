@@ -96,6 +96,23 @@ jobs:
           fi
           echo "Geen hardcoded paden gevonden"
 
+      - name: Installeer uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Smoke test URL-extractie (verwacht minstens 50 URLs)
+        run: |
+          uv run python scripts/extract_urls.py \
+            --skills-dir skills/ \
+            --output /tmp/urls.txt \
+            --format lychee
+          count=$(wc -l < /tmp/urls.txt)
+          echo "Gevonden: $count URLs"
+          if [ "$count" -lt 50 ]; then
+            echo "FOUT: slechts $count URLs gevonden (verwacht minstens 50)"
+            exit 1
+          fi
+          echo "URL-extractie smoke test geslaagd"
+
   lint-markdown:
     runs-on: ubuntu-latest
     steps:

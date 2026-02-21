@@ -1,0 +1,74 @@
+name: Monitoring - Content Changes
+
+on:
+  schedule:
+    - cron: '0 7 * * *'  # dagelijks 07:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: monitoring-content
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Installeer uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Installeer dependencies
+        run: uv sync
+
+      - name: Genereer URL manifest
+        run: |
+          uv run python scripts/extract_urls.py \
+            --skills-dir skills/ \
+            --output /tmp/manifest.json \
+            --format json
+
+      - name: Zorg dat labels bestaan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "monitoring" --color "0E8A16" --description "Automatische monitoring" --force 2>/dev/null || true
+          gh label create "content-changed" --color "FBCA04" --description "Content wijziging gedetecteerd" --force 2>/dev/null || true
+
+      - name: Controleer content wijzigingen
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          uv run python scripts/monitor_content.py \
+            --manifest /tmp/manifest.json \
+            --checksums .github/monitoring/checksums.json
+
+      - name: Commit checksums state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet .github/monitoring/checksums.json 2>/dev/null; then
+            echo "Geen wijzigingen in checksums.json"
+            exit 0
+          fi
+
+          git add .github/monitoring/checksums.json
+          git commit -m "Update monitoring checksums ($(date -I))"
+
+          # Retry push bij concurrent updates (rebase lokale commit op remote)
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Push geslaagd"
+              exit 0
+            fi
+            echo "Push poging $attempt mislukt, pull --rebase en opnieuw..."
+            git pull --rebase
+          done
+          echo "Push mislukt na 3 pogingen"
+          exit 1
