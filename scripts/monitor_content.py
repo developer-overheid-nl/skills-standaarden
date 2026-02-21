@@ -15,7 +15,6 @@ import json
 import os
 import re
 import subprocess
-import sys
 import time
 from pathlib import Path
 
@@ -49,7 +48,7 @@ def fetch_with_retry(
         headers = {}
     headers.setdefault("User-Agent", USER_AGENT)
     for attempt in range(max_retries):
-        delay = min(5 * (2 ** attempt), 60)
+        delay = min(5 * (2**attempt), 60)
         try:
             resp = requests.get(url, headers=headers, timeout=30)
             if resp.status_code in (429, 503):
@@ -93,9 +92,7 @@ def check_github_repo(url: str) -> dict:
     result: dict = {}
 
     # Haal repo info op (inclusief archived status)
-    resp = fetch_with_retry(
-        f"{GITHUB_API}/repos/{repo_path}", headers=github_headers()
-    )
+    resp = fetch_with_retry(f"{GITHUB_API}/repos/{repo_path}", headers=github_headers())
     if resp and resp.status_code == 200:
         data = resp.json()
         result["archived"] = data.get("archived", False)
@@ -158,9 +155,7 @@ def check_url(entry: dict) -> dict:
 
     if url_type == "github_repo":
         return check_github_repo(url)
-    elif url_type in ("published_doc", "draft_doc"):
-        return check_http_resource(url, hash_body=True)
-    elif url_type == "forum":
+    elif url_type in ("published_doc", "draft_doc") or url_type == "forum":
         return check_http_resource(url, hash_body=True)
     else:
         return {"error": f"Onbekend type: {url_type}"}
@@ -176,9 +171,7 @@ def load_checksums(path: Path) -> dict:
 def save_checksums(path: Path, data: dict) -> None:
     """Sla state op naar checksums.json."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
-    )
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def detect_changes(
@@ -199,35 +192,49 @@ def detect_changes(
     prev_state = previous.get("state", {})
 
     # GitHub repo specifiek - alleen vergelijken als key ook in vorige state bestond
-    if "last_commit_sha" in current and "last_commit_sha" in prev_state:
-        if current["last_commit_sha"] != prev_state["last_commit_sha"]:
-            changes.append(
-                f"Nieuwe commit: {current['last_commit_sha'][:7]} "
-                f"({current.get('last_commit_date', 'onbekend')})"
-            )
-    if "latest_tag" in current and "latest_tag" in prev_state:
-        if current["latest_tag"] != prev_state["latest_tag"]:
-            changes.append(
-                f"Nieuwe tag: {current['latest_tag']} "
-                f"(was: {prev_state.get('latest_tag', 'geen')})"
-            )
+    if (
+        "last_commit_sha" in current
+        and "last_commit_sha" in prev_state
+        and current["last_commit_sha"] != prev_state["last_commit_sha"]
+    ):
+        changes.append(
+            f"Nieuwe commit: {current['last_commit_sha'][:7]} "
+            f"({current.get('last_commit_date', 'onbekend')})"
+        )
+    if (
+        "latest_tag" in current
+        and "latest_tag" in prev_state
+        and current["latest_tag"] != prev_state["latest_tag"]
+    ):
+        changes.append(
+            f"Nieuwe tag: {current['latest_tag']} (was: {prev_state.get('latest_tag', 'geen')})"
+        )
     if current.get("archived") and not prev_state.get("archived"):
         changes.append("Repository is gearchiveerd")
 
     # HTTP resources - alleen vergelijken als de key ook in de vorige state bestond
     body_hash_changed = False
-    if "body_sha256" in current and "body_sha256" in prev_state:
-        if current["body_sha256"] != prev_state["body_sha256"]:
-            changes.append("Content is gewijzigd (body hash verschilt)")
-            body_hash_changed = True
-    if "etag" in current and "etag" in prev_state:
-        if current["etag"] != prev_state["etag"]:
-            if not body_hash_changed:  # Alleen als body hash niet al een change gaf
-                changes.append("ETag gewijzigd")
-    if "last_modified" in current and "last_modified" in prev_state:
-        if current["last_modified"] != prev_state["last_modified"]:
-            if not body_hash_changed:
-                changes.append("Last-Modified gewijzigd")
+    if (
+        "body_sha256" in current
+        and "body_sha256" in prev_state
+        and current["body_sha256"] != prev_state["body_sha256"]
+    ):
+        changes.append("Content is gewijzigd (body hash verschilt)")
+        body_hash_changed = True
+    if (
+        "etag" in current
+        and "etag" in prev_state
+        and current["etag"] != prev_state["etag"]
+        and not body_hash_changed
+    ):
+        changes.append("ETag gewijzigd")
+    if (
+        "last_modified" in current
+        and "last_modified" in prev_state
+        and current["last_modified"] != prev_state["last_modified"]
+        and not body_hash_changed
+    ):
+        changes.append("Last-Modified gewijzigd")
 
     return changes
 
@@ -409,7 +416,7 @@ def main() -> None:
             change_text = "\n".join(f"- {c}" for c in changes)
             # Gebruik de laatste 2-3 pad-segmenten voor een beschrijvende titel
             url_parts = url.rstrip("/").split("/")
-            short_name = "/".join(url_parts[-min(3, len(url_parts)):])
+            short_name = "/".join(url_parts[-min(3, len(url_parts)) :])
             issues_to_create.append(
                 {
                     "title": f"[monitoring] Content gewijzigd: {short_name} ({skills})",
@@ -444,8 +451,10 @@ def main() -> None:
 
     # Output samenvatting
     errors = sum(1 for v in new_checksums.values() if v.get("last_error"))
-    print(f"\nSamenvatting: {total} URLs gecontroleerd, {errors} fouten, "
-          f"{len(issues_to_create)} issues")
+    print(
+        f"\nSamenvatting: {total} URLs gecontroleerd, {errors} fouten, "
+        f"{len(issues_to_create)} issues"
+    )
 
 
 if __name__ == "__main__":
