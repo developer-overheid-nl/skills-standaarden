@@ -16,3 +16,5 @@ versie-bump bepaalt:
 
 - [ ] Skills laden correct (`claude --plugin-dir .`)
 - [ ] Geen hardcoded paden of persoonlijke gegevens
+
+<!-- Versies en CHANGELOG worden automatisch beheerd door release-please -->
