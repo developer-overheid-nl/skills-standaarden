@@ -14,18 +14,10 @@ from pathlib import Path
 
 # URL-patronen per type
 URL_PATTERNS = {
-    "github_repo": re.compile(
-        r"https://github\.com/logius-standaarden/[A-Za-z0-9._-]+"
-    ),
-    "published_doc": re.compile(
-        r"https://gitdocumentatie\.logius\.nl/publicatie/[^\s\)\]\"'>]+"
-    ),
-    "draft_doc": re.compile(
-        r"https://logius-standaarden\.github\.io/[^\s\)\]\"'>]+"
-    ),
-    "forum": re.compile(
-        r"https://www\.forumstandaardisatie\.nl/[^\s\)\]\"'>]+"
-    ),
+    "github_repo": re.compile(r"https://github\.com/logius-standaarden/[A-Za-z0-9._-]+"),
+    "published_doc": re.compile(r"https://gitdocumentatie\.logius\.nl/publicatie/[^\s\)\]\"'>]+"),
+    "draft_doc": re.compile(r"https://logius-standaarden\.github\.io/[^\s\)\]\"'>]+"),
+    "forum": re.compile(r"https://www\.forumstandaardisatie\.nl/[^\s\)\]\"'>]+"),
 }
 
 # URLs die geen echte bronnen zijn (voorbeelden, namespaces, etc.)
@@ -54,10 +46,7 @@ URL_RE = re.compile(r"https?://[^\s\)\]\"'>]+")
 
 def is_excluded(url: str) -> bool:
     """Controleer of een URL uitgesloten moet worden."""
-    for pattern in EXCLUDE_PATTERNS:
-        if pattern.search(url):
-            return True
-    return False
+    return any(pattern.search(url) for pattern in EXCLUDE_PATTERNS)
 
 
 def classify_url(url: str) -> str | None:
@@ -205,9 +194,7 @@ def output_json(urls: list[dict], output: Path | None) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Extraheer monitorbare URLs uit skill-bestanden"
-    )
+    parser = argparse.ArgumentParser(description="Extraheer monitorbare URLs uit skill-bestanden")
     parser.add_argument(
         "--skills-dir",
         type=Path,
