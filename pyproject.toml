@@ -1,6 +1,6 @@
 [project]
 name = "standaarden"
-version = "1.2.0"
+version = "1.3.0"
 description = "Logius Standaarden Claude Code Plugin - Nederlandse overheidsstandaarden voor interoperabiliteit"
 requires-python = ">=3.12"
 dependencies = ["requests>=2.31.0"]
