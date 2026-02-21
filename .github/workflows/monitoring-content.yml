@@ -17,7 +17,7 @@ jobs:
   check-content:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Installeer uv
         uses: astral-sh/setup-uv@v7
