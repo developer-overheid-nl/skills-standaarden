@@ -28,6 +28,10 @@
           "type": "yaml",
           "path": "publiccode.yml",
           "jsonpath": "$.softwareVersion"
+        },
+        {
+          "type": "generic",
+          "path": "README.md"
         }
       ]
     }
