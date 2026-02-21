@@ -60,4 +60,15 @@ jobs:
 
           git add .github/monitoring/checksums.json
           git commit -m "Update monitoring checksums ($(date -I))"
-          git push
+
+          # Retry push bij concurrent updates (rebase lokale commit op remote)
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Push geslaagd"
+              exit 0
+            fi
+            echo "Push poging $attempt mislukt, pull --rebase en opnieuw..."
+            git pull --rebase
+          done
+          echo "Push mislukt na 3 pogingen"
+          exit 1

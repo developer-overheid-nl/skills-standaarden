@@ -25,11 +25,16 @@ import requests
 GITHUB_API = "https://api.github.com"
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 CONSECUTIVE_FAILURE_THRESHOLD = 3
+USER_AGENT = "logius-standaarden-monitor/1.0"
+API_DELAY = 0.5  # Vertraging tussen API calls om rate limits te voorkomen
 
 
 def github_headers() -> dict:
     """HTTP headers voor GitHub API calls."""
-    headers = {"Accept": "application/vnd.github+json"}
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": USER_AGENT,
+    }
     if GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
     return headers
@@ -41,10 +46,13 @@ def fetch_with_retry(
     max_retries: int = 3,
 ) -> requests.Response | None:
     """HTTP GET met exponential backoff en Retry-After support."""
+    if headers is None:
+        headers = {}
+    headers.setdefault("User-Agent", USER_AGENT)
     for attempt in range(max_retries):
         delay = min(5 * (2 ** attempt), 60)
         try:
-            resp = requests.get(url, headers=headers or {}, timeout=30)
+            resp = requests.get(url, headers=headers, timeout=30)
             if resp.status_code in (429, 503):
                 retry_after = resp.headers.get("Retry-After")
                 wait = int(retry_after) if retry_after else delay
@@ -67,6 +75,10 @@ def normalize_html(html: str) -> str:
     html = re.sub(r'nonce="[^"]*"', "", html)
     # Verwijder ReSpec-specifieke build timestamps
     html = re.sub(r"respecVersion\s*=\s*['\"][^'\"]*['\"]", "", html)
+    # Verwijder HTML comments (build hashes, timestamps, etc.)
+    html = re.sub(r"<!--.*?-->", "", html, flags=re.DOTALL)
+    # Verwijder cache-busting query params in script/link/img tags
+    html = re.sub(r'(\.(js|css|png|svg|ico))\?[^"\'>\s]+', r"\1", html)
     return html
 
 
@@ -350,6 +362,10 @@ def main() -> None:
         skills = ", ".join(entry.get("skills", []))
 
         print(f"[{i + 1}/{total}] {url_type}: {url}")
+
+        # Vertraging tussen requests om rate limits te voorkomen
+        if i > 0:
+            time.sleep(API_DELAY)
 
         current = check_url(entry)
         previous = checksums.get(url)
