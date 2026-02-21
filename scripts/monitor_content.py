@@ -4,7 +4,8 @@
 Vergelijkt de huidige staat van URLs met een opgeslagen checksums.json.
 Verschillende detectiemethoden per URL-type:
 - github_repo: GitHub API (commit SHA, laatste tag, archived status)
-- published_doc/draft_doc/forum: HTTP ETag/Last-Modified + SHA256 van genormaliseerde body
+- published_doc/draft_doc: HTTP ETag/Last-Modified + SHA256 van body
+- forum: Alleen HTTP ETag/Last-Modified (body te dynamisch)
 
 Maakt GitHub Issues aan bij gedetecteerde wijzigingen.
 """
@@ -70,9 +71,8 @@ def normalize_html(html: str) -> str:
     html = re.sub(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^\s\"'<]*", "", html)
     # Verwijder generator meta-tags
     html = re.sub(r'<meta\s+name="generator"[^>]*>', "", html)
-    # Verwijder nonces (HTML-attributen en JS-assignments)
+    # Verwijder nonces
     html = re.sub(r'nonce="[^"]*"', "", html)
-    html = re.sub(r'\.nonce\s*=\s*"[^"]*"', '.nonce = ""', html)
     # Verwijder ReSpec-specifieke build timestamps
     html = re.sub(r"respecVersion\s*=\s*['\"][^'\"]*['\"]", "", html)
     # Verwijder HTML comments (build hashes, timestamps, etc.)
@@ -161,7 +161,7 @@ def check_url(entry: dict) -> dict:
     elif url_type in ("published_doc", "draft_doc"):
         return check_http_resource(url, hash_body=True)
     elif url_type == "forum":
-        return check_http_resource(url, hash_body=True)
+        return check_http_resource(url, hash_body=False)
     else:
         return {"error": f"Onbekend type: {url_type}"}
 
