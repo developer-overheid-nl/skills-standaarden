@@ -1,0 +1,29 @@
+skills:
+  - changed-files:
+      - any-glob-to-any-file: 'skills/**'
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file: '.github/**'
+
+monitoring:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'scripts/monitor_content.py'
+          - '.github/monitoring/**'
+          - '.github/workflows/monitoring-*.yml'
+
+python:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'scripts/**/*.py'
+          - 'tests/**/*.py'
+          - 'pyproject.toml'
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '*.md'
+          - 'CLAUDE.md'
+          - 'README.md'
+          - 'CHANGELOG.md'
