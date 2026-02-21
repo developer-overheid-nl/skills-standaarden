@@ -5,6 +5,14 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [1.3.1](https://github.com/MinBZK/logius-standaarden-plugin/compare/v1.3.0...v1.3.1) (2026-02-21)
+
+
+### Opgelost
+
+* gebruik dynamische shields.io badge voor versienummer ([#27](https://github.com/MinBZK/logius-standaarden-plugin/issues/27)) ([08344df](https://github.com/MinBZK/logius-standaarden-plugin/commit/08344df969b3e410dfe93fadafdf29a6c2be392d))
+* negeer ETag/Last-Modified false positives in monitoring ([#29](https://github.com/MinBZK/logius-standaarden-plugin/issues/29)) ([ae64994](https://github.com/MinBZK/logius-standaarden-plugin/commit/ae649941af21c9a9068ae70ba1dc2b948bc15655))
+
 ## [1.3.0](https://github.com/MinBZK/logius-standaarden-plugin/compare/v1.2.0...v1.3.0) (2026-02-21)
 
 
