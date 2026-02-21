@@ -1,0 +1,35 @@
+{
+  "release-type": "simple",
+  "bump-minor-pre-major": true,
+  "changelog-path": "CHANGELOG.md",
+  "changelog-sections": [
+    {"type": "feat", "section": "Toegevoegd"},
+    {"type": "fix", "section": "Opgelost"},
+    {"type": "perf", "section": "Prestaties"},
+    {"type": "docs", "section": "Documentatie", "hidden": true},
+    {"type": "chore", "section": "Overig", "hidden": true},
+    {"type": "ci", "section": "Overig", "hidden": true},
+    {"type": "refactor", "section": "Herstructurering", "hidden": true}
+  ],
+  "packages": {
+    ".": {
+      "extra-files": [
+        {
+          "type": "json",
+          "path": ".claude-plugin/plugin.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "toml",
+          "path": "pyproject.toml",
+          "jsonpath": "$.project.version"
+        },
+        {
+          "type": "yaml",
+          "path": "publiccode.yml",
+          "jsonpath": "$.softwareVersion"
+        }
+      ]
+    }
+  }
+}
