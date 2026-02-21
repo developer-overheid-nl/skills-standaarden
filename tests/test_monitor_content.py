@@ -131,12 +131,11 @@ class TestDetectChanges:
         assert not any("ETag" in c for c in changes)
 
     def test_etag_zonder_body_change(self):
-        """ETag change wordt wel gemeld als body hash niet gewijzigd is."""
+        """ETag change wordt genegeerd als body hash beschikbaar en ongewijzigd is."""
         current = {"body_sha256": "same", "etag": "new-etag"}
         previous = {"state": {"body_sha256": "same", "etag": "old-etag"}}
         changes = detect_changes("https://example.com", current, previous)
-        assert len(changes) == 1
-        assert "ETag" in changes[0]
+        assert len(changes) == 0
 
     def test_error_in_current(self):
         """Errors geven geen changes (worden apart afgehandeld)."""
@@ -145,12 +144,11 @@ class TestDetectChanges:
         assert detect_changes("https://example.com", current, previous) == []
 
     def test_last_modified_zonder_body_change(self):
-        """Last-Modified change wordt gemeld als body hash niet gewijzigd is."""
+        """Last-Modified change wordt genegeerd als body hash beschikbaar en ongewijzigd is."""
         current = {"body_sha256": "same", "last_modified": "Tue, 02 Jan 2024"}
         previous = {"state": {"body_sha256": "same", "last_modified": "Mon, 01 Jan 2024"}}
         changes = detect_changes("https://example.com", current, previous)
-        assert len(changes) == 1
-        assert "Last-Modified" in changes[0]
+        assert len(changes) == 0
 
     def test_last_modified_suppressie_bij_body_change(self):
         """Last-Modified change wordt onderdrukt als body hash al gewijzigd is."""
@@ -160,6 +158,22 @@ class TestDetectChanges:
         assert len(changes) == 1
         assert "body hash" in changes[0]
         assert not any("Last-Modified" in c for c in changes)
+
+    def test_etag_zonder_body_hash(self):
+        """ETag change wordt wel gemeld als er geen body hash beschikbaar is."""
+        current = {"etag": "new-etag"}
+        previous = {"state": {"etag": "old-etag"}}
+        changes = detect_changes("https://example.com", current, previous)
+        assert len(changes) == 1
+        assert "ETag" in changes[0]
+
+    def test_last_modified_zonder_body_hash(self):
+        """Last-Modified change wordt wel gemeld als er geen body hash beschikbaar is."""
+        current = {"last_modified": "Tue, 02 Jan 2024"}
+        previous = {"state": {"last_modified": "Mon, 01 Jan 2024"}}
+        changes = detect_changes("https://example.com", current, previous)
+        assert len(changes) == 1
+        assert "Last-Modified" in changes[0]
 
     def test_nieuwe_key_geen_change(self):
         """Key die niet in previous state zit triggert geen change."""
