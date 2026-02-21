@@ -1,10 +1,6 @@
 """Tests voor scripts/extract_urls.py."""
 
-import sys
 from pathlib import Path
-
-# Voeg scripts/ toe aan sys.path zodat we extract_urls kunnen importeren
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 from extract_urls import (
     classify_url,
@@ -168,14 +164,22 @@ class TestExtractUrlsFromFile:
         excluded_urls = [u for u in urls if "example.com" in u or "example/" in u]
         assert excluded_urls == []
 
-    def test_skill_naam_detectie(self):
+    def test_skill_naam_geen_skills_dir(self):
+        """Bestand buiten skills/ directory geeft skill=None."""
         fixture = Path(__file__).parent / "fixtures" / "sample_skill.md"
         results = extract_urls_from_file(fixture)
-
-        # Het bestand staat niet onder skills/<naam>/, dus skill_name is None
-        # Dit is correct gedrag voor bestanden buiten de skills-directory
         for r in results:
-            assert r["source_file"] == str(fixture)
+            assert r["skill"] is None
+
+    def test_skill_naam_in_skills_dir(self, tmp_path):
+        """Bestand onder skills/<naam>/ detecteert skill naam correct."""
+        skill_dir = tmp_path / "skills" / "ls-test"
+        skill_dir.mkdir(parents=True)
+        md = skill_dir / "SKILL.md"
+        md.write_text("Repo: https://github.com/logius-standaarden/test-repo\n")
+        results = extract_urls_from_file(md)
+        assert len(results) == 1
+        assert results[0]["skill"] == "ls-test"
 
     def test_types_correct(self):
         fixture = Path(__file__).parent / "fixtures" / "sample_skill.md"
