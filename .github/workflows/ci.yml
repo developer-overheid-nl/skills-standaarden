@@ -122,10 +122,10 @@ jobs:
         uses: astral-sh/setup-uv@v5
 
       - name: Ruff check
-        run: uv run ruff check scripts/
+        run: uvx ruff check scripts/
 
       - name: Ruff format check
-        run: uv run ruff format --check scripts/
+        run: uvx ruff format --check scripts/
 
   lint-markdown:
     runs-on: ubuntu-latest
