@@ -1,5 +1,5 @@
 # Lychee link checker configuratie voor Logius Standaarden Plugin
-# Documentatie: https://lychee.cli.rs/usage/config/
+# Documentatie: https://github.com/lycheeverse/lychee
 
 # Retries en timeouts
 max_retries = 3
