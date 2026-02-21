@@ -1,7 +1,7 @@
 # Logius Standaarden - Claude Code Plugin
 
 [![EUPL-1.2](https://img.shields.io/badge/licentie-EUPL--1.2-blue.svg)](LICENSE)
-[![versie](https://img.shields.io/badge/versie-1.3.0)](CHANGELOG.md) <!-- x-release-please-version -->
+[![versie](https://img.shields.io/github/v/tag/MinBZK/logius-standaarden-plugin?label=versie&color=green)](CHANGELOG.md)
 
 Claude Code plugin voor het werken met 77 van de 88 GitHub repositories van [Logius standaarden](https://github.com/logius-standaarden) voor Nederlandse overheidsinteroperabiliteit.
 
