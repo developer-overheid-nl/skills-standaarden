@@ -5,6 +5,21 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [1.3.0](https://github.com/MinBZK/logius-standaarden-plugin/compare/v1.2.0...v1.3.0) (2026-02-21)
+
+
+### Toegevoegd
+
+* Automatische releases met release-please ([#17](https://github.com/MinBZK/logius-standaarden-plugin/issues/17)) ([08ead1a](https://github.com/MinBZK/logius-standaarden-plugin/commit/08ead1a7a85d1252c297406483fd320559fb3c49))
+* Python linting met ruff ([#15](https://github.com/MinBZK/logius-standaarden-plugin/issues/15)) ([741a1f1](https://github.com/MinBZK/logius-standaarden-plugin/commit/741a1f1c9907635832c5f7257a4ecc39f50105bb))
+* Tests toevoegen met pytest ([#19](https://github.com/MinBZK/logius-standaarden-plugin/issues/19)) ([f0d81dc](https://github.com/MinBZK/logius-standaarden-plugin/commit/f0d81dc7f971fb272efa40a84ef95489e5ce53c1))
+
+
+### Opgelost
+
+* markdownlint regels compatibel met release-please CHANGELOG ([#25](https://github.com/MinBZK/logius-standaarden-plugin/issues/25)) ([40879cd](https://github.com/MinBZK/logius-standaarden-plugin/commit/40879cdc9eedd643b5e6ea393485e5a3950103ca))
+* versie-badge in README automatisch bijwerken bij release ([#26](https://github.com/MinBZK/logius-standaarden-plugin/issues/26)) ([08edcce](https://github.com/MinBZK/logius-standaarden-plugin/commit/08edcce71d213ca5b340bbb5e37247265ca9a9e1))
+
 ## [1.2.0] - 2026-02-21
 
 ### Toegevoegd
