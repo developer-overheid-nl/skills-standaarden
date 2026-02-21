@@ -51,6 +51,6 @@ maintenance:
   type: community
 name: logius-standaarden-plugin
 releaseDate: '2026-02-21'
-softwareVersion: 1.3.0
+softwareVersion: 1.3.1
 softwareType: standalone/other
 url: https://github.com/MinBZK/logius-standaarden-plugin
