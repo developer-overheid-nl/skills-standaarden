@@ -1,1 +1,1688 @@
-{}
+{
+  "https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules": {
+    "state": {},
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:42Z"
+  },
+  "https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling": {
+    "state": {},
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:43Z"
+  },
+  "https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden": {
+    "state": {},
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:44Z"
+  },
+  "https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20": {
+    "state": {},
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:45Z"
+  },
+  "https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents": {
+    "state": {},
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:46Z"
+  },
+  "https://www.forumstandaardisatie.nl/open-standaarden/nlcius": {
+    "state": {},
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:47Z"
+  },
+  "https://www.forumstandaardisatie.nl/intakeadvies-nl-gov-assurance-profile-oauth-20-versie-11": {
+    "state": {},
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:53Z"
+  },
+  "https://github.com/logius-standaarden/API-Design-Rules": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "f80ac5c5152f81f9e5a767b5ce763a7e892c103f",
+      "last_commit_date": "2026-02-16T09:21:49Z",
+      "latest_tag": "v2.1.0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:55Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/api/adr/2.1.0": {
+    "state": {
+      "etag": "W/\"68b7850a-268df\"",
+      "last_modified": "Wed, 03 Sep 2025 00:00:10 GMT",
+      "body_sha256": "cfdafc95042ced3ca6cb4e8031057c97f67347ab3b8dfc96cb9b6219f4f0b028"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:56Z"
+  },
+  "https://logius-standaarden.github.io/API-Design-Rules": {
+    "state": {
+      "etag": "W/\"6992e1f5-57cda\"",
+      "last_modified": "Mon, 16 Feb 2026 09:23:01 GMT",
+      "body_sha256": "979e7c2fcb1db9bb72100949546678af98e39d64c7d3c4b3a40d9dedb86cb875"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:57Z"
+  },
+  "https://github.com/logius-standaarden/ADR-Beheermodel": {
+    "state": {
+      "archived": true,
+      "default_branch": "develop",
+      "last_commit_sha": "c9d9a60dd42ef81b0e962a1d2a254859f067dc42",
+      "last_commit_date": "2025-01-14T15:27:41Z",
+      "latest_tag": "10r4"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:52:58Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/api/adr-beheer/1.0": {
+    "state": {
+      "etag": "W/\"663eb50a-110e5\"",
+      "last_modified": "Sat, 11 May 2024 00:00:10 GMT",
+      "body_sha256": "ab56152c7bb0225586d651a11338cda174a0bc4a8987282a0ba472910e04ead6"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:04Z"
+  },
+  "https://github.com/logius-standaarden/API-Standaarden-Beheermodel": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "9be784d5537dc6ef58b3ef7b8298a23ff4102064",
+      "last_commit_date": "2025-07-18T11:24:19Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:06Z"
+  },
+  "https://logius-standaarden.github.io/API-Standaarden-Beheermodel": {
+    "state": {
+      "etag": "W/\"687a2f27-1f5f6\"",
+      "last_modified": "Fri, 18 Jul 2025 11:25:27 GMT",
+      "body_sha256": "f1d684dd13baaf1b42156de1f34073e95d0c73a1c6987c1c8361c77395f62b4f"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:06Z"
+  },
+  "https://github.com/logius-standaarden/API-mod-geospatial": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "cead3f1cee8ccd0a7f0d684eb35864f6f6a95efc",
+      "last_commit_date": "2025-07-15T08:53:34Z",
+      "latest_tag": "1.0.2"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:08Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/api/mod-geo/1.0.3": {
+    "state": {
+      "etag": "W/\"682fba84-21c14\"",
+      "last_modified": "Fri, 23 May 2025 00:00:04 GMT",
+      "body_sha256": "a762f961832e45aad7d39ec474f793bb4c2282df98d4032fccc5c9478b0227ec"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:09Z"
+  },
+  "https://logius-standaarden.github.io/API-mod-geospatial": {
+    "state": {
+      "etag": "W/\"6876174e-23eeb\"",
+      "last_modified": "Tue, 15 Jul 2025 08:54:38 GMT",
+      "body_sha256": "61633cbd2fe245520d39b1c2c83195fe66ba9ac04c810704b6733bf0844dd3a6"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:10Z"
+  },
+  "https://github.com/logius-standaarden/API-mod-transport-security": {
+    "state": {
+      "archived": true,
+      "default_branch": "develop",
+      "last_commit_sha": "84a42875f822185b1a45ecabc4985cde2bda3214",
+      "last_commit_date": "2025-08-29T08:19:20Z",
+      "latest_tag": "1.0.2"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:11Z"
+  },
+  "https://github.com/logius-standaarden/API-mod-signing": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "2e337b932ac3696678a1db6a905a9318f4fca5dc",
+      "last_commit_date": "2025-12-15T15:26:55Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:13Z"
+  },
+  "https://logius-standaarden.github.io/API-mod-signing": {
+    "state": {
+      "etag": "W/\"69402959-11760\"",
+      "last_modified": "Mon, 15 Dec 2025 15:29:29 GMT",
+      "body_sha256": "eca0b78e3c811f0286173a78df380e24ee16927af77234382a3c12700b085867"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:13Z"
+  },
+  "https://github.com/logius-standaarden/API-mod-encryption": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "99551a879862523732682ccc9d3a4509001aef6f",
+      "last_commit_date": "2025-12-17T09:26:06Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:15Z"
+  },
+  "https://logius-standaarden.github.io/API-mod-encryption": {
+    "state": {
+      "etag": "W/\"69427771-3aad0\"",
+      "last_modified": "Wed, 17 Dec 2025 09:27:13 GMT",
+      "body_sha256": "b7b3e77e9c7d07d48fc8a43a4043f35433e8dd26a5281c804276b6d1dd9eff5d"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:15Z"
+  },
+  "https://github.com/logius-standaarden/api-linter-impactanalyse": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "082ee8529e222c05213327dfcd9009efb911a66e",
+      "last_commit_date": "2026-02-17T12:26:57Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:17Z"
+  },
+  "https://github.com/logius-standaarden/zaakgericht-werken-api": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "a8bb73abf6ab0122469e29be511a3164189fb1a7",
+      "last_commit_date": "2025-09-23T13:50:58Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:18Z"
+  },
+  "https://github.com/logius-standaarden/BOMOS-Fundament": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "726e76b8a0a6be57bed044370edb80b871508350",
+      "last_commit_date": "2025-08-07T15:38:38Z",
+      "latest_tag": "0.2.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:20Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/bomos/fundament": {
+    "state": {
+      "etag": "\"686db104-155\"",
+      "last_modified": "Wed, 09 Jul 2025 00:00:04 GMT",
+      "body_sha256": "235d070fd536dc5f0bd361a2b2cf810ca2a0a66ccf9058f2f93cb1a948b61565"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:21Z"
+  },
+  "https://logius-standaarden.github.io/BOMOS-Fundament": {
+    "state": {
+      "etag": "W/\"681a2d9b-6af\"",
+      "last_modified": "Tue, 06 May 2025 15:41:15 GMT",
+      "body_sha256": "60d459cb459de3aa88f42770feb2de03d6e50b02a2360bfdbe5fefa9469965ed"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:21Z"
+  },
+  "https://github.com/logius-standaarden/BOMOS-Verdieping": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "17c0bfb3130349ae10a6cc48fd7e28921b4cab67",
+      "last_commit_date": "2025-09-19T20:25:19Z",
+      "latest_tag": "0.2.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:23Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/bomos/verdieping": {
+    "state": {
+      "etag": "\"68cdee8d-155\"",
+      "last_modified": "Sat, 20 Sep 2025 00:00:13 GMT",
+      "body_sha256": "308fa181f8048cc9d5cdd2b20c430f3e2d27e91944da47fb451361baf03d224a"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:24Z"
+  },
+  "https://logius-standaarden.github.io/BOMOS-Verdieping": {
+    "state": {
+      "etag": "W/\"68cdbc79-71d8f\"",
+      "last_modified": "Fri, 19 Sep 2025 20:26:33 GMT",
+      "body_sha256": "f4366ddfdd3dd63c4db86fb5c09aa214396030b1541ff4aa8a41697869a87d56"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:25Z"
+  },
+  "https://github.com/logius-standaarden/BOMOS-Aanvullende-Modules": {
+    "state": {
+      "archived": true,
+      "default_branch": "develop",
+      "last_commit_sha": "e6fba5799614b207ff0b55a4fc9a5a11cbfe34a3",
+      "last_commit_date": "2023-05-15T11:30:29Z",
+      "latest_tag": "0.2.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:26Z"
+  },
+  "https://github.com/logius-standaarden/BOMOS-LinkedData": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "8d0dc08fbbbcec173c957ea5b1ba80225b859d64",
+      "last_commit_date": "2025-08-21T05:50:42Z",
+      "latest_tag": "1.0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:28Z"
+  },
+  "https://logius-standaarden.github.io/BOMOS-LinkedData": {
+    "state": {
+      "etag": "W/\"68a6b3ea-130e8\"",
+      "last_modified": "Thu, 21 Aug 2025 05:51:38 GMT",
+      "body_sha256": "5867a3fcb149fb8a19846f3b2a3b7aa907856be533051b615ab3958ce691ffb6"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:28Z"
+  },
+  "https://github.com/logius-standaarden/BOMOS-OpenSource": {
+    "state": {
+      "archived": true,
+      "default_branch": "develop",
+      "last_commit_sha": "4df4d68cc63e79bf1f47b9d71ee0e9a127682244",
+      "last_commit_date": "2025-08-25T07:51:18Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:30Z"
+  },
+  "https://logius-standaarden.github.io/BOMOS-OpenSource": {
+    "state": {
+      "etag": "W/\"68ac163c-f359\"",
+      "last_modified": "Mon, 25 Aug 2025 07:52:28 GMT",
+      "body_sha256": "1774c1afb24c56a5e35aab25da48871116e214749f89fbc6e46ae397cf2e6f19"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:31Z"
+  },
+  "https://github.com/logius-standaarden/BOMOS-Stelsels": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "7a16b3fac3d0533d002171756d7b163bafc75972",
+      "last_commit_date": "2025-08-21T05:50:34Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:32Z"
+  },
+  "https://logius-standaarden.github.io/BOMOS-Stelsels": {
+    "state": {
+      "etag": "W/\"68a6b3e0-1276c\"",
+      "last_modified": "Thu, 21 Aug 2025 05:51:28 GMT",
+      "body_sha256": "bb110f87ebcb375387c5c87c87422a6e0927c56f8f6c55e280533e1389623b9c"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:33Z"
+  },
+  "https://github.com/logius-standaarden/BOMOS-Beheermodel": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "449a047e6904027a1dfba96d4e071389b826aec8",
+      "last_commit_date": "2025-08-21T05:50:15Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:34Z"
+  },
+  "https://logius-standaarden.github.io/BOMOS-Beheermodel": {
+    "state": {
+      "etag": "W/\"68a6b3cf-19ec2\"",
+      "last_modified": "Thu, 21 Aug 2025 05:51:11 GMT",
+      "body_sha256": "18a4a14b3e3610d8e294f3951141b9d92692d0818fc3f7598058f46aa264d0c5"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:35Z"
+  },
+  "https://github.com/logius-standaarden/BOMOS-voorbeeld-beheermodel": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "b1dd790d5f35867d109accc1c146c93462476fe9",
+      "last_commit_date": "2025-08-21T05:50:24Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:36Z"
+  },
+  "https://logius-standaarden.github.io/BOMOS-voorbeeld-beheermodel": {
+    "state": {
+      "etag": "W/\"68a6b3dd-17724\"",
+      "last_modified": "Thu, 21 Aug 2025 05:51:25 GMT",
+      "body_sha256": "8426f14c1d7f890c79911e4873945df113ce357e19acb8f93cefa4f17097421f"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:37Z"
+  },
+  "https://github.com/logius-standaarden/BOMOS-Community": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "6252fcbb2dc07737bdeda53f534e3870bdb87e2e",
+      "last_commit_date": "2025-10-03T12:33:36Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:38Z"
+  },
+  "https://logius-standaarden.github.io/BOMOS-Community": {
+    "state": {
+      "etag": "W/\"68dfc2c7-178b\"",
+      "last_modified": "Fri, 03 Oct 2025 12:34:15 GMT",
+      "body_sha256": "49226465b56a7138d9f36fbe9133cfcdef011c0dbafdc05b2d8147917c0c4bdf"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:39Z"
+  },
+  "https://github.com/logius-standaarden/Logius-Beheermodel": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "ee9979df4f68540ee630e9a9c29280716d77973c",
+      "last_commit_date": "2025-09-04T08:30:52Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:41Z"
+  },
+  "https://logius-standaarden.github.io/Logius-Beheermodel": {
+    "state": {
+      "etag": "W/\"68b94e60-9de\"",
+      "last_modified": "Thu, 04 Sep 2025 08:31:28 GMT",
+      "body_sha256": "abef46a0ccb2449f276e98ab069995bac6ebc50a0b1e951105c7f6b43072ec75"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:41Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Architectuur": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "b597c4b80669c18e05d997abd18ec374b605874b",
+      "last_commit_date": "2025-09-17T08:34:12Z",
+      "latest_tag": "2.0.2"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:43Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/architectuur": {
+    "state": {
+      "etag": "\"68783d04-155\"",
+      "last_modified": "Thu, 17 Jul 2025 00:00:04 GMT",
+      "body_sha256": "a3c649540939370627d02240ab0151dd97eb4bdb6cc0ce030b8b7132c608cab1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:44Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Architectuur": {
+    "state": {
+      "etag": "W/\"68ca72d4-3dd9f\"",
+      "last_modified": "Wed, 17 Sep 2025 08:35:32 GMT",
+      "body_sha256": "c1667bc57934e63fd654ab4f95734d61b08b5292e61c0da26cf465bcc1312379"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:44Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "f6456866aa1a8ef8879129fe253980f0c5c37b61",
+      "last_commit_date": "2026-01-15T14:28:24Z",
+      "latest_tag": "3.0.0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:46Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/restapi": {
+    "state": {
+      "etag": "\"690bf314-158\"",
+      "last_modified": "Thu, 06 Nov 2025 01:00:04 GMT",
+      "body_sha256": "0b74f8ec95caa591fafd4f929318a2f5f89db7f83bb0658ddcee95c493f2ff4b"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:47Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API": {
+    "state": {
+      "etag": "W/\"6968fd53-17bc6\"",
+      "last_modified": "Thu, 15 Jan 2026 14:44:35 GMT",
+      "body_sha256": "e01cd6504d9395a022eccb44278081c7e59d386c8ee1eafe692bc318f242db43"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:47Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "ebb452fd48ccfc1629840c4015e71d96da442ef9",
+      "last_commit_date": "2025-08-20T12:41:55Z",
+      "latest_tag": "3.3.2"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:49Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/ebms": {
+    "state": {
+      "etag": "W/\"67bd161c-2e501\"",
+      "last_modified": "Tue, 25 Feb 2025 01:00:12 GMT",
+      "body_sha256": "319fdc34601d5274c046a507cac7948fb77e125385ca8ba2d5a617a03692e8cc"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:50Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2": {
+    "state": {
+      "etag": "W/\"68a5c2c7-2f141\"",
+      "last_modified": "Wed, 20 Aug 2025 12:42:47 GMT",
+      "body_sha256": "3ca45b52b0ccd3f0588c7a454bd5b1288c25420a3f42cc27f8b455f62f8daa3c"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:51Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "9a3e7d9d88aece77b1eb4e07c972acd40755f2d6",
+      "last_commit_date": "2025-08-25T07:53:38Z",
+      "latest_tag": "3.8.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:52Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/wus": {
+    "state": {
+      "etag": "\"68350089-a7\"",
+      "last_modified": "Tue, 27 May 2025 00:00:09 GMT",
+      "body_sha256": "8a815943225d8470f264afd119be06a82888f684c55aa336b425507121769419"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:53Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS": {
+    "state": {
+      "etag": "W/\"68ac16b0-1cf2a\"",
+      "last_modified": "Mon, 25 Aug 2025 07:54:24 GMT",
+      "body_sha256": "e6534f5d48befcf9f1ca88548363d2568926d81e4ca924282e6c6ee3be824695"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:54Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "d3228312672a1e92e164da8fea98f40139bc025a",
+      "last_commit_date": "2025-08-20T12:43:27Z",
+      "latest_tag": "3.8.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:55Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/gb": {
+    "state": {
+      "etag": "W/\"67bd161c-2735d\"",
+      "last_modified": "Tue, 25 Feb 2025 01:00:12 GMT",
+      "body_sha256": "de6f15b593a8e852ce22661beb453e1b4cf8b43ed404c5b39f82a8b3d0518428"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:56Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB": {
+    "state": {
+      "etag": "W/\"68a5c31c-27d21\"",
+      "last_modified": "Wed, 20 Aug 2025 12:44:12 GMT",
+      "body_sha256": "5c573ac64c7b7ee16a32a3d80d519a459d2b2d3b9c2347770372cf6f84cb1975"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:57Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "c02d868513ab7a24f82f54f6423ea8c48fb5ddad",
+      "last_commit_date": "2026-01-15T15:12:31Z",
+      "latest_tag": "2.0.0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:53:59Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/beveilig": {
+    "state": {
+      "etag": "\"685b3c04-a7\"",
+      "last_modified": "Wed, 25 Jun 2025 00:00:04 GMT",
+      "body_sha256": "6379872e385d11b0f6396d36a62096033d48daf42b6574afe72c4aa2faed0f70"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:05Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften": {
+    "state": {
+      "etag": "W/\"696904b9-15965\"",
+      "last_modified": "Thu, 15 Jan 2026 15:16:09 GMT",
+      "body_sha256": "447cd1e1aa4876458a58362766c920a5885825efc8a429f2744367db550e1580"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:05Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "61d03bc49b1cbd587621ef62699154f7caaea0b2",
+      "last_commit_date": "2025-08-20T12:41:40Z",
+      "latest_tag": "1.4.2"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:07Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/idauth": {
+    "state": {
+      "etag": "\"68252e86-a7\"",
+      "last_modified": "Thu, 15 May 2025 00:00:06 GMT",
+      "body_sha256": "13c7db18cbbd167967e3e9cf7bba3021a6d9bedc6c01e59e1eceb0d5cf41e7a3"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:08Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie": {
+    "state": {
+      "etag": "W/\"68a5c2b2-1684e\"",
+      "last_modified": "Wed, 20 Aug 2025 12:42:26 GMT",
+      "body_sha256": "5e591c96d00b781bed83027eab5c233155de909b01936efb9d558cc3438b9ab0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:09Z"
+  },
+  "https://github.com/logius-standaarden/OIN-Stelsel": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "3b5a3fd025cd3fad61cba2091e8a05bbc745c5c7",
+      "last_commit_date": "2025-07-23T11:03:17Z",
+      "latest_tag": "2.2.0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:10Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/oin": {
+    "state": {
+      "etag": "\"68817785-155\"",
+      "last_modified": "Thu, 24 Jul 2025 00:00:05 GMT",
+      "body_sha256": "1f05ad53d9b0520af7e7ba51be3ead149c4d290c1fbbba8e3f86b1dece3e4d4c"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:11Z"
+  },
+  "https://logius-standaarden.github.io/OIN-Stelsel": {
+    "state": {
+      "etag": "W/\"6880c1ae-3b95c\"",
+      "last_modified": "Wed, 23 Jul 2025 11:04:14 GMT",
+      "body_sha256": "cf467c081d70804a2fef0f4d2d1e4a53bca779830686d8b2dcdb1853430024a1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:12Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Beheermodel": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "8bc7c34b4cf94c4cbaecb2e2bb0738fce84f137b",
+      "last_commit_date": "2025-08-25T07:51:07Z",
+      "latest_tag": "1.6r"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:13Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/beheer": {
+    "state": {
+      "etag": "W/\"67bd161c-2024a\"",
+      "last_modified": "Tue, 25 Feb 2025 01:00:12 GMT",
+      "body_sha256": "c02707645c2a289fc2aafcd52e6516e5d2190d75d39c9c1d1987fbd94518b585"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:15Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Beheermodel": {
+    "state": {
+      "etag": "W/\"68ac1627-2a0be\"",
+      "last_modified": "Mon, 25 Aug 2025 07:52:07 GMT",
+      "body_sha256": "b20091d3e578d6e4dd138af54af8311b9768f309c1742e643f33d178ab7b33ac"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:15Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Gebruik-en-achtergrond-certificaten": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "8ff60ce954947102f5211cdd27ac3b9d5c6dec18",
+      "last_commit_date": "2026-02-18T10:03:32Z",
+      "latest_tag": "1.6.2"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:17Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert": {
+    "state": {
+      "etag": "W/\"67bd161c-1fedd\"",
+      "last_modified": "Tue, 25 Feb 2025 01:00:12 GMT",
+      "body_sha256": "c4a4f55529e0128a8289f75363218f0dff1d31ecd28bf97f895ba89b5717d6e6"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:18Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Gebruik-en-achtergrond-certificaten": {
+    "state": {
+      "etag": "W/\"69958eb5-20f4b\"",
+      "last_modified": "Wed, 18 Feb 2026 10:04:37 GMT",
+      "body_sha256": "dc3f772c1992986294911acc9eced500e2e4a5229ace4deffd456d3bd4748c1a"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:19Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Handreiking-Adressering-en-Routering": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "c0e47c483f1acf98780ff865f62da0fc35589060",
+      "last_commit_date": "2025-08-20T12:37:31Z",
+      "latest_tag": "1.1.0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:20Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/bpadres": {
+    "state": {
+      "etag": "W/\"67943796-13823\"",
+      "last_modified": "Sat, 25 Jan 2025 01:00:06 GMT",
+      "body_sha256": "8db3a57c2bb3d1f6de90f3704f7968e635afad7c4e22525d4cddf9ca3f2ebcd0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:21Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Handreiking-Adressering-en-Routering": {
+    "state": {
+      "etag": "W/\"68a5c1f3-2f8\"",
+      "last_modified": "Wed, 20 Aug 2025 12:39:15 GMT",
+      "body_sha256": "84a3177a04d661969f888d836605f6669144fbd504fd4d8dd159550b922078fa"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:22Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Best-Practices-ebMS2": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "0dad734aa1f5e7f7d8d3f6e0625528d45f9c99e0",
+      "last_commit_date": "2025-08-20T11:25:17Z",
+      "latest_tag": "3.2.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:24Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/bpebms": {
+    "state": {
+      "etag": "W/\"67bd161c-1fcd0\"",
+      "last_modified": "Tue, 25 Feb 2025 01:00:12 GMT",
+      "body_sha256": "0b06350550936c937817459cbd3f13c8e3a30152582bea2352b99a2c0158485d"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:25Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Best-Practices-ebMS2": {
+    "state": {
+      "etag": "W/\"68a5b0d3-20816\"",
+      "last_modified": "Wed, 20 Aug 2025 11:26:11 GMT",
+      "body_sha256": "7ff07301703c4f36a4e4e6573cef873b665d5063e887cfad082927e852b2ea4f"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:25Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Best-Practices-WUS": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "85305bf31c9161386caa68bb99aad65a631f0ed9",
+      "last_commit_date": "2025-08-20T12:22:59Z",
+      "latest_tag": "3.8"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:27Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/bpwus": {
+    "state": {
+      "etag": "W/\"67bd161c-1509c\"",
+      "last_modified": "Tue, 25 Feb 2025 01:00:12 GMT",
+      "body_sha256": "2a8e14fd97415073f3a38fe2a4ac8ac7dbb20f9002c9a8b53d68bdaa23bae9e4"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:28Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Best-Practices-WUS": {
+    "state": {
+      "etag": "W/\"68a5be6d-15cd4\"",
+      "last_modified": "Wed, 20 Aug 2025 12:24:13 GMT",
+      "body_sha256": "ee1f13cc27e35eea5fff17acc22e6dbb1fae2da0b01e1c0cbf2b19d69bf8bf6a"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:29Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Best-Practices-GB": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "7ace6b09b968743a281763e03015ace10a23b6fa",
+      "last_commit_date": "2025-08-20T12:22:36Z",
+      "latest_tag": "3.1.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:30Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/bpgb": {
+    "state": {
+      "etag": "W/\"67bd161c-1f78c\"",
+      "last_modified": "Tue, 25 Feb 2025 01:00:12 GMT",
+      "body_sha256": "b53570a36379631430504449bf9fb6cb37df13934aa1b54f05adac31f9328066"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:31Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Best-Practices-GB": {
+    "state": {
+      "etag": "W/\"68a5be6b-48e\"",
+      "last_modified": "Wed, 20 Aug 2025 12:24:11 GMT",
+      "body_sha256": "01fc278420e86aa89e710633a6344bed20f911a79760c11b9bdb8c9eb15fd421"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:32Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "31acfb3ec4a0d4f895130c9d18fbe7b96b78495c",
+      "last_commit_date": "2025-12-18T13:15:49Z",
+      "latest_tag": "1.12.0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:33Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/actueel": {
+    "state": {
+      "etag": "\"6944a395-15c\"",
+      "last_modified": "Fri, 19 Dec 2025 01:00:05 GMT",
+      "body_sha256": "78667bd8fb266446e35112dac7f6c38fe5307f510b6f45a448e300f99d42c584"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:34Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance": {
+    "state": {
+      "etag": "W/\"6943fecf-11b35\"",
+      "last_modified": "Thu, 18 Dec 2025 13:17:03 GMT",
+      "body_sha256": "a52e2d328d2b1d340cf94a30563324754d4315d9b860d9ba89204512cd16dbea"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:35Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Wat-is-Digikoppeling": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "fcfa40505d23212bbcaf6b41624ea295f979bfc4",
+      "last_commit_date": "2025-08-21T05:50:50Z",
+      "latest_tag": "1.1.2"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:37Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/watisdk": {
+    "state": {
+      "etag": "W/\"67bd161c-253da\"",
+      "last_modified": "Tue, 25 Feb 2025 01:00:12 GMT",
+      "body_sha256": "5795f5f65e20b60d64f6ff606c1b81fc17dffd87d41666a0f1ad78eb543284d8"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:38Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Wat-is-Digikoppeling": {
+    "state": {
+      "etag": "W/\"68a6b404-25b71\"",
+      "last_modified": "Thu, 21 Aug 2025 05:52:04 GMT",
+      "body_sha256": "15345f5e97bb1548e46fb5b30ee2e25770d79dccdce05de44108d1981d9ec4cb"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:38Z"
+  },
+  "https://github.com/logius-standaarden/Digikoppeling-Algemeen": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "a83c4473845f44f1765e4dece01d8095cfbcfc38",
+      "last_commit_date": "2025-07-18T11:23:48Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:40Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk/roadmap": {
+    "state": {
+      "etag": "\"68252e86-b3\"",
+      "last_modified": "Thu, 15 May 2025 00:00:06 GMT",
+      "body_sha256": "9582936a510396b2370aa0375e0e502209a80baea9ac931c60c1cb438db761ba"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:41Z"
+  },
+  "https://logius-standaarden.github.io/Digikoppeling-Algemeen": {
+    "state": {
+      "etag": "W/\"687a2ee4-425\"",
+      "last_modified": "Fri, 18 Jul 2025 11:24:20 GMT",
+      "body_sha256": "39af7d7b8bff58451909f235b6acb7c530098cf2d14556c0d21ac83e45895cc1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:42Z"
+  },
+  "https://github.com/logius-standaarden/Terugmelding": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "9d88ffc13a8f8fbd6ae3b3f2dac2e55dbf15074d",
+      "last_commit_date": "2025-10-08T08:18:03Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:43Z"
+  },
+  "https://logius-standaarden.github.io/Terugmelding": {
+    "state": {
+      "etag": "W/\"68e61e7d-d0d3\"",
+      "last_modified": "Wed, 08 Oct 2025 08:19:09 GMT",
+      "body_sha256": "1df3a5490e7530b171751de2ac1da7c5940e994a762f8f3f44343c506cf4c9da"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:44Z"
+  },
+  "https://github.com/logius-standaarden/Terugmelden-API": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "1946f644185b25d97ece86c0a10e35663212158c",
+      "last_commit_date": "2023-07-26T13:28:23Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:45Z"
+  },
+  "https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "580d9eda7d63c883cf5aec81de85c9f7ec03ee87",
+      "last_commit_date": "2025-09-04T08:29:38Z",
+      "latest_tag": "1.3"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:47Z"
+  },
+  "https://logius-standaarden.github.io/Digimelding-Koppelvlakspecificatie": {
+    "state": {
+      "etag": "W/\"68b94e2d-1d6d4\"",
+      "last_modified": "Thu, 04 Sep 2025 08:30:37 GMT",
+      "body_sha256": "cf80ad0a62f843a30175db4e179d0fb0e9ac57343aa2c45413400ccb60ffc02e"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:47Z"
+  },
+  "https://github.com/logius-standaarden/basisfactuur-rijk": {
+    "state": {
+      "archived": false,
+      "default_branch": "ontwikkeling",
+      "last_commit_sha": "84f2f4ff14089f3b105d395786c36dcfa45319b7",
+      "last_commit_date": "2023-11-12T15:34:52Z",
+      "latest_tag": "v1.0.8"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:49Z"
+  },
+  "https://logius-standaarden.github.io/basisfactuur-rijk": {
+    "state": {
+      "etag": "W/\"6550f0b9-6e1\"",
+      "last_modified": "Sun, 12 Nov 2023 15:35:21 GMT",
+      "body_sha256": "2186f7d0e304d64409006df778646ec888ab01f68acca6b645c686f7eac07004"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:50Z"
+  },
+  "https://github.com/logius-standaarden/basisorder-rijk": {
+    "state": {
+      "archived": false,
+      "default_branch": "ontwikkeling",
+      "last_commit_sha": "a5d5fabed3210d77cdb5724b032b8c16edd7fccd",
+      "last_commit_date": "2023-10-10T07:23:39Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:51Z"
+  },
+  "https://logius-standaarden.github.io/basisorder-rijk": {
+    "state": {
+      "etag": "W/\"6524fc20-6ea\"",
+      "last_modified": "Tue, 10 Oct 2023 07:24:16 GMT",
+      "body_sha256": "3b9a0b1675d9b224735730a61974781e26055101ff5032bcdafc4860d03f65ef"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:52Z"
+  },
+  "https://github.com/logius-standaarden/e-procurement": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "70163d8f92f07401f6b89fc4d7669021bbd521d0",
+      "last_commit_date": "2023-06-06T14:13:31Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:53Z"
+  },
+  "https://logius-standaarden.github.io/e-procurement": {
+    "state": {
+      "etag": "W/\"64b67c4c-b96\"",
+      "last_modified": "Tue, 18 Jul 2023 11:49:32 GMT",
+      "body_sha256": "132b7764e78a05022e83511e2e17696c115caeecd4fff406ed5bb41db8e61628"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:54Z"
+  },
+  "https://www.forumstandaardisatie.nl/open-standaarden/peppol-bis": {
+    "state": {},
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:55Z"
+  },
+  "https://github.com/logius-standaarden/fsc-core": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "16dbd9b29c397e1b28804affa0971161a90f3ef5",
+      "last_commit_date": "2026-01-20T10:22:56Z",
+      "latest_tag": "1.1.0-rc"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:57Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/fsc/core": {
+    "state": {
+      "etag": "\"68d5d785-155\"",
+      "last_modified": "Fri, 26 Sep 2025 00:00:05 GMT",
+      "body_sha256": "b0a1cfc4f21a21c5fff3903b681d15ea4680e856fbbe519eb835a37e0029d784"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:58Z"
+  },
+  "https://logius-standaarden.github.io/fsc-core": {
+    "state": {
+      "etag": "W/\"696f57c9-2c9c0\"",
+      "last_modified": "Tue, 20 Jan 2026 10:24:09 GMT",
+      "body_sha256": "5a8c7469b6bae5ce787f5d48644a1b0662030f8071691d3d64251cddca9096ff"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:54:58Z"
+  },
+  "https://github.com/logius-standaarden/fsc-logging": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "be1f510f9a70e6c04caec3ddfb3852e75affb8ce",
+      "last_commit_date": "2026-01-15T14:09:30Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:00Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/fsc/logging": {
+    "state": {
+      "etag": "W/\"678ef196-c01f\"",
+      "last_modified": "Tue, 21 Jan 2025 01:00:06 GMT",
+      "body_sha256": "40389a988e13824250dc4bab6beaa28a99310a58e6703762c9737a0fc0ec87c2"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:01Z"
+  },
+  "https://logius-standaarden.github.io/fsc-logging": {
+    "state": {
+      "etag": "W/\"6968f6f8-3d2\"",
+      "last_modified": "Thu, 15 Jan 2026 14:17:28 GMT",
+      "body_sha256": "867df752d8342ec47d01075e480eb81ab3fbbdfefb23b9feb9d6ded2a127d533"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:02Z"
+  },
+  "https://github.com/logius-standaarden/fsc-properties": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "37009aef834055adb3c1e2510b9ebfb2fc9328c3",
+      "last_commit_date": "2025-07-18T11:21:21Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:03Z"
+  },
+  "https://logius-standaarden.github.io/fsc-properties": {
+    "state": {
+      "etag": "W/\"687a2e60-e3e5\"",
+      "last_modified": "Fri, 18 Jul 2025 11:22:08 GMT",
+      "body_sha256": "bd394f63832c3adf4efcd4126d6f944cf96b7b09dd034a16118b582bd55a6588"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:04Z"
+  },
+  "https://github.com/logius-standaarden/fsc-regulated-area": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "ec4bff754563c553f16219dadb384816ac43b4fb",
+      "last_commit_date": "2025-05-02T14:40:30Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:05Z"
+  },
+  "https://logius-standaarden.github.io/fsc-regulated-area": {
+    "state": {
+      "etag": "W/\"6814d98e-599\"",
+      "last_modified": "Fri, 02 May 2025 14:41:18 GMT",
+      "body_sha256": "bcb82f924d69494013162c8ed42456a4abcb16d03536e6c65b8cee0297e6ddb1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:06Z"
+  },
+  "https://github.com/logius-standaarden/fsc-external-contract": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "54b1c10d9cfeb012433d7a8622b2c06ed18956e2",
+      "last_commit_date": "2026-01-19T10:42:12Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:08Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/fsc/ext": {
+    "state": {
+      "etag": "\"696adf14-158\"",
+      "last_modified": "Sat, 17 Jan 2026 01:00:04 GMT",
+      "body_sha256": "1014e3078d6f8ce570bb918c33b325df55ae2bfeb05571f371de402d798ec035"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:09Z"
+  },
+  "https://logius-standaarden.github.io/fsc-external-contract": {
+    "state": {
+      "etag": "W/\"696e0ad1-1337f\"",
+      "last_modified": "Mon, 19 Jan 2026 10:43:29 GMT",
+      "body_sha256": "9afff9f2457dba97d87b3c77c1fe50b3bfae6c53c95d0cff8683241f45291d84"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:09Z"
+  },
+  "https://github.com/logius-standaarden/fsc-extensie-template": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "0d275cd45a6734481a4bc3080c0066708861d308",
+      "last_commit_date": "2025-09-22T08:26:54Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:11Z"
+  },
+  "https://logius-standaarden.github.io/fsc-extensie-template": {
+    "state": {
+      "etag": "W/\"68d1088b-de7c\"",
+      "last_modified": "Mon, 22 Sep 2025 08:27:55 GMT",
+      "body_sha256": "9971be07672158e52f0b8cfa10538a6aa47cb983d2fd9f62fa00b3074b786904"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:11Z"
+  },
+  "https://github.com/logius-standaarden/fsc-test-suite": {
+    "state": {
+      "archived": false,
+      "default_branch": "master",
+      "last_commit_sha": "9e9fa52a7eab2eb5838a47d6a4dc62c2950b0ccb",
+      "last_commit_date": "2026-01-13T09:21:21Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:13Z"
+  },
+  "https://github.com/logius-standaarden/OAuth-NL-profiel": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "bcc3faeb216aef91eaef152f5f259d2ba5a3fbfa",
+      "last_commit_date": "2025-10-21T08:26:49Z",
+      "latest_tag": "v1.1.0"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:15Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/api/oauth": {
+    "state": {
+      "etag": "W/\"67a2b815-26572\"",
+      "last_modified": "Wed, 05 Feb 2025 01:00:05 GMT",
+      "body_sha256": "39a67edb6d6ea41cf3b36e82605adfa0cc27268d80d30eb5c6d7a66ac774f0db"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:16Z"
+  },
+  "https://logius-standaarden.github.io/OAuth-NL-profiel": {
+    "state": {
+      "etag": "W/\"68f74416-2fcee\"",
+      "last_modified": "Tue, 21 Oct 2025 08:28:06 GMT",
+      "body_sha256": "6a104b7c8d09eed21b43ec750859a6e3fcec23671eeeeef95612e50e9ba78e4d"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:17Z"
+  },
+  "https://github.com/logius-standaarden/OIDC-NLGOV": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "d9554e48ccd239b76d760f7fe3897071d62ce066",
+      "last_commit_date": "2025-12-01T15:45:47Z",
+      "latest_tag": "v1.0.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:18Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/api/oidc": {
+    "state": {
+      "etag": "W/\"663eb50a-35e91\"",
+      "last_modified": "Sat, 11 May 2024 00:00:10 GMT",
+      "body_sha256": "2c8f8aadd9adbc1b9eca21638dfabe8e80366758b16a346aa2fb7102fe46f78f"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:19Z"
+  },
+  "https://logius-standaarden.github.io/OIDC-NLGOV": {
+    "state": {
+      "etag": "W/\"692db9ef-4585f\"",
+      "last_modified": "Mon, 01 Dec 2025 15:53:19 GMT",
+      "body_sha256": "0d93196b11ad8ca21f19e3634391f88fc1389622619c7fef37b681a335cdb3be"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:20Z"
+  },
+  "https://github.com/logius-standaarden/OAuth-Inleiding": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "6712542f3635c53862d044023213a8a637e3950d",
+      "last_commit_date": "2025-09-08T13:56:38Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:22Z"
+  },
+  "https://logius-standaarden.github.io/OAuth-Inleiding": {
+    "state": {
+      "etag": "W/\"6811fc6a-981\"",
+      "last_modified": "Wed, 30 Apr 2025 10:33:14 GMT",
+      "body_sha256": "a2a3dc179851d1af21cd2c75ec8b8ce32a70b4e0627e20ecb59f70a7e67bf8cf"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:22Z"
+  },
+  "https://github.com/logius-standaarden/OAuth-Beheermodel": {
+    "state": {
+      "archived": true,
+      "default_branch": "develop",
+      "last_commit_sha": "ec8955f3db30fc48868f64989c40d8880648bf12",
+      "last_commit_date": "2025-01-14T15:19:58Z",
+      "latest_tag": "0.2"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:24Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/api/oauth-beheer": {
+    "state": {
+      "etag": "W/\"663eb50a-ff9b\"",
+      "last_modified": "Sat, 11 May 2024 00:00:10 GMT",
+      "body_sha256": "1115862097b4a58218352d750aa54f0fd2b9e69879d4b3c2814ce186fec55025"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:27Z"
+  },
+  "https://github.com/logius-standaarden/authzen-nlgov": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "7f3a62b0a3c6dd656c6c350005656b49dcf1b13d",
+      "last_commit_date": "2025-10-10T13:49:06Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:29Z"
+  },
+  "https://logius-standaarden.github.io/authzen-nlgov": {
+    "state": {
+      "etag": "W/\"68f7697d-41ede\"",
+      "last_modified": "Tue, 21 Oct 2025 11:07:41 GMT",
+      "body_sha256": "e17a2c5916d6d7ac4dd9850ee88c7f0c35af1fe3e4b4ee5811bbecad29d7fcb7"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:29Z"
+  },
+  "https://github.com/logius-standaarden/authorization-decision-log": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "d4b75d7301a49390fee87ea9d949c1197d55af9b",
+      "last_commit_date": "2025-11-16T15:53:57Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:31Z"
+  },
+  "https://logius-standaarden.github.io/authorization-decision-log": {
+    "state": {
+      "etag": "W/\"6919f3e9-238d3\"",
+      "last_modified": "Sun, 16 Nov 2025 15:55:21 GMT",
+      "body_sha256": "d9674558c42f1d5f8c456eccae901b96dd3ef06a71f34cd598cc83eb448c5853"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:31Z"
+  },
+  "https://github.com/logius-standaarden/st-saml-spec": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "6b0cb4b2b2d5ba665c2a88352b0bf4f82782d9bc",
+      "last_commit_date": "2025-10-16T13:05:02Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:33Z"
+  },
+  "https://logius-standaarden.github.io/st-saml-spec": {
+    "state": {
+      "etag": "W/\"68f0ede2-19d283\"",
+      "last_modified": "Thu, 16 Oct 2025 13:06:42 GMT",
+      "body_sha256": "85074832c5dfb1e402cab54a70275eee0c5e03aff3923495a05d4fdd0f454f6d"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:33Z"
+  },
+  "https://github.com/logius-standaarden/logboek-dataverwerkingen": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "56d00e7a99d0e833adcdc99907a3cf76b361646f",
+      "last_commit_date": "2026-02-11T09:43:53Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:35Z"
+  },
+  "https://logius-standaarden.github.io/logboek-dataverwerkingen": {
+    "state": {
+      "etag": "W/\"698c4f9e-23736\"",
+      "last_modified": "Wed, 11 Feb 2026 09:45:02 GMT",
+      "body_sha256": "75b8801750dfc127ced33a4f3d7a070f965e44aaa73ae33a5270f598c1544011"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:36Z"
+  },
+  "https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "4fd7215f63ef3f4c7ab4dcc35aa4dbf4293525c2",
+      "last_commit_date": "2026-02-11T09:44:16Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:37Z"
+  },
+  "https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding": {
+    "state": {
+      "etag": "W/\"698c4fb0-18216\"",
+      "last_modified": "Wed, 11 Feb 2026 09:45:20 GMT",
+      "body_sha256": "4456551e9c845619b1049ad582a876d1a1d40dec180641b58aeb696c3eed12dc"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:38Z"
+  },
+  "https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "96950f69527c1cfbd9bf78d74d7df7d91e5c5104",
+      "last_commit_date": "2026-02-11T09:44:25Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:39Z"
+  },
+  "https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader": {
+    "state": {
+      "etag": "W/\"698c4fb5-220b8\"",
+      "last_modified": "Wed, 11 Feb 2026 09:45:25 GMT",
+      "body_sha256": "2341e9034c6e5c12a7160f6ce2d39294a661647fc76f359777f1fc0b26500e57"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:40Z"
+  },
+  "https://github.com/logius-standaarden/logboek-dataverwerkingen-demo": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "ede16558c63cd5d81cb75c0c0b6ac1333773a306",
+      "last_commit_date": "2025-01-22T11:23:40Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:42Z"
+  },
+  "https://github.com/logius-standaarden/logboek-extensie-lezen": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "4ea909eed2c97bde43fe35c7eec409587f96185b",
+      "last_commit_date": "2025-12-15T09:28:52Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:43Z"
+  },
+  "https://logius-standaarden.github.io/logboek-extensie-lezen": {
+    "state": {
+      "etag": "W/\"693fd516-10201\"",
+      "last_modified": "Mon, 15 Dec 2025 09:29:58 GMT",
+      "body_sha256": "5b26b55e9d286429bd72c53f3ffb690d5feb92e7d7fe9c717bd6d3b3ca76be06"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:44Z"
+  },
+  "https://github.com/logius-standaarden/logboek-extensie-nen7513": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "f2e34fb6fb044394ac2762a42a05f6d165b97fd7",
+      "last_commit_date": "2025-08-25T08:23:59Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:45Z"
+  },
+  "https://logius-standaarden.github.io/logboek-extensie-nen7513": {
+    "state": {
+      "etag": "W/\"68ac1dcf-d229\"",
+      "last_modified": "Mon, 25 Aug 2025 08:24:47 GMT",
+      "body_sha256": "2503d82db5991bb3e068e37fa44183afbd9efca0e781f4b97d30afc69eb62b02"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:46Z"
+  },
+  "https://github.com/logius-standaarden/logboek-extensie-object": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "b2d0e4d783897c1b0e7f655d5ddb321ca62ae1cc",
+      "last_commit_date": "2025-12-17T11:26:55Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:47Z"
+  },
+  "https://logius-standaarden.github.io/logboek-extensie-object": {
+    "state": {
+      "etag": "W/\"694293be-e154\"",
+      "last_modified": "Wed, 17 Dec 2025 11:27:58 GMT",
+      "body_sha256": "2842bb9c5e0cd66bf847d2b3cf6f4175a996c14d2a7c10cfb49b981440671813"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:48Z"
+  },
+  "https://github.com/logius-standaarden/logboek-extensie-template": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "83bdddcc83a2be20760b88ea3c20a1c4830fa1a1",
+      "last_commit_date": "2026-02-11T09:44:03Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:50Z"
+  },
+  "https://logius-standaarden.github.io/logboek-extensie-template": {
+    "state": {
+      "etag": "W/\"698c4fad-f703\"",
+      "last_modified": "Wed, 11 Feb 2026 09:45:17 GMT",
+      "body_sha256": "8548c4a96c76877e3da2b86a871af51a7436801eeecb77f60ff7f961ec23277a"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:51Z"
+  },
+  "https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "7a3424ed228343a1fa817950824da9a9cbd534e2",
+      "last_commit_date": "2026-01-21T14:49:05Z",
+      "latest_tag": "v0.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:52Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl": {
+    "state": {
+      "etag": "\"695c5e95-150\"",
+      "last_modified": "Tue, 06 Jan 2026 01:00:05 GMT",
+      "body_sha256": "a1e4ed5c938a20158f8ede9abc5c78862de4ad66d72bde1cca649fd88b2ff7f7"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:53Z"
+  },
+  "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents": {
+    "state": {
+      "etag": "W/\"6970e7a3-1f1ee\"",
+      "last_modified": "Wed, 21 Jan 2026 14:50:11 GMT",
+      "body_sha256": "76dcfa5b9cd50c04595d300496b878eb34c872dd4d737d692cec1bb617b630b5"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:54Z"
+  },
+  "https://github.com/logius-standaarden/CloudEvents-NL-Guidelines": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "d85aa2f0071e46e39bd057222a6871ff08ee72fd",
+      "last_commit_date": "2025-07-18T11:20:24Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:55Z"
+  },
+  "https://logius-standaarden.github.io/CloudEvents-NL-Guidelines": {
+    "state": {
+      "etag": "W/\"687a2e29-13f9e\"",
+      "last_modified": "Fri, 18 Jul 2025 11:21:13 GMT",
+      "body_sha256": "860c4d60614a51993b3420e9f2df50adcbf7f854f499f6a7e58fdbb9588dd7ad"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:56Z"
+  },
+  "https://github.com/logius-standaarden/Notificatieservices": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "6b2cd0724e4a8c87a2f72a98314e6ddb3d8c53ab",
+      "last_commit_date": "2023-11-23T08:56:24Z",
+      "latest_tag": "v0.1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:57Z"
+  },
+  "https://github.com/logius-standaarden/Abonneren": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "53639bd4af4593d2818a650b30f6d3c5f29182db",
+      "last_commit_date": "2025-10-23T08:28:56Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:55:59Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/notificatieservices/abonneren": {
+    "state": {
+      "etag": "\"68fac185-158\"",
+      "last_modified": "Fri, 24 Oct 2025 00:00:05 GMT",
+      "body_sha256": "87dc5e674553f144f95aa0ce3e7891820155fc59575aa29f65f3950e9b596458"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:00Z"
+  },
+  "https://github.com/logius-standaarden/publicatie": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "9feef9289c89336ce0caf3d45371cfa42b2780e2",
+      "last_commit_date": "2026-02-11T09:39:50Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:01Z"
+  },
+  "https://github.com/logius-standaarden/Publicatie-Preview": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "7503978c323606d55cf18b16796c1916ecf665f2",
+      "last_commit_date": "2026-02-19T12:45:38Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:03Z"
+  },
+  "https://logius-standaarden.github.io/Publicatie-Preview": {
+    "state": {
+      "etag": "W/\"69970618-3ef\"",
+      "last_modified": "Thu, 19 Feb 2026 12:46:16 GMT",
+      "body_sha256": "4183e8998f9eb3e7cf1bb1be239eb12d612167db4e1d72d88370a5d0ffa1bc36"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:03Z"
+  },
+  "https://github.com/logius-standaarden/respec": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "c0d6d606e9c60cb923875b31549d8a4bed697ea4",
+      "last_commit_date": "2025-09-29T14:25:08Z",
+      "latest_tag": "v35.1.1-NLGOV"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:05Z"
+  },
+  "https://github.com/logius-standaarden/ReSpec-template": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "acb89066c64aaa72a31966a7189d812f7c220354",
+      "last_commit_date": "2026-01-20T12:12:23Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:07Z"
+  },
+  "https://logius-standaarden.github.io/ReSpec-template": {
+    "state": {
+      "etag": "W/\"696f7146-47c\"",
+      "last_modified": "Tue, 20 Jan 2026 12:12:54 GMT",
+      "body_sha256": "8c271bee690229da4f8b5f0d1cbeb16d48a35ec523ab337ded26efdb14d1d771"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:07Z"
+  },
+  "https://github.com/logius-standaarden/ReSpec-template-Logius": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "dcce7f4c94962ca520f7327761a0fedf9f340761",
+      "last_commit_date": "2024-03-19T11:06:26Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:09Z"
+  },
+  "https://logius-standaarden.github.io/ReSpec-template-Logius": {
+    "state": {
+      "etag": "W/\"65f971f2-599\"",
+      "last_modified": "Tue, 19 Mar 2024 11:07:30 GMT",
+      "body_sha256": "bcb82f924d69494013162c8ed42456a4abcb16d03536e6c65b8cee0297e6ddb1"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:09Z"
+  },
+  "https://github.com/logius-standaarden/Openbare-Consultaties": {
+    "state": {
+      "archived": false,
+      "default_branch": "master",
+      "last_commit_sha": "6d9b301bc652dd32ca2d5c756f7487825367b41c",
+      "last_commit_date": "2026-01-30T09:59:09Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:11Z"
+  },
+  "https://logius-standaarden.github.io/Openbare-Consultaties": {
+    "state": {
+      "etag": "W/\"697c810e-2e4c\"",
+      "last_modified": "Fri, 30 Jan 2026 09:59:42 GMT",
+      "body_sha256": "1f1607d97d27f19000584bfa1c25105e97bb128311b5e030a6d915a0f63cb369"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:12Z"
+  },
+  "https://github.com/logius-standaarden/Automatisering": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "316bf70c94a7930b3b35c107a1bfb0a277220fae",
+      "last_commit_date": "2026-01-21T12:13:49Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:13Z"
+  },
+  "https://github.com/logius-standaarden/automatisering-test": {
+    "state": {
+      "archived": false,
+      "default_branch": "develop",
+      "last_commit_sha": "fa54290f92bfa3fc323e6519cb83bf824f8a625d",
+      "last_commit_date": "2026-01-20T12:25:59Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:14Z"
+  },
+  "https://github.com/logius-standaarden/tech-radar": {
+    "state": {
+      "archived": false,
+      "default_branch": "main",
+      "last_commit_sha": "d539ac436b052641752766c03169e5e6d00dc73b",
+      "last_commit_date": "2025-05-09T09:08:50Z"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:16Z"
+  },
+  "https://logius-standaarden.github.io/tech-radar": {
+    "state": {
+      "etag": "W/\"681dc644-1349\"",
+      "last_modified": "Fri, 09 May 2025 09:09:24 GMT",
+      "body_sha256": "8a77c3f17da1f82dd681d91eaecce1e98a296b5d91684667e3d7cca05b95ce27"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:17Z"
+  },
+  "https://logius-standaarden.github.io/publicatie/respec/organisation-config.mjs": {
+    "state": {
+      "etag": "W/\"698c4eaf-6860\"",
+      "last_modified": "Wed, 11 Feb 2026 09:41:03 GMT",
+      "body_sha256": "c8ef1998411631ef46e1dcaf11d1b474f71efe35f0d927eb23d19a329816b88e"
+    },
+    "consecutive_failures": 0,
+    "last_checked": "2026-02-21T17:56:17Z"
+  },
+  "https://gitdocumentatie.logius.nl/publicatie/dk": {
+    "state": {},
+    "consecutive_failures": 1,
+    "last_error": "HTTP 403",
+    "last_checked": "2026-02-21T17:56:18Z"
+  }
+}
