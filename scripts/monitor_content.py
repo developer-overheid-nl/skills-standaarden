@@ -213,28 +213,23 @@ def detect_changes(
         changes.append("Repository is gearchiveerd")
 
     # HTTP resources - alleen vergelijken als de key ook in de vorige state bestond
-    body_hash_changed = False
-    if (
-        "body_sha256" in current
-        and "body_sha256" in prev_state
-        and current["body_sha256"] != prev_state["body_sha256"]
-    ):
+    body_hash_available = "body_sha256" in current and "body_sha256" in prev_state
+    body_hash_changed = body_hash_available and current["body_sha256"] != prev_state["body_sha256"]
+
+    if body_hash_changed:
         changes.append("Content is gewijzigd (body hash verschilt)")
-        body_hash_changed = True
-    if (
-        "etag" in current
-        and "etag" in prev_state
-        and current["etag"] != prev_state["etag"]
-        and not body_hash_changed
-    ):
-        changes.append("ETag gewijzigd")
-    if (
-        "last_modified" in current
-        and "last_modified" in prev_state
-        and current["last_modified"] != prev_state["last_modified"]
-        and not body_hash_changed
-    ):
-        changes.append("Last-Modified gewijzigd")
+
+    # ETag/Last-Modified alleen rapporteren als er GEEN body hash beschikbaar is
+    # (als body hash wel beschikbaar is, is die leidend en zijn ETag/Last-Modified noise)
+    if not body_hash_available:
+        if "etag" in current and "etag" in prev_state and current["etag"] != prev_state["etag"]:
+            changes.append("ETag gewijzigd")
+        if (
+            "last_modified" in current
+            and "last_modified" in prev_state
+            and current["last_modified"] != prev_state["last_modified"]
+        ):
+            changes.append("Last-Modified gewijzigd")
 
     return changes
 
