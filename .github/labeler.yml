@@ -2,9 +2,20 @@ skills:
   - changed-files:
       - any-glob-to-any-file: 'skills/**'
 
+plugin:
+  - changed-files:
+      - any-glob-to-any-file: '.claude-plugin/**'
+
 ci:
   - changed-files:
-      - any-glob-to-any-file: '.github/**'
+      - any-glob-to-any-file:
+          - '.github/workflows/ci.yml'
+          - '.github/workflows/labeler.yml'
+          - '.github/workflows/release-please.yml'
+          - '.github/dependabot.yml'
+          - '.github/labeler.yml'
+          - '.github/pull_request_template.md'
+          - '.pre-commit-config.yaml'
 
 monitoring:
   - changed-files:
@@ -24,6 +35,4 @@ documentation:
   - changed-files:
       - any-glob-to-any-file:
           - '*.md'
-          - 'CLAUDE.md'
-          - 'README.md'
-          - 'CHANGELOG.md'
+          - 'docs/**/*.md'
