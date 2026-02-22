@@ -43,6 +43,6 @@ De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarh
 
 ## Referenties
 
-- Gepubliceerde versies: https://gitdocumentatie.logius.nl/publicatie/dk/
+- Gepubliceerde versies (overzicht): https://gitdocumentatie.logius.nl/publicatie/dk/actueel/
 - GitHub organisatie: https://github.com/logius-standaarden/
 - Forum Standaardisatie: https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling
