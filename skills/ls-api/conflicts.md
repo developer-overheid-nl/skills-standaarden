@@ -42,7 +42,7 @@ De module-inhoud is feitelijk in de hoofdspecificatie opgenomen, maar de leeswij
 
 ### Keuze in SKILL.md
 
-De SKILL.md beschrijft de feitelijke situatie: inhoud ingebed in v2.1.0, module nog normatief in leeswijzer, repo gearchiveerd. Dit voorkomt de onjuiste conclusie dat de module "vervallen" is terwijl deze nog in de leeswijzer staat. Als de leeswijzer wordt bijgewerkt, moet deze beschrijving opnieuw worden beoordeeld.
+De SKILL.md beschrijft de drieledige situatie: inhoud ingebed in v2.1.0, module nog normatief in leeswijzer, repo gearchiveerd. Als de leeswijzer wordt bijgewerkt, moet deze beschrijving opnieuw worden beoordeeld.
 
 ## ADR werkversie-nummering op draft-pagina
 
@@ -50,7 +50,7 @@ De draft-pagina op GitHub Pages ([logius-standaarden.github.io/API-Design-Rules]
 
 ### Keuze in SKILL.md
 
-De SKILL.md beschrijft de werkversie als "lopende ontwikkeling richting de volgende release" zonder een specifiek versienummer te claimen voor de draft. Dit voorkomt verwarring met de DEF-versie. Als de ReSpec-configuratie wordt bijgewerkt naar een nieuw versienummer, moet deze beschrijving opnieuw worden beoordeeld.
+De SKILL.md beschrijft de werkversie als "lopende ontwikkeling richting de volgende release" zonder een specifiek versienummer voor de draft. Als de ReSpec-configuratie wordt bijgewerkt naar een nieuw versienummer, moet deze beschrijving opnieuw worden beoordeeld.
 
 ## Keuze in SKILL.md
 

@@ -1,6 +1,6 @@
 ---
 name: ls-egov
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'Terugmelding', 'Terugmelden', 'Digimelding', 'basisfactuur', 'basisorder', 'e-procurement', 'inkoopstandaarden overheid', 'factuurstandaard', 'NLCIUS', 'Peppol BIS', 'PEPPOLBIS', 'elektronisch bestellen'."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over 'Terugmelding', 'Terugmelden', 'Digimelding', 'basisfactuur', 'basisorder', 'e-procurement', 'inkoopstandaarden overheid', 'factuurstandaard', 'NLCIUS', 'Peppol BIS', 'PEPPOLBIS', 'elektronisch bestellen', 'UBL', 'UBL 2.1', 'factuur validatie', 'Schematron'."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -110,115 +110,6 @@ E-Procurement (overkoepelend)
 ---
 
 ## Implementatievoorbeelden
-
-### Terugmelding Indienen via REST API (curl)
-
-```bash
-# Terugmelding aanmaken (root-annotatie)
-curl -X POST https://digimelding.example.com/api/v1/terugmeldingen \
-  -H "Authorization: Bearer $JWT_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "registratie": "BRP",
-    "bronhouder_oin": "00000001234567890000",
-    "gegeven": {
-      "attribuut": "verblijfplaats",
-      "huidige_waarde": "Keizersgracht 100, Amsterdam",
-      "verwachte_waarde": "Herengracht 200, Amsterdam"
-    },
-    "betrokkene": {
-      "type": "BSN",
-      "id": "999990342"
-    },
-    "toelichting": "Persoon is verhuisd per 1 januari 2024",
-    "contactgegevens": {
-      "naam": "Gemeente Amsterdam",
-      "email": "terugmelding@amsterdam.nl",
-      "organisatie_oin": "00000001823288444000"
-    }
-  }'
-
-# Response: 201 Created
-# {
-#   "id": "550e8400-e29b-41d4-a716-446655440000",
-#   "status": "ontvangen",
-#   "registratie": "BRP",
-#   "created_at": "2024-01-15T10:30:00Z"
-# }
-```
-
-### Terugmelding Status Opvragen (curl)
-
-```bash
-# Status van een terugmelding ophalen
-curl -X GET https://digimelding.example.com/api/v1/terugmeldingen/550e8400-e29b-41d4-a716-446655440000 \
-  -H "Authorization: Bearer $JWT_TOKEN" | jq
-
-# Alle leaf-annotaties (reacties) bij een terugmelding
-curl -X GET https://digimelding.example.com/api/v1/terugmeldingen/550e8400-e29b-41d4-a716-446655440000/annotaties \
-  -H "Authorization: Bearer $JWT_TOKEN" | jq
-```
-
-### Terugmelding Verwerken in Python
-
-```python
-import requests
-
-class DigimeldingClient:
-    """Client voor de Terugmelden-API (conceptueel)."""
-
-    def __init__(self, base_url: str, token: str):
-        self.base_url = base_url
-        self.session = requests.Session()
-        self.session.headers.update({
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json",
-        })
-
-    def maak_terugmelding(self, registratie: str, attribuut: str,
-                          huidige_waarde: str, verwachte_waarde: str,
-                          betrokkene_id: str, toelichting: str) -> dict:
-        """Dien een nieuwe terugmelding in (root-annotatie)."""
-        response = self.session.post(f"{self.base_url}/api/v1/terugmeldingen", json={
-            "registratie": registratie,
-            "gegeven": {
-                "attribuut": attribuut,
-                "huidige_waarde": huidige_waarde,
-                "verwachte_waarde": verwachte_waarde,
-            },
-            "betrokkene": {"type": "BSN", "id": betrokkene_id},
-            "toelichting": toelichting,
-        })
-        response.raise_for_status()
-        return response.json()
-
-    def get_status(self, terugmelding_id: str) -> dict:
-        """Haal de huidige status van een terugmelding op."""
-        response = self.session.get(
-            f"{self.base_url}/api/v1/terugmeldingen/{terugmelding_id}")
-        response.raise_for_status()
-        return response.json()
-
-    def voeg_aanvulling_toe(self, terugmelding_id: str, tekst: str) -> dict:
-        """Voeg een aanvulling toe als leaf-annotatie."""
-        response = self.session.post(
-            f"{self.base_url}/api/v1/terugmeldingen/{terugmelding_id}/annotaties",
-            json={"type": "aanvulling", "tekst": tekst})
-        response.raise_for_status()
-        return response.json()
-
-# Gebruik
-client = DigimeldingClient("https://digimelding.example.com", token="eyJ...")
-tm = client.maak_terugmelding(
-    registratie="BAG",
-    attribuut="huisnummer",
-    huidige_waarde="100",
-    verwachte_waarde="100a",
-    betrokkene_id="999990342",
-    toelichting="Huisnummer is gesplitst na verbouwing"
-)
-print(f"Terugmelding ingediend: {tm['id']}")
-```
 
 ### UBL 2.1 Basisfactuur XML (Minimum Viable)
 
@@ -362,6 +253,53 @@ Facturen worden automatisch afgewezen wanneer:
 - **Ongeldig UBL-formaat** - XML voldoet niet aan NLCIUS-validatieschema
 
 Bij afwijzing ontvangt de leverancier een e-mail met de specifieke ontbrekende velden.
+
+### Digimelding: Bestaande Koppelvlakspecificatie (SOAP/WUS)
+
+De huidige operationele interface voor terugmelden is SOAP/WUS, beschreven in de [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie). Zie `/ls-dk` voor WUS-implementatiedetails en WSDL-configuratie.
+
+```bash
+# Digimelding koppelvlakspecificatie bekijken
+gh api repos/logius-standaarden/Digimelding-Koppelvlakspecificatie/contents --jq '.[].name'
+```
+
+### Basisfactuur Validatie (Schematron)
+
+Het repo `basisfactuur-rijk` bevat een Schematron bestand met validatieregels en voorbeeld-XML's:
+
+```bash
+# Bekijk de Schematron validatieregels voor de Basisfactuur Rijk
+gh api repos/logius-standaarden/basisfactuur-rijk/contents/technische-documentatie/basisfactuur-rijk.sch \
+  -H "Accept: application/vnd.github.raw"
+
+# Bekijk een voorbeeldfactuur
+gh api repos/logius-standaarden/basisfactuur-rijk/contents/technische-documentatie/NLCIUS%20voorbeeldbericht%20Basisfactuur%20Rijk%20v01.xml \
+  -H "Accept: application/vnd.github.raw"
+```
+
+---
+
+### Toekomstig: Terugmelden-API (conceptueel)
+
+> **Let op:** De onderstaande REST API voorbeelden zijn **conceptueel/illustratief**. Er bestaat een [werkrepository Terugmelden-API](https://github.com/logius-standaarden/Terugmelden-API) maar deze bevat nog geen OpenAPI-specificatie. De bestaande operationele interface is SOAP/WUS via Digimelding (zie hierboven). Gebruik deze voorbeelden **niet** als basis voor productie-code.
+
+```bash
+# Conceptueel: terugmelding aanmaken via toekomstige REST API
+curl -X POST https://digimelding.example.com/api/v1/terugmeldingen \
+  -H "Authorization: Bearer $JWT_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "registratie": "BRP",
+    "bronhouder_oin": "00000001234567890000",
+    "gegeven": {
+      "attribuut": "verblijfplaats",
+      "huidige_waarde": "Keizersgracht 100, Amsterdam",
+      "verwachte_waarde": "Herengracht 200, Amsterdam"
+    },
+    "betrokkene": {"type": "BSN", "id": "999990342"},
+    "toelichting": "Persoon is verhuisd per 1 januari 2024"
+  }'
+```
 
 ## Achtergrondinfo
 

@@ -1,6 +1,6 @@
 ---
 name: ls-iam
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'OAuth', 'OpenID Connect', 'OIDC', 'authenticatie', 'autorisatie', 'AuthZEN', 'SAML', 'identity management', 'toegangsbeheer', 'OAuth NL profiel', 'OIDC NL GOV', 'authorization decision', 'OIN authenticatie'."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over 'OAuth', 'OpenID Connect', 'OIDC', 'authenticatie', 'autorisatie', 'AuthZEN', 'SAML', 'identity management', 'toegangsbeheer', 'OAuth NL profiel', 'OIDC NL GOV', 'NL GOV profiel', 'authorization decision', 'OIN authenticatie', 'token endpoint', 'JWT', 'private_key_jwt', 'client credentials', 'authorization_code', 'PKCE'."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -26,7 +26,7 @@ Net als andere Logius-standaarden kennen deze standaarden twee publicatiekanalen
 
 De IAM-standaarden OAuth-NL-profiel, OIDC-NLGOV en OIN-Stelsel hebben **vastgestelde versies** op gitdocumentatie.logius.nl. OAuth-Beheermodel heeft eveneens een vastgestelde versie maar is **gearchiveerd**. De overige standaarden (AuthZEN, Authorization Decision Log, OAuth-Inleiding) hebben momenteel alleen werkversies.
 
-OpenID.NLGov (v1.0.1) en SAML zijn beide **verplicht** als onderdeel van de gecombineerde vermelding ["Authenticatie-standaarden (OpenID.NLGov en SAML)"](https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden) op het Forum Standaardisatie (sinds 21-09-2023). Voor **nieuwe implementaties** wordt OIDC NL GOV aanbevolen; bestaande SAML-koppelingen blijven ondersteund.
+OpenID.NLGov (v1.0.1) en SAML zijn beide **verplicht** (['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden), sinds 21-09-2023). Voor **nieuwe implementaties** wordt OIDC aanbevolen; bestaande SAML-koppelingen blijven ondersteund. SAML-details staan in [reference.md](reference.md).
 
 Op het Forum Standaardisatie staat het OAuth-NL-profiel **v1.0** als verplicht (['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20)). Versie v1.1.0 is vastgesteld door Logius (DEF) maar is op het Forum [in procedure genomen](https://www.forumstandaardisatie.nl/intakeadvies-nl-gov-assurance-profile-oauth-20-versie-11) (intake goedgekeurd 24-09-2025, verkort expertonderzoek loopt).
 
@@ -65,8 +65,20 @@ Het Nederlandse OAuth 2.0 profiel scherpt de basisspecificatie (RFC 6749) aan me
 
 Het token endpoint vereist sterke client authenticatie:
 
-- **mTLS (Mutual TLS)**: de client presenteert een TLS-certificaat (bij voorkeur PKIoverheid) bij het aanroepen van het token endpoint. Dit biedt sterke cryptografische binding.
-- **private_key_jwt**: de client ondertekent een JWT-assertion met zijn private key en stuurt deze mee als client authenticatie. De authorization server valideert met de geregistreerde public key.
+- **private_key_jwt** (VERPLICHT per OAuth NL profiel): de client ondertekent een JWT-assertion met zijn private key en stuurt deze mee als client authenticatie. De authorization server valideert met de geregistreerde public key.
+- **mTLS (Mutual TLS)** (MAY per OAuth NL profiel, gelijkwaardig alternatief per OIDC NL GOV profiel): de client presenteert een TLS-certificaat (bij voorkeur PKIoverheid) bij het aanroepen van het token endpoint. Dit biedt sterke cryptografische binding.
+
+### Keuzematrix: grant type en client authenticatie
+
+```
+Menselijke eindgebruiker betrokken?
+  JA  → authorization_code + PKCE
+  NEE → client_credentials (machine-to-machine)
+
+Client authenticatie bij token endpoint:
+  → private_key_jwt (standaard, verplicht per OAuth NL profiel)
+  → mTLS (gelijkwaardig alternatief per OIDC NL GOV profiel, bij PKIoverheid certificaat)
+```
 
 ---
 

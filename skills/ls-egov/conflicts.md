@@ -28,11 +28,11 @@ De volgende standaarden worden op het Forum Standaardisatie vermeld in de contex
 
 ### Analyse
 
-De SKILL.md vermeldt NLCIUS en Peppol BIS als Forum-standaarden met hun status (verplicht), maar neemt ze niet op als Logius-repositories. Dit is correct: Logius beheert de Terugmeld- en Digimelding-standaarden, niet de e-procurement standaarden.
+NLCIUS en Peppol BIS staan in de SKILL.md als Forum-standaarden met hun status (verplicht), maar niet als Logius-repositories. Logius beheert de Terugmeld- en Digimelding-standaarden; de e-procurement standaarden worden extern beheerd.
 
 ## Keuze in SKILL.md
 
-De skill vermeldt correct dat Logius-repositories alleen werkversies hebben. NLCIUS en Peppol BIS worden vermeld vanwege hun Forum Standaardisatie-status, maar niet als Logius-repositories. Als er DEF-versies worden vastgesteld voor de Terugmeld-repositories, moet dit document worden bijgewerkt.
+Logius-repositories hebben alleen werkversies. NLCIUS en Peppol BIS staan in de skill vanwege hun Forum Standaardisatie-status, niet als Logius-repositories. Als er DEF-versies worden vastgesteld voor de Terugmeld-repositories, moet dit document worden bijgewerkt.
 
 ## Referenties
 

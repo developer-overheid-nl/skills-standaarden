@@ -1,6 +1,6 @@
 ---
 name: ls-pub
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'publicatie', 'ReSpec', 'documentatie tooling', 'GitHub Actions workflows', 'build workflow', 'check workflow', 'publish workflow', 'tech radar', 'WCAG check', 'markdownlint', 'lint', 'kwaliteitscheck', 'Muffet', 'link validatie', 'automatisering', 'HTML generatie', 'PDF generatie', 'accessibility check', 'a11y'."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over 'publicatie', 'ReSpec', 'documentatie tooling', 'GitHub Actions workflows', 'build workflow', 'check workflow', 'publish workflow', 'tech radar', 'WCAG check', 'markdownlint', 'markdown lint', 'kwaliteitscheck', 'Muffet', 'link validatie', 'automatisering', 'HTML generatie', 'PDF generatie', 'accessibility check', 'a11y'. Niet voor API linting (zie ls-api) of code linting."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -12,6 +12,7 @@ allowed-tools:
   - Bash(npx markdownlint *)
   - Bash(npx @axe-core/cli *)
   - Bash(npx muffet *)
+  - Bash(npx http-server *)
   - Bash(node *)
   - WebFetch(*)
 ---

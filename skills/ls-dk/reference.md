@@ -57,7 +57,7 @@ WUS staat voor WSDL, UDDI en SOAP en biedt een gestandaardiseerde manier voor sy
   - **2W-be** (Messaging, Best-effort): Basis synchroon berichtverkeer zonder extra beveiliging op berichtniveau
   - **2W-be-S** (Messaging, Best-effort, Signed): Bericht wordt digitaal ondertekend met WS-Security en XML Digital Signature (XMLDSIG). Garandeert integriteit en onweerlegbaarheid.
   - **2W-be-SE** (Messaging, Best-effort, Signed & Encrypted): Bericht wordt ondertekend en versleuteld met WS-Security en XML Encryption. Garandeert integriteit, onweerlegbaarheid en vertrouwelijkheid.
-- **Standaarden**: WS-Security 1.1, WS-Addressing, SOAP 1.2, MTOM voor binaire bijlagen
+- **Standaarden**: WS-Security 1.1, WS-Addressing, SOAP 1.1 (document-literal binding), MTOM voor binaire bijlagen
 - **Adressering**: WS-Addressing headers met OIN-gebaseerde endpoint-URL's
 
 WUS is geschikt voor synchrone transacties waarbij interoperabiliteit met bestaande SOAP-webservices vereist is.

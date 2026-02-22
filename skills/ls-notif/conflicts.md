@@ -28,7 +28,7 @@ Het Forum Standaardisatie vermeldt v1.0 als de verplichte versie op de pas-toe-o
 
 ## Keuze in SKILL.md
 
-De skill noemt beide versies correct: v1.0 als de Forum Standaardisatie-versie (verplicht) en v1.1 als de meest recente Logius DEF. Als het Forum de lijstversie bijwerkt naar v1.1, moet dit conflict opnieuw worden beoordeeld.
+De skill noemt beide versies: v1.0 als de Forum Standaardisatie-versie (verplicht) en v1.1 als de meest recente Logius DEF. Als het Forum de lijstversie bijwerkt naar v1.1, moet dit conflict opnieuw worden beoordeeld.
 
 ## Referenties
 

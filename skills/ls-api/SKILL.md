@@ -1,6 +1,6 @@
 ---
 name: ls-api
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'API Design Rules', 'ADR', 'REST API standaard', 'API richtlijnen', 'NL GOV API', 'Spectral linter', 'API linter', 'OpenAPI validatie', 'API beveiliging', 'transport security', 'API signing', 'API encryption', 'geospatial API', of 'api-linter'."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over 'API Design Rules', 'ADR', 'REST API standaard', 'API richtlijnen', 'NL GOV API', 'Spectral linter', 'API linter', 'OpenAPI validatie', 'API design', 'REST API naming', 'transport security', 'API signing', 'API encryption', 'geospatial API', 'api-linter', 'problem+json', 'error response format'."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -219,32 +219,40 @@ async def problem_json_handler(request: Request, exc: HTTPException):
 
 ## Spectral Linter
 
-De Spectral linter valideert OpenAPI specs tegen 15 ADR regels.
+De Spectral linter valideert OpenAPI specs tegen ADR regels. De DON-hosted ruleset bevat 11 regels; de GitHub-versie bevat 17 regels (inclusief extra checks zoals `query-keys-camel-case`, `semver` en `info-contact`).
 
 ```bash
-# Haal spectral.yml op en lint een OpenAPI spec
+# Optie 1: Publieke DON-hosted ruleset (geen GitHub auth nodig, aanbevolen)
+npx @stoplight/spectral-cli lint <jouw-spec.yaml> \
+  --ruleset https://static.developer.overheid.nl/adr/ruleset.yaml
+
+# Optie 2: Ruleset ophalen via GitHub API
 gh api repos/logius-standaarden/API-Design-Rules/contents/linter/spectral.yml \
   -H "Accept: application/vnd.github.raw" > /tmp/adr-spectral.yml
 npx @stoplight/spectral-cli lint <jouw-spec.yaml> --ruleset /tmp/adr-spectral.yml
 
-# Bekijk beschikbare regels
-gh api repos/logius-standaarden/API-Design-Rules/contents/linter/spectral.yml \
-  -H "Accept: application/vnd.github.raw" | grep "nlgov:"
+# Bekijk beschikbare regels (DON-versie)
+curl -s https://static.developer.overheid.nl/adr/ruleset.yaml | grep -oE "^\s{2}\S+:" | sed 's/^\s*//;s/:$//'
 
 # Linter testcases bekijken
 gh api repos/logius-standaarden/API-Design-Rules/contents/linter/testcases --jq '.[].name'
 ```
 
-Belangrijke Spectral regels:
-- `nlgov:include-major-version-in-uri` - Major versie in URI pad
-- `nlgov:paths-no-trailing-slash` - Geen trailing slashes
-- `nlgov:paths-kebab-case` - Kebab-case padsegmenten
+Belangrijke Spectral regels (DON-naam / GitHub-naam):
+- `include-major-version-in-uri` / `nlgov:include-major-version-in-uri` - Major versie in URI pad
+- `paths-no-trailing-slash` / `nlgov:paths-no-trailing-slash` - Geen trailing slashes
+- `paths-kebab-case` / `nlgov:paths-kebab-case` - Kebab-case padsegmenten
+- `http-methods` / `nlgov:http-methods` - Alleen standaard HTTP methoden
+- `missing-version-header` / `nlgov:missing-version-header` - Version header in 2xx/3xx responses
+- `use-problem-schema` / `nlgov:use-problem-schema` - Problem+json voor fouten
+
+Alleen in de GitHub-versie (17 regels totaal, 6 extra t.o.v. DON):
 - `nlgov:query-keys-camel-case` - camelCase query parameters
-- `nlgov:http-methods` - Alleen standaard HTTP methoden
-- `nlgov:info-contact-fields-exist` - Contactinformatie aanwezig
-- `nlgov:missing-version-header` - Version header in 2xx/3xx responses
-- `nlgov:use-problem-schema` - Problem+json voor fouten
+- `nlgov:info-contact-fields-exist` - Contactinformatie velden aanwezig
+- `info-contact` - Contactobject aanwezig (zonder `nlgov:` prefix)
 - `nlgov:semver` - Semantic versioning formaat
+- `nlgov:openapi-root-exists` - OpenAPI root object aanwezig
+- `oas3-api-servers` - Servers array aanwezig (built-in regel op error gezet)
 
 ## Achtergrondinfo
 

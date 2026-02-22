@@ -1,6 +1,6 @@
 ---
 name: ls-logboek
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'Logboek Dataverwerkingen', 'dataverwerkingen logging', 'transparantie dataverwerkingen', 'NEN 7513', 'logging API overheid', 'logboek extensie', 'AVG logging', 'GDPR logging', 'verwerkingenlogging'."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over 'Logboek Dataverwerkingen', 'dataverwerkingen logging', 'transparantie dataverwerkingen', 'NEN 7513', 'logging API overheid', 'logboek extensie', 'AVG logging', 'GDPR logging', 'verwerkingenlogging', 'OpenTelemetry', 'OTLP', 'dpl.core', 'verwerkingsactiviteit loggen'."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -90,7 +90,7 @@ De `dpl.core` namespace bevat de verplichte en optionele verwerkingsattributen:
 | Attribuut | Type | Verplicht | Beschrijving |
 |-----------|------|-----------|--------------|
 | `dpl.core.processing_activity_id` | URI | Ja | Verwijzing naar de verwerkingsactiviteit in het Register (AVG Art. 30). Koppelt de logregel aan het doel en de grondslag van de verwerking. |
-| `dpl.core.data_subject_id` | string | Ja | Versleuteld of gepseudonimiseerd ID van de betrokkene. Mag nooit een onversleuteld BSN of direct identificerend gegeven bevatten. |
+| `dpl.core.data_subject_id` | string | Ja | Unieke, versleutelde identificerende code van de betrokkene. De specificatie BEVEELT AAN om deze te pseudonimiseren (SHOULD). |
 | `dpl.core.data_subject_id_type` | string | Ja | Type identificatie van de betrokkene. Mogelijke waarden: `BSN`, `personeelsnummer`, `URI`, of een ander organisatiespecifiek type. |
 | `dpl.core.foreign_operation.processor` | URL | Nee | Link naar de externe applicatie of organisatie die betrokken is bij een cross-organisatie verwerking. Wordt ingevuld wanneer een verwerking een andere partij betreft. |
 
@@ -99,11 +99,13 @@ De `dpl.core` namespace bevat de verplichte en optionele verwerkingsattributen:
 ```json
 {
   "dpl.core.processing_activity_id": "https://register.example.org/activiteiten/123",
-  "dpl.core.data_subject_id": "sha256:a1b2c3d4e5f6...",
+  "dpl.core.data_subject_id": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
   "dpl.core.data_subject_id_type": "BSN",
   "dpl.core.foreign_operation.processor": "https://api.andere-organisatie.nl/service"
 }
 ```
+
+> **Let op:** `dpl.core.data_subject_id` bevat hier een HMAC-SHA256 hash van het BSN. De specificatie BEVEELT AAN (SHOULD) om de identificerende code te pseudonimiseren. In het implementatievoorbeeld hieronder tonen we HMAC-SHA256 als een mogelijke aanpak; de specificatie schrijft geen specifiek algoritme voor.
 
 ## Cross-organisatie Flow
 
@@ -179,11 +181,20 @@ Zorg-specifieke uitbreiding voor logging conform NEN 7513. Voegt verplichte attr
 ### Python Applicatie met OpenTelemetry SDK
 
 ```python
+import hashlib, hmac, os
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
 from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
 from opentelemetry.sdk.resources import Resource
+
+# --- BSN pseudonimisering (AANBEVOLEN door de specificatie, niet verplicht) ---
+# De spec schrijft geen specifiek algoritme voor; HMAC-SHA256 is een veelgebruikte aanpak.
+ORG_SALT = os.environ["DPL_ORG_SALT"]  # organisatie-breed geheim, beheerd als secret
+
+def pseudonimiseer_bsn(bsn: str) -> str:
+    """HMAC-SHA256 pseudonimisering van BSN. Eenrichtings, deterministisch per organisatie."""
+    return hmac.new(ORG_SALT.encode(), bsn.encode(), hashlib.sha256).hexdigest()
 
 # Configureer de tracer met applicatie-metadata
 resource = Resource.create({
@@ -205,7 +216,7 @@ def verwerk_aanvraag(bsn: str, verwerking_id: str):
         # Verplichte dpl.core attributen
         span.set_attribute("dpl.core.processing_activity_id",
             f"https://register.example.com/verwerkingen/{verwerking_id}")
-        span.set_attribute("dpl.core.data_subject_id", bsn)  # versleuteld in productie
+        span.set_attribute("dpl.core.data_subject_id", pseudonimiseer_bsn(bsn))  # pseudonimisering aanbevolen
         span.set_attribute("dpl.core.data_subject_id_type", "BSN")
 
         # Verwerking uitvoeren
@@ -229,13 +240,13 @@ from opentelemetry.propagate import inject
 
 tracer = trace.get_tracer("organisatie-a")
 
-def vraag_gegevens_op_bij_organisatie_b(bsn: str):
+def vraag_gegevens_op_bij_organisatie_b(bsn: str):  # pseudonimiseer_bsn() gedefinieerd in eerste codeblok
     """Cross-organisatie call met W3C Trace Context propagatie."""
     with tracer.start_as_current_span("opvragen-externe-gegevens") as span:
         # dpl.core attributen voor deze verwerking
         span.set_attribute("dpl.core.processing_activity_id",
             "https://register.example.com/verwerkingen/opvragen-brp")
-        span.set_attribute("dpl.core.data_subject_id", bsn)
+        span.set_attribute("dpl.core.data_subject_id", pseudonimiseer_bsn(bsn))
         span.set_attribute("dpl.core.data_subject_id_type", "BSN")
 
         # W3C Trace Context headers automatisch injecteren
@@ -267,6 +278,7 @@ from opentelemetry.propagate import extract
 
 app = FastAPI()
 tracer = trace.get_tracer("organisatie-b")
+# pseudonimiseer_bsn() gedefinieerd in eerste codeblok hierboven
 
 @app.get("/v1/personen")
 async def get_persoon(bsn: str, request: Request):
@@ -278,7 +290,7 @@ async def get_persoon(bsn: str, request: Request):
         # Dezelfde trace_id als Organisatie A, nieuwe span_id
         span.set_attribute("dpl.core.processing_activity_id",
             "https://register.organisatie-b.nl/verwerkingen/leveren-brp")
-        span.set_attribute("dpl.core.data_subject_id", bsn)
+        span.set_attribute("dpl.core.data_subject_id", pseudonimiseer_bsn(bsn))
         span.set_attribute("dpl.core.data_subject_id_type", "BSN")
 
         # Bron van het externe verzoek vastleggen
@@ -292,6 +304,7 @@ async def get_persoon(bsn: str, request: Request):
 ### Meerdere Betrokkenen per Verwerking
 
 ```python
+# pseudonimiseer_bsn() gedefinieerd in eerste codeblok hierboven
 def verwerk_batch(bsn_lijst: list[str], verwerking_id: str):
     """Bij meerdere betrokkenen: apart logregel per persoon."""
     with tracer.start_as_current_span("batch-verwerking") as parent_span:
@@ -301,7 +314,7 @@ def verwerk_batch(bsn_lijst: list[str], verwerking_id: str):
         for bsn in bsn_lijst:
             # Child span per betrokkene (zelfde trace_id, unieke span_id)
             with tracer.start_as_current_span(f"verwerk-persoon") as child_span:
-                child_span.set_attribute("dpl.core.data_subject_id", bsn)
+                child_span.set_attribute("dpl.core.data_subject_id", pseudonimiseer_bsn(bsn))
                 child_span.set_attribute("dpl.core.data_subject_id_type", "BSN")
                 child_span.set_attribute("dpl.core.processing_activity_id",
                     f"https://register.example.com/verwerkingen/{verwerking_id}")
@@ -324,10 +337,11 @@ def verwerk_batch(bsn_lijst: list[str], verwerking_id: str):
 
 ```python
 import traceback
+# pseudonimiseer_bsn() en tracer gedefinieerd in eerste codeblok hierboven
 
 with tracer.start_as_current_span("verwerk-gegevens") as span:
     span.set_attribute("dpl.core.processing_activity_id", verwerking_url)
-    span.set_attribute("dpl.core.data_subject_id", bsn)
+    span.set_attribute("dpl.core.data_subject_id", pseudonimiseer_bsn(bsn))
     span.set_attribute("dpl.core.data_subject_id_type", "BSN")
     try:
         result = external_api.get(bsn)

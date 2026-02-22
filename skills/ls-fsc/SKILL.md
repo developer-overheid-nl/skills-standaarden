@@ -1,6 +1,6 @@
 ---
 name: ls-fsc
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'FSC', 'Federated Service Connectivity', 'federatieve dienstverlening', 'inway', 'outway', 'service directory', 'regulated area', 'external contract', 'fsc-core'."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over 'FSC', 'Federated Service Connectivity', 'federatieve dienstverlening', 'inway', 'outway', 'service directory', 'regulated area', 'external contract', 'fsc-core', 'NLX', 'peer', 'PeerID', 'Manager API'."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -102,35 +102,52 @@ De Inway van de provider:
 
 ### Contract JSON-structuur
 
-Een contract heeft de volgende globale structuur:
+Een contract heeft de volgende structuur (conform fsc-core specificatie):
 
 ```json
 {
-  "version": "1",
-  "validFrom": "2025-01-01T00:00:00Z",
-  "validUntil": "2026-01-01T00:00:00Z",
-  "grants": [
-    {
-      "type": "ServiceConnectionGrant",
-      "servicePeerID": "<PeerID-provider>",
-      "serviceName": "mijn-service",
-      "consumerPeerID": "<PeerID-consumer>"
-    }
-  ],
-  "signatures": [
-    {
-      "peerID": "<PeerID-consumer>",
-      "certificateThumbprint": "<SHA-256 hash>",
-      "signature": "<base64-encoded signature>"
+  "content": {
+    "fsc_version": "1.0.0",
+    "iv": "06338364-8305-7b74-8000-de4963503139",
+    "group_id": "nl-overheid-productie",
+    "validity": {
+      "not_before": 1672527600,
+      "not_after": 1704063600
     },
-    {
-      "peerID": "<PeerID-provider>",
-      "certificateThumbprint": "<SHA-256 hash>",
-      "signature": "<base64-encoded signature>"
-    }
-  ]
+    "grants": [
+      {
+        "data": {
+          "type": "GRANT_TYPE_SERVICE_CONNECTION",
+          "service": {
+            "type": "SERVICE_TYPE_SERVICE",
+            "peer_id": "00000000000000000001",
+            "name": "mijn-service"
+          },
+          "outway": {
+            "peer_id": "00000000000000000002",
+            "identification": {
+              "type": "OUTWAY_IDENTIFICATION_TYPE_PUBLIC_KEY_THUMBPRINT",
+              "public_key_thumbprint": "3a56f2e9269ac63f0d4394c46b96539da1625b6a985d38029ff89f34e490960c"
+            }
+          }
+        }
+      }
+    ],
+    "hash_algorithm": "HASH_ALGORITHM_SHA3_512",
+    "created_at": 1672527600
+  },
+  "signatures": {
+    "accept": {
+      "00000000000000000001": "eyJhbGciOiJSUzUxMiIsIng1dCNTMjU2Ijo...  <JWS compact serialization>",
+      "00000000000000000002": "eyJhbGciOiJFUzI1NiIsIng1dCNTMjU2Ijo...  <JWS compact serialization>"
+    },
+    "reject": {},
+    "revoke": {}
+  }
 }
 ```
+
+> **Polymorfe velden:** `service` kan ook `SERVICE_TYPE_DELEGATED_SERVICE` zijn (extra veld `delegator`). `outway.identification` kan ook `OUTWAY_IDENTIFICATION_TYPE_DOMAIN_NAME` zijn (veld `domain_name`). Grants kunnen optioneel een `properties`-object bevatten. Zie de [fsc-core OpenAPI spec](https://github.com/logius-standaarden/fsc-core/blob/develop/media/specs/manager.yaml) voor het volledige schema.
 
 ### Grant Types
 
@@ -372,52 +389,63 @@ def validate_fsc_token(token: str, client_cert_pem: bytes, group_id: str, manage
 
 ### Contract Aanmaken en Ondertekenen (curl)
 
+De Manager API (`POST /contracts`) verwacht `content` (verplicht) en `signature` (JWS string). De Manager berekent en valideert de signature op basis van het certificaat waarmee de mTLS-verbinding is opgezet.
+
 ```bash
-# Stap 1: Contract indienen bij provider
-curl -X POST https://provider-manager.example.com:8443/contracts \
+# Stap 1: Contract indienen door consumer bij eigen Manager
+# De Manager genereert de JWS-signature op basis van het mTLS-certificaat
+curl -X POST https://consumer-manager.example.com:8443/v1/contracts \
   --cert pkio_cert.pem --key pkio_key.pem --cacert pkio_ca_chain.pem \
   -H "Content-Type: application/json" \
+  -H "Fsc-Manager-Address: https://consumer-manager.example.com:8443" \
   -d '{
     "content": {
       "fsc_version": "1.0.0",
-      "iv": "'$(uuidgen)'",
+      "iv": "06338364-8305-7b74-8000-de4963503139",
       "group_id": "nl-overheid-productie",
       "validity": {
-        "not_before": '$(date +%s)',
-        "not_after": '$(date -v+1y +%s)'
+        "not_before": 1704067200,
+        "not_after": 1735689600
       },
       "grants": [{
-        "type": "ServiceConnectionGrant",
-        "service_name": "brp-bevraging",
-        "outway": {
-          "public_key_thumbprint": "sha256:abc123..."
+        "data": {
+          "type": "GRANT_TYPE_SERVICE_CONNECTION",
+          "service": {
+            "type": "SERVICE_TYPE_SERVICE",
+            "peer_id": "00000001234567890000",
+            "name": "brp-bevraging"
+          },
+          "outway": {
+            "peer_id": "00000001823288444000",
+            "identification": {
+              "type": "OUTWAY_IDENTIFICATION_TYPE_PUBLIC_KEY_THUMBPRINT",
+              "public_key_thumbprint": "3a56f2e9269ac63f0d4394c46b96539da1625b6a985d38029ff89f34e490960c"
+            }
+          }
         }
       }],
       "hash_algorithm": "HASH_ALGORITHM_SHA3_512",
-      "created_at": '$(date +%s)'
+      "created_at": 1704067200
     },
-    "signatures": [{
-      "peer_id": "00000001823288444000",
-      "certificate_thumbprint": "sha256:def456...",
-      "signature": "base64_signature_here",
-      "acceptance": "ACCEPTED"
-    }]
+    "signature": "eyJhbGciOiJSUzUxMiIsIng1dCNTMjU2Ijo..."
   }'
+# Response: 201 Created
 
-# Stap 2: Contract accepteren door provider
-CONTRACT_HASH="returned_contract_hash"
-curl -X PUT "https://provider-manager.example.com:8443/contracts/${CONTRACT_HASH}/accept" \
+# Stap 2: Contract accepteren door provider via zijn Manager
+# De accept endpoint vereist zowel content als signature (signatureRequest schema)
+CONTRACT_HASH="<hash uit stap 1 response>"
+curl -X PUT "https://provider-manager.example.com:8443/v1/contracts/${CONTRACT_HASH}/accept" \
   --cert pkio_cert.pem --key pkio_key.pem --cacert pkio_ca_chain.pem \
   -H "Content-Type: application/json" \
+  -H "Fsc-Manager-Address: https://provider-manager.example.com:8443" \
   -d '{
-    "signature": {
-      "peer_id": "00000001234567890000",
-      "certificate_thumbprint": "sha256:ghi789...",
-      "signature": "base64_provider_signature",
-      "acceptance": "ACCEPTED"
-    }
+    "content": { <dezelfde contract content als in stap 1> },
+    "signature": "eyJhbGciOiJSUzUxMiIsIng1dCNTMjU2Ijo..."
   }'
+# Response: 201 Signature created
 ```
+
+> **Let op:** De `signature`-waarden zijn JWS tokens (RFC7515) die een hash van de contract-content bevatten, ondertekend met het PKIoverheid-certificaat. De JWS payload bevat `contract_content_hash`, `type` ("accept"/"reject"/"revoke") en `signed_at`. Het volledige algoritme staat in de [fsc-core specificatie](https://gitdocumentatie.logius.nl/publicatie/fsc/core/), sectie Signatures.
 
 ### Service Discovery via Directory (curl)
 
@@ -446,7 +474,6 @@ curl -s "https://directory.example.com:8443/services?name=brp-bevraging" \
 | 401 | `ERROR_CODE_ACCESS_TOKEN_EXPIRED` | Token verlopen | Nieuw token ophalen |
 | 403 | `ERROR_CODE_WRONG_GROUP_ID_IN_TOKEN` | Group ID in token matcht niet | Controleer groepsconfiguratie |
 | 404 | `ERROR_CODE_SERVICE_NOT_FOUND` | Service niet geregistreerd | Controleer servicenaam in contract |
-| 500 | `ERROR_CODE_TRANSACTION_LOG_WRITE_ERROR` | Transactielog schrijven mislukt | Probeer later opnieuw |
 | 502 | `ERROR_CODE_SERVICE_UNREACHABLE` | Achterliggende service onbereikbaar | Probeer later opnieuw |
 
 ### Error Response Formaat
@@ -467,10 +494,6 @@ De `Fsc-Error-Code` header wordt altijd meegegeven bij foutresponses, naast de H
 |------------|---------------|-------------|
 | 405 | `ERROR_CODE_METHOD_UNSUPPORTED` | CONNECT methode niet ondersteund |
 
-### Retry Strategie
-
-Zie [reference.md](reference.md) voor een Python implementatie van een retry-strategie met exponential backoff die onderscheid maakt tussen token-fouten (vernieuwen en opnieuw proberen), tijdelijke fouten (backoff) en permanente fouten (direct stoppen).
-
 ## Achtergrondinfo
 
-Zie [reference.md](reference.md) voor componentarchitectuur, trust model, retry-strategie code, en protocoldocumentatie. Zie [conflicts.md](conflicts.md) voor bekende discrepanties tussen GitHub-tags en gepubliceerde versies.
+Zie [reference.md](reference.md) voor componentarchitectuur, trust model, retry-strategie (exponential backoff), en protocoldocumentatie. Zie [conflicts.md](conflicts.md) voor bronconflicten.

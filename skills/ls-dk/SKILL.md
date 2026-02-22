@@ -1,6 +1,6 @@
 ---
 name: ls-dk
-description: "Gebruik deze skill wanneer de gebruiker vraagt over Digikoppeling, koppelvlakstandaarden, ebMS2, WUS, SOAP, REST-API koppelvlak, grote berichten, OIN, Organisatie Identificatie Nummer, PKIoverheid, beveiligingsstandaarden overheid, routering en adressering, CPA, berichtuitwisseling tussen overheidsorganisaties."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over Digikoppeling, koppelvlakstandaarden, ebMS2, WUS, WSDL, SOAP, REST-API koppelvlak, grote berichten, OIN, Organisatie Identificatie Nummer, PKIoverheid, beveiligingsstandaarden overheid, routering en adressering, CPA, berichtuitwisseling tussen overheidsorganisaties."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -58,7 +58,7 @@ Net als andere Logius-standaarden kent Digikoppeling twee publicatiekanalen:
 De keuze voor het juiste Digikoppeling-profiel hangt af van de functionele en niet-functionele eisen van de berichtuitwisseling. Gebruik de volgende beslisboom:
 
 ```
-Berichtgrootte > 20 MB?
+Berichtgrootte > 20 MiB?
   JA  --> Grote Berichten (aanvullend op REST-API, WUS of ebMS2)
   NEE --> Ga verder
 
@@ -276,7 +276,7 @@ curl -X PUT https://receiver.example.com/gb/upload/document-123 \
   -H "Content-Length: 52428800" \
   --data-binary @large_document.pdf
 
-# Response: 200 OK (volledig ontvangen) of 206 Partial Content
+# Response: 200 OK of 201 Created (spec schrijft geen specifieke response code voor)
 ```
 
 ### Nginx mTLS Configuratie voor Digikoppeling
@@ -300,9 +300,9 @@ server {
     ssl_prefer_server_ciphers on;
     ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384';
 
-    # OIN uit client certificaat doorgeven aan applicatie
-    proxy_set_header X-Client-OIN $ssl_client_s_dn_serial;
-    proxy_set_header X-Client-CN  $ssl_client_s_dn_cn;
+    # Client certificaat Subject DN doorgeven aan applicatie
+    # $ssl_client_s_dn bevat de volledige DN, bijv. "serialNumber=00000001823288444000,CN=Mijn Org"
+    proxy_set_header X-Client-DN $ssl_client_s_dn;
 
     location /dk/v1/ {
         proxy_pass http://localhost:8080;

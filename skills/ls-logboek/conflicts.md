@@ -21,7 +21,7 @@ Er zijn geen vastgestelde (DEF) versies voor Logboek Dataverwerkingen. De public
 
 ## Keuze in SKILL.md
 
-De skill vermeldt correct dat er alleen werkversies zijn. Er zijn geen bronconflicten geconstateerd. Als er een DEF-versie wordt vastgesteld, moet dit document worden bijgewerkt met de versie-informatie.
+Alle repositories hebben alleen werkversies; er zijn geen bronconflicten. Als er een DEF-versie wordt vastgesteld, moet dit document worden bijgewerkt met de versie-informatie.
 
 ## Referenties
 
