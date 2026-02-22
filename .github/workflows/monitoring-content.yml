@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: write
+  contents: read
   issues: write
 
 jobs:
@@ -32,6 +32,13 @@ jobs:
             --output /tmp/manifest.json \
             --format json
 
+      - name: Herstel checksums uit cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .github/monitoring/checksums.json
+          key: monitoring-checksums-
+          restore-keys: monitoring-checksums-
+
       - name: Zorg dat labels bestaan
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -48,27 +55,9 @@ jobs:
             --manifest /tmp/manifest.json \
             --checksums .github/monitoring/checksums.json
 
-      - name: Commit checksums state
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          if git diff --quiet .github/monitoring/checksums.json 2>/dev/null; then
-            echo "Geen wijzigingen in checksums.json"
-            exit 0
-          fi
-
-          git add .github/monitoring/checksums.json
-          git commit -m "Update monitoring checksums ($(date -I))"
-
-          # Retry push bij concurrent updates (rebase lokale commit op remote)
-          for attempt in 1 2 3; do
-            if git push; then
-              echo "Push geslaagd"
-              exit 0
-            fi
-            echo "Push poging $attempt mislukt, pull --rebase en opnieuw..."
-            git pull --rebase
-          done
-          echo "Push mislukt na 3 pogingen"
-          exit 1
+      - name: Bewaar checksums in cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .github/monitoring/checksums.json
+          key: monitoring-checksums-${{ github.run_id }}
