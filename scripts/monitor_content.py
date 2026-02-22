@@ -78,6 +78,21 @@ def normalize_html(html: str) -> str:
     html = re.sub(r"<!--.*?-->", "", html, flags=re.DOTALL)
     # Verwijder cache-busting query params in script/link/img tags
     html = re.sub(r'(\.(js|css|png|svg|ico))\?[^"\'>\s]+', r"\1", html)
+    # Drupal CMS: aggregatie filenames met content-hashes (veranderen bij cache rebuild)
+    html = re.sub(
+        r"/sites/default/files/css/css_[A-Za-z0-9_-]+\.css",
+        "/sites/default/files/css/css_HASH.css",
+        html,
+    )
+    html = re.sub(
+        r"/sites/default/files/js/js_[A-Za-z0-9_-]+\.js",
+        "/sites/default/files/js/js_HASH.js",
+        html,
+    )
+    # Drupal CMS: view DOM IDs (veranderen bij cache rebuild)
+    html = re.sub(r"js-view-dom-id-[a-f0-9]+", "js-view-dom-id-HASH", html)
+    # Drupal CMS: permissionsHash (verandert bij module/permissie updates)
+    html = re.sub(r'"permissionsHash":"[a-f0-9]+"', '"permissionsHash":"HASH"', html)
     return html
 
 
