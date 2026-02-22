@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [1.3.3](https://github.com/MinBZK/logius-standaarden-plugin/compare/v1.3.2...v1.3.3) (2026-02-22)
+
+
+### Opgelost
+
+* vervang /publicatie/dk/ (403) door /publicatie/dk/actueel/ ([#46](https://github.com/MinBZK/logius-standaarden-plugin/issues/46)) ([66d405e](https://github.com/MinBZK/logius-standaarden-plugin/commit/66d405e32b870c0b7d3d38d99f00089083aee2eb))
+
 ## [1.3.2](https://github.com/MinBZK/logius-standaarden-plugin/compare/v1.3.1...v1.3.2) (2026-02-22)
 
 
