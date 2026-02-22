@@ -1,6 +1,6 @@
 ---
 name: ls-notif
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'CloudEvents', 'notificaties', 'notificatieservices', 'abonnementen', 'event-driven', 'NL GOV CloudEvents', 'pub/sub overheid', 'gebeurtenisnotificatie'."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over 'CloudEvents', 'notificaties', 'notificatieservices', 'abonnementen', 'event-driven', 'NL GOV CloudEvents', 'pub/sub overheid', 'gebeurtenisnotificatie', 'webhook', 'webhooks', 'subscription'."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -96,6 +96,16 @@ Het Abonneren-component beschrijft hoe afnemers zich kunnen registreren om speci
 **Push-model (aanbevolen):** Event-driven aflevering via webhooks. De notificatieservice stuurt events actief naar een door de afnemer opgegeven endpoint. Dit is het voorkeursmodel vanwege lage latency en efficiënter resourcegebruik.
 
 **Pull-model:** Polling-gebaseerde aflevering. De afnemer bevraagt periodiek de notificatieservice op nieuwe events. Geschikt voor situaties waar de afnemer geen inkomend endpoint kan aanbieden (bijv. vanwege firewallrestricties).
+
+> **Let op:** De huidige Notificatieservices OpenAPI-specificatie bevat alleen push-endpoints voor events (`POST /events`). Er zijn geen pull/polling-endpoints voor het ophalen van events. De Abonneren-werkversie beschrijft push als het voorkeursmodel; pull/polling wordt alleen genoemd als het onwenselijke alternatief dat de abonnementsfunctie overbodig maakt — het is niet uitgewerkt als een ondersteund aflevermodel.
+
+### Keuzehulp: Push of Pull?
+
+```
+Kan de afnemer een bereikbaar HTTPS endpoint aanbieden?
+  JA  → Push-model (webhook) — aanbevolen, lage latency
+  NEE → Pull-model (polling) — nog niet gespecificeerd in de API, check status in de Abonneren-repo
+```
 
 ## Security & Privacy
 

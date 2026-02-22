@@ -24,7 +24,7 @@ Logius-standaarden kennen twee publicatiekanalen (vergelijkbaar met W3C):
 - **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
 - **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
 
-Niet alle standaarden hebben al een vastgestelde versie. De domeinen ADR, Digikoppeling, BOMOS, IAM (OAuth-NL-profiel v1.1.0, OIDC-NLGOV v1.0.1), FSC (fsc-core v1.1.2, fsc-logging v1.0.0) en Notificaties (CloudEvents NL GOV v1.1) hebben vastgestelde publicaties; de overige domeinen (Logboek, E-Gov) publiceren vooralsnog alleen werkversies. Een standaard kan tegelijkertijd een vastgestelde versie en een werkversie (draft voor de volgende release) hebben. Modules en subcomponenten ontlenen hun status aan de standaard die ernaar verwijst.
+Niet alle standaarden hebben al een vastgestelde versie. De domeinen ADR, Digikoppeling, BOMOS, IAM (OAuth-NL-profiel v1.1.0, OIDC-NLGOV v1.0.1), FSC (fsc-core v1.1.2, fsc-logging v1.0.0) en Notificaties (CloudEvents NL GOV v1.1) hebben vastgestelde publicaties (DEF). De overige domeinen (Logboek, E-Gov) publiceren vooralsnog alleen werkversies. Een standaard kan tegelijkertijd een vastgestelde versie en een werkversie (draft voor de volgende release) hebben. Modules en subcomponenten ontlenen hun status aan de standaard die ernaar verwijst.
 
 ## Forum Standaardisatie Status
 
@@ -34,7 +34,7 @@ Niet alle Logius-standaarden staan op de 'pas-toe-of-leg-uit'-lijst van het Foru
 - **Aanbevolen**: Peppol BIS
 - **Niet op de lijst**: BOMOS (raamwerk, geen interoperabiliteitsstandaard), FSC (onderdeel Digikoppeling), Logboek (in ontwikkeling), Digimelding/Terugmelding, e-procurement
 
-> OAuth-NL-profiel v1.1 is vastgesteld door Logius (DEF), maar op het Forum Standaardisatie nog ["in behandeling"](https://www.forumstandaardisatie.nl/intakeadvies-nl-gov-assurance-profile-oauth-20-versie-11); v1.0 is de verplichte versie.
+> OAuth-NL-profiel v1.1 is vastgesteld door Logius (DEF), maar op het Forum Standaardisatie nog ["in procedure"](https://www.forumstandaardisatie.nl/intakeadvies-nl-gov-assurance-profile-oauth-20-versie-11) (intake goedgekeurd 24-09-2025); v1.0 is de verplichte versie.
 
 ## Domeinen
 

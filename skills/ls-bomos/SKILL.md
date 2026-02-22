@@ -1,6 +1,6 @@
 ---
 name: ls-bomos
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'BOMOS', 'Beheer- en Ontwikkelmodel', 'open standaarden beheer', 'standaardisatie governance', 'beheermodel', 'community management standaarden', 'linked data standaarden', 'open source governance', 'stelselstandaarden'."
+description: "Gebruik deze skill wanneer de gebruiker vraagt over 'BOMOS', 'Beheer- en Ontwikkelmodel', 'open standaarden beheer', 'standaardisatie governance', 'beheermodel', 'community management standaarden', 'open source governance', 'stelselstandaarden', 'RFC proces', 'wijzigingsproces standaard', 'change management standaarden'."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -67,7 +67,7 @@ gh issue view [NUMMER] --repo logius-standaarden/[STANDAARD]
 gh issue list --repo logius-standaarden/[STANDAARD] --label RFC --json number,title,labels,updatedAt
 
 # Zoeken naar goedgekeurde RFC's
-gh issue list --repo logius-standaarden/[STANDAARD] --label RFC --state closed --search "label:accepted"
+gh issue list --repo logius-standaarden/[STANDAARD] --label RFC --label accepted --state closed
 ```
 
 **Proces:** RFC indienen → Community review → Expert beoordeling → Autorisator besluit → Implementatie → Publicatie nieuwe versie
