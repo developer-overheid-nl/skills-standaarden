@@ -5,6 +5,21 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [1.3.3](https://github.com/MinBZK/logius-standaarden-plugin/compare/v1.3.2...v1.3.3) (2026-02-22)
+
+
+### Opgelost
+
+* vervang /publicatie/dk/ (403) door /publicatie/dk/actueel/ ([#46](https://github.com/MinBZK/logius-standaarden-plugin/issues/46)) ([66d405e](https://github.com/MinBZK/logius-standaarden-plugin/commit/66d405e32b870c0b7d3d38d99f00089083aee2eb))
+
+## [1.3.2](https://github.com/MinBZK/logius-standaarden-plugin/compare/v1.3.1...v1.3.2) (2026-02-22)
+
+
+### Opgelost
+
+* elimineer monitoring false positives ([#45](https://github.com/MinBZK/logius-standaarden-plugin/issues/45)) ([13434d5](https://github.com/MinBZK/logius-standaarden-plugin/commit/13434d5ca452ab5c6457ad1e2a8c80600ffdacff))
+* gebruik Actions cache voor monitoring checksums i.p.v. git push ([#40](https://github.com/MinBZK/logius-standaarden-plugin/issues/40)) ([c0b2f5e](https://github.com/MinBZK/logius-standaarden-plugin/commit/c0b2f5e3b2b8a1e1eb6ce09e0cff69836222b92e))
+
 ## [1.3.1](https://github.com/MinBZK/logius-standaarden-plugin/compare/v1.3.0...v1.3.1) (2026-02-21)
 
 
