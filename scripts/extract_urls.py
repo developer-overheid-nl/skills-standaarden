@@ -38,6 +38,8 @@ EXCLUDE_PATTERNS = [
     re.compile(r"https?://manager\.example"),
     re.compile(r"https?://directory\.example"),
     re.compile(r"https?://provider-manager\.example"),
+    # Publicatie-Preview verandert by design meerdere keren per dag (preview builds)
+    re.compile(r"https?://github\.com/logius-standaarden/Publicatie-Preview"),
 ]
 
 # Markdown-extractie regex: vindt alle URLs in tekst

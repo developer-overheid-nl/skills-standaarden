@@ -68,6 +68,30 @@ class TestNormalizeHtml:
         result = normalize_html(html)
         assert "35.0.2" not in result
 
+    def test_drupal_css_aggregatie(self):
+        html = '<link href="/sites/default/files/css/css_US753fRZjubynpaAuOsRw3D.css">'
+        result = normalize_html(html)
+        assert "US753fRZ" not in result
+        assert "css_HASH.css" in result
+
+    def test_drupal_js_aggregatie(self):
+        html = '<script src="/sites/default/files/js/js_Abc123XYZ_def456.js"></script>'
+        result = normalize_html(html)
+        assert "Abc123XYZ" not in result
+        assert "js_HASH.js" in result
+
+    def test_drupal_view_dom_id(self):
+        html = '<div class="js-view-dom-id-56cf8948b068a635455604d548fcf9d2039b62fd">'
+        result = normalize_html(html)
+        assert "56cf8948" not in result
+        assert "js-view-dom-id-HASH" in result
+
+    def test_drupal_permissions_hash(self):
+        html = '{"user":{"uid":0,"permissionsHash":"c838df03955022ed860389a1310a7a71"}}'
+        result = normalize_html(html)
+        assert "c838df03" not in result
+        assert '"permissionsHash":"HASH"' in result
+
     def test_gewone_content_behouden(self):
         html = "<h1>Digikoppeling Architectuur</h1><p>Standaard tekst.</p>"
         assert normalize_html(html) == html
