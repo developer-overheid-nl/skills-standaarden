@@ -37,7 +37,7 @@ Voor compleetheid worden hier ook de IAM-repositories vermeld waar tags en publi
 
 ### Details OAuth-Beheermodel
 
-- **Enige tag:** `0.2`
+- **Tags:** `0.1`, `0.2`
 - De repository is **gearchiveerd**
 - De gepubliceerde DEF-versie op gitdocumentatie is `v1.0`
 - De tag `0.2` is een conceptversie; de definitieve versie v1.0 is gepubliceerd zonder bijbehorende Git-tag

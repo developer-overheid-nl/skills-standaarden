@@ -13,7 +13,7 @@ Alle E-Government repositories beheerd door Logius hebben alleen werkversies. Er
 | [Terugmelding](https://github.com/logius-standaarden/Terugmelding) | _(geen DEF)_ | _(geen tags)_ | N.v.t. — alleen werkversies |
 | [Terugmelden-API](https://github.com/logius-standaarden/Terugmelden-API) | _(geen DEF)_ | _(geen tags)_ | N.v.t. — alleen werkversies |
 | [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie) | _(geen DEF)_ | `1.3` | N.v.t. — alleen werkversies |
-| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | _(geen DEF)_ | _(geen tags)_ | N.v.t. — alleen werkversies |
+| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | _(geen DEF)_ | `v1.0.8` | Tags aanwezig (`v1.0.8`, `v1.0.6`) maar geen DEF op gitdocumentatie |
 | [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | _(geen DEF)_ | _(geen tags)_ | N.v.t. — alleen werkversies |
 | [e-procurement](https://github.com/logius-standaarden/e-procurement) | _(geen DEF)_ | _(geen tags)_ | N.v.t. — alleen werkversies |
 
