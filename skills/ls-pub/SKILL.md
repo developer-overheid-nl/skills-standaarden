@@ -110,7 +110,7 @@ Alle standaarden-repos roepen centrale workflows aan uit de `Automatisering` rep
 
 ### check.yml - Kwaliteitschecks (3 parallelle checks)
 
-1. **WCAG check**: `npx @axe-core/cli http://localhost:8080/index.html --tags wcag2aa` (geautomatiseerde check; dekt ~30% van WCAG-criteria, handmatige toetsing blijft nodig)
+1. **WCAG check**: `npx @axe-core/cli http://localhost:8080/index.html --tags wcag2aa` (geautomatiseerde check; dekt ~30% van WCAG-criteria, handmatige toetsing blijft nodig). axe-core is een van meerdere tools die gestandaardiseerde [W3C ACT Rules](https://www.w3.org/WAI/standards-guidelines/act/rules/) implementeren; alternatieven zijn o.a. Alfa (Siteimprove) en Linter van het NL Design System.
 2. **Markdown lint**: `npx markdownlint-cli sections/`
 3. **Link validatie**: Muffet valideert alle hyperlinks
 
@@ -161,7 +161,9 @@ npx respec --src index.html --out output.html
 npx @axe-core/cli output.html --tags wcag2aa
 # ⚠️ Let op: axe-core checkt automatisch ~30% van de WCAG-criteria.
 # Een groene check betekent NIET dat je volledig voldoet aan EN 301 549 / WCAG 2.1 AA.
-# Handmatige toetsing door een toegankelijkheidsexpert blijft nodig.
+# Handmatige toetsing op alle 55 succescriteria in WCAG 2.1 AA blijft nodig.
+# axe-core implementeert W3C ACT Rules (https://www.w3.org/WAI/standards-guidelines/act/rules/)
+# Alternatieven: Alfa (Siteimprove), Linter van NL Design System
 
 # Markdown linting
 npx markdownlint-cli 'sections/**/*.md'
