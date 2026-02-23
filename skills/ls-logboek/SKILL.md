@@ -33,7 +33,7 @@ Logboek Dataverwerkingen heeft momenteel **alleen werkversies**. Er zijn nog gee
 
 | Repository | Beschrijving | Vastgesteld | Draft |
 |-----------|-------------|------------|-------|
-| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | Hoofdspecificatie met REST API definitie | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen/) |
+| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | Normatieve hoofdspecificatie (logging-interface) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen/) |
 | [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding) | Introductie en achtergrond | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/) |
 | [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | Juridisch en beleidskader | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/) |
 | [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo) | Docker demo-omgeving met meerdere services | - | - |
@@ -143,16 +143,7 @@ De standaard schrijft geen specifiek transportprotocol voor, maar beveelt **Open
 
 - Het Logboek **MOET** TLS kunnen afdwingen voor alle communicatie.
 - Het Logboek **MOET** elke schrijfactie bevestigen met een bevestigingsbericht (acknowledgement). De applicatie weet hierdoor zeker dat de logregel is opgeslagen.
-- OTLP ondersteunt zowel gRPC als HTTP/protobuf als transportlaag.
-- Bij gebruik van gRPC wordt bidirectionele streaming ondersteund voor hoge volumes.
-- Bij gebruik van HTTP/protobuf worden standaard REST-semantieken gevolgd.
-
-**Transportopties:**
-
-| Protocol | Poort | Beschrijving |
-|----------|-------|--------------|
-| OTLP/gRPC | 4317 | Primair protocol, geschikt voor hoge volumes |
-| OTLP/HTTP | 4318 | Alternatief voor omgevingen zonder gRPC-ondersteuning |
+- OTLP ondersteunt zowel gRPC als HTTP/protobuf als transportlaag (standaard OTLP-poorten: 4317 voor gRPC, 4318 voor HTTP — niet voorgeschreven door de Logboek-standaard zelf).
 
 ## Extensies
 
@@ -160,7 +151,7 @@ De standaard is modulair uitbreidbaar via extensies. Elke extensie voegt aanvull
 
 ### Object Extensie
 
-Voegt geo-object informatie toe aan logregels. Bruikbaar wanneer verwerkingen betrekking hebben op specifieke objecten (bijv. kadastrale percelen, voertuigen, gebouwen). Definieert aanvullende attributes in de `dpl.object` namespace.
+Voegt objectgegevens toe aan logregels. Bruikbaar wanneer verwerkingen betrekking hebben op specifieke objecten (bijv. kadastrale percelen, voertuigen, gebouwen, maar ook andere domeinobjecten). Definieert aanvullende attributes in de `dpl.objects` namespace.
 
 - Repository: [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object)
 

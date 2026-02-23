@@ -51,14 +51,14 @@ Het Nederlandse OAuth 2.0 profiel scherpt de basisspecificatie (RFC 6749) aan me
 
 ### Verplichte beveiligingseisen
 
-- **PKCE (Proof Key for Code Exchange)** is verplicht voor alle clients, inclusief confidential clients. Dit voorkomt authorization code interception aanvallen. Clients genereren een `code_verifier` en sturen een `code_challenge` mee in het authorization request.
-- **Grant types**: uitsluitend `authorization_code` en `client_credentials` zijn toegestaan. Implicit grant en Resource Owner Password Credentials zijn expliciet verboden vanwege bekende beveiligingsrisico's.
-- **Tokens als HTTP headers**: access tokens worden uitsluitend als HTTP `Authorization` header (Bearer scheme) meegegeven. Transport via query parameters is niet toegestaan om te voorkomen dat tokens in server logs en browser history terechtkomen.
+- **PKCE (Proof Key for Code Exchange)** is verplicht voor public clients. Confidential clients die zich authenticeren met `private_key_jwt` of mTLS zijn vrijgesteld. Dit voorkomt authorization code interception aanvallen. Clients genereren een `code_verifier` en sturen een `code_challenge` mee in het authorization request.
+- **Grant types**: `authorization_code` is verplicht (MUST); `client_credentials` is toegestaan (MAY) voor machine-to-machine communicatie. Implicit grant en Resource Owner Password Credentials zijn expliciet verboden vanwege bekende beveiligingsrisico's.
+- **Tokens als HTTP headers**: access tokens worden als HTTP `Authorization` header (Bearer scheme) meegegeven. Transport via query parameters is verboden (MUST NOT). Form-encoded body parameters (RFC 6750 Section 2.2) zijn wel toegestaan.
 
 ### Token specificaties
 
-- **Access tokens**: JWT-formaat (RFC 9068) wordt aanbevolen. Dit maakt lokale validatie mogelijk zonder een introspection endpoint aan te roepen, wat de prestaties verbetert.
-- **Refresh tokens**: verplicht bij de `authorization_code` flow. Hiermee kunnen clients nieuwe access tokens verkrijgen zonder hernieuwde gebruikersinteractie. Refresh token rotation wordt aanbevolen.
+- **Access tokens**: JWT-formaat (RFC 9068) is verplicht (MUST). Dit maakt lokale validatie mogelijk zonder een introspection endpoint aan te roepen, wat de prestaties verbetert.
+- **Refresh tokens**: worden ondersteund (MAY) bij de `authorization_code` flow. Hiermee kunnen clients nieuwe access tokens verkrijgen zonder hernieuwde gebruikersinteractie. Refresh token rotation wordt aanbevolen.
 - **Token levensduur**: access tokens hebben een korte levensduur. De exacte duur wordt bepaald door de authorization server, maar korte TTL's (minuten) verdienen de voorkeur.
 
 ### Client authenticatie
@@ -109,7 +109,8 @@ Het ID Token moet minimaal de volgende claims bevatten:
 | `aud` | Identifier van de Relying Party (audience) |
 | `exp` | Verloopdatum van het token (expiration) |
 | `iat` | Tijdstip van uitgifte (issued at) |
-| `acr` | Betrouwbaarheidsniveau van de authenticatie (authentication context class reference) |
+| `nonce` | Waarde uit het authorization request (voorkomt replay attacks) |
+| `acr` | Betrouwbaarheidsniveau (SHOULD — aanbevolen, niet verplicht) |
 
 ### ID Token validatie
 
@@ -122,7 +123,7 @@ Bij het valideren van een OIDC ID Token MOETEN de volgende stappen worden doorlo
 5. **exp** - MOET in de toekomst liggen (token niet verlopen)
 6. **iat** - MAG niet te ver in het verleden liggen (max 5 minuten aanbevolen)
 7. **acr** - MOET minimaal het gevraagde betrouwbaarheidsniveau bevatten
-8. **jti** - MOET uniek zijn (bewaar 12+ maanden om hergebruik te detecteren)
+8. **jti** - MOET uniek zijn (bewaar voldoende lang om hergebruik te detecteren)
 
 ---
 
@@ -132,7 +133,7 @@ Het AuthZEN NL GOV profiel specificeert een architectuur voor geëxternaliseerde
 
 ### Architectuurcomponenten
 
-Het profiel volgt het XACML-referentiemodel met vier kerncomponenten:
+Het profiel definieert PDP en PEP als kerncomponenten. PAP en PIP komen uit het XACML-referentiemodel en worden in de praktijk vaak samen ingezet:
 
 | Component | Rol | Beschrijving |
 |-----------|-----|-------------|
@@ -219,11 +220,16 @@ De Authorization Decision Log standaard definieert een gestructureerd formaat vo
 | Veld | Beschrijving |
 |------|-------------|
 | `timestamp` | Tijdstip van de beslissing (ISO 8601) |
-| `trace_id` | Unieke trace identifier conform W3C Trace Context |
-| `span_id` | Span identifier binnen de trace |
 | `type` | Type van het record, bijvoorbeeld `evaluation` |
 | `request` | Het oorspronkelijke autorisatieverzoek (subject, action, resource, context) |
 | `response` | De autorisatiebeslissing (decision en eventuele context) |
+
+### Aanbevolen velden (SHOULD)
+
+| Veld | Beschrijving |
+|------|-------------|
+| `trace_id` | Unieke trace identifier conform W3C Trace Context |
+| `span_id` | Span identifier binnen de trace |
 
 ### Optionele velden
 

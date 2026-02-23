@@ -26,6 +26,7 @@ De tactieklaag vertaalt strategie naar concrete beheerafspraken en kwaliteitsnor
 - **Adoptiestrategie** - Beleid voor het bevorderen van adoptie: verplichte open standaarden lijsten, comply-or-explain
 - **Kwaliteitsbeleid** - Kwaliteitscriteria voor de standaard zelf en het beheerproces
 - **Rechtenmanagement** - Intellectueel eigendom, licentiemodel, en gebruiksvoorwaarden
+- **Community** - Opbouwen en onderhouden van een actieve community van gebruikers en ontwikkelaars
 
 **Rol:** Autorisator
 
@@ -38,6 +39,7 @@ De operationele laag omvat het daadwerkelijke dagelijkse werk van standaardontwi
 - **Ontwikkeling** - Technische uitwerking van wijzigingen, review, en oplevering van nieuwe versies
 - **Uitvoering** - Doorvoeren van goedgekeurde wijzigingen in de operationele omgeving
 - **Documentatie** - Bijhouden van alle documentatie: specificaties, release notes, handleidingen
+- **Klachtenafhandeling** - Proces voor het ontvangen, registreren en afhandelen van klachten van gebruikers
 
 **Rollen:** Functioneel Beheerder, Technisch Beheerder
 
@@ -56,9 +58,7 @@ Deze laag ondersteunt organisaties bij de daadwerkelijke implementatie van de st
 De communicatielaag zorgt voor zichtbaarheid en betrokkenheid rond de standaard.
 
 - **Promotie** - Actieve promotie van de standaard bij potentiële gebruikers en stakeholders
-- **Community management** - Opbouwen en onderhouden van een actieve community van gebruikers en ontwikkelaars
-- **Events** - Organiseren van bijeenkomsten, werkgroepen, en plugfests
-- **Distributie** - Publicatie en verspreiding van de standaard en bijbehorende documentatie
+- **Publicatie** - Publicatie en verspreiding van de standaard en bijbehorende documentatie
 
 **Rol:** Distributeur
 

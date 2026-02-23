@@ -241,7 +241,7 @@ FSC definieert twee poorten voor verschillende typen verkeer:
 
 - **HTTP/1.1** is verplicht als minimale versie voor alle FSC-verbindingen
 - **HTTP/2** is optioneel en mag worden ondersteund als aanvulling
-- Alle verbindingen gebruiken **TLS 1.2** of hoger
+- **TLS** is verplicht; de minimale TLS-versie wordt bepaald door de Group Rules (in de praktijk minimaal TLS 1.2)
 - **mTLS** is verplicht: zowel client als server presenteren een certificaat
 
 ## Logging Extensie
