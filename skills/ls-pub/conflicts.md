@@ -6,7 +6,7 @@ Dit document beschrijft bekende discrepanties en bewuste keuzes voor de Publicat
 
 ## GitHub-tags vs. gepubliceerde versies
 
-De publicatie-tooling repositories (respec, respec-tools, build-push-action, etc.) zijn tooling-repos, geen standaard-documenten. Ze hebben geen vastgestelde (DEF) versies op gitdocumentatie.logius.nl.
+De publicatie-tooling repositories (respec, Automatisering, etc.) zijn tooling-repos, geen standaard-documenten. Ze hebben geen vastgestelde (DEF) versies op gitdocumentatie.logius.nl.
 
 Er zijn geen bronconflicten geconstateerd. Tooling-versies worden via GitHub Releases beheerd, niet via gitdocumentatie.logius.nl.
 

@@ -15,7 +15,7 @@ allowed-tools:
 
 **Agent-instructie:** Deze skill helpt bij het implementeren van event-driven communicatie met CloudEvents NL GOV profiel. Gebruik de `cloudevents` SDK voor Python/JavaScript. Source moet URN nld-notatie gebruiken: `urn:nld:oin:<OIN>:systeem:<naam>`.
 
-De notificatiestandaarden definiëren hoe overheidsorganisaties gebeurtenissen (events) kunnen publiceren en daarop kunnen abonneren. Gebaseerd op de internationale CNCF CloudEvents specificatie (v1.0.1) met een NL GOV profiel dat specifieke eisen stelt aan naamgeving, identificatie en het gebruik van context-attributen binnen de Nederlandse overheid.
+De notificatiestandaarden definiëren hoe overheidsorganisaties gebeurtenissen (events) kunnen publiceren en daarop kunnen abonneren. Gebaseerd op de internationale CNCF CloudEvents specificatie (v1.0.2) met een NL GOV profiel dat specifieke eisen stelt aan naamgeving, identificatie en het gebruik van context-attributen binnen de Nederlandse overheid.
 
 ## Versiemodel
 
@@ -61,7 +61,8 @@ Het NL GOV profiel scherpt de CNCF CloudEvents specificatie aan voor gebruik bin
 | `subject` | String | Het onderwerp waarop het event betrekking heeft, bijvoorbeeld een BSN (`999990342`) of zaak-ID. Hiermee kunnen afnemers filteren zonder de payload te openen. |
 | `time` | Timestamp | Tijdstip in RFC 3339 formaat. Let op: dit is het tijdstip van logging/registratie van het event, niet noodzakelijk het moment van de werkelijke gebeurtenis. Voorbeeld: `2024-01-15T10:30:00Z`. |
 | `dataref` | URI | Verwijzing naar een externe locatie waar de volledige event payload beschikbaar is. Implementeert het Claim Check Pattern voor grote payloads die niet in het event zelf passen. |
-| `sequence` | String | Geeft de relatieve volgorde van events aan. Nuttig wanneer de volgorde van verwerking van belang is voor de afnemer. |
+| `sequence` | String | Geeft de relatieve volgorde van events aan. Nuttig wanneer de volgorde van verwerking van belang is voor de afnemer. Dit is een NL GOV extensie-attribuut (niet in de CNCF-kernspec). |
+| `sequencetype` | String | Geeft het type sequentie aan (bijv. `Integer`). Verplicht als `sequence` wordt gebruikt. Dit is een NL GOV extensie-attribuut. |
 
 ## Notificatieservices API
 

@@ -87,9 +87,9 @@ ebMS2 is geschikt voor scenario's waar betrouwbare, asynchrone aflevering essent
 
 ### Grote Berichten
 
-De koppelvlakstandaard Grote Berichten biedt een oplossing voor het uitwisselen van berichten groter dan 20 MB. Het gebruikt het claim-check patroon: het grote bestand wordt buiten de reguliere berichtenuitwisseling om overgedragen, terwijl een referentie (claim-check) via het normale kanaal wordt verstuurd.
+De koppelvlakstandaard Grote Berichten biedt een oplossing voor het uitwisselen van berichten groter dan 20 MiB. Het gebruikt het claim-check patroon: het grote bestand wordt buiten de reguliere berichtenuitwisseling om overgedragen, terwijl een referentie (claim-check) via het normale kanaal wordt verstuurd.
 
-- **Drempelwaarde**: Berichten groter dan 20 MB moeten via Grote Berichten worden uitgewisseld
+- **Drempelwaarde**: Berichten groter dan 20 MiB moeten via Grote Berichten worden uitgewisseld
 - **Patroon**: Claim-check (ook wel Attachment Deferral genoemd)
 - **Protocol**: HTTP 1.1 met ondersteuning voor BYTE-RANGE (RFC 7233) voor hervatbare downloads
 
