@@ -49,8 +49,8 @@ maintenance:
     - name: Logius
       email: standaarden@logius.nl
   type: community
-name: logius-standaarden-plugin
+name: standaarden-plugin
 releaseDate: '2026-02-21'
 softwareVersion: 1.3.4
 softwareType: standalone/other
-url: https://github.com/MinBZK/logius-standaarden-plugin
+url: https://github.com/developer-overheid-nl/standaarden-plugin
