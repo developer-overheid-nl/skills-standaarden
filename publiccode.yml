@@ -51,6 +51,6 @@ maintenance:
   type: community
 name: standaarden-plugin
 releaseDate: '2026-02-21'
-softwareVersion: 1.3.4
+softwareVersion: 1.3.5
 softwareType: standalone/other
 url: https://github.com/developer-overheid-nl/standaarden-plugin
