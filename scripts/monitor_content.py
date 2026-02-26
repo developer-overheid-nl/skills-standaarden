@@ -10,6 +10,7 @@ Maakt GitHub Issues aan bij gedetecteerde wijzigingen.
 """
 
 import argparse
+import contextlib
 import hashlib
 import json
 import os
@@ -296,10 +297,8 @@ def manage_issue(
     )
     existing_issues: list[dict] = []
     if result.returncode == 0 and result.stdout.strip():
-        try:
+        with contextlib.suppress(json.JSONDecodeError):
             existing_issues = json.loads(result.stdout)
-        except json.JSONDecodeError:
-            pass
 
     for change in changes:
         title = change["title"]
