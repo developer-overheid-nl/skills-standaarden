@@ -17,6 +17,8 @@ allowed-tools:
   - WebFetch(*)
 ---
 
+> **Let op:** De beschrijvingen in deze skill zijn informatieve samenvattingen — niet de officiële standaarden zelf. De definities op [forumstandaardisatie.nl](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Rijksbrede beleidskader voor generatieve AI](https://www.government.nl/documents/policy-notes/2025/01/31/government-wide-position-on-the-use-of-generative-ai). Zie [DISCLAIMER.md](../../DISCLAIMER.md).
+
 # Publicatie & Tooling
 
 **Agent-instructie:** Deze skill is de centrale plek voor publicatie-tooling en kwaliteitschecks van alle Logius standaarden. Gebruik deze skill wanneer de gebruiker een document wil bouwen, valideren (WCAG, markdown lint, link check), publiceren, of een nieuw ReSpec-document wil opzetten. Dit is de ENIGE skill met markdownlint, axe-core en muffet tools.

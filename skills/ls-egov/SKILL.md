@@ -11,6 +11,8 @@ allowed-tools:
   - WebFetch(*)
 ---
 
+> **Let op:** De beschrijvingen in deze skill zijn informatieve samenvattingen — niet de officiële standaarden zelf. De definities op [forumstandaardisatie.nl](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Rijksbrede beleidskader voor generatieve AI](https://www.government.nl/documents/policy-notes/2025/01/31/government-wide-position-on-the-use-of-generative-ai). Zie [DISCLAIMER.md](../../DISCLAIMER.md).
+
 # E-Government Services
 
 **Agent-instructie:** Deze skill helpt bij het implementeren van terugmeldingen op basisregistraties en e-facturatie voor de Rijksoverheid. Gebruik de Digimelding-Koppelvlakspecificatie voor meldingen. Basisfactuur Rijk volgt Peppol BIS 3 / NLCIUS.

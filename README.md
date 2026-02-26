@@ -111,6 +111,10 @@ De hele plugin wordt als 1 eenheid geversioned (semver):
 - [GitHub CLI](https://cli.github.com/) (`gh`) - voor het ophalen van repo-content
 - Node.js - voor ReSpec, Spectral en andere npm-tools (optioneel, voor validatie)
 
+## Disclaimer
+
+Dit is een experimenteel project om te leren over generatieve AI bij de overheid. De skills in deze plugin zijn informatieve samenvattingen — **niet** de officiële standaarden zelf. De definities op [Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Rijksbrede beleidskader voor generatieve AI](https://www.government.nl/documents/policy-notes/2025/01/31/government-wide-position-on-the-use-of-generative-ai). Zie [DISCLAIMER.md](DISCLAIMER.md) voor de volledige disclaimer.
+
 ## Licentie
 
 [EUPL-1.2](LICENSE) - European Union Public Licence
