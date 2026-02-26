@@ -1,6 +1,6 @@
 # Disclaimer
 
-Deze plugin is een **experimenteel project** om ervaring op te doen met de inzet van generatieve AI bij de Nederlandse overheid. De inhoud — inclusief skills, referentiemateriaal en voorbeeldcode — is **informatief** en niet normatief.
+Deze plugin is een **experimenteel project** om te leren hoe generatieve AI gestuurd kan worden om te werken volgens de kaders, richtlijnen en standaarden van de Nederlandse overheid. De inhoud — inclusief skills, referentiemateriaal en voorbeeldcode — is **informatief** en niet normatief.
 
 ## De skills in deze plugin zijn niet de officiële standaarden
 
@@ -26,6 +26,6 @@ Overheidsorganisaties die generatieve AI inzetten — waaronder het gebruik van 
 
 ## Geen garantie
 
-Dit project is mede bedoeld om te leren over de mogelijkheden en beperkingen van generatieve AI bij de overheid. De content wordt aangeboden zonder enige garantie van volledigheid, juistheid of actualiteit. Gebruik is op eigen risico.
+Dit project is mede bedoeld om te leren hoe generatieve AI gestuurd kan worden om te werken volgens de kaders, richtlijnen en standaarden van de overheid. De content wordt aangeboden zonder enige garantie van volledigheid, juistheid of actualiteit. Gebruik is op eigen risico.
 
 ---
