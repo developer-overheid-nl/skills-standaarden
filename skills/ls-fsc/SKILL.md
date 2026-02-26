@@ -497,5 +497,4 @@ De `Fsc-Error-Code` header wordt altijd meegegeven bij foutresponses, naast de H
 | 405 | `ERROR_CODE_METHOD_UNSUPPORTED` | CONNECT methode niet ondersteund |
 
 ## Achtergrondinfo
-
 Zie [reference.md](reference.md) voor componentarchitectuur, trust model, retry-strategie (exponential backoff), en protocoldocumentatie. Zie [conflicts.md](conflicts.md) voor bronconflicten.
