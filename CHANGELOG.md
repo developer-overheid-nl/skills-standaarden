@@ -5,6 +5,14 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [1.3.5](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v1.3.4...v1.3.5) (2026-02-26)
+
+
+### Opgelost
+
+* corrigeer feitelijke onjuistheden in skills na grondige verificatie ([#55](https://github.com/developer-overheid-nl/standaarden-plugin/issues/55)) ([fa41c9c](https://github.com/developer-overheid-nl/standaarden-plugin/commit/fa41c9cb4fa4b68cf59d9b247f0da945e2bab3d9))
+* voeg disclaimer toe dat axe-core WCAG check beperkt is ([#57](https://github.com/developer-overheid-nl/standaarden-plugin/issues/57)) ([27c2af3](https://github.com/developer-overheid-nl/standaarden-plugin/commit/27c2af38d7ea767acc5e6d6f7add96390983bbc2))
+
 ## [1.3.4](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v1.3.3...v1.3.4) (2026-02-22)
 
 
