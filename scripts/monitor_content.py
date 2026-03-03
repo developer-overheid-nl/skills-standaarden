@@ -99,6 +99,13 @@ def normalize_html(html: str) -> str:
     html = re.sub(r'name="p_auth"\s+value="[^"]*"', 'name="p_auth" value="TOKEN"', html)
     # Liferay CMS: cache-bust timestamp op resource URLs (bijv. ?t=1771832749422 of &t=...)
     html = re.sub(r"[?&]t=\d{10,15}", "?t=TIMESTAMP", html)
+    # Liferay CMS: AUI module config blokken (variëren tussen backend servers)
+    html = re.sub(
+        r"<script[^>]*>\s*try\s*\{var MODULE_MAIN=.*?</script>",
+        "",
+        html,
+        flags=re.DOTALL,
+    )
     # Sentry tracing: trace-id en baggage veranderen per request
     html = re.sub(r'<meta\s+name="sentry-trace"[^>]*>', "", html)
     html = re.sub(r'<meta\s+name="baggage"\s+content="sentry-[^"]*"[^>]*>', "", html)
