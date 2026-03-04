@@ -5,7 +5,7 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
-## [1.3.5](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v1.3.4...v1.3.5) (2026-02-26)
+## [0.3.5](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v0.3.4...v0.3.5) (2026-02-26)
 
 
 ### Opgelost
@@ -13,21 +13,21 @@ en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 * corrigeer feitelijke onjuistheden in skills na grondige verificatie ([#55](https://github.com/developer-overheid-nl/standaarden-plugin/issues/55)) ([fa41c9c](https://github.com/developer-overheid-nl/standaarden-plugin/commit/fa41c9cb4fa4b68cf59d9b247f0da945e2bab3d9))
 * voeg disclaimer toe dat axe-core WCAG check beperkt is ([#57](https://github.com/developer-overheid-nl/standaarden-plugin/issues/57)) ([27c2af3](https://github.com/developer-overheid-nl/standaarden-plugin/commit/27c2af38d7ea767acc5e6d6f7add96390983bbc2))
 
-## [1.3.4](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v1.3.3...v1.3.4) (2026-02-22)
+## [0.3.4](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v0.3.3...v0.3.4) (2026-02-22)
 
 
 ### Opgelost
 
 * verbeter bruikbaarheid en correctheid van skills ([#53](https://github.com/developer-overheid-nl/standaarden-plugin/issues/53)) ([b68942f](https://github.com/developer-overheid-nl/standaarden-plugin/commit/b68942fe185f45afc97bc29898e1a6ca5be70d5f))
 
-## [1.3.3](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v1.3.2...v1.3.3) (2026-02-22)
+## [0.3.3](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v0.3.2...v0.3.3) (2026-02-22)
 
 
 ### Opgelost
 
 * vervang /publicatie/dk/ (403) door /publicatie/dk/actueel/ ([#46](https://github.com/developer-overheid-nl/standaarden-plugin/issues/46)) ([66d405e](https://github.com/developer-overheid-nl/standaarden-plugin/commit/66d405e32b870c0b7d3d38d99f00089083aee2eb))
 
-## [1.3.2](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v1.3.1...v1.3.2) (2026-02-22)
+## [0.3.2](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v0.3.1...v0.3.2) (2026-02-22)
 
 
 ### Opgelost
@@ -35,7 +35,7 @@ en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 * elimineer monitoring false positives ([#45](https://github.com/developer-overheid-nl/standaarden-plugin/issues/45)) ([13434d5](https://github.com/developer-overheid-nl/standaarden-plugin/commit/13434d5ca452ab5c6457ad1e2a8c80600ffdacff))
 * gebruik Actions cache voor monitoring checksums i.p.v. git push ([#40](https://github.com/developer-overheid-nl/standaarden-plugin/issues/40)) ([c0b2f5e](https://github.com/developer-overheid-nl/standaarden-plugin/commit/c0b2f5e3b2b8a1e1eb6ce09e0cff69836222b92e))
 
-## [1.3.1](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v1.3.0...v1.3.1) (2026-02-21)
+## [0.3.1](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v0.3.0...v0.3.1) (2026-02-21)
 
 
 ### Opgelost
@@ -43,7 +43,7 @@ en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 * gebruik dynamische shields.io badge voor versienummer ([#27](https://github.com/developer-overheid-nl/standaarden-plugin/issues/27)) ([08344df](https://github.com/developer-overheid-nl/standaarden-plugin/commit/08344df969b3e410dfe93fadafdf29a6c2be392d))
 * negeer ETag/Last-Modified false positives in monitoring ([#29](https://github.com/developer-overheid-nl/standaarden-plugin/issues/29)) ([ae64994](https://github.com/developer-overheid-nl/standaarden-plugin/commit/ae649941af21c9a9068ae70ba1dc2b948bc15655))
 
-## [1.3.0](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v1.2.0...v1.3.0) (2026-02-21)
+## [0.3.0](https://github.com/developer-overheid-nl/standaarden-plugin/compare/v0.2.0...v0.3.0) (2026-02-21)
 
 
 ### Toegevoegd
@@ -58,7 +58,7 @@ en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 * markdownlint regels compatibel met release-please CHANGELOG ([#25](https://github.com/developer-overheid-nl/standaarden-plugin/issues/25)) ([40879cd](https://github.com/developer-overheid-nl/standaarden-plugin/commit/40879cdc9eedd643b5e6ea393485e5a3950103ca))
 * versie-badge in README automatisch bijwerken bij release ([#26](https://github.com/developer-overheid-nl/standaarden-plugin/issues/26)) ([08edcce](https://github.com/developer-overheid-nl/standaarden-plugin/commit/08edcce71d213ca5b340bbb5e37247265ca9a9e1))
 
-## [1.2.0] - 2026-02-21
+## [0.2.0] - 2026-02-21
 
 ### Toegevoegd
 
@@ -79,7 +79,7 @@ en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 - ADR werkversie-omschrijving verduidelijkt: draft is werk-in-uitvoering richting volgende release (n.a.v. reviewer feedback)
 - README, publiccode.yml en plugin.json bijgewerkt met gecorrigeerde tellingen en beschrijvingen
 
-## [1.1.0] - 2026-02-16
+## [0.1.0] - 2026-02-16
 
 ### Gewijzigd
 
@@ -91,7 +91,7 @@ en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 - `.claude-plugin/marketplace.json` - leeft voortaan in de marketplace-repo
 - Marketplace validatiestap uit CI workflow
 
-## [1.0.0] - 2026-02-12
+## [0.0.0] - 2026-02-12
 
 ### Toegevoegd
 

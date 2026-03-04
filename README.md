@@ -101,9 +101,9 @@ Skills bevatten compacte agent-instructies, beslisbomen en implementatievoorbeel
 
 De hele plugin wordt als 1 eenheid geversioned (semver):
 
-- **Patch** (`1.0.1`): Typos, broken links, kleine correcties
-- **Minor** (`1.1.0`): Content sync met upstream standaard-wijzigingen, nieuwe voorbeelden
-- **Major** (`2.0.0`): Nieuwe skills, verwijderde skills, breaking changes in structuur
+- **Patch** (`0.3.1`): Typos, broken links, kleine correcties
+- **Minor** (`0.4.0`): Content sync met upstream standaard-wijzigingen, nieuwe voorbeelden
+- **Major** (`1.0.0`): Stabiele release, breaking changes in structuur
 
 ## Vereisten
 
