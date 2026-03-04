@@ -1,5 +1,5 @@
 {
   "name": "logius-standaarden",
   "description": "Plugin voor het werken met Logius standaarden voor Nederlandse overheidsinteroperabiliteit. Bevat skills voor 77 GitHub repositories verdeeld over 9 domeinen: API Design Rules, Digikoppeling, Identity & Access Management, FSC, Logboek Dataverwerkingen, CloudEvents & Notificaties, BOMOS governance, E-Government services, en Publicatie & Tooling.",
-  "version": "1.3.5"
+  "version": "0.3.5"
 }
