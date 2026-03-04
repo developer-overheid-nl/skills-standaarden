@@ -1,7 +1,7 @@
 # Logius Standaarden - Claude Code Plugin
 
 [![EUPL-1.2](https://img.shields.io/badge/licentie-EUPL--1.2-blue.svg)](LICENSE)
-[![versie](https://img.shields.io/github/v/tag/developer-overheid-nl/standaarden-plugin?label=versie&color=green)](CHANGELOG.md)
+[![versie](https://img.shields.io/github/v/tag/developer-overheid-nl/skills-standaarden?label=versie&color=green)](CHANGELOG.md)
 
 Claude Code plugin voor het werken met 77 van de 88 GitHub repositories van [Logius standaarden](https://github.com/logius-standaarden) voor Nederlandse overheidsinteroperabiliteit.
 
@@ -9,10 +9,10 @@ Claude Code plugin voor het werken met 77 van de 88 GitHub repositories van [Log
 
 ### Globaal installeren (aanbevolen)
 
-Voeg de [overheid-plugins marketplace](https://github.com/developer-overheid-nl/overheid-claude-plugins) toe en installeer de plugin. De skills zijn daarna beschikbaar in elke Claude Code sessie.
+Voeg de [overheid-plugins marketplace](https://github.com/developer-overheid-nl/skills-marketplace) toe en installeer de plugin. De skills zijn daarna beschikbaar in elke Claude Code sessie.
 
 ```bash
-claude plugin marketplace add developer-overheid-nl/overheid-claude-plugins
+claude plugin marketplace add developer-overheid-nl/skills-marketplace
 claude plugin install logius-standaarden@overheid-plugins
 ```
 
@@ -21,8 +21,8 @@ claude plugin install logius-standaarden@overheid-plugins
 Alternatief: laad de plugin alleen voor de huidige sessie via `--plugin-dir`:
 
 ```bash
-git clone https://github.com/developer-overheid-nl/standaarden-plugin.git
-claude --plugin-dir ./standaarden-plugin
+git clone https://github.com/developer-overheid-nl/skills-standaarden.git
+claude --plugin-dir ./skills-standaarden
 ```
 
 ## Wat doet deze plugin?
