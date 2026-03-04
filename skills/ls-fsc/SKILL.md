@@ -493,13 +493,7 @@ curl -s "https://directory.example.com:8443/services?name=brp-bevraging" \
 }
 ```
 
-De `Fsc-Error-Code` header wordt altijd meegegeven bij foutresponses, naast de HTTP status code.
-
-### Outway Error Code
-
-| HTTP Status | Fsc-Error-Code | Beschrijving |
-|------------|---------------|-------------|
-| 405 | `ERROR_CODE_METHOD_UNSUPPORTED` | CONNECT methode niet ondersteund |
+De `Fsc-Error-Code` header wordt altijd meegegeven bij foutresponses, naast de HTTP status code. Outway geeft `405 ERROR_CODE_METHOD_UNSUPPORTED` bij een niet-ondersteunde CONNECT methode.
 
 ## Achtergrondinfo
 Zie [reference.md](reference.md) voor componentarchitectuur, trust model, retry-strategie (exponential backoff), en protocoldocumentatie. Zie [conflicts.md](conflicts.md) voor bronconflicten.
