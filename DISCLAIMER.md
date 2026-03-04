@@ -1,6 +1,8 @@
 # Disclaimer
 
-Deze plugin is een **experimenteel project** om te leren hoe generatieve AI gestuurd kan worden om te werken volgens de kaders, richtlijnen en standaarden van de Nederlandse overheid. De inhoud — inclusief skills, referentiemateriaal en voorbeeldcode — is **informatief** en niet normatief.
+Deze plugin is een **experimenteel project** van [developer.overheid.nl](https://developer.overheid.nl) om te leren hoe generatieve AI gestuurd kan worden om te werken volgens de kaders, richtlijnen en standaarden van de Nederlandse overheid. De inhoud — inclusief skills, referentiemateriaal en voorbeeldcode — is **informatief** en niet normatief.
+
+**Deze plugin is geen officieel product van [Logius](https://www.logius.nl).** De inhoud is gebaseerd op publiek beschikbare standaarden en documentatie die door Logius worden beheerd, maar is onafhankelijk samengesteld door developer.overheid.nl.
 
 ## De skills in deze plugin zijn niet de officiële standaarden
 
