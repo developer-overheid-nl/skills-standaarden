@@ -229,9 +229,9 @@ npx @stoplight/spectral-cli lint <jouw-spec.yaml> \
   --ruleset https://static.developer.overheid.nl/adr/ruleset.yaml
 
 # Optie 2: Ruleset ophalen via GitHub API
-gh api repos/logius-standaarden/API-Design-Rules/contents/media/linter.yml \
-  -H "Accept: application/vnd.github.raw" > /tmp/adr-linter.yml
-npx @stoplight/spectral-cli lint <jouw-spec.yaml> --ruleset /tmp/adr-linter.yml
+gh api repos/logius-standaarden/API-Design-Rules/contents/media/linter.yaml \
+  -H "Accept: application/vnd.github.raw" > /tmp/adr-linter.yaml
+npx @stoplight/spectral-cli lint <jouw-spec.yaml> --ruleset /tmp/adr-linter.yaml
 
 # Bekijk beschikbare regels (DON-versie)
 curl -s https://static.developer.overheid.nl/adr/ruleset.yaml | grep -oE "^\s{2}\S+:" | sed 's/^\s*//;s/:$//'
