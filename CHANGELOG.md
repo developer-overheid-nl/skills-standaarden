@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.6](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.5...v0.3.6) (2026-03-04)
+
+
+### Opgelost
+
+* update linter.yml to linter.yaml in ls-api skill ([#87](https://github.com/developer-overheid-nl/skills-standaarden/issues/87)) ([2acdd10](https://github.com/developer-overheid-nl/skills-standaarden/commit/2acdd1043e82f6b0d8b20c36d491637c6254fa02))
+
 ## [0.3.5](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.4...v0.3.5) (2026-02-26)
 
 
