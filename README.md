@@ -1,9 +1,9 @@
-# Logius Standaarden - Claude Code Plugin
+# Standaarden - Claude Code Plugin
 
 [![EUPL-1.2](https://img.shields.io/badge/licentie-EUPL--1.2-blue.svg)](LICENSE)
 [![versie](https://img.shields.io/github/v/tag/developer-overheid-nl/skills-standaarden?label=versie&color=green)](CHANGELOG.md)
 
-Claude Code plugin voor het werken met 77 van de 88 GitHub repositories van [Logius standaarden](https://github.com/logius-standaarden) voor Nederlandse overheidsinteroperabiliteit.
+Claude Code plugin voor Nederlandse overheidsstandaarden. Bevat skills voor 77 van de 88 GitHub repositories van [Logius standaarden](https://github.com/logius-standaarden) voor interoperabiliteit: API Design Rules, Digikoppeling, OAuth NL, FSC, CloudEvents, BOMOS en meer.
 
 ## Installatie
 
@@ -113,7 +113,7 @@ De hele plugin wordt als 1 eenheid geversioned (semver):
 
 ## Disclaimer
 
-Dit is een experimenteel project om te leren hoe generatieve AI gestuurd kan worden om te werken volgens de kaders, richtlijnen en standaarden van de overheid. De skills in deze plugin zijn informatieve samenvattingen — **niet** de officiële standaarden zelf. De definities op [Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Rijksbrede beleidskader voor generatieve AI](https://www.government.nl/documents/policy-notes/2025/01/31/government-wide-position-on-the-use-of-generative-ai). Zie [DISCLAIMER.md](DISCLAIMER.md) voor de volledige disclaimer.
+**Deze plugin is geen officieel product van [Logius](https://www.logius.nl).** Het is een experimenteel project van [developer.overheid.nl](https://developer.overheid.nl), gebaseerd op publiek beschikbare standaarden en documentatie. De skills zijn informatieve samenvattingen — **niet** de officiële standaarden zelf. De definities op [Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Rijksbrede beleidskader voor generatieve AI](https://www.government.nl/documents/policy-notes/2025/01/31/government-wide-position-on-the-use-of-generative-ai). Zie [DISCLAIMER.md](DISCLAIMER.md) voor de volledige disclaimer.
 
 ## Licentie
 
