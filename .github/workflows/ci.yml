@@ -13,11 +13,14 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Valideer plugin.json
-        run: python3 -c "import json; json.load(open('.claude-plugin/plugin.json'))"
+        run: python3 -c "import json; json.load(open('.plugin/plugin.json'))"
+
+      - name: Controleer plugin sync
+        run: python3 scripts/generate_plugin.py --check
 
       - name: Controleer vereiste bestanden
         run: |
-          for f in LICENSE README.md CHANGELOG.md CLAUDE.md .claude-plugin/plugin.json; do
+          for f in LICENSE README.md CHANGELOG.md CLAUDE.md .plugin/plugin.json .claude-plugin/plugin.json .cursor-plugin/plugin.json; do
             if [ ! -f "$f" ]; then
               echo "FOUT: $f ontbreekt"
               exit 1
