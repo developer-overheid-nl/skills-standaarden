@@ -46,7 +46,7 @@ Modules hebben geen eigen vaststellingsproces — ze ontlenen hun status aan de 
 | [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Module: HTTP Message Signing — draft | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/API-mod-signing/) |
 | [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Module: Encryption (JWE) — draft | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/API-mod-encryption/) |
 | [api-linter-impactanalyse](https://github.com/logius-standaarden/api-linter-impactanalyse) | Python tool: test Spectral regels tegen echte OpenAPI specs uit het API-register | Niet gespecificeerd | - | - |
-| [zaakgericht-werken-api](https://github.com/logius-standaarden/zaakgericht-werken-api) | API-specificatie voor zaakgericht werken | Niet gespecificeerd | - | - |
+| [zaakgericht-werken-api](https://github.com/logius-standaarden/zaakgericht-werken-api) | API-specificatie voor zaakgericht werken | [W3C Software License](https://www.w3.org/copyright/software-license-2023/) | - | - |
 
 ## Technische Regels
 
