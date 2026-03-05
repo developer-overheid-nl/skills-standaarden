@@ -23,25 +23,25 @@ Er zijn geen vastgestelde (DEF) versies voor Logboek Dataverwerkingen. De public
 
 Alle repositories hebben alleen werkversies; er zijn geen bronconflicten. Als er een DEF-versie wordt vastgesteld, moet dit document worden bijgewerkt met de versie-informatie.
 
-## Ontbrekende licentie in GitHub-repositories
+## Licentie-status GitHub-repositories
 
-De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en [logius-standaarden.github.io](https://logius-standaarden.github.io) vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
+Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec-template), terwijl de gepubliceerde standaarden CC-BY-4.0 vermelden via de ReSpec-configuratie. Andere repositories hebben geen expliciet `LICENSE`-bestand.
 
 | Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
 |-----------|--------------|----------------------|--------|
-| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [logboek-extensie-template](https://github.com/logius-standaarden/logboek-extensie-template) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 
 **Opmerking:** [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo) heeft wél een expliciete EUPL-1.2 licentie in GitHub en is een demo/referentie-implementatie (geen ReSpec-document), en is daarom niet opgenomen in bovenstaande tabel.
 
 ### Aandachtspunt
 
-De licentie-informatie in de SKILL.md is gebaseerd op de gepubliceerde ReSpec-documenten. Het verdient aanbeveling dat de repositories expliciet een `LICENSE`-bestand toevoegen om juridische duidelijkheid te bieden, met name voor hergebruik onder artikel 15n Auteurswet (text and data mining exceptie).
+De W3C Software License is afkomstig van het ReSpec-template en dekt de tooling-code. De gepubliceerde standaard-inhoud valt onder CC-BY-4.0 (vermeld in de ReSpec-configuratie). Voor repositories zonder LICENSE-bestand verdient het aanbeveling om expliciet een licentie toe te voegen, relevant voor artikel 15n Auteurswet (text and data mining exceptie).
 
 ## Referenties
 

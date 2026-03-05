@@ -56,22 +56,22 @@ De SKILL.md beschrijft de werkversie als "lopende ontwikkeling richting de volge
 
 De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies. De GitHub-tag van API-mod-geospatial loopt één patchversie achter; dit is hetzelfde patroon als bij andere Logius-standaarden repos (zie ook [ls-dk/conflicts.md](../ls-dk/conflicts.md)). ADR-Beheermodel heeft een afwijkend tag-formaat (`10r4` vs DEF v1.0). Transport Security wordt beschreven met de feitelijke drieledige status (ingebed, leeswijzer, gearchiveerd). Als tags worden bijgewerkt of de leeswijzer wordt aangepast, moeten deze conflicten opnieuw worden beoordeeld.
 
-## Ontbrekende licentie in GitHub-repositories
+## Licentie-status GitHub-repositories
 
-De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en [logius-standaarden.github.io](https://logius-standaarden.github.io) vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
+Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec-template), terwijl de gepubliceerde standaarden CC-BY-4.0 vermelden via de ReSpec-configuratie. Andere repositories hebben geen expliciet `LICENSE`-bestand.
 
 | Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
 |-----------|--------------|----------------------|--------|
 | [ADR-Beheermodel](https://github.com/logius-standaarden/ADR-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [API-Standaarden-Beheermodel](https://github.com/logius-standaarden/API-Standaarden-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [API-mod-geospatial](https://github.com/logius-standaarden/API-mod-geospatial) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [API-mod-transport-security](https://github.com/logius-standaarden/API-mod-transport-security) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [API-mod-transport-security](https://github.com/logius-standaarden/API-mod-transport-security) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 
 ### Aandachtspunt
 
-De licentie-informatie in de SKILL.md is gebaseerd op de gepubliceerde ReSpec-documenten. Het verdient aanbeveling dat de repositories expliciet een `LICENSE`-bestand toevoegen om juridische duidelijkheid te bieden, met name voor hergebruik onder artikel 15n Auteurswet (text and data mining exceptie).
+De W3C Software License is afkomstig van het ReSpec-template en dekt de tooling-code. De gepubliceerde standaard-inhoud valt onder CC-BY-4.0 (vermeld in de ReSpec-configuratie). Voor repositories zonder LICENSE-bestand verdient het aanbeveling om expliciet een licentie toe te voegen, relevant voor artikel 15n Auteurswet (text and data mining exceptie).
 
 ## Referenties
 
