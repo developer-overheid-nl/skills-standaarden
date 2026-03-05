@@ -30,6 +30,21 @@ Het Forum Standaardisatie vermeldt v1.0 als de verplichte versie op de pas-toe-o
 
 De skill noemt beide versies: v1.0 als de Forum Standaardisatie-versie (verplicht) en v1.1 als de meest recente Logius DEF. Als het Forum de lijstversie bijwerkt naar v1.1, moet dit conflict opnieuw worden beoordeeld.
 
+## Ontbrekende licentie in GitHub-repositories
+
+De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en [logius-standaarden.github.io](https://logius-standaarden.github.io) vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [NL-GOV-profile-for-CloudEvents](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Notificatieservices](https://github.com/logius-standaarden/Notificatieservices) | Geen | N.v.t. | Geen licentie |
+| [Abonneren](https://github.com/logius-standaarden/Abonneren) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+
+### Aandachtspunt
+
+De licentie-informatie in de SKILL.md is gebaseerd op de gepubliceerde ReSpec-documenten. Het verdient aanbeveling dat de repositories expliciet een `LICENSE`-bestand toevoegen om juridische duidelijkheid te bieden, met name voor hergebruik onder artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - Publicatie CloudEvents NL GOV profiel: https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl/

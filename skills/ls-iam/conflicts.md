@@ -69,6 +69,25 @@ De skill gebruikt **"verkort expertonderzoek"**, conform het intakeadvies-docume
 
 De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies (OIN-Stelsel v2.2.1, OAuth-Beheermodel v1.0). Voor het expertonderzoek-type van OAuth v1.1 volgt de skill het intakeadvies-document ("verkort"). OAuth-Beheermodel heeft een afwijkende tag (`0.2` vs DEF v1.0) maar is gearchiveerd. Als de GitHub-tags of de Forum-hoofdpagina worden bijgewerkt, moet dit conflict opnieuw worden beoordeeld.
 
+## Ontbrekende licentie in GitHub-repositories
+
+De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en [logius-standaarden.github.io](https://logius-standaarden.github.io) vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [OAuth-NL-profiel](https://github.com/logius-standaarden/OAuth-NL-profiel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [OIDC-NLGOV](https://github.com/logius-standaarden/OIDC-NLGOV) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [OAuth-Inleiding](https://github.com/logius-standaarden/OAuth-Inleiding) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [OAuth-Beheermodel](https://github.com/logius-standaarden/OAuth-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [authzen-nlgov](https://github.com/logius-standaarden/authzen-nlgov) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [authorization-decision-log](https://github.com/logius-standaarden/authorization-decision-log) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+
+### Aandachtspunt
+
+De licentie-informatie in de SKILL.md is gebaseerd op de gepubliceerde ReSpec-documenten. Het verdient aanbeveling dat de repositories expliciet een `LICENSE`-bestand toevoegen om juridische duidelijkheid te bieden, met name voor hergebruik onder artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - Publicatie OIN-Stelsel: https://gitdocumentatie.logius.nl/publicatie/dk/oin/

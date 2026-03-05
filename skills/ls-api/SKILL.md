@@ -36,17 +36,17 @@ Modules hebben geen eigen vaststellingsproces — ze ontlenen hun status aan de 
 
 ## Repositories
 
-| Repository | Beschrijving | Vastgesteld | Draft |
-|-----------|-------------|------------|-------|
-| [API-Design-Rules](https://github.com/logius-standaarden/API-Design-Rules) | Hoofdspecificatie (ADR) | [v2.1.0](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.1.0/) | [Draft](https://logius-standaarden.github.io/API-Design-Rules/) |
-| [ADR-Beheermodel](https://github.com/logius-standaarden/ADR-Beheermodel) | Beheermodel voor de ADR standaard — **gearchiveerd**, vervangen door API-Standaarden-Beheermodel | [v1.0](https://gitdocumentatie.logius.nl/publicatie/api/adr-beheer/1.0/) | - |
-| [API-Standaarden-Beheermodel](https://github.com/logius-standaarden/API-Standaarden-Beheermodel) | Overkoepelend beheermodel API-standaarden | - | [Draft](https://logius-standaarden.github.io/API-Standaarden-Beheermodel/) |
-| [API-mod-geospatial](https://github.com/logius-standaarden/API-mod-geospatial) | Module: Geospatial (GeoJSON, CRS) — normatief in ADR v2.1.0 | [v1.0.3](https://gitdocumentatie.logius.nl/publicatie/api/mod-geo/1.0.3/) | [Draft](https://logius-standaarden.github.io/API-mod-geospatial/) |
-| [API-mod-transport-security](https://github.com/logius-standaarden/API-mod-transport-security) | Module: Transport Security — **gearchiveerd**; inhoud ingebed in ADR v2.1.0; normatief vermeld in leeswijzer; repo gearchiveerd | - | - |
-| [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Module: HTTP Message Signing — draft | - | [Draft](https://logius-standaarden.github.io/API-mod-signing/) |
-| [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Module: Encryption (JWE) — draft | - | [Draft](https://logius-standaarden.github.io/API-mod-encryption/) |
-| [api-linter-impactanalyse](https://github.com/logius-standaarden/api-linter-impactanalyse) | Python tool: test Spectral regels tegen echte OpenAPI specs uit het API-register | - | - |
-| [zaakgericht-werken-api](https://github.com/logius-standaarden/zaakgericht-werken-api) | API-specificatie voor zaakgericht werken | - | - |
+| Repository | Beschrijving | Licentie | Vastgesteld | Draft |
+|-----------|-------------|--------|------------|-------|
+| [API-Design-Rules](https://github.com/logius-standaarden/API-Design-Rules) | Hoofdspecificatie (ADR) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [v2.1.0](https://gitdocumentatie.logius.nl/publicatie/api/adr/2.1.0/) | [Draft](https://logius-standaarden.github.io/API-Design-Rules/) |
+| [ADR-Beheermodel](https://github.com/logius-standaarden/ADR-Beheermodel) | Beheermodel voor de ADR standaard — **gearchiveerd**, vervangen door API-Standaarden-Beheermodel | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [v1.0](https://gitdocumentatie.logius.nl/publicatie/api/adr-beheer/1.0/) | - |
+| [API-Standaarden-Beheermodel](https://github.com/logius-standaarden/API-Standaarden-Beheermodel) | Overkoepelend beheermodel API-standaarden | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/API-Standaarden-Beheermodel/) |
+| [API-mod-geospatial](https://github.com/logius-standaarden/API-mod-geospatial) | Module: Geospatial (GeoJSON, CRS) — normatief in ADR v2.1.0 | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [v1.0.3](https://gitdocumentatie.logius.nl/publicatie/api/mod-geo/1.0.3/) | [Draft](https://logius-standaarden.github.io/API-mod-geospatial/) |
+| [API-mod-transport-security](https://github.com/logius-standaarden/API-mod-transport-security) | Module: Transport Security — **gearchiveerd**; inhoud ingebed in ADR v2.1.0; normatief vermeld in leeswijzer; repo gearchiveerd | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | - |
+| [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Module: HTTP Message Signing — draft | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/API-mod-signing/) |
+| [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Module: Encryption (JWE) — draft | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/API-mod-encryption/) |
+| [api-linter-impactanalyse](https://github.com/logius-standaarden/api-linter-impactanalyse) | Python tool: test Spectral regels tegen echte OpenAPI specs uit het API-register | Niet gespecificeerd | - | - |
+| [zaakgericht-werken-api](https://github.com/logius-standaarden/zaakgericht-werken-api) | API-specificatie voor zaakgericht werken | Niet gespecificeerd | - | - |
 
 ## Technische Regels
 

@@ -38,16 +38,16 @@ Logboek Dataverwerkingen heeft momenteel **alleen werkversies**. Er zijn nog gee
 
 ## Repositories
 
-| Repository | Beschrijving | Vastgesteld | Draft |
-|-----------|-------------|------------|-------|
-| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | Normatieve hoofdspecificatie (logging-interface) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen/) |
-| [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding) | Introductie en achtergrond | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/) |
-| [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | Juridisch en beleidskader | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/) |
-| [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo) | Docker demo-omgeving met meerdere services | - | - |
-| [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | Extensie: leesoperaties op het logboek | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-lezen/) |
-| [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513) | Extensie: NEN 7513 (logging in de zorg) | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-nen7513/) |
-| [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object) | Extensie: objectgegevens bij verwerkingen | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-object/) |
-| [logboek-extensie-template](https://github.com/logius-standaarden/logboek-extensie-template) | Template voor nieuwe extensies | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-template/) |
+| Repository | Beschrijving | Licentie | Vastgesteld | Draft |
+|-----------|-------------|--------|------------|-------|
+| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | Normatieve hoofdspecificatie (logging-interface) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen/) |
+| [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding) | Introductie en achtergrond | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/) |
+| [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | Juridisch en beleidskader | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/) |
+| [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo) | Docker demo-omgeving met meerdere services | [EUPL-1.2](https://eupl.eu/1.2/nl/) | - | - |
+| [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | Extensie: leesoperaties op het logboek | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-lezen/) |
+| [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513) | Extensie: NEN 7513 (logging in de zorg) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-nen7513/) |
+| [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object) | Extensie: objectgegevens bij verwerkingen | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-object/) |
+| [logboek-extensie-template](https://github.com/logius-standaarden/logboek-extensie-template) | Template voor nieuwe extensies | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-template/) |
 
 ## Architectuur
 

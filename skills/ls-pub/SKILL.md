@@ -41,17 +41,17 @@ De publicatie-tooling ondersteunt het versiemodel van Logius-standaarden via de 
 
 ## Repositories
 
-| Repository | Beschrijving | Publicatie |
-|-----------|-------------|-----------|
-| [publicatie](https://github.com/logius-standaarden/publicatie) | Centrale publicatie-repo: alle vastgestelde standaarden | gitdocumentatie.logius.nl (geen directory listing) |
-| [Publicatie-Preview](https://github.com/logius-standaarden/Publicatie-Preview) | Preview-omgeving voor documenten in ontwikkeling | [Lees online](https://logius-standaarden.github.io/Publicatie-Preview/) |
-| [respec](https://github.com/logius-standaarden/respec) | Logius fork van W3C ReSpec documentatie-tool | - |
-| [ReSpec-template](https://github.com/logius-standaarden/ReSpec-template) | Basis template voor nieuwe ReSpec documenten | [Lees online](https://logius-standaarden.github.io/ReSpec-template/) |
-| [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) | Logius-specifiek ReSpec template met huisstijl | [Lees online](https://logius-standaarden.github.io/ReSpec-template-Logius/) |
-| [Openbare-Consultaties](https://github.com/logius-standaarden/Openbare-Consultaties) | Gepubliceerde consultatieversies (CV) | [Lees online](https://logius-standaarden.github.io/Openbare-Consultaties/) |
-| [Automatisering](https://github.com/logius-standaarden/Automatisering) | Herbruikbare GitHub Actions workflows | - |
-| [automatisering-test](https://github.com/logius-standaarden/automatisering-test) | Testomgeving voor de automatiseringsworkflows | - |
-| [tech-radar](https://github.com/logius-standaarden/tech-radar) | Technologie radar voor Logius standaarden | [Lees online](https://logius-standaarden.github.io/tech-radar/) |
+| Repository | Beschrijving | Licentie | Publicatie |
+|-----------|-------------|--------|-----------|
+| [publicatie](https://github.com/logius-standaarden/publicatie) | Centrale publicatie-repo: alle vastgestelde standaarden | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | gitdocumentatie.logius.nl (geen directory listing) |
+| [Publicatie-Preview](https://github.com/logius-standaarden/Publicatie-Preview) | Preview-omgeving voor documenten in ontwikkeling | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Lees online](https://logius-standaarden.github.io/Publicatie-Preview/) |
+| [respec](https://github.com/logius-standaarden/respec) | Logius fork van W3C ReSpec documentatie-tool | Niet gespecificeerd | - |
+| [ReSpec-template](https://github.com/logius-standaarden/ReSpec-template) | Basis template voor nieuwe ReSpec documenten | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Lees online](https://logius-standaarden.github.io/ReSpec-template/) |
+| [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) | Logius-specifiek ReSpec template met huisstijl | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Lees online](https://logius-standaarden.github.io/ReSpec-template-Logius/) |
+| [Openbare-Consultaties](https://github.com/logius-standaarden/Openbare-Consultaties) | Gepubliceerde consultatieversies (CV) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Lees online](https://logius-standaarden.github.io/Openbare-Consultaties/) |
+| [Automatisering](https://github.com/logius-standaarden/Automatisering) | Herbruikbare GitHub Actions workflows | Niet gespecificeerd | - |
+| [automatisering-test](https://github.com/logius-standaarden/automatisering-test) | Testomgeving voor de automatiseringsworkflows | Niet gespecificeerd | - |
+| [tech-radar](https://github.com/logius-standaarden/tech-radar) | Technologie radar voor Logius standaarden | [MIT](https://opensource.org/licenses/MIT) | [Lees online](https://logius-standaarden.github.io/tech-radar/) |
 
 ## ReSpec Documentatie-systeem
 

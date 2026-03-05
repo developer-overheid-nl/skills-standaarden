@@ -34,6 +34,23 @@ NLCIUS en Peppol BIS staan in de SKILL.md als Forum-standaarden met hun status (
 
 Logius-repositories hebben alleen werkversies. NLCIUS en Peppol BIS staan in de skill vanwege hun Forum Standaardisatie-status, niet als Logius-repositories. Als er DEF-versies worden vastgesteld voor de Terugmeld-repositories, moet dit document worden bijgewerkt.
 
+## Ontbrekende licentie in GitHub-repositories
+
+De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en [logius-standaarden.github.io](https://logius-standaarden.github.io) vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [Terugmelding](https://github.com/logius-standaarden/Terugmelding) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Terugmelden-API](https://github.com/logius-standaarden/Terugmelden-API) | Geen | N.v.t. | Geen licentie |
+| [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [e-procurement](https://github.com/logius-standaarden/e-procurement) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+
+### Aandachtspunt
+
+De licentie-informatie in de SKILL.md is gebaseerd op de gepubliceerde ReSpec-documenten. Het verdient aanbeveling dat de repositories expliciet een `LICENSE`-bestand toevoegen om juridische duidelijkheid te bieden, met name voor hergebruik onder artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - GitHub Terugmelding: https://github.com/logius-standaarden/Terugmelding

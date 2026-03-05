@@ -36,6 +36,24 @@ Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en d
 
 De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies. De GitHub-tags lopen significant achter (fsc-core) of ontbreken geheel (fsc-logging, fsc-external-contract). Als tags worden bijgewerkt of aangemaakt, moet dit conflict opnieuw worden beoordeeld.
 
+## Ontbrekende licentie in GitHub-repositories
+
+De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en [logius-standaarden.github.io](https://logius-standaarden.github.io) vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [fsc-core](https://github.com/logius-standaarden/fsc-core) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [fsc-properties](https://github.com/logius-standaarden/fsc-properties) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [fsc-extensie-template](https://github.com/logius-standaarden/fsc-extensie-template) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [fsc-test-suite](https://github.com/logius-standaarden/fsc-test-suite) | Geen | N.v.t. | Geen licentie |
+
+### Aandachtspunt
+
+De licentie-informatie in de SKILL.md is gebaseerd op de gepubliceerde ReSpec-documenten. Het verdient aanbeveling dat de repositories expliciet een `LICENSE`-bestand toevoegen om juridische duidelijkheid te bieden, met name voor hergebruik onder artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - Publicatie fsc-core: https://gitdocumentatie.logius.nl/publicatie/fsc/core/

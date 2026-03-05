@@ -36,6 +36,27 @@ De documentversie v3.0.1 resp. v3.1.0 is bevestigd via de ReSpec `localBiblio` c
 
 De skill gebruikt de documentversies (`v3.0.1` en `v3.1.0`) van gitdocumentatie.logius.nl, niet de Git-tags die een onafhankelijk versienummerschema voor de repo-structuur hanteren. Dit is een bijzonderheid van BOMOS. Als het versienummerschema wordt geharmoniseerd, moet dit conflict opnieuw worden beoordeeld.
 
+## Ontbrekende licentie in GitHub-repositories
+
+De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en [logius-standaarden.github.io](https://logius-standaarden.github.io) vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [BOMOS-Fundament](https://github.com/logius-standaarden/BOMOS-Fundament) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [BOMOS-Verdieping](https://github.com/logius-standaarden/BOMOS-Verdieping) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [BOMOS-Aanvullende-Modules](https://github.com/logius-standaarden/BOMOS-Aanvullende-Modules) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [BOMOS-LinkedData](https://github.com/logius-standaarden/BOMOS-LinkedData) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [BOMOS-OpenSource](https://github.com/logius-standaarden/BOMOS-OpenSource) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [BOMOS-Stelsels](https://github.com/logius-standaarden/BOMOS-Stelsels) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [BOMOS-Beheermodel](https://github.com/logius-standaarden/BOMOS-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [BOMOS-voorbeeld-beheermodel](https://github.com/logius-standaarden/BOMOS-voorbeeld-beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [BOMOS-Community](https://github.com/logius-standaarden/BOMOS-Community) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Logius-Beheermodel](https://github.com/logius-standaarden/Logius-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+
+### Aandachtspunt
+
+De licentie-informatie in de SKILL.md is gebaseerd op de gepubliceerde ReSpec-documenten. Het verdient aanbeveling dat de repositories expliciet een `LICENSE`-bestand toevoegen om juridische duidelijkheid te bieden, met name voor hergebruik onder artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - Publicatie BOMOS-Fundament: https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/
