@@ -31,11 +31,11 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 |-----------|--------------|----------------------|--------|
 | [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
-| [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [logboek-extensie-template](https://github.com/logius-standaarden/logboek-extensie-template) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [logboek-extensie-template](https://github.com/logius-standaarden/logboek-extensie-template) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
-| [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 
 **Opmerking:** [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo) heeft wél een expliciete EUPL-1.2 licentie in GitHub en is een demo/referentie-implementatie (geen ReSpec-document), en is daarom niet opgenomen in bovenstaande tabel.
 

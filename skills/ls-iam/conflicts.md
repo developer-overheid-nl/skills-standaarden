@@ -77,11 +77,11 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 |-----------|--------------|----------------------|--------|
 | [OAuth-NL-profiel](https://github.com/logius-standaarden/OAuth-NL-profiel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [OIDC-NLGOV](https://github.com/logius-standaarden/OIDC-NLGOV) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
-| [OAuth-Inleiding](https://github.com/logius-standaarden/OAuth-Inleiding) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [OAuth-Inleiding](https://github.com/logius-standaarden/OAuth-Inleiding) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [OAuth-Beheermodel](https://github.com/logius-standaarden/OAuth-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [authzen-nlgov](https://github.com/logius-standaarden/authzen-nlgov) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [authorization-decision-log](https://github.com/logius-standaarden/authorization-decision-log) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [authzen-nlgov](https://github.com/logius-standaarden/authzen-nlgov) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [authorization-decision-log](https://github.com/logius-standaarden/authorization-decision-log) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 
 ### Aandachtspunt

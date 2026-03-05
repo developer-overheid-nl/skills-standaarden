@@ -44,7 +44,7 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 | [Terugmelden-API](https://github.com/logius-standaarden/Terugmelden-API) | Geen | N.v.t. | Geen licentie |
 | [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
-| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [e-procurement](https://github.com/logius-standaarden/e-procurement) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 
 ### Aandachtspunt
