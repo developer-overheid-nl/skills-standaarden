@@ -30,6 +30,21 @@ Het Forum Standaardisatie vermeldt v1.0 als de verplichte versie op de pas-toe-o
 
 De skill noemt beide versies: v1.0 als de Forum Standaardisatie-versie (verplicht) en v1.1 als de meest recente Logius DEF. Als het Forum de lijstversie bijwerkt naar v1.1, moet dit conflict opnieuw worden beoordeeld.
 
+## Licentie-status GitHub-repositories
+
+Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec-template), terwijl de gepubliceerde standaarden CC-BY-4.0 vermelden via de ReSpec-configuratie. Andere repositories hebben geen expliciet `LICENSE`-bestand.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [NL-GOV-profile-for-CloudEvents](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [Notificatieservices](https://github.com/logius-standaarden/Notificatieservices) | Geen | N.v.t. | Geen licentie |
+| [Abonneren](https://github.com/logius-standaarden/Abonneren) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+
+### Aandachtspunt
+
+De W3C Software License is afkomstig van het ReSpec-template en dekt de tooling-code. De gepubliceerde standaard-inhoud valt onder CC-BY-4.0 (vermeld in de ReSpec-configuratie). Voor repositories zonder LICENSE-bestand verdient het aanbeveling om expliciet een licentie toe te voegen, relevant voor artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - Publicatie CloudEvents NL GOV profiel: https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl/

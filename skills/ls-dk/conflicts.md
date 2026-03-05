@@ -41,6 +41,34 @@ Daarnaast worden GitHub Releases (een apart mechanisme naast tags) niet conseque
 
 De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies. GitHub-tags lopen achter maar dat is een beheerproces-kwestie. Als tags worden bijgewerkt, moet dit conflict opnieuw worden beoordeeld.
 
+## Ontbrekende licentie in GitHub-repositories
+
+De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en [logius-standaarden.github.io](https://logius-standaarden.github.io) vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Gebruik-en-achtergrond-certificaten](https://github.com/logius-standaarden/Digikoppeling-Gebruik-en-achtergrond-certificaten) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Best-Practices-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-ebMS2) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance](https://github.com/logius-standaarden/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Best-Practices-GB](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-GB) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Best-Practices-WUS](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-WUS) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Handreiking-Adressering-en-Routering](https://github.com/logius-standaarden/Digikoppeling-Handreiking-Adressering-en-Routering) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Wat-is-Digikoppeling](https://github.com/logius-standaarden/Digikoppeling-Wat-is-Digikoppeling) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [Digikoppeling-Algemeen](https://github.com/logius-standaarden/Digikoppeling-Algemeen) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+
+### Aandachtspunt
+
+De licentie-informatie in de SKILL.md is gebaseerd op de gepubliceerde ReSpec-documenten. Het verdient aanbeveling dat de repositories expliciet een `LICENSE`-bestand toevoegen om juridische duidelijkheid te bieden, met name voor hergebruik onder artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - Gepubliceerde versies (overzicht): https://gitdocumentatie.logius.nl/publicatie/dk/actueel/

@@ -36,6 +36,24 @@ Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en d
 
 De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies. De GitHub-tags lopen significant achter (fsc-core) of ontbreken geheel (fsc-logging, fsc-external-contract). Als tags worden bijgewerkt of aangemaakt, moet dit conflict opnieuw worden beoordeeld.
 
+## Licentie-status GitHub-repositories
+
+Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec-template), terwijl de gepubliceerde standaarden CC-BY-4.0 vermelden via de ReSpec-configuratie. Andere repositories hebben geen expliciet `LICENSE`-bestand.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [fsc-core](https://github.com/logius-standaarden/fsc-core) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [fsc-properties](https://github.com/logius-standaarden/fsc-properties) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [fsc-extensie-template](https://github.com/logius-standaarden/fsc-extensie-template) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [fsc-test-suite](https://github.com/logius-standaarden/fsc-test-suite) | Geen | N.v.t. | Geen licentie |
+
+### Aandachtspunt
+
+De W3C Software License is afkomstig van het ReSpec-template en dekt de tooling-code. De gepubliceerde standaard-inhoud valt onder CC-BY-4.0 (vermeld in de ReSpec-configuratie). Voor repositories zonder LICENSE-bestand verdient het aanbeveling om expliciet een licentie toe te voegen, relevant voor artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - Publicatie fsc-core: https://gitdocumentatie.logius.nl/publicatie/fsc/core/

@@ -69,6 +69,25 @@ De skill gebruikt **"verkort expertonderzoek"**, conform het intakeadvies-docume
 
 De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies (OIN-Stelsel v2.2.1, OAuth-Beheermodel v1.0). Voor het expertonderzoek-type van OAuth v1.1 volgt de skill het intakeadvies-document ("verkort"). OAuth-Beheermodel heeft een afwijkende tag (`0.2` vs DEF v1.0) maar is gearchiveerd. Als de GitHub-tags of de Forum-hoofdpagina worden bijgewerkt, moet dit conflict opnieuw worden beoordeeld.
 
+## Licentie-status GitHub-repositories
+
+Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec-template), terwijl de gepubliceerde standaarden CC-BY-4.0 vermelden via de ReSpec-configuratie. Andere repositories hebben geen expliciet `LICENSE`-bestand.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [OAuth-NL-profiel](https://github.com/logius-standaarden/OAuth-NL-profiel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [OIDC-NLGOV](https://github.com/logius-standaarden/OIDC-NLGOV) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [OAuth-Inleiding](https://github.com/logius-standaarden/OAuth-Inleiding) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [OAuth-Beheermodel](https://github.com/logius-standaarden/OAuth-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [authzen-nlgov](https://github.com/logius-standaarden/authzen-nlgov) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [authorization-decision-log](https://github.com/logius-standaarden/authorization-decision-log) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+
+### Aandachtspunt
+
+De W3C Software License is afkomstig van het ReSpec-template en dekt de tooling-code. De gepubliceerde standaard-inhoud valt onder CC-BY-4.0 (vermeld in de ReSpec-configuratie). Voor repositories zonder LICENSE-bestand verdient het aanbeveling om expliciet een licentie toe te voegen, relevant voor artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - Publicatie OIN-Stelsel: https://gitdocumentatie.logius.nl/publicatie/dk/oin/

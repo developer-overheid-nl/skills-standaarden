@@ -34,6 +34,23 @@ NLCIUS en Peppol BIS staan in de SKILL.md als Forum-standaarden met hun status (
 
 Logius-repositories hebben alleen werkversies. NLCIUS en Peppol BIS staan in de skill vanwege hun Forum Standaardisatie-status, niet als Logius-repositories. Als er DEF-versies worden vastgesteld voor de Terugmeld-repositories, moet dit document worden bijgewerkt.
 
+## Licentie-status GitHub-repositories
+
+Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec-template), terwijl de gepubliceerde standaarden CC-BY-4.0 vermelden via de ReSpec-configuratie. Andere repositories hebben geen expliciet `LICENSE`-bestand.
+
+| Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
+|-----------|--------------|----------------------|--------|
+| [Terugmelding](https://github.com/logius-standaarden/Terugmelding) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [Terugmelden-API](https://github.com/logius-standaarden/Terugmelden-API) | Geen | N.v.t. | Geen licentie |
+| [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [e-procurement](https://github.com/logius-standaarden/e-procurement) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+
+### Aandachtspunt
+
+De W3C Software License is afkomstig van het ReSpec-template en dekt de tooling-code. De gepubliceerde standaard-inhoud valt onder CC-BY-4.0 (vermeld in de ReSpec-configuratie). Voor repositories zonder LICENSE-bestand verdient het aanbeveling om expliciet een licentie toe te voegen, relevant voor artikel 15n Auteurswet (text and data mining exceptie).
+
 ## Referenties
 
 - GitHub Terugmelding: https://github.com/logius-standaarden/Terugmelding

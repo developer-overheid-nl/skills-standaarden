@@ -37,12 +37,12 @@ Op het Forum Standaardisatie staat CloudEvents **v1.0** als verplicht (['pas-toe
 
 ## Repositories
 
-| Repository | Beschrijving | Vastgesteld | Draft |
-|-----------|-------------|------------|-------|
-| [NL-GOV-profile-for-CloudEvents](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents) | Nederlands overheidsprofiel voor CloudEvents (kernstandaard) | [v1.1](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl/) | [Draft](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/) |
-| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | Richtlijnen en toelichting bij het NL GOV profiel | - | [Draft](https://logius-standaarden.github.io/CloudEvents-NL-Guidelines/) |
-| [Notificatieservices](https://github.com/logius-standaarden/Notificatieservices) | API-specificatie voor notificatieservices (werkrepository, geen publicatie) | - | - |
-| [Abonneren](https://github.com/logius-standaarden/Abonneren) | API-specificatie voor het abonneren op notificaties | - | [WV v0.0.1](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/abonneren/)¹ |
+| Repository | Beschrijving | Licentie | Vastgesteld | Draft |
+|-----------|-------------|--------|------------|-------|
+| [NL-GOV-profile-for-CloudEvents](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents) | Nederlands overheidsprofiel voor CloudEvents (kernstandaard) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [v1.1](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl/) | [Draft](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/) |
+| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | Richtlijnen en toelichting bij het NL GOV profiel | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/CloudEvents-NL-Guidelines/) |
+| [Notificatieservices](https://github.com/logius-standaarden/Notificatieservices) | API-specificatie voor notificatieservices (werkrepository, geen publicatie) | Niet gespecificeerd | - | - |
+| [Abonneren](https://github.com/logius-standaarden/Abonneren) | API-specificatie voor het abonneren op notificaties | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [WV v0.0.1](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/abonneren/)¹ |
 
 ¹ Abonneren WV v0.0.1 is gepubliceerd op gitdocumentatie.logius.nl, wat normaal voor vastgestelde versies (DEF/VV) is. Dit is een uitzondering; de standaard is nog in ontwikkeling.
 
