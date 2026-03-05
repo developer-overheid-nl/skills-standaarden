@@ -37,12 +37,12 @@ De E-Government standaarden hebben momenteel **alleen werkversies**. Er zijn nog
 
 | Repository | Beschrijving | Licentie | Vastgesteld | Draft |
 |-----------|-------------|--------|------------|-------|
-| [Terugmelding](https://github.com/logius-standaarden/Terugmelding) | Standaard voor terugmelden op basisregistraties | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/Terugmelding/) |
+| [Terugmelding](https://github.com/logius-standaarden/Terugmelding) | Standaard voor terugmelden op basisregistraties | [CC-BY-4.0](https://github.com/logius-standaarden/Terugmelding/blob/develop/LICENSE) | - | [Draft](https://logius-standaarden.github.io/Terugmelding/) |
 | [Terugmelden-API](https://github.com/logius-standaarden/Terugmelden-API) | Werkrepository voor een toekomstige REST API koppelvlakspecificatie voor terugmelden (nog geen specificatie beschikbaar) | Niet gespecificeerd | - | - |
-| [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie) | Koppelvlakspecificatie voor Digimelding | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/Digimelding-Koppelvlakspecificatie/) |
-| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | Handreiking basisfactuur voor de Rijksoverheid | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/basisfactuur-rijk/) |
-| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | Handreiking basisorder voor de Rijksoverheid | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/basisorder-rijk/) |
-| [e-procurement](https://github.com/logius-standaarden/e-procurement) | Overkoepelende e-procurement standaarden | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - | [Draft](https://logius-standaarden.github.io/e-procurement/) |
+| [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie) | Koppelvlakspecificatie voor Digimelding | CC-BY-4.0 | - | [Draft](https://logius-standaarden.github.io/Digimelding-Koppelvlakspecificatie/) |
+| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | Handreiking basisfactuur voor de Rijksoverheid | [CC-BY-4.0](https://github.com/logius-standaarden/basisfactuur-rijk/blob/ontwikkeling/LICENSE) | - | [Draft](https://logius-standaarden.github.io/basisfactuur-rijk/) |
+| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | Handreiking basisorder voor de Rijksoverheid | [CC-BY-4.0](https://github.com/logius-standaarden/basisorder-rijk/blob/ontwikkeling/LICENSE) | - | [Draft](https://logius-standaarden.github.io/basisorder-rijk/) |
+| [e-procurement](https://github.com/logius-standaarden/e-procurement) | Overkoepelende e-procurement standaarden | CC-BY-4.0 | - | [Draft](https://logius-standaarden.github.io/e-procurement/) |
 
 ---
 
