@@ -37,21 +37,21 @@ BOMOS is geen interoperabiliteitsstandaard en staat niet op de 'pas-toe-of-leg-u
 
 | Repository | Beschrijving | Licentie | Vastgesteld | Draft |
 |-----------|-------------|--------|------------|-------|
-| [BOMOS-Fundament](https://github.com/logius-standaarden/BOMOS-Fundament) | Kernmodel: activiteiten, rollen, structuur | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [v3.0.1](https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/) | [Draft](https://logius-standaarden.github.io/BOMOS-Fundament/) |
-| [BOMOS-Verdieping](https://github.com/logius-standaarden/BOMOS-Verdieping) | Verdiepende beschrijving van BOMOS activiteiten | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [v3.1.0](https://gitdocumentatie.logius.nl/publicatie/bomos/verdieping/) | [Draft](https://logius-standaarden.github.io/BOMOS-Verdieping/) |
+| [BOMOS-Fundament](https://github.com/logius-standaarden/BOMOS-Fundament) | Kernmodel: activiteiten, rollen, structuur | CC-BY-4.0 | [v3.0.1](https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/) | [Draft](https://logius-standaarden.github.io/BOMOS-Fundament/) |
+| [BOMOS-Verdieping](https://github.com/logius-standaarden/BOMOS-Verdieping) | Verdiepende beschrijving van BOMOS activiteiten | CC-BY-4.0 | [v3.1.0](https://gitdocumentatie.logius.nl/publicatie/bomos/verdieping/) | [Draft](https://logius-standaarden.github.io/BOMOS-Verdieping/) |
 
 ### Aanvullende modules en documenten (alleen werkversies)
 
 | Repository | Beschrijving | Licentie | Publicatie |
 |-----------|-------------|--------|-----------|
-| [BOMOS-Aanvullende-Modules](https://github.com/logius-standaarden/BOMOS-Aanvullende-Modules) | Aanvullende modules voor specifieke aspecten — **gearchiveerd** | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | - |
-| [BOMOS-LinkedData](https://github.com/logius-standaarden/BOMOS-LinkedData) | Module: beheer van Linked Data standaarden | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Draft](https://logius-standaarden.github.io/BOMOS-LinkedData/) |
-| [BOMOS-OpenSource](https://github.com/logius-standaarden/BOMOS-OpenSource) | Module: open source governance — **gearchiveerd** | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Draft (bevroren)](https://logius-standaarden.github.io/BOMOS-OpenSource/) |
-| [BOMOS-Stelsels](https://github.com/logius-standaarden/BOMOS-Stelsels) | Module: beheer van stelsels van standaarden | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Draft](https://logius-standaarden.github.io/BOMOS-Stelsels/) |
-| [BOMOS-Beheermodel](https://github.com/logius-standaarden/BOMOS-Beheermodel) | Beheermodel voor BOMOS zelf | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Draft](https://logius-standaarden.github.io/BOMOS-Beheermodel/) |
-| [BOMOS-voorbeeld-beheermodel](https://github.com/logius-standaarden/BOMOS-voorbeeld-beheermodel) | Voorbeelddocument voor een beheermodel | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Draft](https://logius-standaarden.github.io/BOMOS-voorbeeld-beheermodel/) |
-| [BOMOS-Community](https://github.com/logius-standaarden/BOMOS-Community) | Community-aspecten van standaardenbeheer | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Draft](https://logius-standaarden.github.io/BOMOS-Community/) |
-| [Logius-Beheermodel](https://github.com/logius-standaarden/Logius-Beheermodel) | Overkoepelend beheermodel van Logius | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Draft](https://logius-standaarden.github.io/Logius-Beheermodel/) |
+| [BOMOS-Aanvullende-Modules](https://github.com/logius-standaarden/BOMOS-Aanvullende-Modules) | Aanvullende modules voor specifieke aspecten — **gearchiveerd** | CC-BY-4.0 | - |
+| [BOMOS-LinkedData](https://github.com/logius-standaarden/BOMOS-LinkedData) | Module: beheer van Linked Data standaarden | CC-BY-4.0 | [Draft](https://logius-standaarden.github.io/BOMOS-LinkedData/) |
+| [BOMOS-OpenSource](https://github.com/logius-standaarden/BOMOS-OpenSource) | Module: open source governance — **gearchiveerd** | [CC-BY-4.0](https://github.com/logius-standaarden/BOMOS-OpenSource/blob/develop/LICENSE) | [Draft (bevroren)](https://logius-standaarden.github.io/BOMOS-OpenSource/) |
+| [BOMOS-Stelsels](https://github.com/logius-standaarden/BOMOS-Stelsels) | Module: beheer van stelsels van standaarden | CC-BY-4.0 | [Draft](https://logius-standaarden.github.io/BOMOS-Stelsels/) |
+| [BOMOS-Beheermodel](https://github.com/logius-standaarden/BOMOS-Beheermodel) | Beheermodel voor BOMOS zelf | CC-BY-4.0 | [Draft](https://logius-standaarden.github.io/BOMOS-Beheermodel/) |
+| [BOMOS-voorbeeld-beheermodel](https://github.com/logius-standaarden/BOMOS-voorbeeld-beheermodel) | Voorbeelddocument voor een beheermodel | CC-BY-4.0 | [Draft](https://logius-standaarden.github.io/BOMOS-voorbeeld-beheermodel/) |
+| [BOMOS-Community](https://github.com/logius-standaarden/BOMOS-Community) | Community-aspecten van standaardenbeheer | CC-BY-4.0 | [Draft](https://logius-standaarden.github.io/BOMOS-Community/) |
+| [Logius-Beheermodel](https://github.com/logius-standaarden/Logius-Beheermodel) | Overkoepelend beheermodel van Logius | CC-BY-4.0 | [Draft](https://logius-standaarden.github.io/Logius-Beheermodel/) |
 
 ## Wijzigingsbeheer Workflow
 
