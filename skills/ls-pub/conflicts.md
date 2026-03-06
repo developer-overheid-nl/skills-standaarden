@@ -22,8 +22,8 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 |-----------|--------------|----------------------|--------|
 | [publicatie](https://github.com/logius-standaarden/publicatie) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [Publicatie-Preview](https://github.com/logius-standaarden/Publicatie-Preview) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [ReSpec-template](https://github.com/logius-standaarden/ReSpec-template) | W3C Software License | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) | W3C Software License | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [ReSpec-template](https://github.com/logius-standaarden/ReSpec-template) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [Openbare-Consultaties](https://github.com/logius-standaarden/Openbare-Consultaties) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [respec](https://github.com/logius-standaarden/respec) | W3C Software License | N.v.t. (tooling) | OK |
 | [automatisering-test](https://github.com/logius-standaarden/automatisering-test) | W3C Software License | N.v.t. (tooling) | OK |
