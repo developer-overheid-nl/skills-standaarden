@@ -43,15 +43,15 @@ De publicatie-tooling ondersteunt het versiemodel van Logius-standaarden via de 
 
 | Repository | Beschrijving | Licentie | Publicatie |
 |-----------|-------------|--------|-----------|
-| [publicatie](https://github.com/logius-standaarden/publicatie) | Centrale publicatie-repo: alle vastgestelde standaarden | CC-BY-4.0 | gitdocumentatie.logius.nl (geen directory listing) |
-| [Publicatie-Preview](https://github.com/logius-standaarden/Publicatie-Preview) | Preview-omgeving voor documenten in ontwikkeling | CC-BY-4.0 | [Lees online](https://logius-standaarden.github.io/Publicatie-Preview/) |
-| [respec](https://github.com/logius-standaarden/respec) | Logius fork van W3C ReSpec documentatie-tool | [W3C Software License](https://github.com/logius-standaarden/respec/blob/develop/LICENSE) | - |
-| [ReSpec-template](https://github.com/logius-standaarden/ReSpec-template) | Basis template voor nieuwe ReSpec documenten | CC-BY-4.0 | [Lees online](https://logius-standaarden.github.io/ReSpec-template/) |
-| [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) | Logius-specifiek ReSpec template met huisstijl | CC-BY-4.0 | [Lees online](https://logius-standaarden.github.io/ReSpec-template-Logius/) |
-| [Openbare-Consultaties](https://github.com/logius-standaarden/Openbare-Consultaties) | Gepubliceerde consultatieversies (CV) | CC-BY-4.0 | [Lees online](https://logius-standaarden.github.io/Openbare-Consultaties/) |
+| [publicatie](https://github.com/logius-standaarden/publicatie) | Centrale publicatie-repo: alle vastgestelde standaarden | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | gitdocumentatie.logius.nl (geen directory listing) |
+| [Publicatie-Preview](https://github.com/logius-standaarden/Publicatie-Preview) | Preview-omgeving voor documenten in ontwikkeling | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [Lees online](https://logius-standaarden.github.io/Publicatie-Preview/) |
+| [respec](https://github.com/logius-standaarden/respec) | Logius fork van W3C ReSpec documentatie-tool | [W3C Software License](https://www.w3.org/copyright/software-license-2023/) | - |
+| [ReSpec-template](https://github.com/logius-standaarden/ReSpec-template) | Basis template voor nieuwe ReSpec documenten | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [Lees online](https://logius-standaarden.github.io/ReSpec-template/) |
+| [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) | Logius-specifiek ReSpec template met huisstijl | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en) | [Lees online](https://logius-standaarden.github.io/ReSpec-template-Logius/) |
+| [Openbare-Consultaties](https://github.com/logius-standaarden/Openbare-Consultaties) | Gepubliceerde consultatieversies (CV) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [Lees online](https://logius-standaarden.github.io/Openbare-Consultaties/) |
 | [Automatisering](https://github.com/logius-standaarden/Automatisering) | Herbruikbare GitHub Actions workflows | Niet gespecificeerd | - |
-| [automatisering-test](https://github.com/logius-standaarden/automatisering-test) | Testomgeving voor de automatiseringsworkflows | [W3C Software License](https://github.com/logius-standaarden/automatisering-test/blob/develop/LICENSE) | - |
-| [tech-radar](https://github.com/logius-standaarden/tech-radar) | Technologie radar voor Logius standaarden | [MIT](https://github.com/logius-standaarden/tech-radar/blob/main/LICENSE.txt) | [Lees online](https://logius-standaarden.github.io/tech-radar/) |
+| [automatisering-test](https://github.com/logius-standaarden/automatisering-test) | Testomgeving voor de automatiseringsworkflows | [W3C Software License](https://www.w3.org/copyright/software-license-2023/) | - |
+| [tech-radar](https://github.com/logius-standaarden/tech-radar) | Technologie radar voor Logius standaarden | [MIT](https://opensource.org/licenses/MIT) | [Lees online](https://logius-standaarden.github.io/tech-radar/) |
 
 ## ReSpec Documentatie-systeem
 
