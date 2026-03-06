@@ -68,6 +68,7 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 | [API-mod-transport-security](https://github.com/logius-standaarden/API-mod-transport-security) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [zaakgericht-werken-api](https://github.com/logius-standaarden/zaakgericht-werken-api) | W3C Software License | CC-BY-4.0 (ReSpec, overgeërfd van organisatie-config) | Afwijkend |
 
 ### Aandachtspunt
 
