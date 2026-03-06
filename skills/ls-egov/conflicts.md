@@ -40,11 +40,11 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 
 | Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
 |-----------|--------------|----------------------|--------|
-| [Terugmelding](https://github.com/logius-standaarden/Terugmelding) | W3C Software License | CC0-1.0 (ReSpec) | Afwijkend — ReSpec config specifies cc0; intended license is CC0-1.0 |
+| [Terugmelding](https://github.com/logius-standaarden/Terugmelding) | W3C Software License | CC0-1.0 (ReSpec) | Afwijkend |
 | [Terugmelden-API](https://github.com/logius-standaarden/Terugmelden-API) | Geen | N.v.t. | Geen licentie |
 | [Digimelding-Koppelvlakspecificatie](https://github.com/logius-standaarden/Digimelding-Koppelvlakspecificatie) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | W3C Software License | CC0-1.0 (ReSpec) | Afwijkend — ReSpec config specifies cc0; intended license is CC0-1.0 |
-| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | W3C Software License | CC0-1.0 (ReSpec) | Afwijkend — ReSpec config specifies cc0; intended license is CC0-1.0 |
+| [basisfactuur-rijk](https://github.com/logius-standaarden/basisfactuur-rijk) | W3C Software License | CC0-1.0 (ReSpec) | Afwijkend |
+| [basisorder-rijk](https://github.com/logius-standaarden/basisorder-rijk) | W3C Software License | CC0-1.0 (ReSpec) | Afwijkend |
 | [e-procurement](https://github.com/logius-standaarden/e-procurement) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 
 ### Aandachtspunt
