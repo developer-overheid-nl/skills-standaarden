@@ -75,7 +75,7 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 
 | Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
 |-----------|--------------|----------------------|--------|
-| [OAuth-NL-profiel](https://github.com/logius-standaarden/OAuth-NL-profiel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [OAuth-NL-profiel](https://github.com/logius-standaarden/OAuth-NL-profiel) | Geen | CC-BY-ND-4.0 (ReSpec) | Discrepantie |
 | [OIDC-NLGOV](https://github.com/logius-standaarden/OIDC-NLGOV) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [OAuth-Inleiding](https://github.com/logius-standaarden/OAuth-Inleiding) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [OAuth-Beheermodel](https://github.com/logius-standaarden/OAuth-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |

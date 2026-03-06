@@ -41,7 +41,7 @@ Op het Forum Standaardisatie staat het OAuth-NL-profiel **v1.0** als verplicht (
 
 | Repository | Beschrijving | Licentie | Vastgesteld | Draft |
 |-----------|-------------|--------|------------|-------|
-| [OAuth-NL-profiel](https://github.com/logius-standaarden/OAuth-NL-profiel) | Nederlands profiel voor OAuth 2.0 | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.1.0](https://gitdocumentatie.logius.nl/publicatie/api/oauth/) | [Draft](https://logius-standaarden.github.io/OAuth-NL-profiel/) |
+| [OAuth-NL-profiel](https://github.com/logius-standaarden/OAuth-NL-profiel) | Nederlands profiel voor OAuth 2.0 | [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/legalcode.en) | [v1.1.0](https://gitdocumentatie.logius.nl/publicatie/api/oauth/) | [Draft](https://logius-standaarden.github.io/OAuth-NL-profiel/) |
 | [OIDC-NLGOV](https://github.com/logius-standaarden/OIDC-NLGOV) | OpenID Connect profiel voor NL overheid | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0.1](https://gitdocumentatie.logius.nl/publicatie/api/oidc/) | [Draft](https://logius-standaarden.github.io/OIDC-NLGOV/) |
 | [OAuth-Inleiding](https://github.com/logius-standaarden/OAuth-Inleiding) | Introductie en achtergrond OAuth | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/OAuth-Inleiding/) |
 | [OAuth-Beheermodel](https://github.com/logius-standaarden/OAuth-Beheermodel) | Beheermodel voor OAuth standaarden — **gearchiveerd** | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0](https://gitdocumentatie.logius.nl/publicatie/api/oauth-beheer/) | - |
