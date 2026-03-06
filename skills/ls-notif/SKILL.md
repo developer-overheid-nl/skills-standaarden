@@ -40,9 +40,9 @@ Op het Forum Standaardisatie staat CloudEvents **v1.0** als verplicht (['pas-toe
 | Repository | Beschrijving | Licentie | Vastgesteld | Draft |
 |-----------|-------------|--------|------------|-------|
 | [NL-GOV-profile-for-CloudEvents](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents) | Nederlands overheidsprofiel voor CloudEvents (kernstandaard) | CC-BY-4.0 | [v1.1](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/cloudevents-nl/) | [Draft](https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/) |
-| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | Richtlijnen en toelichting bij het NL GOV profiel | [CC-BY-4.0](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines/blob/develop/LICENSE) | - | [Draft](https://logius-standaarden.github.io/CloudEvents-NL-Guidelines/) |
+| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | Richtlijnen en toelichting bij het NL GOV profiel | CC-BY-4.0 | - | [Draft](https://logius-standaarden.github.io/CloudEvents-NL-Guidelines/) |
 | [Notificatieservices](https://github.com/logius-standaarden/Notificatieservices) | API-specificatie voor notificatieservices (werkrepository, geen publicatie) | Niet gespecificeerd | - | - |
-| [Abonneren](https://github.com/logius-standaarden/Abonneren) | API-specificatie voor het abonneren op notificaties | [CC-BY-4.0](https://github.com/logius-standaarden/Abonneren/blob/develop/LICENSE) | - | [WV v0.0.1](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/abonneren/)¹ |
+| [Abonneren](https://github.com/logius-standaarden/Abonneren) | API-specificatie voor het abonneren op notificaties | CC-BY-4.0 | - | [WV v0.0.1](https://gitdocumentatie.logius.nl/publicatie/notificatieservices/abonneren/)¹ |
 
 ¹ Abonneren WV v0.0.1 is gepubliceerd op gitdocumentatie.logius.nl, wat normaal voor vastgestelde versies (DEF/VV) is. Dit is een uitzondering; de standaard is nog in ontwikkeling.
 
