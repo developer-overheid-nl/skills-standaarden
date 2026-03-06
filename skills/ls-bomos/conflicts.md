@@ -46,7 +46,7 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 | [BOMOS-Verdieping](https://github.com/logius-standaarden/BOMOS-Verdieping) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [BOMOS-Aanvullende-Modules](https://github.com/logius-standaarden/BOMOS-Aanvullende-Modules) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [BOMOS-LinkedData](https://github.com/logius-standaarden/BOMOS-LinkedData) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [BOMOS-OpenSource](https://github.com/logius-standaarden/BOMOS-OpenSource) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [BOMOS-OpenSource](https://github.com/logius-standaarden/BOMOS-OpenSource) | W3C Software License | CC0-1.0 (ReSpec) | Afwijkend |
 | [BOMOS-Stelsels](https://github.com/logius-standaarden/BOMOS-Stelsels) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [BOMOS-Beheermodel](https://github.com/logius-standaarden/BOMOS-Beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [BOMOS-voorbeeld-beheermodel](https://github.com/logius-standaarden/BOMOS-voorbeeld-beheermodel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
