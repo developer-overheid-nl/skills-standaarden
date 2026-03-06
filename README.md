@@ -113,7 +113,7 @@ De hele plugin wordt als 1 eenheid geversioned (semver):
 
 ## Disclaimer
 
-**Deze plugin is geen officieel product van [Logius](https://www.logius.nl).** Het is een experimenteel project van [developer.overheid.nl](https://developer.overheid.nl), gebaseerd op publiek beschikbare standaarden en documentatie. De skills zijn informatieve samenvattingen — **niet** de officiële standaarden zelf. De definities op [Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Rijksbrede beleidskader voor generatieve AI](https://www.government.nl/documents/policy-notes/2025/01/31/government-wide-position-on-the-use-of-generative-ai). Zie [DISCLAIMER.md](DISCLAIMER.md) voor de volledige disclaimer.
+**Deze plugin is geen officieel product van [Logius](https://www.logius.nl).** Het is een experimenteel project van [developer.overheid.nl](https://developer.overheid.nl), gebaseerd op publiek beschikbare standaarden en documentatie. De skills zijn informatieve samenvattingen — **niet** de officiële standaarden zelf. De definities op [Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Overheidsbreed standpunt voor de inzet van generatieve AI](https://open.overheid.nl/documenten/bc03ce31-0cf1-4946-9c94-e934a62ebe73/file). Zie [DISCLAIMER.md](DISCLAIMER.md) voor de volledige disclaimer.
 
 ## Licentie
 
