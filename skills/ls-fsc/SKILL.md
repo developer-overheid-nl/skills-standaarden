@@ -37,10 +37,10 @@ FSC heeft **vastgestelde versies** voor fsc-core en fsc-logging. De overige modu
 |-----------|-------------|--------|------------|-------|
 | [fsc-core](https://github.com/logius-standaarden/fsc-core) | Core specificatie: architectuur, protocol, componenten | CC-BY-4.0 | [v1.1.2](https://gitdocumentatie.logius.nl/publicatie/fsc/core/) | [Draft](https://logius-standaarden.github.io/fsc-core/) |
 | [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | Module: logging specificatie voor FSC transacties | CC-BY-4.0 | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) | [Draft](https://logius-standaarden.github.io/fsc-logging/) |
-| [fsc-properties](https://github.com/logius-standaarden/fsc-properties) | Module: metadata-properties voor FSC services | [CC-BY-4.0](https://github.com/logius-standaarden/fsc-properties/blob/develop/LICENSE) | - | [Draft](https://logius-standaarden.github.io/fsc-properties/) |
-| [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | Module: Regulated Area specificatie (governance zones) | [CC-BY-4.0](https://github.com/logius-standaarden/fsc-regulated-area/blob/develop/LICENSE) | - | [Draft](https://logius-standaarden.github.io/fsc-regulated-area/) |
+| [fsc-properties](https://github.com/logius-standaarden/fsc-properties) | Module: metadata-properties voor FSC services | CC-BY-4.0 | - | [Draft](https://logius-standaarden.github.io/fsc-properties/) |
+| [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | Module: Regulated Area specificatie (governance zones) | CC-BY-4.0 | - | [Draft](https://logius-standaarden.github.io/fsc-regulated-area/) |
 | [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | Module: External Contract specificatie (afspraken tussen partijen) | CC-BY-4.0 | [CV v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/)¹ | [Draft](https://logius-standaarden.github.io/fsc-external-contract/) |
-| [fsc-extensie-template](https://github.com/logius-standaarden/fsc-extensie-template) | Richtlijn voor nieuwe FSC extensies | [CC-BY-4.0](https://github.com/logius-standaarden/fsc-extensie-template/blob/develop/LICENSE) | - | [Draft](https://logius-standaarden.github.io/fsc-extensie-template/) |
+| [fsc-extensie-template](https://github.com/logius-standaarden/fsc-extensie-template) | Richtlijn voor nieuwe FSC extensies | CC-BY-4.0 | - | [Draft](https://logius-standaarden.github.io/fsc-extensie-template/) |
 | [fsc-test-suite](https://github.com/logius-standaarden/fsc-test-suite) | Integratietests en componenttests | Niet gespecificeerd | - | - |
 
 ¹ CV = consultatieversie, nog niet definitief vastgesteld.
