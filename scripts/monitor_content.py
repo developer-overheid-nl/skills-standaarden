@@ -108,7 +108,8 @@ def normalize_html(html: str) -> str:
     )
     # Liferay CMS: Sharing script blok met p_p_auth tokens (verschijnt intermittent)
     html = re.sub(
-        r"<script[^>]*>\s*\(function\(\)\s*\{var \$ = AUI\.\$.*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);\s*</script>",
+        r"<script[^>]*>\s*\(function\(\)\s*\{var \$ = AUI\.\$"
+        r".*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);\s*</script>",
         "",
         html,
         flags=re.DOTALL,
