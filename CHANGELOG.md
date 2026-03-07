@@ -5,6 +5,14 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.7](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.6...v0.3.7) (2026-03-07)
+
+
+### Opgelost
+
+* normalize_html strip Liferay Sharing script blok ([#122](https://github.com/developer-overheid-nl/skills-standaarden/issues/122)) ([b707c25](https://github.com/developer-overheid-nl/skills-standaarden/commit/b707c251f56d34d30e3ad8c3903e944202bb1865))
+* point release-please at .plugin/plugin.json source of truth ([#107](https://github.com/developer-overheid-nl/skills-standaarden/issues/107)) ([3f5c234](https://github.com/developer-overheid-nl/skills-standaarden/commit/3f5c234aa26a26eb1bc7eeb70bfd9cb361fce771))
+
 ## [0.3.6](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.5...v0.3.6) (2026-03-04)
 
 
