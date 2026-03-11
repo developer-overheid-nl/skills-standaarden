@@ -20,6 +20,8 @@ metadata:
 
 # Logboek Dataverwerkingen
 
+> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
+
 **Agent-instructie:** Deze skill helpt bij het implementeren van logging van dataverwerkingen conform AVG/GDPR. Gebruik OpenTelemetry SDK met de dpl.core namespace attributen. Trace Context headers propageren automatisch over organisatiegrenzen.
 
 Het Logboek Dataverwerkingen is de standaard voor het transparant vastleggen van dataverwerkingen door
@@ -372,4 +374,4 @@ Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.
 
 ---
 
-> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.

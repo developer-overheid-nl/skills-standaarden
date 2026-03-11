@@ -20,6 +20,8 @@ metadata:
 
 # Digikoppeling
 
+> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
+
 **Agent-instructie:** Deze skill helpt bij het implementeren van Digikoppeling koppelvlakken. Gebruik de beslisboom om het juiste profiel te kiezen. De implementatievoorbeelden bevatten werkende code voor alle vier koppelvlakstandaarden.
 
 Digikoppeling is de Nederlandse standaard voor beveiligde elektronische gegevensuitwisseling tussen overheidsorganisaties. Het definieert de architectuur en koppelvlakspecificaties waarmee overheden op een gestandaardiseerde, veilige en betrouwbare manier berichten en gegevens uitwisselen. Digikoppeling is opgenomen op de ["pas toe of leg uit"](https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling)-lijst van het Forum Standaardisatie.
@@ -370,4 +372,4 @@ Zie [reference.md](reference.md) voor de architectuur, beveiligingsstandaarden, 
 
 ---
 
-> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.

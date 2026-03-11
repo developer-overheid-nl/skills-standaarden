@@ -20,6 +20,8 @@ metadata:
 
 # Logius Standaarden - Overzicht
 
+> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
+
 **Agent-instructie:** Gebruik deze skill om de gebruiker naar het juiste domein te routeren. Bij een domein-specifieke vraag, verwijs naar de juiste `/ls-*` skill. Bij organisatie-brede vragen, gebruik de gh commando's hieronder.
 
 Logius beheert 88 GitHub repositories onder [github.com/logius-standaarden](https://github.com/logius-standaarden). Deze plugin bevat skills voor 77 daarvan, verdeeld over 9 domeinen (de overige repos zijn gearchiveerd, meta/test-repos of duplicaten).
@@ -75,4 +77,4 @@ gh search issues --owner logius-standaarden --state open --sort created
 
 ---
 
-> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.

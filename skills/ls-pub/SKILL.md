@@ -26,6 +26,8 @@ metadata:
 
 # Publicatie & Tooling
 
+> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
+
 **Agent-instructie:** Deze skill is de centrale plek voor publicatie-tooling en kwaliteitschecks van alle Logius standaarden. Gebruik deze skill wanneer de gebruiker een document wil bouwen, valideren (WCAG, markdown lint, link check), publiceren, of een nieuw ReSpec-document wil opzetten. Dit is de ENIGE skill met markdownlint, axe-core en muffet tools.
 
 ## Versiemodel van standaarden
@@ -202,4 +204,4 @@ Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.
 
 ---
 
-> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.

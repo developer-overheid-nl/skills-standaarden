@@ -20,6 +20,8 @@ metadata:
 
 # BOMOS - Beheer- en Ontwikkelmodel voor Open Standaarden
 
+> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
+
 **Agent-instructie:** Deze skill helpt bij het opzetten en beoordelen van beheermodellen voor open standaarden conform BOMOS. Gebruik het template en de checklist om een beheermodel op te stellen. Gebruik gh commando's om actuele content op te halen uit de BOMOS repos.
 
 ## Versiemodel
@@ -186,4 +188,4 @@ Zie [reference.md](reference.md) voor het activiteitenmodel, rollen, levensfasen
 
 ---
 
-> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.

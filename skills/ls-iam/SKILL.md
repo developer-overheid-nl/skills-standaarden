@@ -20,6 +20,8 @@ metadata:
 
 # Identity & Access Management (IAM)
 
+> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
+
 **Agent-instructie:** Deze skill helpt bij het implementeren van authenticatie en autorisatie voor overheids-APIs. Gebruik de OAuth 2.0 NL en OIDC NL GOV profielen voor nieuwe implementaties. AuthZEN voor geëxternaliseerde autorisatie.
 
 De IAM-standaarden van Logius definiëren profielen voor authenticatie en autorisatie bij Nederlandse overheids-APIs. Dit omvat OAuth 2.0, OpenID Connect, AuthZEN en aanvullende profielen specifiek voor de Nederlandse overheid. Deze standaarden waarborgen een consistent en veilig identiteits- en toegangsbeheer binnen het publieke domein.
@@ -476,4 +478,4 @@ Zie [reference.md](reference.md) voor SAML-details, OIN-stelsel, en gedetailleer
 
 ---
 
-> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.

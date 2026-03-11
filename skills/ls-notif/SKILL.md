@@ -20,6 +20,8 @@ metadata:
 
 # CloudEvents & Notificaties
 
+> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
+
 **Agent-instructie:** Deze skill helpt bij het implementeren van event-driven communicatie met CloudEvents NL GOV profiel. Gebruik de `cloudevents` SDK voor Python/JavaScript. Source moet URN nld-notatie gebruiken: `urn:nld:oin:<OIN>:systeem:<naam>`.
 
 De notificatiestandaarden definiëren hoe overheidsorganisaties gebeurtenissen (events) kunnen publiceren en daarop kunnen abonneren. Gebaseerd op de internationale CNCF CloudEvents specificatie (v1.0.2) met een NL GOV profiel dat specifieke eisen stelt aan naamgeving, identificatie en het gebruik van context-attributen binnen de Nederlandse overheid.
@@ -345,4 +347,4 @@ Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.
 
 ---
 
-> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.

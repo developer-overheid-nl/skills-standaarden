@@ -20,6 +20,8 @@ metadata:
 
 # E-Government Services
 
+> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
+
 **Agent-instructie:** Deze skill helpt bij het implementeren van terugmeldingen op basisregistraties en e-facturatie voor de Rijksoverheid. Gebruik de Digimelding-Koppelvlakspecificatie voor meldingen. Basisfactuur Rijk volgt Peppol BIS 3 / NLCIUS.
 
 De E-Government standaarden omvatten diensten voor terugmelding op basisregistraties, Digimelding, en e-procurement (elektronisch bestellen en factureren) voor de Nederlandse overheid. Deze standaarden worden beheerd door Logius en vormen een essentieel onderdeel van de digitale overheidsdienstverlening.
@@ -315,4 +317,4 @@ Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.
 
 ---
 
-> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.

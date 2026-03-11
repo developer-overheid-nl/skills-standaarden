@@ -20,6 +20,8 @@ metadata:
 
 # Federated Service Connectivity (FSC)
 
+> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
+
 **Agent-instructie:** Deze skill helpt bij het implementeren van FSC (Federated Service Connectivity) voor federatieve dienstverlening. FSC gebruikt mTLS, OAuth 2.0 client_credentials en cryptografisch ondertekende contracten. Vereist bij Digikoppeling REST-API (v3.0.1+); geen afzonderlijke vermelding op het Forum Standaardisatie.
 
 ## Versiemodel
@@ -500,4 +502,4 @@ Zie [reference.md](reference.md) voor componentarchitectuur, trust model, retry-
 
 ---
 
-> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.
