@@ -16,11 +16,9 @@ metadata:
   status: concept
 ---
 
-> **Let op:** Deze skill is geen officieel product van Logius. De beschrijvingen zijn informatieve samenvattingen — niet de officiële standaarden zelf. De definities op [forumstandaardisatie.nl](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Overheidsbreed standpunt voor de inzet van generatieve AI](https://open.overheid.nl/documenten/bc03ce31-0cf1-4946-9c94-e934a62ebe73/file). Zie [DISCLAIMER.md](../../DISCLAIMER.md).
+> **CONCEPT — Let op:** Deze skill is geen officieel product van Logius. De beschrijvingen zijn informatieve samenvattingen — niet de officiële standaarden zelf. De definities op [forumstandaardisatie.nl](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Overheidsbreed standpunt voor de inzet van generatieve AI](https://open.overheid.nl/documenten/bc03ce31-0cf1-4946-9c94-e934a62ebe73/file). Zie [DISCLAIMER.md](../../DISCLAIMER.md) en onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
 
 # Digikoppeling
-
-> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
 
 **Agent-instructie:** Deze skill helpt bij het implementeren van Digikoppeling koppelvlakken. Gebruik de beslisboom om het juiste profiel te kiezen. De implementatievoorbeelden bevatten werkende code voor alle vier koppelvlakstandaarden.
 
@@ -369,7 +367,3 @@ Bij het profiel `osb-rm` gelden de volgende retry-regels:
 ## Achtergrondinfo
 
 Zie [reference.md](reference.md) voor de architectuur, beveiligingsstandaarden, en gedetailleerde protocol-beschrijvingen. Zie [conflicts.md](conflicts.md) voor bekende discrepanties tussen GitHub-tags en gepubliceerde versies.
-
----
-
-> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.

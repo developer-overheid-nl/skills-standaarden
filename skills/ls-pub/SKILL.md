@@ -22,11 +22,9 @@ metadata:
   status: concept
 ---
 
-> **Let op:** Deze skill is geen officieel product van Logius. De beschrijvingen zijn informatieve samenvattingen — niet de officiële standaarden zelf. De definities op [forumstandaardisatie.nl](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Overheidsbreed standpunt voor de inzet van generatieve AI](https://open.overheid.nl/documenten/bc03ce31-0cf1-4946-9c94-e934a62ebe73/file). Zie [DISCLAIMER.md](../../DISCLAIMER.md).
+> **CONCEPT — Let op:** Deze skill is geen officieel product van Logius. De beschrijvingen zijn informatieve samenvattingen — niet de officiële standaarden zelf. De definities op [forumstandaardisatie.nl](https://www.forumstandaardisatie.nl/open-standaarden) en [Logius](https://www.logius.nl) zijn altijd leidend. Overheidsorganisaties die generatieve AI inzetten dienen te voldoen aan het [Overheidsbreed standpunt voor de inzet van generatieve AI](https://open.overheid.nl/documenten/bc03ce31-0cf1-4946-9c94-e934a62ebe73/file). Zie [DISCLAIMER.md](../../DISCLAIMER.md) en onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
 
 # Publicatie & Tooling
-
-> **CONCEPT** — Deze skill is in ontwikkeling. Voor meer informatie zie onze [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md).
 
 **Agent-instructie:** Deze skill is de centrale plek voor publicatie-tooling en kwaliteitschecks van alle Logius standaarden. Gebruik deze skill wanneer de gebruiker een document wil bouwen, valideren (WCAG, markdown lint, link check), publiceren, of een nieuw ReSpec-document wil opzetten. Dit is de ENIGE skill met markdownlint, axe-core en muffet tools.
 
@@ -201,7 +199,3 @@ Op `consultatie/*` branches wordt `specStatus` automatisch overschreven naar `"c
 
 Zie [reference.md](reference.md) voor gedetailleerde info over tech radar, label-updates workflow, en workflow-configuratie.
 Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.
-
----
-
-> Zie de [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor de volledige gebruiksvoorwaarden.
