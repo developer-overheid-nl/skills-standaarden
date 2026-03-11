@@ -5,6 +5,8 @@
 
 Claude Code plugin voor Nederlandse overheidsstandaarden. Bevat skills voor 77 van de 88 GitHub repositories van [Logius standaarden](https://github.com/logius-standaarden) voor interoperabiliteit: API Design Rules, Digikoppeling, OAuth NL, FSC, CloudEvents, BOMOS en meer.
 
+> **CONCEPT** — Deze plugin is in ontwikkeling en is geen officieel product van Logius. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
+
 ## Installatie
 
 ### Globaal installeren (aanbevolen)

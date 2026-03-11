@@ -369,3 +369,7 @@ Als een verplicht veld ontbreekt, MOET de software een standaardwaarde invullen 
 
 Zie [reference.md](reference.md) voor de architectuurbeschrijving, W3C Trace Context details, Docker demo-omgeving, en extensie-details.
 Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.
+
+---
+
+> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.

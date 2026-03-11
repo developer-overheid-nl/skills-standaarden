@@ -183,3 +183,7 @@ Een organisatie werkt conform BOMOS wanneer voor **elke** activiteit een bewuste
 ## Achtergrondinfo
 
 Zie [reference.md](reference.md) voor het activiteitenmodel, rollen, levensfasen, pressure cooker model, en praktijkvoorbeelden. Zie [conflicts.md](conflicts.md) voor bekende discrepanties tussen GitHub-tags en gepubliceerde versies.
+
+---
+
+> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.

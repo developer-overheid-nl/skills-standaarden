@@ -72,3 +72,7 @@ gh api orgs/logius-standaarden/repos --paginate --jq 'sort_by(.pushed_at) | reve
 # Open issues over alle repos
 gh search issues --owner logius-standaarden --state open --sort created
 ```
+
+---
+
+> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.

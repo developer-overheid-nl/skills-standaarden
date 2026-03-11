@@ -367,3 +367,7 @@ Bij het profiel `osb-rm` gelden de volgende retry-regels:
 ## Achtergrondinfo
 
 Zie [reference.md](reference.md) voor de architectuur, beveiligingsstandaarden, en gedetailleerde protocol-beschrijvingen. Zie [conflicts.md](conflicts.md) voor bekende discrepanties tussen GitHub-tags en gepubliceerde versies.
+
+---
+
+> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.

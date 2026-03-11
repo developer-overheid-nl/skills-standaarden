@@ -312,3 +312,7 @@ curl -X POST https://digimelding.example.com/api/v1/terugmeldingen \
 
 Zie [reference.md](reference.md) voor kernbegrippen, annotatie-framework, best practices leveranciers, en e-procurement details.
 Zie [conflicts.md](conflicts.md) voor bronconflicten en gemaakte keuzes.
+
+---
+
+> **CONCEPT** — Deze skill is in ontwikkeling en is geen officieel product. De officiële standaarden zijn altijd leidend. Zie de [verantwoording](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/docs/verantwoording.md) en [disclaimer](https://github.com/developer-overheid-nl/skills-marketplace/blob/main/DISCLAIMER.md) voor meer informatie.
