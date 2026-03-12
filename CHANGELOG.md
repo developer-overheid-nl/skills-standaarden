@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.8](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.7...v0.3.8) (2026-03-12)
+
+
+### Opgelost
+
+* strip Sharing IIFE ook wanneer ingebed in groter script blok ([#194](https://github.com/developer-overheid-nl/skills-standaarden/issues/194)) ([f936f18](https://github.com/developer-overheid-nl/skills-standaarden/commit/f936f1851b82ebc658672f1dd45dd2ed2ab661e4))
+
 ## [0.3.7](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.6...v0.3.7) (2026-03-07)
 
 
