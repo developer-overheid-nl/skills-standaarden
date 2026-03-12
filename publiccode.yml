@@ -51,6 +51,6 @@ maintenance:
   type: community
 name: skills-standaarden
 releaseDate: '2026-02-21'
-softwareVersion: 0.3.7
+softwareVersion: 0.3.8
 softwareType: standalone/other
 url: https://github.com/developer-overheid-nl/skills-standaarden
