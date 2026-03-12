@@ -99,6 +99,10 @@ def normalize_html(html: str) -> str:
     html = re.sub(r'name="p_auth"\s+value="[^"]*"', 'name="p_auth" value="TOKEN"', html)
     # Liferay CMS: cache-bust timestamp op resource URLs (bijv. ?t=1771832749422 of &t=...)
     html = re.sub(r"[?&]t=\d{10,15}", "?t=TIMESTAMP", html)
+    # Liferay CMS: HTML-encoded cache-bust timestamps (&amp;t=DIGITS in combo servlet URLs)
+    html = re.sub(r"&amp;t=\d{10,15}", "&amp;t=TIMESTAMP", html)
+    # Liferay CMS: dynamische hex IDs op link/style elementen (variëren tussen backend servers)
+    html = re.sub(r' id="[a-f0-9]{6,10}"', ' id="HEXID"', html)
     # Liferay CMS: AUI module config blokken (variëren tussen backend servers)
     html = re.sub(
         r"<script[^>]*>\s*try\s*\{var MODULE_MAIN=.*?</script>",
@@ -107,9 +111,18 @@ def normalize_html(html: str) -> str:
         flags=re.DOTALL,
     )
     # Liferay CMS: Sharing script blok met p_p_auth tokens (verschijnt intermittent)
+    # Variant 1: eigen <script> tag (volledige tag verwijderen)
     html = re.sub(
         r"<script[^>]*>\s*\(function\(\)\s*\{var \$ = AUI\.\$"
         r".*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);\s*</script>",
+        "",
+        html,
+        flags=re.DOTALL,
+    )
+    # Variant 2: ingebed in groter script blok (alleen de IIFE verwijderen)
+    html = re.sub(
+        r"\(function\(\)\s*\{var \$ = AUI\.\$"
+        r".*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);",
         "",
         html,
         flags=re.DOTALL,
