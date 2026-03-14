@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.9](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.8...v0.3.9) (2026-03-14)
+
+
+### Opgelost
+
+* OIN-Stelsel v2.2.2 en verbreed Liferay normalisatie ([#201](https://github.com/developer-overheid-nl/skills-standaarden/issues/201)) ([f20d531](https://github.com/developer-overheid-nl/skills-standaarden/commit/f20d531844f3d8aff601808bd7e8218d39ea6deb))
+
 ## [0.3.8](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.7...v0.3.8) (2026-03-12)
 
 
