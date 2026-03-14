@@ -110,11 +110,12 @@ def normalize_html(html: str) -> str:
         html,
         flags=re.DOTALL,
     )
-    # Liferay CMS: Sharing script blok met p_p_auth tokens (verschijnt intermittent)
+    # Liferay CMS: AUI IIFE script blokken (verschijnen intermittent, variërend per request)
+    # Matcht alle (function() {var $ = AUI.$ ...})(); patronen (Sharing, ratings, socialBookmarks, etc.)
     # Variant 1: eigen <script> tag (volledige tag verwijderen)
     html = re.sub(
         r"<script[^>]*>\s*\(function\(\)\s*\{var \$ = AUI\.\$"
-        r".*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);\s*</script>",
+        r".*?\}\)\(\);\s*</script>",
         "",
         html,
         flags=re.DOTALL,
@@ -122,7 +123,7 @@ def normalize_html(html: str) -> str:
     # Variant 2: ingebed in groter script blok (alleen de IIFE verwijderen)
     html = re.sub(
         r"\(function\(\)\s*\{var \$ = AUI\.\$"
-        r".*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);",
+        r".*?\}\)\(\);",
         "",
         html,
         flags=re.DOTALL,

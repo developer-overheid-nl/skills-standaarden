@@ -12,14 +12,14 @@ De **gepubliceerde versie op gitdocumentatie.logius.nl is leidend** voor DEF-ver
 
 | Repository | Gepubliceerde versie (DEF) | Laatste GitHub-tag | Discrepantie |
 |-----------|---------------------------|-------------------|-------------|
-| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v2.2.1](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | Tag achter: publicatie v2.2.1 vs tag 2.2.0 |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | Tag achter: publicatie v2.2.2 vs tag 2.2.0 |
 
 ### Details OIN-Stelsel
 
 - **Bekende tags:** `2.2.0`, `2.0.3`, `2.0.2`, `2.0.2r`, `2.0.1`
 - **Laatste GitHub Release:** `2.0.3` (gepubliceerd 2022-11-29) — ver achter op de laatste tag `2.2.0`
-- De tag `2.2.0` bestaat, maar de gepubliceerde versie op gitdocumentatie is `v2.2.1` — één patchversie verder
-- Er is geen tag `2.2.1` in de repository
+- De tag `2.2.0` bestaat, maar de gepubliceerde versie op gitdocumentatie is `v2.2.2` — twee patchversies verder
+- Er zijn geen tags `2.2.1` of `2.2.2` in de repository
 
 **Let op:** OIN-Stelsel wordt ook gerefereerd vanuit `/ls-dk` (Digikoppeling). Dezelfde discrepantie is gedocumenteerd in [ls-dk/conflicts.md](../ls-dk/conflicts.md).
 
@@ -67,7 +67,7 @@ De skill gebruikt **"verkort expertonderzoek"**, conform het intakeadvies-docume
 
 ## Keuze in SKILL.md
 
-De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies (OIN-Stelsel v2.2.1, OAuth-Beheermodel v1.0). Voor het expertonderzoek-type van OAuth v1.1 volgt de skill het intakeadvies-document ("verkort"). OAuth-Beheermodel heeft een afwijkende tag (`0.2` vs DEF v1.0) maar is gearchiveerd. Als de GitHub-tags of de Forum-hoofdpagina worden bijgewerkt, moet dit conflict opnieuw worden beoordeeld.
+De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies (OIN-Stelsel v2.2.2, OAuth-Beheermodel v1.0). Voor het expertonderzoek-type van OAuth v1.1 volgt de skill het intakeadvies-document ("verkort"). OAuth-Beheermodel heeft een afwijkende tag (`0.2` vs DEF v1.0) maar is gearchiveerd. Als de GitHub-tags of de Forum-hoofdpagina worden bijgewerkt, moet dit conflict opnieuw worden beoordeeld.
 
 ## Licentie-status GitHub-repositories
 
@@ -82,7 +82,7 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 | [authzen-nlgov](https://github.com/logius-standaarden/authzen-nlgov) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [authorization-decision-log](https://github.com/logius-standaarden/authorization-decision-log) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
-| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [CC-BY-4.0](https://github.com/logius-standaarden/OIN-Stelsel/blob/main/LICENSE) | CC-BY-4.0 (ReSpec) | Opgelost |
 
 ### Aandachtspunt
 
