@@ -110,8 +110,8 @@ def normalize_html(html: str) -> str:
         html,
         flags=re.DOTALL,
     )
-    # Liferay CMS: AUI IIFE script blokken (verschijnen intermittent, variërend per request)
-    # Matcht alle (function() {var $ = AUI.$ ...})(); patronen (Sharing, ratings, socialBookmarks, etc.)
+    # Liferay CMS: AUI IIFE script blokken (intermittent, variërend per request)
+    # Matcht alle (function() {var $ = AUI.$ ...})(); patronen
     # Variant 1: eigen <script> tag (volledige tag verwijderen)
     html = re.sub(
         r"<script[^>]*>\s*\(function\(\)\s*\{var \$ = AUI\.\$"
