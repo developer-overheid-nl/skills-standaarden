@@ -137,6 +137,8 @@ def normalize_html(html: str) -> str:
     html = re.sub(r"<script\s*>self\.__next_f\.push\([^<]*\)</script>", "", html)
     # Next.js/React escaped JSON nonces: \"nonce\":\"base64value\"
     html = re.sub(r'\\"nonce\\":\\"[^"\\]*\\"', r'\\"nonce\\":\\"NONCE\\"', html)
+    # Normaliseer opeenvolgende lege regels (variëren tussen requests bij sommige CMS'en)
+    html = re.sub(r"\n{3,}", "\n\n", html)
     return html
 
 
