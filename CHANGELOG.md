@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.10](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.9...v0.3.10) (2026-03-15)
+
+
+### Opgelost
+
+* normaliseer opeenvolgende lege regels in normalize_html ([#203](https://github.com/developer-overheid-nl/skills-standaarden/issues/203)) ([46a68dc](https://github.com/developer-overheid-nl/skills-standaarden/commit/46a68dc1eaf34c61d0f9b410521b30cfe33a588c))
+
 ## [0.3.9](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.8...v0.3.9) (2026-03-14)
 
 
