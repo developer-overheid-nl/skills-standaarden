@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.11](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.10...v0.3.11) (2026-03-18)
+
+
+### Opgelost
+
+* update logboek-extensie-lezen licentie naar CC-BY-4.0 in conflicts.md ([#286](https://github.com/developer-overheid-nl/skills-standaarden/issues/286)) ([72ede90](https://github.com/developer-overheid-nl/skills-standaarden/commit/72ede904872edbb1b0461605d6d66fb601a76c19))
+
 ## [0.3.10](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.9...v0.3.10) (2026-03-15)
 
 
