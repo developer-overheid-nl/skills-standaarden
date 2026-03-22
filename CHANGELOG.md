@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.12](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.11...v0.3.12) (2026-03-22)
+
+
+### Opgelost
+
+* documenteer pubDomain en shortName validatie in ls-pub ([#303](https://github.com/developer-overheid-nl/skills-standaarden/issues/303)) ([d5315ce](https://github.com/developer-overheid-nl/skills-standaarden/commit/d5315ce37522007787344ad92b216b46730db85b))
+
 ## [0.3.11](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.10...v0.3.11) (2026-03-18)
 
 
