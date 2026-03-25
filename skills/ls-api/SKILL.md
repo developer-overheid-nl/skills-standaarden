@@ -56,7 +56,7 @@ Modules hebben geen eigen vaststellingsproces — ze ontlenen hun status aan de 
 - Gebruik **camelCase** voor query-parameters: `?sortOrder=desc`
 - Geen trailing slashes: `/api/v1/users` (niet `/api/v1/users/`)
 - Geen bestandsextensies (gebruik Accept-header voor content negotiation)
-- Major versie in URI: `/v1/resources`
+- Major versie in URI: `/v1/resources` (Let op: in de OAS moet dit op serverniveau worden gespecificeerd, niet in individuele paden. Dit om uit te sluiten dat één API meerdere major versies in verschillende paden heeft, wat verwarrend is. De linter controleert op aanwezigheid van major versie in server URL, niet in individuele paden.)
 - Operaties als sub-resources: laatste padsegment mag starten met `_` (bijv. `/_search`)
 - Geen gevoelige informatie in URIs (niet beschermd door TLS)
 
