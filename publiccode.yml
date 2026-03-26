@@ -1,4 +1,4 @@
-publiccodeYmlVersion: '0.2'
+publiccodeYmlVersion: "0.5"
 categories:
   - it-development
 description:
@@ -11,12 +11,8 @@ description:
     genericName: Claude Code plugin
     longDescription: >
       Claude Code plugin voor het werken met 77 van de 88 GitHub repositories
-      van
-
-      Logius standaarden voor Nederlandse overheidsinteroperabiliteit. Bevat
-
+      van Logius standaarden voor Nederlandse overheidsinteroperabiliteit. Bevat
       skills voor API Design Rules, Digikoppeling, OAuth NL, FSC, Logboek
-
       Dataverwerkingen, CloudEvents, BOMOS, E-Government en Publicatie tooling.
     shortDescription: Claude Code plugin voor Logius standaarden
   en:
@@ -28,17 +24,25 @@ description:
     genericName: Claude Code plugin
     longDescription: >
       Claude Code plugin for working with 77 of the 88 GitHub repositories of
-
       Logius standards for Dutch government interoperability. Contains skills
-
       for API Design Rules, Digikoppeling, OAuth NL, FSC, Logboek
-
       Dataverwerkingen, CloudEvents, BOMOS, E-Government and Publication
       tooling.
     shortDescription: Claude Code plugin for Logius standards
-developmentStatus: beta
+developmentStatus: development
+platforms:
+  - linux
+  - mac
+  - windows
+intendedAudience:
+  countries:
+    - NL
+  scope:
+    - government
+
 legal:
   license: EUPL-1.2
+  mainCopyrightOwner: Stichting Geonovum
 localisation:
   availableLanguages:
     - nl
@@ -49,8 +53,8 @@ maintenance:
     - name: Logius
       email: standaarden@logius.nl
   type: community
-name: skills-standaarden
-releaseDate: '2026-02-21'
+name: Skills standaarden
+releaseDate: "2026-02-21"
 softwareVersion: 0.3.7
 softwareType: standalone/other
 url: https://github.com/developer-overheid-nl/skills-standaarden
