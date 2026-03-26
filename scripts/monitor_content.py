@@ -110,11 +110,12 @@ def normalize_html(html: str) -> str:
         html,
         flags=re.DOTALL,
     )
-    # Liferay CMS: Sharing script blok met p_p_auth tokens (verschijnt intermittent)
+    # Liferay CMS: AUI IIFE script blokken (intermittent, variërend per request)
+    # Matcht alle (function() {var $ = AUI.$ ...})(); patronen
     # Variant 1: eigen <script> tag (volledige tag verwijderen)
     html = re.sub(
         r"<script[^>]*>\s*\(function\(\)\s*\{var \$ = AUI\.\$"
-        r".*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);\s*</script>",
+        r".*?\}\)\(\);\s*</script>",
         "",
         html,
         flags=re.DOTALL,
@@ -122,7 +123,7 @@ def normalize_html(html: str) -> str:
     # Variant 2: ingebed in groter script blok (alleen de IIFE verwijderen)
     html = re.sub(
         r"\(function\(\)\s*\{var \$ = AUI\.\$"
-        r".*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);",
+        r".*?\}\)\(\);",
         "",
         html,
         flags=re.DOTALL,
@@ -136,6 +137,8 @@ def normalize_html(html: str) -> str:
     html = re.sub(r"<script\s*>self\.__next_f\.push\([^<]*\)</script>", "", html)
     # Next.js/React escaped JSON nonces: \"nonce\":\"base64value\"
     html = re.sub(r'\\"nonce\\":\\"[^"\\]*\\"', r'\\"nonce\\":\\"NONCE\\"', html)
+    # Normaliseer opeenvolgende lege regels (variëren tussen requests bij sommige CMS'en)
+    html = re.sub(r"\n{3,}", "\n\n", html)
     return html
 
 

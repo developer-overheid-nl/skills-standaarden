@@ -30,7 +30,7 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 | Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
 |-----------|--------------|----------------------|--------|
 | [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
-| [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | CC-BY-4.0 | CC-BY-4.0 (ReSpec) | Opgelost |
 | [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [logboek-extensie-template](https://github.com/logius-standaarden/logboek-extensie-template) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |

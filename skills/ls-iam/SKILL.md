@@ -48,7 +48,7 @@ Op het Forum Standaardisatie staat het OAuth-NL-profiel **v1.0** als verplicht (
 | [authzen-nlgov](https://github.com/logius-standaarden/authzen-nlgov) | AuthZEN NL GOV profiel (autorisatiebeslissingen) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/authzen-nlgov/) |
 | [authorization-decision-log](https://github.com/logius-standaarden/authorization-decision-log) | Logging van autorisatiebeslissingen | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/authorization-decision-log/) |
 | [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | SAML specificatie — onderdeel van verplichte "Authenticatie-standaarden"; voor nieuwe implementaties wordt OIDC aanbevolen | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/st-saml-spec/) |
-| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Organisatie Identificatie Nummer (ook in `/ls-dk`) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v2.2.1](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | [Draft](https://logius-standaarden.github.io/OIN-Stelsel/) |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Organisatie Identificatie Nummer (ook in `/ls-dk`) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | [Draft](https://logius-standaarden.github.io/OIN-Stelsel/) |
 
 ---
 
