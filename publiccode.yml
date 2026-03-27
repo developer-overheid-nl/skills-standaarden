@@ -1,4 +1,4 @@
-publiccodeYmlVersion: "0.5"
+publiccodeYmlVersion: '0.5'
 categories:
   - it-development
 description:
@@ -39,7 +39,6 @@ intendedAudience:
     - NL
   scope:
     - government
-
 legal:
   license: EUPL-1.2
   mainCopyrightOwner: Stichting Geonovum
@@ -54,7 +53,7 @@ maintenance:
       email: standaarden@logius.nl
   type: community
 name: Skills standaarden
-releaseDate: "2026-02-21"
-softwareVersion: 0.3.12
+releaseDate: '2026-02-21'
+softwareVersion: 0.3.13
 softwareType: standalone/other
 url: https://github.com/developer-overheid-nl/skills-standaarden

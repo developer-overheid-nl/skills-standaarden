@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.13](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.12...v0.3.13) (2026-03-27)
+
+
+### Opgelost
+
+* strip Drupal /uploads/ aggregatie in normalize_html ([#335](https://github.com/developer-overheid-nl/skills-standaarden/issues/335)) ([820d154](https://github.com/developer-overheid-nl/skills-standaarden/commit/820d154142de643343704ef06c1f67784c8df17b))
+
 ## [0.3.12](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.11...v0.3.12) (2026-03-22)
 
 
