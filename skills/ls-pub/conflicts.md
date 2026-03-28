@@ -10,6 +10,14 @@ De publicatie-tooling repositories (respec, Automatisering, etc.) zijn tooling-r
 
 Er zijn geen bronconflicten geconstateerd. Tooling-versies worden via GitHub Releases beheerd, niet via gitdocumentatie.logius.nl.
 
+## pubDomain `ftv` (Federatieve Toegang Verlening)
+
+Geconstateerd: 2026-03-28
+
+In maart 2026 is `ftv` als nieuw pubDomain toegevoegd aan `organisation-config.mjs` ([PR #65](https://github.com/logius-standaarden/publicatie/pull/65)). De authorization-decision-log is verhuisd van pubDomain `dk` (Digikoppeling) naar `ftv` met shortName `adl`. De oude `dk/authorization-decision-log/` directory is verwijderd uit de publicatie-repo.
+
+Let op: `ftv` heeft nog geen email-mapping in `EMAIL_TO_DOMAIN_MAPPING` in organisation-config.mjs. ReSpec zal een error geven bij publicatie van een document met `pubDomain: "ftv"` tot die mapping is toegevoegd door Logius.
+
 ## Keuze in SKILL.md
 
 De skill beschrijft de publicatie-tooling en workflows zonder versieclaims voor de tooling zelf. Er zijn geen discrepanties tussen bronnen. Als er in de toekomst versiegebonden tooling-releases komen, moet dit document worden bijgewerkt.
