@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.14](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.13...v0.3.14) (2026-03-28)
+
+
+### Opgelost
+
+* update ls-pub pubDomain lijst en normalize_html Apache timestamps ([#342](https://github.com/developer-overheid-nl/skills-standaarden/issues/342)) ([78ba5f2](https://github.com/developer-overheid-nl/skills-standaarden/commit/78ba5f2928bea12eff41a77d7900d8a749ee7212))
+
 ## [0.3.13](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.12...v0.3.13) (2026-03-27)
 
 
