@@ -163,6 +163,8 @@ def normalize_html(html: str) -> str:
     html = re.sub(r"<script\s*>self\.__next_f\.push\([^<]*\)</script>", "", html)
     # Next.js/React escaped JSON nonces: \"nonce\":\"base64value\"
     html = re.sub(r'\\"nonce\\":\\"[^"\\]*\\"', r'\\"nonce\\":\\"NONCE\\"', html)
+    # Apache directory listings: timestamps variëren bij server-deployments
+    html = re.sub(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}\s+", "", html)
     # Normaliseer opeenvolgende lege regels (variëren tussen requests bij sommige CMS'en)
     html = re.sub(r"\n{3,}", "\n\n", html)
     return html
