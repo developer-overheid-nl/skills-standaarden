@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.15](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.14...v0.3.15) (2026-03-31)
+
+
+### Opgelost
+
+* strip Liferay importmap script blokken in normalize_html() ([#348](https://github.com/developer-overheid-nl/skills-standaarden/issues/348)) ([b2118da](https://github.com/developer-overheid-nl/skills-standaarden/commit/b2118da8259c0141809bc2d8f33b0d517a80b464))
+
 ## [0.3.14](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.13...v0.3.14) (2026-03-28)
 
 
