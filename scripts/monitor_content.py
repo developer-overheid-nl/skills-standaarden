@@ -154,6 +154,13 @@ def normalize_html(html: str) -> str:
         html,
         flags=re.DOTALL,
     )
+    # Liferay CMS: importmap script blokken (key-volgorde varieert per backend server)
+    html = re.sub(
+        r'<script\s+type="importmap">\s*\{.*?\}\s*</script>',
+        "",
+        html,
+        flags=re.DOTALL,
+    )
     # Liferay CMS: p_p_auth tokens in URLs (variëren per request/server)
     html = re.sub(r"p_p_auth=[A-Za-z0-9_-]+", "p_p_auth=TOKEN", html)
     # Sentry tracing: trace-id en baggage veranderen per request
