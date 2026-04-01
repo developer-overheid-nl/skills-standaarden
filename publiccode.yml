@@ -1,4 +1,7 @@
 publiccodeYmlVersion: "0.5"
+name: Skills standaarden
+softwareType: standalone/other
+url: https://github.com/developer-overheid-nl/skills-standaarden
 
 categories:
   - it-development
@@ -61,7 +64,3 @@ maintenance:
     - name: Logius
       email: standaarden@logius.nl
   type: community
-
-name: Skills standaarden
-softwareType: standalone/other
-url: https://github.com/developer-overheid-nl/skills-standaarden
