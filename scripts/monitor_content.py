@@ -94,9 +94,35 @@ def normalize_html(html: str) -> str:
     html = re.sub(r"js-view-dom-id-[a-f0-9]+", "js-view-dom-id-HASH", html)
     # Drupal CMS: permissionsHash (verandert bij module/permissie updates)
     html = re.sub(r'"permissionsHash":"[a-f0-9]+"', '"permissionsHash":"HASH"', html)
+    # Drupal CMS: aggregatie filenames via /uploads/ pad (alternatief voor /sites/default/files/)
+    html = re.sub(
+        r"/uploads/css/css_[A-Za-z0-9_-]+\.css",
+        "/uploads/css/css_HASH.css",
+        html,
+    )
+    html = re.sub(
+        r"/uploads/js/js_[A-Za-z0-9_-]+\.js",
+        "/uploads/js/js_HASH.js",
+        html,
+    )
+    # Drupal CMS: ajaxPageState.libraries (base64-encoded library list, verandert bij cache rebuild)
+    html = re.sub(
+        r'"libraries":"[A-Za-z0-9+/=_-]+"',
+        '"libraries":"HASH"',
+        html,
+    )
+    # Drupal CMS: form_action CSRF tokens in ajaxTrustedUrl (veranderen bij cache rebuild)
+    html = re.sub(r"form_action_[A-Za-z0-9_-]+", "form_action_HASH", html)
     # Liferay CMS: authToken / p_auth CSRF token (verandert per request)
     html = re.sub(r"Liferay\.authToken\s*=\s*'[^']*'", "Liferay.authToken = 'TOKEN'", html)
     html = re.sub(r'name="p_auth"\s+value="[^"]*"', 'name="p_auth" value="TOKEN"', html)
+    # Liferay CMS: getRemoteAddr/getRemoteHost in ThemeDisplay (bevat IP van requester,
+    # varieert per CI runner)
+    html = re.sub(
+        r"(getRemote(?:Addr|Host):\s*function\s*\(\)\s*\{\s*return\s*')[^']*(')",
+        r"\1REMOTE_ADDR\2",
+        html,
+    )
     # Liferay CMS: cache-bust timestamp op resource URLs (bijv. ?t=1771832749422 of &t=...)
     html = re.sub(r"[?&]t=\d{10,15}", "?t=TIMESTAMP", html)
     # Liferay CMS: HTML-encoded cache-bust timestamps (&amp;t=DIGITS in combo servlet URLs)
@@ -110,11 +136,12 @@ def normalize_html(html: str) -> str:
         html,
         flags=re.DOTALL,
     )
-    # Liferay CMS: Sharing script blok met p_p_auth tokens (verschijnt intermittent)
+    # Liferay CMS: AUI IIFE script blokken (intermittent, variërend per request)
+    # Matcht alle (function() {var $ = AUI.$ ...})(); patronen
     # Variant 1: eigen <script> tag (volledige tag verwijderen)
     html = re.sub(
         r"<script[^>]*>\s*\(function\(\)\s*\{var \$ = AUI\.\$"
-        r".*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);\s*</script>",
+        r".*?\}\)\(\);\s*</script>",
         "",
         html,
         flags=re.DOTALL,
@@ -122,7 +149,14 @@ def normalize_html(html: str) -> str:
     # Variant 2: ingebed in groter script blok (alleen de IIFE verwijderen)
     html = re.sub(
         r"\(function\(\)\s*\{var \$ = AUI\.\$"
-        r".*?Liferay\.Sharing\s*=\s*Sharing;\s*\}\)\(\);",
+        r".*?\}\)\(\);",
+        "",
+        html,
+        flags=re.DOTALL,
+    )
+    # Liferay CMS: importmap script blokken (key-volgorde varieert per backend server)
+    html = re.sub(
+        r'<script\s+type="importmap">\s*\{.*?\}\s*</script>',
         "",
         html,
         flags=re.DOTALL,
@@ -136,6 +170,10 @@ def normalize_html(html: str) -> str:
     html = re.sub(r"<script\s*>self\.__next_f\.push\([^<]*\)</script>", "", html)
     # Next.js/React escaped JSON nonces: \"nonce\":\"base64value\"
     html = re.sub(r'\\"nonce\\":\\"[^"\\]*\\"', r'\\"nonce\\":\\"NONCE\\"', html)
+    # Apache directory listings: timestamps variëren bij server-deployments
+    html = re.sub(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}\s+", "", html)
+    # Normaliseer opeenvolgende lege regels (variëren tussen requests bij sommige CMS'en)
+    html = re.sub(r"\n{3,}", "\n\n", html)
     return html
 
 

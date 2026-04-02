@@ -81,8 +81,8 @@ loadRespecWithConfiguration({
   license: "cc-by",
   specStatus: "WV",        // WV=Werkversie, CV=Consultatieversie, VV=Versie ter vaststelling, DEF=Vastgestelde versie
   specType: "HR",           // HR=Handreiking, ST=Standaard, PR=Praktijkrichtlijn, IM=Informatiemodel
-  pubDomain: "dk",
-  shortName: "template",
+  pubDomain: "dk",          // Toegestane waarden: api, bomos, dk, fsc, ftv, logboek, notificatieservices
+  shortName: "template",    // Moet kebab-case zijn: alleen kleine letters, gescheiden door streepjes
   publishDate: "2023-06-21",
   publishVersion: "0.0.3",
   editors: [{ name: "Logius Standaarden", company: "Logius", companyURL: "https://logius.nl" }],
@@ -154,7 +154,7 @@ jobs:
 ## Nieuw Document Starten
 
 1. **Fork het template**: Gebruik [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) als basis
-2. **Configureer `js/config.mjs`**: Pas `specStatus`, `specType`, `pubDomain`, `shortName`, `title` aan
+2. **Configureer `js/config.mjs`**: Pas `specStatus`, `specType`, `pubDomain`, `shortName`, `title` aan. `pubDomain` accepteert alleen `api`, `bomos`, `dk`, `fsc`, `ftv`, `logboek` of `notificatieservices`. `shortName` moet in kebab-case (alleen kleine letters, gescheiden door streepjes, bijv. `rest-api`)
 3. **Schrijf content**: Maak hoofdstukken als losse Markdown-bestanden
 4. **Push naar GitHub**: CI/CD bouwt automatisch HTML en PDF
 

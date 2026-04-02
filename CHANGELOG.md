@@ -5,6 +5,62 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.15](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.14...v0.3.15) (2026-03-31)
+
+
+### Opgelost
+
+* strip Liferay importmap script blokken in normalize_html() ([#348](https://github.com/developer-overheid-nl/skills-standaarden/issues/348)) ([b2118da](https://github.com/developer-overheid-nl/skills-standaarden/commit/b2118da8259c0141809bc2d8f33b0d517a80b464))
+
+## [0.3.14](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.13...v0.3.14) (2026-03-28)
+
+
+### Opgelost
+
+* update ls-pub pubDomain lijst en normalize_html Apache timestamps ([#342](https://github.com/developer-overheid-nl/skills-standaarden/issues/342)) ([78ba5f2](https://github.com/developer-overheid-nl/skills-standaarden/commit/78ba5f2928bea12eff41a77d7900d8a749ee7212))
+
+## [0.3.13](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.12...v0.3.13) (2026-03-27)
+
+
+### Opgelost
+
+* strip Drupal /uploads/ aggregatie in normalize_html ([#335](https://github.com/developer-overheid-nl/skills-standaarden/issues/335)) ([820d154](https://github.com/developer-overheid-nl/skills-standaarden/commit/820d154142de643343704ef06c1f67784c8df17b))
+
+## [0.3.12](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.11...v0.3.12) (2026-03-22)
+
+
+### Opgelost
+
+* documenteer pubDomain en shortName validatie in ls-pub ([#303](https://github.com/developer-overheid-nl/skills-standaarden/issues/303)) ([d5315ce](https://github.com/developer-overheid-nl/skills-standaarden/commit/d5315ce37522007787344ad92b216b46730db85b))
+
+## [0.3.11](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.10...v0.3.11) (2026-03-18)
+
+
+### Opgelost
+
+* update logboek-extensie-lezen licentie naar CC-BY-4.0 in conflicts.md ([#286](https://github.com/developer-overheid-nl/skills-standaarden/issues/286)) ([72ede90](https://github.com/developer-overheid-nl/skills-standaarden/commit/72ede904872edbb1b0461605d6d66fb601a76c19))
+
+## [0.3.10](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.9...v0.3.10) (2026-03-15)
+
+
+### Opgelost
+
+* normaliseer opeenvolgende lege regels in normalize_html ([#203](https://github.com/developer-overheid-nl/skills-standaarden/issues/203)) ([46a68dc](https://github.com/developer-overheid-nl/skills-standaarden/commit/46a68dc1eaf34c61d0f9b410521b30cfe33a588c))
+
+## [0.3.9](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.8...v0.3.9) (2026-03-14)
+
+
+### Opgelost
+
+* OIN-Stelsel v2.2.2 en verbreed Liferay normalisatie ([#201](https://github.com/developer-overheid-nl/skills-standaarden/issues/201)) ([f20d531](https://github.com/developer-overheid-nl/skills-standaarden/commit/f20d531844f3d8aff601808bd7e8218d39ea6deb))
+
+## [0.3.8](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.7...v0.3.8) (2026-03-12)
+
+
+### Opgelost
+
+* strip Sharing IIFE ook wanneer ingebed in groter script blok ([#194](https://github.com/developer-overheid-nl/skills-standaarden/issues/194)) ([f936f18](https://github.com/developer-overheid-nl/skills-standaarden/commit/f936f1851b82ebc658672f1dd45dd2ed2ab661e4))
+
 ## [0.3.7](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.6...v0.3.7) (2026-03-07)
 
 
