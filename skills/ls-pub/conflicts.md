@@ -16,7 +16,7 @@ Geconstateerd: 2026-03-28
 
 In maart 2026 is `ftv` als nieuw pubDomain toegevoegd aan `organisation-config.mjs` ([PR #65](https://github.com/logius-standaarden/publicatie/pull/65)). De authorization-decision-log is verhuisd van pubDomain `dk` (Digikoppeling) naar `ftv` met shortName `adl`. De oude `dk/authorization-decision-log/` directory is verwijderd uit de publicatie-repo.
 
-Let op: `ftv` heeft nog geen email-mapping in `EMAIL_TO_DOMAIN_MAPPING` in organisation-config.mjs. ReSpec zal een error geven bij publicatie van een document met `pubDomain: "ftv"` tot die mapping is toegevoegd door Logius.
+Sinds april 2026 (commit 6422959) is de email-mapping in organisation-config.mjs herschreven van een dictionary-lookup naar expliciete if/else branches. `ftv` valt in de default-branch en krijgt `api@logius.nl` als contactadres en `"API"` als technisch overleg. Daarnaast voegt de config nu `emailForConsultation` en `technischOverleg` toe aan de ReSpec-configuratie voor gebruik bij het aanmaken van consultatie-READMEs.
 
 ## Keuze in SKILL.md
 
