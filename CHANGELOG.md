@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.16](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.15...v0.3.16) (2026-04-02)
+
+
+### Opgelost
+
+* update ftv email-mapping status in ls-pub conflicts.md ([#359](https://github.com/developer-overheid-nl/skills-standaarden/issues/359)) ([5368ba1](https://github.com/developer-overheid-nl/skills-standaarden/commit/5368ba1ac744ba018d923f4ccb95b4d4728fb621))
+
 ## [0.3.15](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.14...v0.3.15) (2026-03-31)
 
 
