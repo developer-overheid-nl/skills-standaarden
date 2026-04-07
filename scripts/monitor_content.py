@@ -64,117 +64,25 @@ def fetch_with_retry(
     return None
 
 
-def normalize_html(html: str) -> str:
-    """Normaliseer HTML body door dynamische elementen te strippen."""
-    # Verwijder timestamps en datum-achtige patronen
-    html = re.sub(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^\s\"'<]*", "", html)
-    # Verwijder generator meta-tags
-    html = re.sub(r'<meta\s+name="generator"[^>]*>', "", html)
-    # Verwijder nonces (HTML-attributen en JS-assignments)
-    html = re.sub(r'nonce="[^"]*"', "", html)
-    html = re.sub(r'\.nonce\s*=\s*"[^"]*"', '.nonce = ""', html)
-    # Verwijder ReSpec-specifieke build timestamps
-    html = re.sub(r"respecVersion\s*=\s*['\"][^'\"]*['\"]", "", html)
-    # Verwijder HTML comments (build hashes, timestamps, etc.)
-    html = re.sub(r"<!--.*?-->", "", html, flags=re.DOTALL)
-    # Verwijder cache-busting query params in script/link/img tags
-    html = re.sub(r'(\.(js|css|png|svg|ico))\?[^"\'>\s]+', r"\1", html)
-    # Drupal CMS: aggregatie filenames met content-hashes (veranderen bij cache rebuild)
-    html = re.sub(
-        r"/sites/default/files/css/css_[A-Za-z0-9_-]+\.css",
-        "/sites/default/files/css/css_HASH.css",
-        html,
-    )
-    html = re.sub(
-        r"/sites/default/files/js/js_[A-Za-z0-9_-]+\.js",
-        "/sites/default/files/js/js_HASH.js",
-        html,
-    )
-    # Drupal CMS: view DOM IDs (veranderen bij cache rebuild)
-    html = re.sub(r"js-view-dom-id-[a-f0-9]+", "js-view-dom-id-HASH", html)
-    # Drupal CMS: permissionsHash (verandert bij module/permissie updates)
-    html = re.sub(r'"permissionsHash":"[a-f0-9]+"', '"permissionsHash":"HASH"', html)
-    # Drupal CMS: aggregatie filenames via /uploads/ pad (alternatief voor /sites/default/files/)
-    html = re.sub(
-        r"/uploads/css/css_[A-Za-z0-9_-]+\.css",
-        "/uploads/css/css_HASH.css",
-        html,
-    )
-    html = re.sub(
-        r"/uploads/js/js_[A-Za-z0-9_-]+\.js",
-        "/uploads/js/js_HASH.js",
-        html,
-    )
-    # Drupal CMS: ajaxPageState.libraries (base64-encoded library list, verandert bij cache rebuild)
-    html = re.sub(
-        r'"libraries":"[A-Za-z0-9+/=_-]+"',
-        '"libraries":"HASH"',
-        html,
-    )
-    # Drupal CMS: form_action CSRF tokens in ajaxTrustedUrl (veranderen bij cache rebuild)
-    html = re.sub(r"form_action_[A-Za-z0-9_-]+", "form_action_HASH", html)
-    # Liferay CMS: authToken / p_auth CSRF token (verandert per request)
-    html = re.sub(r"Liferay\.authToken\s*=\s*'[^']*'", "Liferay.authToken = 'TOKEN'", html)
-    html = re.sub(r'name="p_auth"\s+value="[^"]*"', 'name="p_auth" value="TOKEN"', html)
-    # Liferay CMS: getRemoteAddr/getRemoteHost in ThemeDisplay (bevat IP van requester,
-    # varieert per CI runner)
-    html = re.sub(
-        r"(getRemote(?:Addr|Host):\s*function\s*\(\)\s*\{\s*return\s*')[^']*(')",
-        r"\1REMOTE_ADDR\2",
-        html,
-    )
-    # Liferay CMS: cache-bust timestamp op resource URLs (bijv. ?t=1771832749422 of &t=...)
-    html = re.sub(r"[?&]t=\d{10,15}", "?t=TIMESTAMP", html)
-    # Liferay CMS: HTML-encoded cache-bust timestamps (&amp;t=DIGITS in combo servlet URLs)
-    html = re.sub(r"&amp;t=\d{10,15}", "&amp;t=TIMESTAMP", html)
-    # Liferay CMS: dynamische hex IDs op link/style elementen (variëren tussen backend servers)
-    html = re.sub(r' id="[a-f0-9]{6,10}"', ' id="HEXID"', html)
-    # Liferay CMS: AUI module config blokken (variëren tussen backend servers)
-    html = re.sub(
-        r"<script[^>]*>\s*try\s*\{var MODULE_MAIN=.*?</script>",
-        "",
-        html,
-        flags=re.DOTALL,
-    )
-    # Liferay CMS: AUI IIFE script blokken (intermittent, variërend per request)
-    # Matcht alle (function() {var $ = AUI.$ ...})(); patronen
-    # Variant 1: eigen <script> tag (volledige tag verwijderen)
-    html = re.sub(
-        r"<script[^>]*>\s*\(function\(\)\s*\{var \$ = AUI\.\$"
-        r".*?\}\)\(\);\s*</script>",
-        "",
-        html,
-        flags=re.DOTALL,
-    )
-    # Variant 2: ingebed in groter script blok (alleen de IIFE verwijderen)
-    html = re.sub(
-        r"\(function\(\)\s*\{var \$ = AUI\.\$"
-        r".*?\}\)\(\);",
-        "",
-        html,
-        flags=re.DOTALL,
-    )
-    # Liferay CMS: importmap script blokken (key-volgorde varieert per backend server)
-    html = re.sub(
-        r'<script\s+type="importmap">\s*\{.*?\}\s*</script>',
-        "",
-        html,
-        flags=re.DOTALL,
-    )
-    # Liferay CMS: p_p_auth tokens in URLs (variëren per request/server)
-    html = re.sub(r"p_p_auth=[A-Za-z0-9_-]+", "p_p_auth=TOKEN", html)
-    # Sentry tracing: trace-id en baggage veranderen per request
-    html = re.sub(r'<meta\s+name="sentry-trace"[^>]*>', "", html)
-    html = re.sub(r'<meta\s+name="baggage"\s+content="sentry-[^"]*"[^>]*>', "", html)
-    # Next.js RSC streaming: inline data scripts veranderen chunking per request
-    html = re.sub(r"<script\s*>self\.__next_f\.push\([^<]*\)</script>", "", html)
-    # Next.js/React escaped JSON nonces: \"nonce\":\"base64value\"
-    html = re.sub(r'\\"nonce\\":\\"[^"\\]*\\"', r'\\"nonce\\":\\"NONCE\\"', html)
-    # Apache directory listings: timestamps variëren bij server-deployments
-    html = re.sub(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2}\s+", "", html)
-    # Normaliseer opeenvolgende lege regels (variëren tussen requests bij sommige CMS'en)
-    html = re.sub(r"\n{3,}", "\n\n", html)
-    return html
+def extract_visible_text(html: str) -> str:
+    """Extraheer alleen de zichtbare tekst uit HTML.
+
+    Verwijdert alle scripts, styles, HTML-tags en normaliseert whitespace.
+    Dit is robuust tegen CMS-framework wijzigingen (Drupal cache rebuilds,
+    Liferay token rotatie, etc.) omdat alleen de leesbare content overblijft.
+    """
+    # Gebruik alleen de <body> als die er is
+    body_match = re.search(r"<body[^>]*>(.*)</body>", html, flags=re.DOTALL)
+    text = body_match.group(1) if body_match else html
+    # Verwijder niet-zichtbare elementen
+    text = re.sub(r"<script[^>]*>.*?</script>", " ", text, flags=re.DOTALL)
+    text = re.sub(r"<style[^>]*>.*?</style>", " ", text, flags=re.DOTALL)
+    text = re.sub(r"<noscript[^>]*>.*?</noscript>", " ", text, flags=re.DOTALL)
+    # Verwijder alle HTML-tags
+    text = re.sub(r"<[^>]+>", " ", text)
+    # Normaliseer whitespace
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
 
 
 def check_github_repo(url: str) -> dict:
@@ -238,8 +146,8 @@ def check_http_resource(url: str, hash_body: bool = True) -> dict:
         result["last_modified"] = resp.headers["Last-Modified"]
 
     if hash_body and resp.text:
-        normalized = normalize_html(resp.text)
-        result["body_sha256"] = hashlib.sha256(normalized.encode()).hexdigest()
+        visible_text = extract_visible_text(resp.text)
+        result["body_sha256"] = hashlib.sha256(visible_text.encode()).hexdigest()
 
     return result
 
@@ -251,10 +159,9 @@ def check_url(entry: dict) -> dict:
 
     if url_type == "github_repo":
         return check_github_repo(url)
-    elif url_type in ("published_doc", "draft_doc") or url_type == "forum":
-        return check_http_resource(url, hash_body=True)
     else:
-        return {"error": f"Onbekend type: {url_type}"}
+        # Alle niet-GitHub URLs als HTTP resource checken
+        return check_http_resource(url, hash_body=True)
 
 
 def load_checksums(path: Path) -> dict:
