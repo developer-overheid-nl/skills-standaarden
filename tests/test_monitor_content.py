@@ -8,93 +8,95 @@ import responses
 from monitor_content import (
     check_http_resource,
     detect_changes,
+    extract_visible_text,
     fetch_with_retry,
-    normalize_html,
 )
 
-# --- normalize_html() ---
+# --- extract_visible_text() ---
 
 
-class TestNormalizeHtml:
-    def test_timestamps_verwijderd(self):
-        html = "<span>Laatste update: 2024-01-15T12:00:00Z</span>"
-        result = normalize_html(html)
-        assert "2024-01-15" not in result
-        assert "<span>" in result
+class TestExtractVisibleText:
+    def test_body_tekst_behouden(self):
+        html = "<html><body><h1>Titel</h1><p>Standaard tekst.</p></body></html>"
+        result = extract_visible_text(html)
+        assert "Titel" in result
+        assert "Standaard tekst." in result
 
-    def test_nonces_html_attributen(self):
-        html = '<script nonce="abc123">console.log("test")</script>'
-        result = normalize_html(html)
-        assert 'nonce="abc123"' not in result
-        assert "console.log" in result
+    def test_scripts_verwijderd(self):
+        html = '<body><p>content</p><script>var x = "secret";</script></body>'
+        result = extract_visible_text(html)
+        assert "content" in result
+        assert "secret" not in result
 
-    def test_nonces_js_assignments(self):
-        html = 'element.nonce = "xyz789"'
-        result = normalize_html(html)
-        assert "xyz789" not in result
-        assert '.nonce = ""' in result
+    def test_styles_verwijderd(self):
+        html = "<body><style>.cls { color: red; }</style><p>zichtbaar</p></body>"
+        result = extract_visible_text(html)
+        assert "zichtbaar" in result
+        assert "color" not in result
 
-    def test_html_comments_verwijderd(self):
-        html = "<div><!-- build hash: abc123 --><p>content</p></div>"
-        result = normalize_html(html)
-        assert "build hash" not in result
-        assert "<p>content</p>" in result
+    def test_noscript_verwijderd(self):
+        html = "<body><noscript>JS required</noscript><p>content</p></body>"
+        result = extract_visible_text(html)
+        assert "content" in result
+        assert "JS required" not in result
 
-    def test_multiline_comments(self):
-        html = "<div><!--\nmultiline\ncomment\n--><p>ok</p></div>"
-        result = normalize_html(html)
-        assert "multiline" not in result
-        assert "<p>ok</p>" in result
+    def test_html_tags_verwijderd(self):
+        html = '<body><div class="wrapper"><a href="/link">tekst</a></div></body>'
+        result = extract_visible_text(html)
+        assert "tekst" in result
+        assert "<div" not in result
+        assert "href" not in result
 
-    def test_cache_busters_verwijderd(self):
-        html = '<script src="app.js?v=abc123"></script>'
-        result = normalize_html(html)
-        assert "?v=abc123" not in result
-        assert "app.js" in result
+    def test_whitespace_genormaliseerd(self):
+        html = "<body><p>veel   spaties</p>\n\n\n<p>en  regels</p></body>"
+        result = extract_visible_text(html)
+        assert "veel spaties" in result
+        assert "en regels" in result
+        assert "\n" not in result
 
-    def test_css_cache_busters(self):
-        html = '<link href="style.css?hash=def456">'
-        result = normalize_html(html)
-        assert "?hash=def456" not in result
-        assert "style.css" in result
+    def test_drupal_framework_ruis_genegeerd(self):
+        """CMS-framework code verdwijnt omdat het in script-tags zit."""
+        html = (
+            "<body>"
+            '<script data-drupal-selector="drupal-settings-json">'
+            '{"ajaxPageState":{"libraries":"eJxdzUEOAi"}}'
+            "</script>"
+            "<p>Echte content</p>"
+            "</body>"
+        )
+        result = extract_visible_text(html)
+        assert "Echte content" in result
+        assert "ajaxPageState" not in result
+        assert "libraries" not in result
 
-    def test_generator_meta_verwijderd(self):
-        html = '<meta name="generator" content="ReSpec 1.0">'
-        result = normalize_html(html)
-        assert "generator" not in result
+    def test_liferay_framework_ruis_genegeerd(self):
+        """Liferay tokens en config verdwijnen omdat ze in script-tags zitten."""
+        html = "<body><script>Liferay.authToken = '9zmfQSYt';</script><p>PDOK content</p></body>"
+        result = extract_visible_text(html)
+        assert "PDOK content" in result
+        assert "authToken" not in result
 
-    def test_respec_version_verwijderd(self):
-        html = "var respecVersion = '35.0.2'"
-        result = normalize_html(html)
-        assert "35.0.2" not in result
+    def test_zonder_body_tag(self):
+        """Werkt ook als er geen <body> tag is (bijv. plain HTML fragment)."""
+        html = "<h1>Titel</h1><p>Tekst</p>"
+        result = extract_visible_text(html)
+        assert "Titel" in result
+        assert "Tekst" in result
 
-    def test_drupal_css_aggregatie(self):
-        html = '<link href="/sites/default/files/css/css_US753fRZjubynpaAuOsRw3D.css">'
-        result = normalize_html(html)
-        assert "US753fRZ" not in result
-        assert "css_HASH.css" in result
-
-    def test_drupal_js_aggregatie(self):
-        html = '<script src="/sites/default/files/js/js_Abc123XYZ_def456.js"></script>'
-        result = normalize_html(html)
-        assert "Abc123XYZ" not in result
-        assert "js_HASH.js" in result
-
-    def test_drupal_view_dom_id(self):
-        html = '<div class="js-view-dom-id-56cf8948b068a635455604d548fcf9d2039b62fd">'
-        result = normalize_html(html)
-        assert "56cf8948" not in result
-        assert "js-view-dom-id-HASH" in result
-
-    def test_drupal_permissions_hash(self):
-        html = '{"user":{"uid":0,"permissionsHash":"c838df03955022ed860389a1310a7a71"}}'
-        result = normalize_html(html)
-        assert "c838df03" not in result
-        assert '"permissionsHash":"HASH"' in result
-
-    def test_gewone_content_behouden(self):
-        html = "<h1>Digikoppeling Architectuur</h1><p>Standaard tekst.</p>"
-        assert normalize_html(html) == html
+    def test_multiline_script(self):
+        html = (
+            "<body>"
+            "<script>\n"
+            "  var config = {\n"
+            '    token: "abc123"\n'
+            "  };\n"
+            "</script>"
+            "<p>content</p>"
+            "</body>"
+        )
+        result = extract_visible_text(html)
+        assert "content" in result
+        assert "token" not in result
 
 
 # --- detect_changes() ---
@@ -286,7 +288,7 @@ class TestCheckHttpResource:
         result = check_http_resource("https://test.com/doc")
         assert result["etag"] == '"abc123"'
         assert result["last_modified"] == "Mon, 01 Jan 2024 00:00:00 GMT"
-        expected_hash = hashlib.sha256(normalize_html(body).encode()).hexdigest()
+        expected_hash = hashlib.sha256(extract_visible_text(body).encode()).hexdigest()
         assert result["body_sha256"] == expected_hash
 
     @responses.activate
