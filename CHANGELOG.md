@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.3.17](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.16...v0.3.17) (2026-04-07)
+
+
+### Opgelost
+
+* vervang normalize_html() door extract_visible_text() ([#363](https://github.com/developer-overheid-nl/skills-standaarden/issues/363)) ([74c6ecb](https://github.com/developer-overheid-nl/skills-standaarden/commit/74c6ecb5d6d9cfb5e3100eb8714ef72dbf41d8db))
+
 ## [0.3.16](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.15...v0.3.16) (2026-04-02)
 
 
