@@ -94,6 +94,14 @@ Gebruik `application/problem+json` (RFC 9457) voor foutresponses:
 
 Geen technische details (stack traces, interne hints) in foutmeldingen.
 
+### Datum en tijd
+
+- Gebruik RFC 3339 formaat voor datum/tijd waarden
+- Altijd een timezone specificeren bij `date-time` velden (bijv. `2026-04-11T10:30:00+02:00`)
+- Gebruik `format: date` wanneer alleen een datum nodig is (niet `date-time`)
+- Specificeer altijd een `format` voor properties die datum of tijd bevatten
+- De Spectral linter bevat 4 regels die dit afdwingen (`date-time-ensure-timezone`, `specify-format-for-date-and-time`, `time-without-timezone`, `use-date-instead-of-datetime`)
+
 ### Naamgeving
 
 - Resources als **zelfstandige naamwoorden** (niet werkwoorden)
@@ -226,7 +234,7 @@ async def problem_json_handler(request: Request, exc: HTTPException):
 
 ## Spectral Linter
 
-De Spectral linter valideert OpenAPI specs tegen ADR regels. De DON-hosted ruleset bevat 11 regels; de GitHub-versie bevat 17 regels (inclusief extra checks zoals `query-keys-camel-case`, `semver` en `info-contact`).
+De Spectral linter valideert OpenAPI specs tegen ADR regels. De DON-hosted ruleset bevat 11 regels; de GitHub-versie bevat 22 regels (inclusief extra checks voor datum/tijd, naamgeving en foutafhandeling).
 
 ```bash
 # Optie 1: Publieke DON-hosted ruleset (geen GitHub auth nodig, aanbevolen)
@@ -253,13 +261,18 @@ Belangrijke Spectral regels (DON-naam / GitHub-naam):
 - `missing-version-header` / `nlgov:missing-version-header` - Version header in 2xx/3xx responses
 - `use-problem-schema` / `nlgov:use-problem-schema` - Problem+json voor fouten
 
-Alleen in de GitHub-versie (17 regels totaal, 6 extra t.o.v. DON):
+Alleen in de GitHub-versie (22 regels totaal, 11 extra t.o.v. DON):
 - `nlgov:query-keys-camel-case` - camelCase query parameters
 - `nlgov:info-contact-fields-exist` - Contactinformatie velden aanwezig
 - `info-contact` - Contactobject aanwezig (zonder `nlgov:` prefix)
 - `nlgov:semver` - Semantic versioning formaat
 - `nlgov:openapi-root-exists` - OpenAPI root object aanwezig
 - `oas3-api-servers` - Servers array aanwezig (built-in regel op error gezet)
+- `nlgov:problem-schema-members` - Verplichte velden in problem+json schema (RFC 9457)
+- `nlgov:date-time-ensure-timezone` - Datum/tijd velden met timezone
+- `nlgov:time-without-timezone` - Detecteert `time` format zonder timezone
+- `nlgov:specify-format-for-date-and-time` - Verplicht format voor datum/tijd properties
+- `nlgov:use-date-instead-of-datetime` - Gebruik `date` i.p.v. `date-time` waar geen tijd nodig is
 
 ## Achtergrondinfo
 
