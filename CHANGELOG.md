@@ -5,6 +5,14 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.4.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.17...v0.4.0) (2026-04-14)
+
+
+### Toegevoegd
+
+* **ls-logboek,ls-bomos:** update naar vastgestelde versies ([#483](https://github.com/developer-overheid-nl/skills-standaarden/issues/483)) ([7a5a1c7](https://github.com/developer-overheid-nl/skills-standaarden/commit/7a5a1c7593d69e6174ad12ea937cdd7faa396efd))
+* voeg datum/tijd regels en bijgewerkte Spectral linter count toe aan ls-api ([#476](https://github.com/developer-overheid-nl/skills-standaarden/issues/476)) ([b8627fb](https://github.com/developer-overheid-nl/skills-standaarden/commit/b8627fbd6af058efd409ff208d785db043613f61))
+
 ## [0.3.17](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.16...v0.3.17) (2026-04-07)
 
 
