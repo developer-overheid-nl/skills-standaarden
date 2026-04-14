@@ -37,7 +37,7 @@ BOMOS is geen interoperabiliteitsstandaard en staat niet op de 'pas-toe-of-leg-u
 
 | Repository | Beschrijving | Licentie | Vastgesteld | Draft |
 |-----------|-------------|--------|------------|-------|
-| [BOMOS-Fundament](https://github.com/logius-standaarden/BOMOS-Fundament) | Kernmodel: activiteiten, rollen, structuur | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.0.1](https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/) | [Draft](https://logius-standaarden.github.io/BOMOS-Fundament/) |
+| [BOMOS-Fundament](https://github.com/logius-standaarden/BOMOS-Fundament) | Kernmodel: activiteiten, rollen, structuur | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.0.2](https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/) | [Draft](https://logius-standaarden.github.io/BOMOS-Fundament/) |
 | [BOMOS-Verdieping](https://github.com/logius-standaarden/BOMOS-Verdieping) | Verdiepende beschrijving van BOMOS activiteiten | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.1.0](https://gitdocumentatie.logius.nl/publicatie/bomos/verdieping/) | [Draft](https://logius-standaarden.github.io/BOMOS-Verdieping/) |
 
 ### Aanvullende modules en documenten (alleen werkversies)

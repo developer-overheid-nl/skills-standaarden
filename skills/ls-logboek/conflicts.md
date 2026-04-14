@@ -1,16 +1,17 @@
 # Logboek Dataverwerkingen - Bronconflicten
 
 Geconstateerd: 2026-02-21
+Bijgewerkt: 2026-04-14
 
 Dit document beschrijft bekende discrepanties en bewuste keuzes voor de Logboek-skill.
 
 ## GitHub-tags vs. gepubliceerde versies
 
-Er zijn geen vastgestelde (DEF) versies voor Logboek Dataverwerkingen. De publicatie-URL `gitdocumentatie.logius.nl/publicatie/logboek/logging/` geeft een 404. De GitHub-repositories hebben geen tags.
+De normatieve hoofdspecificatie heeft sinds 9 april 2026 een vastgestelde versie v1.0.0 op `gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/1.0.0/`. De GitHub-repo `logboek-dataverwerkingen` heeft nog geen tag die overeenkomt met deze publicatie — dit is een bekend beheerproces-issue. Alle overige repositories hebben nog alleen werkversies en geen tags.
 
 | Repository | Gepubliceerde versie (DEF) | Laatste GitHub-tag | Discrepantie |
 |-----------|---------------------------|-------------------|-------------|
-| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | _(geen DEF)_ | _(geen tags)_ | N.v.t. — alleen werkversies |
+| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/1.0.0/) | _(geen tags)_ | Publicatie loopt voor op tag |
 | [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | _(geen DEF)_ | _(geen tags)_ | N.v.t. — alleen werkversies |
 | [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513) | _(geen DEF)_ | _(geen tags)_ | N.v.t. — alleen werkversies |
 | [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object) | _(geen DEF)_ | _(geen tags)_ | N.v.t. — alleen werkversies |
@@ -21,7 +22,7 @@ Er zijn geen vastgestelde (DEF) versies voor Logboek Dataverwerkingen. De public
 
 ## Keuze in SKILL.md
 
-Alle repositories hebben alleen werkversies; er zijn geen bronconflicten. Als er een DEF-versie wordt vastgesteld, moet dit document worden bijgewerkt met de versie-informatie.
+De hoofdspecificatie `logboek-dataverwerkingen` wordt vermeld met versie v1.0.0 (DEF) op basis van `gitdocumentatie.logius.nl`. Overige onderdelen blijven als werkversies vermeld totdat zij ook een DEF-publicatie krijgen. Bij een nieuwe DEF-publicatie van extensies of inleiding moet dit document worden bijgewerkt.
 
 ## Licentie-status GitHub-repositories
 
