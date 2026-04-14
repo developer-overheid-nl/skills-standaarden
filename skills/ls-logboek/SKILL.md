@@ -34,13 +34,13 @@ Net als andere Logius-standaarden kent Logboek Dataverwerkingen twee publicatiek
 - **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
 - **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
 
-Logboek Dataverwerkingen heeft momenteel **alleen werkversies**. Er zijn nog geen vastgestelde versies gepubliceerd. Extensies ontlenen hun status aan de hoofdspecificatie. Logboek Dataverwerkingen is nog niet opgenomen op de lijst van het Forum Standaardisatie; de standaard is in ontwikkeling.
+De normatieve hoofdspecificatie **logboek-dataverwerkingen** heeft sinds 9 april 2026 een vastgestelde versie v1.0.0. De overige onderdelen (inleiding, juridisch-beleidskader, extensies) hebben nog alleen werkversies. Extensies ontlenen hun status aan de hoofdspecificatie. Logboek Dataverwerkingen is nog niet opgenomen op de lijst van het Forum Standaardisatie.
 
 ## Repositories
 
 | Repository | Beschrijving | Licentie | Vastgesteld | Draft |
 |-----------|-------------|--------|------------|-------|
-| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | Normatieve hoofdspecificatie (logging-interface) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen/) |
+| [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | Normatieve hoofdspecificatie (logging-interface) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/1.0.0/) | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen/) |
 | [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding) | Introductie en achtergrond | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/) |
 | [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | Juridisch en beleidskader | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/) |
 | [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo) | Docker demo-omgeving met meerdere services | [EUPL-1.2](https://eupl.eu/1.2/en) | - | - |

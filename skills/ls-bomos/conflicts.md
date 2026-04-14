@@ -1,6 +1,7 @@
 # BOMOS - Bronconflicten
 
 Geconstateerd: 2026-02-21
+Bijgewerkt: 2026-04-14
 
 Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en de gepubliceerde versies op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl). De **gepubliceerde versie op gitdocumentatie.logius.nl is leidend** voor DEF-versies.
 
@@ -8,7 +9,7 @@ Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en d
 
 | Repository | Gepubliceerde versie (DEF) | Laatste GitHub-tag | Discrepantie |
 |-----------|---------------------------|-------------------|-------------|
-| [BOMOS-Fundament](https://github.com/logius-standaarden/BOMOS-Fundament) | [v3.0.1](https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/) | `0.2.1` | Volledig afwijkend versienummerschema |
+| [BOMOS-Fundament](https://github.com/logius-standaarden/BOMOS-Fundament) | [v3.0.2](https://gitdocumentatie.logius.nl/publicatie/bomos/fundament/) | `0.2.1` | Volledig afwijkend versienummerschema |
 | [BOMOS-Verdieping](https://github.com/logius-standaarden/BOMOS-Verdieping) | [v3.1.0](https://gitdocumentatie.logius.nl/publicatie/bomos/verdieping/) | `0.2.1` | Volledig afwijkend versienummerschema |
 
 ### Details: Dubbel versienummerschema
@@ -25,7 +26,7 @@ De documentversie v3.0.1 resp. v3.1.0 is bevestigd via de ReSpec `localBiblio` c
 **BOMOS-Fundament:**
 - Tags: `0.2.1`, `0.2`, `0.1`
 - Geen GitHub Releases
-- Documentversie (ReSpec): `3.0.1`
+- Documentversie (ReSpec): `3.0.2`
 
 **BOMOS-Verdieping:**
 - Tags: `0.2.1`, `0.2`, `0.1`
@@ -34,7 +35,7 @@ De documentversie v3.0.1 resp. v3.1.0 is bevestigd via de ReSpec `localBiblio` c
 
 ## Keuze in SKILL.md
 
-De skill gebruikt de documentversies (`v3.0.1` en `v3.1.0`) van gitdocumentatie.logius.nl, niet de Git-tags die een onafhankelijk versienummerschema voor de repo-structuur hanteren. Dit is een bijzonderheid van BOMOS. Als het versienummerschema wordt geharmoniseerd, moet dit conflict opnieuw worden beoordeeld.
+De skill gebruikt de documentversies (`v3.0.2` en `v3.1.0`) van gitdocumentatie.logius.nl, niet de Git-tags die een onafhankelijk versienummerschema voor de repo-structuur hanteren. Dit is een bijzonderheid van BOMOS. Als het versienummerschema wordt geharmoniseerd, moet dit conflict opnieuw worden beoordeeld.
 
 ## Licentie-status GitHub-repositories
 
