@@ -1,6 +1,7 @@
 # Digikoppeling - Bronconflicten
 
 Geconstateerd: 2026-02-21
+Laatste verificatie: 2026-04-20
 
 Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en de gepubliceerde versies op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl). De **gepubliceerde versie op gitdocumentatie.logius.nl is leidend** voor DEF-versies; GitHub-tags worden niet altijd bijgewerkt na publicatie.
 
@@ -15,22 +16,22 @@ Daarnaast worden GitHub Releases (een apart mechanisme naast tags) niet conseque
 | Repository | Gepubliceerde versie (DEF) | Laatste GitHub-tag | Discrepantie |
 |-----------|---------------------------|-------------------|-------------|
 | [Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur) | [v2.1.1](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur/) | `2.0.2` | Tag achter: publicatie v2.1.1 vs tag 2.0.2 |
-| [Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API) | [v3.0.1](https://gitdocumentatie.logius.nl/publicatie/dk/restapi/) | `3.0.0` | Tag achter: publicatie v3.0.1 vs tag 3.0.0 |
+| [Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API) | [v4.0.0](https://gitdocumentatie.logius.nl/publicatie/dk/restapi/) | `3.0.0` | Tag achter: publicatie v4.0.0 vs tag 3.0.0 |
 | [Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2) | [v3.3.2](https://gitdocumentatie.logius.nl/publicatie/dk/ebms/) | `3.3.2` | Geen discrepantie (tag komt overeen) |
 | [Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS) | [v3.8.1](https://gitdocumentatie.logius.nl/publicatie/dk/wus/) | `3.8.1` | Geen discrepantie (tag komt overeen) |
 | [Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB) | [v3.8.1](https://gitdocumentatie.logius.nl/publicatie/dk/gb/) | `3.8.1` | Geen discrepantie (tag komt overeen, al zijn er ook sub-releases `3.8.1-2`, `3.8.1-3`) |
-| [Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften) | [v2.0.1](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/) | `2.0.0` | Tag achter: publicatie v2.0.1 vs tag 2.0.0 |
+| [Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften) | [v3.0.0](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/) | `2.0.0` | Tag achter: publicatie v3.0.0 vs tag 2.0.0 |
 | [Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie) | [v1.5.0](https://gitdocumentatie.logius.nl/publicatie/dk/idauth/) | `1.4.2` | Tag achter: publicatie v1.5.0 vs tag 1.4.2 |
 | [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | Tag achter: publicatie v2.2.2 vs tag 2.2.0 (zie ook [ls-iam conflicts.md](../ls-iam/conflicts.md)) |
 | [Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel) | [v1.8](https://gitdocumentatie.logius.nl/publicatie/dk/beheer/) | `1.6r` | Tag achter: publicatie v1.8 vs tag 1.6r |
 | [Digikoppeling-Gebruik-en-achtergrond-certificaten](https://github.com/logius-standaarden/Digikoppeling-Gebruik-en-achtergrond-certificaten) | [v1.6.3](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert/) | `1.6.2` | Tag achter: publicatie v1.6.3 vs tag 1.6.2 |
 | [Digikoppeling-Best-Practices-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-ebMS2) | [v3.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms/) | `3.2.1` | Tag achter: publicatie v3.2.2 vs tag 3.2.1 |
-| [Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance](https://github.com/logius-standaarden/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance) | [v1.12.2](https://gitdocumentatie.logius.nl/publicatie/dk/actueel/) | `1.12.0` | Tag achter: publicatie v1.12.2 vs tag 1.12.0 |
+| [Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance](https://github.com/logius-standaarden/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance) | [v1.13.0](https://gitdocumentatie.logius.nl/publicatie/dk/actueel/) | `1.12.0` | Tag achter: publicatie v1.13.0 vs tag 1.12.0 |
 | [Digikoppeling-Best-Practices-GB](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-GB) | [v3.2.0](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb/) | `3.1.1` | Tag achter: publicatie v3.2.0 vs tag 3.1.1. Overige tags: `3.1`, `3.1r`–`3.1r5` |
 | [Digikoppeling-Best-Practices-WUS](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-WUS) | [v1.10.2](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus/) | `1.10.1` | Tag achter: publicatie v1.10.2 vs tag 1.10.1. Overige tags: `1.10`, `1.10r`–`1.10r3`. Let op: anomale tag `3.8` (verkeerd versienummerschema) |
 | [Digikoppeling-Handreiking-Adressering-en-Routering](https://github.com/logius-standaarden/Digikoppeling-Handreiking-Adressering-en-Routering) | [v1.1.0](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres/) | `1.1.0` | Geen discrepantie (tag komt overeen). Overige tags: `1.0`, `1.0.1` |
 | [Digikoppeling-Wat-is-Digikoppeling](https://github.com/logius-standaarden/Digikoppeling-Wat-is-Digikoppeling) | [v1.1.2](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk/) | `1.1.2` | Geen discrepantie (tag komt overeen). Overige tags: `1.1.1`, `1.1.1r`–`1.1.1r4` |
-| [Digikoppeling-Algemeen](https://github.com/logius-standaarden/Digikoppeling-Algemeen) | [v2024-2025](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap/) | _(geen tags)_ | Geen tags aanwezig; publicatie v2024-2025 is niet getagd |
+| [Digikoppeling-Algemeen](https://github.com/logius-standaarden/Digikoppeling-Algemeen) | [v2026-2027](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap/) | _(geen tags)_ | Geen tags aanwezig; publicatie v2026-2027 (vastgesteld DEF, 2026-04-16) is niet getagd |
 
 ## Overige observaties
 

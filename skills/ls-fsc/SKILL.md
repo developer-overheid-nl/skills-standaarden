@@ -20,7 +20,7 @@ metadata:
 
 # Federated Service Connectivity (FSC)
 
-**Agent-instructie:** Deze skill helpt bij het implementeren van FSC (Federated Service Connectivity) voor federatieve dienstverlening. FSC gebruikt mTLS, OAuth 2.0 client_credentials en cryptografisch ondertekende contracten. Vereist bij Digikoppeling REST-API (v3.0.1+); geen afzonderlijke vermelding op het Forum Standaardisatie.
+**Agent-instructie:** Deze skill helpt bij het implementeren van FSC (Federated Service Connectivity) voor federatieve dienstverlening. FSC gebruikt mTLS, OAuth 2.0 client_credentials en cryptografisch ondertekende contracten. Vereist bij Digikoppeling REST-API (v3.0.1+; huidige publicatie v4.0.0); geen afzonderlijke vermelding op het Forum Standaardisatie.
 
 ## Versiemodel
 
@@ -35,8 +35,8 @@ FSC heeft **vastgestelde versies** voor fsc-core en fsc-logging. De overige modu
 
 | Repository | Beschrijving | Licentie | Vastgesteld | Draft |
 |-----------|-------------|--------|------------|-------|
-| [fsc-core](https://github.com/logius-standaarden/fsc-core) | Core specificatie: architectuur, protocol, componenten | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.1.2](https://gitdocumentatie.logius.nl/publicatie/fsc/core/) | [Draft](https://logius-standaarden.github.io/fsc-core/) |
-| [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | Module: logging specificatie voor FSC transacties | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) | [Draft](https://logius-standaarden.github.io/fsc-logging/) |
+| [fsc-core](https://github.com/logius-standaarden/fsc-core) | Core specificatie: architectuur, protocol, componenten | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v2.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/core/) | [Draft](https://logius-standaarden.github.io/fsc-core/) |
+| [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | Module: logging specificatie voor FSC transacties | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.1.0](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) | [Draft](https://logius-standaarden.github.io/fsc-logging/) |
 | [fsc-properties](https://github.com/logius-standaarden/fsc-properties) | Module: metadata-properties voor FSC services | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/fsc-properties/) |
 | [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | Module: Regulated Area specificatie (governance zones) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/fsc-regulated-area/) |
 | [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | Module: External Contract specificatie (afspraken tussen partijen) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [CV v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/)¹ | [Draft](https://logius-standaarden.github.io/fsc-external-contract/) |

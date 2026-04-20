@@ -1,6 +1,7 @@
 # FSC - Bronconflicten
 
 Geconstateerd: 2026-02-21
+Laatste verificatie: 2026-04-20
 
 Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en de gepubliceerde versies op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl). De **gepubliceerde versie op gitdocumentatie.logius.nl is leidend** voor DEF-versies.
 
@@ -8,21 +9,21 @@ Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en d
 
 | Repository | Gepubliceerde versie (DEF) | Laatste GitHub-tag | Discrepantie |
 |-----------|---------------------------|-------------------|-------------|
-| [fsc-core](https://github.com/logius-standaarden/fsc-core) | [v1.1.2](https://gitdocumentatie.logius.nl/publicatie/fsc/core/) | `1.1.0-rc` | Tag ver achter: publicatie v1.1.2 vs tag 1.1.0-rc (release candidate) |
-| [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) | _(geen tags)_ | Geen tags: publicatie v1.0.0 bestaat maar de repo heeft nul Git-tags |
+| [fsc-core](https://github.com/logius-standaarden/fsc-core) | [v2.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/core/) | `1.1.0-rc` | Tag ver achter: publicatie v2.0.0 vs tag 1.1.0-rc (release candidate) |
+| [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | [v1.1.0](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) | _(geen tags)_ | Geen tags: publicatie v1.1.0 bestaat maar de repo heeft nul Git-tags |
 | [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | [CV v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/) | _(geen tags)_ | Geen tags: publicatie CV v1.0.0 bestaat maar de repo heeft nul Git-tags |
 
 ### Details fsc-core
 
 - **Enige tag:** `1.1.0-rc` (gepubliceerd als GitHub Release op 2025-08-07)
-- De tag is een **release candidate** (`-rc`), terwijl de gepubliceerde versie `v1.1.2` al twee patchversies verder is
-- Er zijn geen tags voor `1.1.0`, `1.1.1` of `1.1.2`
-- Dit wijst erop dat het volledige release-proces (v1.1.0 -> v1.1.1 -> v1.1.2) heeft plaatsgevonden zonder nieuwe Git-tags
+- De tag is een **release candidate** (`-rc`), terwijl de gepubliceerde versie inmiddels `v2.0.0` is (een major-bump verder)
+- Er zijn geen tags voor `1.1.0`, `1.1.1`, `1.1.2` of `2.0.0`
+- Dit wijst erop dat het volledige release-proces (v1.1.0 -> v1.1.1 -> v1.1.2 -> v2.0.0) heeft plaatsgevonden zonder nieuwe Git-tags
 
 ### Details fsc-logging
 
 - De repository heeft **nul Git-tags** en **nul GitHub Releases**
-- Desondanks bestaat er een gepubliceerde versie [v1.0.0 op gitdocumentatie](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/)
+- Desondanks bestaat er een gepubliceerde versie [v1.1.0 op gitdocumentatie](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/)
 - Het publicatieproces heeft hier volledig buiten Git-tagging om plaatsgevonden
 
 ### Details fsc-external-contract
