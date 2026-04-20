@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.4.2](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.1...v0.4.2) (2026-04-20)
+
+
+### Opgelost
+
+* bump pygments 2.19.2 -&gt; 2.20.0 (GHSA-5239-wwwm-4pmq) ([#517](https://github.com/developer-overheid-nl/skills-standaarden/issues/517)) ([b6dbe9c](https://github.com/developer-overheid-nl/skills-standaarden/commit/b6dbe9cd46d180cf6578121932594fe667dbc6ed))
+
 ## [0.4.1](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.0...v0.4.1) (2026-04-20)
 
 
