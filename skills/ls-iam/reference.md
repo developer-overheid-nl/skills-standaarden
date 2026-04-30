@@ -160,11 +160,11 @@ Clients moeten vooraf worden geregistreerd bij de OpenID Provider. Bij registrat
 
 ### Integratie en Transport
 
-**FSC Logging**: de Authorization Decision Log integreert met FSC (Federated Service Connectivity) logging via het `transaction_id` veld. Hiermee kunnen autorisatiebeslissingen worden gerelateerd aan de bredere transactieketen.
+**FSC Logging**: de Authorization Decision Log integreert met FSC (Federated Service Connectivity) logging via het `adl.fsc.transaction_id` attribute. Hiermee kunnen autorisatiebeslissingen worden gerelateerd aan de bredere transactieketen.
 
-**FSC Transactieketen**: Wanneer een API-aanroep meerdere services doorloopt, wordt de `transaction_id` doorgegeven. Elke service logt zijn autorisatiebeslissingen met deze ID, waardoor de volledige transactieketen kan worden gereconstrueerd voor audit doeleinden.
+**FSC Transactieketen**: Wanneer een API-aanroep meerdere services doorloopt, wordt de FSC transaction-id doorgegeven. Elke service logt zijn autorisatiebeslissingen met deze ID in `attributes.adl.fsc.transaction_id`, waardoor de volledige transactieketen kan worden gereconstrueerd voor audit doeleinden.
 
-**OpenTelemetry Protocol (OTLP)**: OTLP wordt aanbevolen als transportprotocol voor het verzenden van log records naar centrale logging-infrastructuur. Dit sluit aan bij de W3C Trace Context die al in de `trace_id` en `span_id` velden wordt gebruikt.
+**OpenTelemetry Protocol (OTLP)**: OTLP wordt aanbevolen als transportprotocol voor het verzenden van log records naar centrale logging-infrastructuur. Het record-model zelf is bewust transport-onafhankelijk (REST, gRPC, messaging, file ingestion zijn allemaal toegestaan), maar de OpenTelemetry-vorm sluit aan bij W3C Trace Context die al in `trace_id`, `span_id` en `parent_span_id` wordt gebruikt.
 
 **OTLP Integratie**:
 - Log records worden verzonden als OTLP log events
