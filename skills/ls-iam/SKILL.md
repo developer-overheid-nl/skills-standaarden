@@ -220,37 +220,25 @@ Bij een weigering kan het PDP een reden meegeven:
 
 ## Authorization Decision Log
 
-De Authorization Decision Log standaard definieert een gestructureerd formaat voor het vastleggen van autorisatiebeslissingen. Dit is essentieel voor audit, verantwoording en het reproduceren van historische beslissingen.
+De ADL-standaard definieert een gestructureerd formaat voor het vastleggen van autorisatiebeslissingen voor audit, verantwoording en replay. De werkversie volgt sinds april 2026 een **OpenTelemetry-vorm** op basis van het AuthZEN-informatiemodel. Het record-model is transport-onafhankelijk; OTLP wordt aanbevolen, maar elke transport (REST, gRPC, messaging) is toegestaan zolang het record de gespecificeerde velden draagt.
 
-De werkversie volgt sinds april 2026 een **OpenTelemetry-vorm** op basis van de AuthZEN-informatiemodel. Het record-model is transport-onafhankelijk; OTLP wordt aanbevolen, maar elke transport (REST, gRPC, messaging) is toegestaan zolang het record de gespecificeerde velden draagt.
+### Record-velden
 
-### Verplichte velden
+| Veld | Type | Verplicht? | Beschrijving |
+|------|------|-----------|-------------|
+| `trace_id` | 16 byte hex (32 chars) | Ja | Trace-id conform [W3C Trace Context](https://www.w3.org/TR/trace-context/), cryptografisch random |
+| `span_id` | 8 byte hex (16 chars) | Ja | Span-id voor deze beslissing |
+| `parent_span_id` | 8 byte hex (16 chars) | Conditioneel | Verplicht bij upstream `traceparent`; alleen weglaatbaar bij root-span |
+| `event_name` | string | Ja | Een van vijf vaste waarden (zie hieronder) |
+| `timestamp` | uint64 | Ja | Milliseconden sinds Unix epoch |
+| `status` | enum | Ja | `Unset` (default, ook bij denial), `Ok`, of `Error` (PDP kon geen beslissing produceren) |
+| `attributes` | object | Optioneel | Source-referenties en metadata (`adl.core.*`) |
+| `resource` | object | Optioneel | OpenTelemetry resource-object (component-context) |
+| `body` | object | Optioneel | Raw payload (`adl.core.request`, `adl.core.response`, etc.) |
 
-| Veld | Type | Beschrijving |
-|------|------|-------------|
-| `trace_id` | 16 byte hex (32 chars) | Trace-identifier conform [W3C Trace Context](https://www.w3.org/TR/trace-context/), MUST cryptografisch random gegenereerd worden |
-| `span_id` | 8 byte hex (16 chars) | Span-identifier voor deze beslissing |
-| `event_name` | string | Type beslissing — een van vijf vaste waarden (zie hieronder) |
-| `timestamp` | uint64 | Aantal milliseconden sinds Unix epoch |
-| `status` | enum | `Unset`, `Ok` of `Error` |
-
-### Conditioneel verplicht
-
-| Veld | Beschrijving |
-|------|-------------|
-| `parent_span_id` | Verplicht wanneer een upstream `traceparent` aanwezig is; alleen weglaatbaar bij root-span |
-
-### Optionele velden
-
-| Veld | Beschrijving |
-|------|-------------|
-| `attributes` | Source-referenties en metadata (`adl.core.*` keys) |
-| `resource` | OpenTelemetry resource-object (component-context) |
-| `body` | Raw payload (`adl.core.request`, `adl.core.response`, etc.) |
+Een denial (`decision: false`) is `Unset`, niet `Error`.
 
 ### `event_name` waarden
-
-Elk record correspondeert met één van de vijf AuthZEN APIs:
 
 | AuthZEN API | `event_name` |
 |-------------|--------------|
@@ -260,37 +248,24 @@ Elk record correspondeert met één van de vijf AuthZEN APIs:
 | Action Search API | `adl.search_action` |
 | Resource Search API | `adl.search_resource` |
 
-### `status` waarden
-
-- `Unset` (default) — PDP heeft geëvalueerd zonder fout. Een denial (`decision: false`) is `Unset`, niet `Error`.
-- `Ok` — optionele expliciete markering van succesvolle evaluatie, functioneel gelijk aan `Unset`.
-- `Error` — PDP kon geen beslissing produceren (engine fault, missende attributen, downstream timeout).
-
 ### `attributes.adl.core.*`
 
-Source-referenties (geen raw data — die hoort in `body`). Een veld MOET in precies één van beide locaties staan.
+Source-referenties — geen raw data, die hoort in `body`. Een veld MOET in precies één van beide locaties staan.
 
 | Attribute | Beschrijving |
 |-----------|-------------|
-| `adl.core.request` | Source-referentie naar de input van de beslissing (AuthZEN-formaat) |
-| `adl.core.response` | Source-referentie naar de output (verplicht retrieveerbaar bij `status: Unset`/`Ok`) |
+| `adl.core.request` | Input van de beslissing (AuthZEN-formaat) |
+| `adl.core.response` | Output (verplicht retrieveerbaar bij `status: Unset`/`Ok`) |
 | `adl.core.policies` | Object met per policy-source een versie-identifier (timestamp, hash, semver) |
-| `adl.core.information` | Referenties naar PIP-data die voor de beslissing is gebruikt |
-| `adl.core.configuration` | Configuratie van PDP/PIP/PAP ten tijde van de beslissing |
+| `adl.core.information` | Referenties naar PIP-data |
+| `adl.core.configuration` | Configuratie van PDP/PIP/PAP |
 | `adl.fsc.transaction_id` | FSC transaction-id voor correlatie met FSC logs |
 
-Aanvullende keys buiten `adl.*` mogen worden opgenomen volgens `<vendor>.<area>.<name>`-conventie. Onbekende keys MOETEN zonder fout worden genegeerd door consumers.
+Aanvullende keys volgen `<vendor>.<area>.<name>`. Onbekende keys MOETEN door consumers worden genegeerd.
 
 ### Levels of detail
 
-Vier niveaus van replayability, oplopend in detail:
-
-| Niveau | Bevat | Doel |
-|--------|-------|------|
-| 1 | Request + response | Basis-accountability |
-| 2 | + `adl.core.policies` | Policy-versie reproduceerbaar |
-| 3 | + `adl.core.information` | PIP-data reconstrueerbaar (full replayability bij deterministische engine) |
-| 4 | + `adl.core.configuration` | Volledige replayability inclusief engine-configuratie |
+Vier niveaus van replayability (zie [reference.md](reference.md)): (1) request+response, (2) + `adl.core.policies`, (3) + `adl.core.information`, (4) + `adl.core.configuration`.
 
 ### Voorbeeld log record (Level 1)
 
@@ -302,35 +277,23 @@ Vier niveaus van replayability, oplopend in detail:
   "event_name": "adl.access_evaluation",
   "timestamp": 1757240058042,
   "status": "Unset",
-  "attributes": {},
   "body": {
     "adl.core.request": {
-      "subject": { "type": "user", "id": "alice" },
-      "action": { "name": "approve" },
-      "resource": {
-        "type": "holiday-request",
-        "id": "446epbc8y7",
-        "properties": { "employee": "bob" }
-      },
-      "context": {
-        "traceparent": "00-28dbeec32e77635cc19bc3204ec56c41-dec5220770f8f4f4-01"
-      }
+      "subject": {"type": "user", "id": "alice"},
+      "action": {"name": "approve"},
+      "resource": {"type": "holiday-request", "id": "446epbc8y7"}
     },
     "adl.core.response": {
       "decision": false,
-      "context": { "reason": { "48": "No signing authority" } }
+      "context": {"reason": {"48": "No signing authority"}}
     }
   }
 }
 ```
 
-### Trace context propagatie
+### Trace context en ingestion
 
-Alle componenten in een autorisatie-evaluatie (PEP, PDP, PIP, PAP) MOETEN W3C Trace Context propageren. De `trace_id` blijft ongewijzigd over organisatiegrenzen heen — een nieuwe `trace_id` mag NIET binnen een lopende beslissingsflow worden gealloceerd. Logging is onafhankelijk van het `sampled`-bit in `traceparent`: ADL-records MOETEN altijd worden geproduceerd, ongeacht sampling.
-
-### Idempotente ingestion
-
-Re-submission van hetzelfde log record (bijvoorbeeld door queue-redelivery in een write-ahead-log patroon) MOET niet leiden tot duplicate records. De idempotency-sleutel is implementatie-specifiek; gangbare keuzes zijn `(trace_id, span_id)` of een content-hash van het record.
+Alle componenten (PEP, PDP, PIP, PAP) MOETEN W3C Trace Context propageren; `trace_id` blijft ongewijzigd over organisatiegrenzen, ook bij sampling=0 (records worden altijd geproduceerd). Ingestion MOET idempotent zijn met `(trace_id, span_id)` of content-hash als sleutel. Zie [reference.md](reference.md) voor details.
 
 ---
 

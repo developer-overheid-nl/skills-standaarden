@@ -158,6 +158,35 @@ Clients moeten vooraf worden geregistreerd bij de OpenID Provider. Bij registrat
 
 ## Authorization Decision Log - Uitgebreide Documentatie
 
+### Levels of detail
+
+De standaard definieert vier niveaus van replayability, elk oplopend in detail:
+
+| Niveau | Bevat | Doel |
+|--------|-------|------|
+| 1 | Request + response | Basis-accountability |
+| 2 | + `adl.core.policies` | Policy-versie reproduceerbaar |
+| 3 | + `adl.core.information` | PIP-data reconstrueerbaar (full replayability bij deterministische engine) |
+| 4 | + `adl.core.configuration` | Volledige replayability inclusief engine-configuratie |
+
+Het juiste niveau hangt af van de organisatorische context en wettelijke vereisten — het hoogste niveau is niet altijd nodig.
+
+### Trace context propagatie
+
+Alle componenten in een autorisatie-evaluatie (PEP, PDP, PIP, PAP) MOETEN W3C Trace Context propageren en trace-continuïteit over componentgrenzen behouden. Bij een inkomende request creëert een component een span als child van de span uit `traceparent`, of start een nieuwe trace als root-span bij afwezigheid. De `trace_id` blijft ongewijzigd over organisatiegrenzen heen — een nieuwe `trace_id` mag NIET binnen een lopende beslissingsflow worden gealloceerd.
+
+Logging is onafhankelijk van het `sampled`-bit in `traceparent`: dat bit regelt alleen telemetry-sampling. ADL-records zijn accountability records en MOETEN altijd worden geproduceerd, ongeacht sampling. ADL-emitters MOGEN het `sampled`-flag NIET wijzigen.
+
+Pro-actieve interacties (zoals een PAP die policies distribueert naar een PDP) vallen buiten de trace van een individuele autorisatiebeslissing — die hebben hun eigen lifecycle en, waar van toepassing, eigen traces.
+
+### Idempotente ingestion
+
+Ingestion van log records MOET idempotent zijn: re-submission van hetzelfde record (bijvoorbeeld door queue-redelivery in een write-ahead-log patroon) MOET niet leiden tot een duplicate persisted record. De idempotency-sleutel is implementatie-specifiek; gangbare keuzes zijn `(trace_id, span_id)` of een content-hash.
+
+### Cached decisions
+
+Caching van autorisatiebeslissingen wordt afgeraden: een gecachte beslissing verwijst naar policies en informatie die actueel waren bij cache-populatie, en replay tegen de huidige state kan een ander resultaat geven. Per-cache-use logging — vereist voor accountability — erodeert het performance-voordeel van caching. Indien toch toegepast, MOET de toepassing van een gecachte beslissing een nieuw log record produceren met de `trace_id` en `parent_span_id` van de nieuwe request en een vers gealloceerde `span_id`.
+
 ### Integratie en Transport
 
 **FSC Logging**: de Authorization Decision Log integreert met FSC (Federated Service Connectivity) logging via het `adl.fsc.transaction_id` attribute. Hiermee kunnen autorisatiebeslissingen worden gerelateerd aan de bredere transactieketen.
