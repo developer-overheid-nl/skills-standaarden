@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.4.3](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.2...v0.4.3) (2026-04-30)
+
+
+### Opgelost
+
+* **ls-iam:** update Authorization Decision Log naar OpenTelemetry-vorm ([#574](https://github.com/developer-overheid-nl/skills-standaarden/issues/574)) ([9a1f58a](https://github.com/developer-overheid-nl/skills-standaarden/commit/9a1f58a02d2d34a3658d035e76199450ac6840e3))
+
 ## [0.4.2](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.1...v0.4.2) (2026-04-20)
 
 
