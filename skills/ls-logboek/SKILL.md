@@ -148,7 +148,7 @@ De standaard schrijft geen specifiek transportprotocol voor, maar beveelt **Open
 
 **Vereisten:**
 
-- Het Logboek **MOET** TLS kunnen afdwingen voor alle communicatie.
+- Het Logboek **MOET** TLS kunnen afdwingen (capability-eis aan de software). De spec verduidelijkt expliciet dat hiermee niet wordt bedoeld dat TLS verplicht is — of TLS-connecties daadwerkelijk worden toegepast is een organisatie-keuze.
 - Het Logboek **MOET** elke schrijfactie bevestigen met een bevestigingsbericht (acknowledgement). De applicatie weet hierdoor zeker dat de logregel is opgeslagen.
 - OTLP ondersteunt zowel gRPC als HTTP/protobuf als transportlaag (standaard OTLP-poorten: 4317 voor gRPC, 4318 voor HTTP — niet voorgeschreven door de Logboek-standaard zelf).
 

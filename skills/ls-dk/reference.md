@@ -71,13 +71,13 @@ ebMS2 (Electronic Business Messaging Service version 2) biedt asynchrone, betrou
 - **Berichtformaat**: SOAP 1.1 met ebMS2 headers, payload als MIME-attachment
 - **Profielen**:
   - **osb-be** (Best-effort): Asynchroon berichtverkeer zonder betrouwbaarheidsgaranties
-  - **osb-rm** (Reliable Messaging): Asynchroon berichtverkeer met MessageOrder, at-most-once delivery, duplicate-eliminatie en Message Acknowledgements
+  - **osb-rm** (Reliable Messaging): Asynchroon berichtverkeer met MessageOrder, **once-and-only-once** (exactly-once) delivery, duplicate-eliminatie en Message Acknowledgements
   - **osb-be-S** (Best-effort, Signed): Asynchroon met ondertekening op berichtniveau
   - **osb-rm-S** (Reliable, Signed): Betrouwbaar asynchroon met ondertekening
   - **osb-be-E** (Best-effort, Encrypted): Asynchroon met versleuteling op berichtniveau
   - **osb-rm-E** (Reliable, Encrypted): Betrouwbaar asynchroon met versleuteling
 - **Betrouwbaarheidsmechanismen** (rm-profielen):
-  - **At-most-once delivery**: Garandeert dat een bericht maximaal eenmaal wordt afgeleverd
+  - **Once-and-only-once delivery** (exactly-once): Garandeert end-to-end dat een bericht precies één keer wordt afgeleverd, op basis van end-to-end retransmission
   - **Duplicate-eliminatie**: Herkent en verwijdert duplicaten op basis van MessageId
   - **Message Acknowledgements**: Ontvangstbevestigingen (Message Status Response)
   - **Message Ordering**: Optionele volgordelijkheid van berichten via ConversationId en SequenceNumber

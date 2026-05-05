@@ -114,7 +114,7 @@ Geen technische details (stack traces, interne hints) in foutmeldingen.
 
 - OpenAPI 3.0+ specificatie verplicht
 - Publiceer JSON op standaardlocatie: `/openapi.json` (VERPLICHT); YAML (`/openapi.yaml`) is OPTIONEEL
-- Contactinformatie verplicht (name, email, url)
+- Contactinformatie (`info.contact` met `name`, `email`, `url`) wordt sterk aanbevolen voor publieke APIs (ADR `/core/doc-openapi-contact`: SHOULD); de Spectral linter dwingt deze velden af als error voor publieke APIs
 - CORS ondersteunen voor documentatie-toegang
 
 ## Modules
