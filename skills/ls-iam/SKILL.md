@@ -117,7 +117,7 @@ Het ID Token moet minimaal de volgende claims bevatten:
 | `exp` | Verloopdatum van het token (expiration) |
 | `iat` | Tijdstip van uitgifte (issued at) |
 | `nonce` | Waarde uit het authorization request (voorkomt replay attacks) |
-| `acr` | Betrouwbaarheidsniveau (SHOULD — aanbevolen, niet verplicht) |
+| `acr` | Betrouwbaarheidsniveau (OPTIONAL per OIDC NL GOV; **als gezet MOET de waarde minimaal het gevraagde betrouwbaarheidsniveau zijn**) |
 
 ### ID Token validatie
 
@@ -128,7 +128,7 @@ Bij het valideren van een OIDC ID Token MOETEN de volgende stappen worden doorlo
 3. **aud** - MOET de `client_id` van de relying party bevatten
 4. **nonce** - MOET exact overeenkomen met de nonce uit het authorization request
 5. **exp** - MOET in de toekomst liggen (token niet verlopen)
-6. **iat** - MAG niet te ver in het verleden liggen (max 5 minuten aanbevolen)
+6. **iat** - MOET in het verleden liggen; de acceptabele afstand is per Client te bepalen (OIDC NL GOV laat dit expliciet aan de Client; veelvoorkomende keuze in de praktijk: enkele minuten)
 7. **acr** - MOET minimaal het gevraagde betrouwbaarheidsniveau bevatten
 8. **jti** - MOET uniek zijn (bewaar voldoende lang om hergebruik te detecteren)
 
