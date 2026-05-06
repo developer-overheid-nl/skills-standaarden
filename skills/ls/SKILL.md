@@ -1,6 +1,6 @@
 ---
 name: ls
-description: "Overzicht van alle Logius standaarden. Gebruik deze skill wanneer de gebruiker vraagt over 'Logius standaarden', 'Nederlandse overheidsstandaarden', 'interoperabiliteit', 'welke standaarden zijn er', 'standaarden overzicht', 'welke standaard moet ik gebruiken', of een vraag heeft die niet duidelijk bij een domein past."
+description: "Overzicht van Logius standaarden voor de Nederlandse overheid. Routeert naar sub-skills (Digikoppeling, API Design Rules, OAuth, FSC, BOMOS, etc.) of geeft hulp bij interoperabiliteitsvragen."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)

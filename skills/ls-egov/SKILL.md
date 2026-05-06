@@ -1,6 +1,6 @@
 ---
 name: ls-egov
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'Terugmelding', 'Terugmelden', 'Digimelding', 'basisfactuur', 'basisorder', 'e-procurement', 'inkoopstandaarden overheid', 'factuurstandaard', 'NLCIUS', 'Peppol BIS', 'PEPPOLBIS', 'elektronisch bestellen', 'UBL', 'UBL 2.1', 'factuur validatie', 'Schematron'."
+description: "E-procurement bij de overheid: Peppol BIS, NLCIUS, UBL 2.1, basisfactuur, basisorder, Schematron-validatie. Ook Digimelding/Terugmelden voor basisregistraties."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)

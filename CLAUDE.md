@@ -76,7 +76,7 @@ Elk domein heeft een `conflicts.md` met vaste structuur:
 De `SKILL.md` verwijst naar `conflicts.md` in de Achtergrondinfo-sectie.
 
 ### Description triggers
-Descriptions bevatten zowel Nederlandse als technische Engelse triggerwoorden zodat de skill bij relevante vragen wordt geactiveerd.
+Descriptions bevatten zowel Nederlandse als technische Engelse triggerwoorden zodat de skill bij relevante vragen wordt geactiveerd. Houd descriptions kort: doel **~150 chars, max 200**. Eén functionele zin met de eigennamen die mensen daadwerkelijk gebruiken (DMARC, OAuth, NEN 3610) is genoeg; voeg alleen een korte triggerstaart toe voor termen die niet uit de hoofdzin volgen. Geen "Gebruik deze skill wanneer..."-aanhef en geen quoted keyword-lijsten — die vreten skill listing budget op zonder triggerwaarde toe te voegen.
 
 ### Allowed tools
 Pas per skill aan. Niet elke skill heeft alle tools nodig. Standaard set:
