@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.4.5](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.4...v0.4.5) (2026-05-06)
+
+
+### Opgelost
+
+* kort skill descriptions in om listing budget te ontlasten ([#578](https://github.com/developer-overheid-nl/skills-standaarden/issues/578)) ([a5af9ab](https://github.com/developer-overheid-nl/skills-standaarden/commit/a5af9abf2a72e9c1620b4c30cc379f2950590b91))
+
 ## [0.4.4](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.3...v0.4.4) (2026-05-05)
 
 
