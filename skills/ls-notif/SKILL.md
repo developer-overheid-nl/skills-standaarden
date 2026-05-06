@@ -1,6 +1,6 @@
 ---
 name: ls-notif
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'CloudEvents', 'notificaties', 'notificatieservices', 'abonnementen', 'event-driven', 'NL GOV CloudEvents', 'pub/sub overheid', 'gebeurtenisnotificatie', 'webhook', 'webhooks', 'subscription'."
+description: "NL GOV CloudEvents profiel voor notificatieservices: abonnementen, webhooks, pub/sub tussen overheidsorganisaties."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)

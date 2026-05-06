@@ -1,6 +1,6 @@
 ---
 name: ls-api
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'API Design Rules', 'ADR', 'REST API standaard', 'API richtlijnen', 'NL GOV API', 'Spectral linter', 'API linter', 'OpenAPI validatie', 'API design', 'REST API naming', 'transport security', 'API signing', 'API encryption', 'geospatial API', 'api-linter', 'problem+json', 'error response format'."
+description: "API Design Rules (ADR) voor NL GOV REST APIs: Spectral-linting, naming, transport security, signing, encryption, problem+json errors, geo-extensie."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)

@@ -1,6 +1,6 @@
 ---
 name: ls-dk
-description: "Gebruik deze skill wanneer de gebruiker vraagt over Digikoppeling, koppelvlakstandaarden, ebMS2, WUS, WSDL, SOAP, REST-API koppelvlak, grote berichten, OIN, Organisatie Identificatie Nummer, PKIoverheid, beveiligingsstandaarden overheid, routering en adressering, CPA, berichtuitwisseling tussen overheidsorganisaties."
+description: "Digikoppeling koppelvlakken (ebMS2, WUS, REST-API, grote berichten) voor berichtuitwisseling tussen overheidsorganisaties. Ook OIN, PKIoverheid, CPA, routering."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)

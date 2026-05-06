@@ -1,6 +1,6 @@
 ---
 name: ls-logboek
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'Logboek Dataverwerkingen', 'dataverwerkingen logging', 'transparantie dataverwerkingen', 'NEN 7513', 'logging API overheid', 'logboek extensie', 'AVG logging', 'GDPR logging', 'verwerkingenlogging', 'OpenTelemetry', 'OTLP', 'dpl.core', 'verwerkingsactiviteit loggen'."
+description: "Logboek Dataverwerkingen voor AVG/GDPR-transparantie. NEN 7513, OpenTelemetry/OTLP, dpl.core, verwerkingenlogging in overheidssystemen."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)

@@ -1,6 +1,6 @@
 ---
 name: ls-iam
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'OAuth', 'OpenID Connect', 'OIDC', 'authenticatie', 'autorisatie', 'AuthZEN', 'SAML', 'identity management', 'toegangsbeheer', 'OAuth NL profiel', 'OIDC NL GOV', 'NL GOV profiel', 'authorization decision', 'OIN authenticatie', 'token endpoint', 'JWT', 'private_key_jwt', 'client credentials', 'authorization_code', 'PKCE'."
+description: "OAuth, OpenID Connect, AuthZEN, SAML voor authenticatie en autorisatie bij de overheid. NL GOV profielen, JWT, PKCE, private_key_jwt, OIN authenticatie."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)

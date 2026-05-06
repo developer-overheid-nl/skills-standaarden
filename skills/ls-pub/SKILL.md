@@ -1,6 +1,6 @@
 ---
 name: ls-pub
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'publicatie', 'ReSpec', 'documentatie tooling', 'GitHub Actions workflows', 'build workflow', 'check workflow', 'publish workflow', 'tech radar', 'WCAG check', 'markdownlint', 'markdown lint', 'kwaliteitscheck', 'Muffet', 'link validatie', 'automatisering', 'HTML generatie', 'PDF generatie', 'accessibility check', 'a11y'. Niet voor API linting (zie ls-api) of code linting."
+description: "Logius publicatieworkflow voor standaardenrepos: ReSpec, GitHub Actions, markdownlint, WCAG/a11y, Muffet linkvalidatie, tech radar. Niet voor API of code linting."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)

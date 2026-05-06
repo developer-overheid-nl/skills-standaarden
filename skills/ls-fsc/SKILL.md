@@ -1,6 +1,6 @@
 ---
 name: ls-fsc
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'FSC', 'Federated Service Connectivity', 'federatieve dienstverlening', 'inway', 'outway', 'service directory', 'regulated area', 'external contract', 'fsc-core', 'NLX', 'peer', 'PeerID', 'Manager API'."
+description: "Federated Service Connectivity (FSC, voorheen NLX): inway, outway, service directory, peers, external contracts, Manager API."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)

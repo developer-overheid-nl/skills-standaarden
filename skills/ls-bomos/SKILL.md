@@ -1,6 +1,6 @@
 ---
 name: ls-bomos
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'BOMOS', 'Beheer- en Ontwikkelmodel', 'open standaarden beheer', 'standaardisatie governance', 'beheermodel', 'community management standaarden', 'open source governance', 'stelselstandaarden', 'RFC proces', 'wijzigingsproces standaard', 'change management standaarden'."
+description: "BOMOS (Beheer- en Ontwikkelmodel voor Open Standaarden): governance, RFC-proces, community management voor stelselstandaarden bij de overheid."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
