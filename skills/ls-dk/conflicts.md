@@ -1,6 +1,6 @@
 # Digikoppeling - Bronconflicten
 
-Geconstateerd: 2026-02-21
+Geconstateerd: 2026-02-21 (OIN-Stelsel rij bijgewerkt 2026-05-09: v3.0.0)
 Laatste verificatie: 2026-04-20
 
 Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en de gepubliceerde versies op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl). De **gepubliceerde versie op gitdocumentatie.logius.nl is leidend** voor DEF-versies; GitHub-tags worden niet altijd bijgewerkt na publicatie.
@@ -22,7 +22,7 @@ Daarnaast worden GitHub Releases (een apart mechanisme naast tags) niet conseque
 | [Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB) | [v3.8.1](https://gitdocumentatie.logius.nl/publicatie/dk/gb/) | `3.8.1` | Geen discrepantie (tag komt overeen, al zijn er ook sub-releases `3.8.1-2`, `3.8.1-3`) |
 | [Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften) | [v3.0.0](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/) | `2.0.0` | Tag achter: publicatie v3.0.0 vs tag 2.0.0 |
 | [Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie) | [v1.5.0](https://gitdocumentatie.logius.nl/publicatie/dk/idauth/) | `1.4.2` | Tag achter: publicatie v1.5.0 vs tag 1.4.2 |
-| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | Tag achter: publicatie v2.2.2 vs tag 2.2.0 (zie ook [ls-iam conflicts.md](../ls-iam/conflicts.md)) |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v3.0.0](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | Tag achter: publicatie v3.0.0 vs tag 2.2.0 (zie ook [ls-iam conflicts.md](../ls-iam/conflicts.md)) |
 | [Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel) | [v1.8](https://gitdocumentatie.logius.nl/publicatie/dk/beheer/) | `1.6r` | Tag achter: publicatie v1.8 vs tag 1.6r |
 | [Digikoppeling-Gebruik-en-achtergrond-certificaten](https://github.com/logius-standaarden/Digikoppeling-Gebruik-en-achtergrond-certificaten) | [v1.6.3](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert/) | `1.6.2` | Tag achter: publicatie v1.6.3 vs tag 1.6.2 |
 | [Digikoppeling-Best-Practices-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-ebMS2) | [v3.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms/) | `3.2.1` | Tag achter: publicatie v3.2.2 vs tag 3.2.1 |

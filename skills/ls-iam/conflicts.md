@@ -1,6 +1,6 @@
 # IAM - Bronconflicten
 
-Geconstateerd: 2026-02-21
+Geconstateerd: 2026-02-21 (OIN-Stelsel sectie bijgewerkt 2026-05-09: v3.0.0)
 
 Dit document beschrijft bekende discrepanties in bronnen die relevant zijn voor de IAM-skill.
 
@@ -12,14 +12,15 @@ De **gepubliceerde versie op gitdocumentatie.logius.nl is leidend** voor DEF-ver
 
 | Repository | Gepubliceerde versie (DEF) | Laatste GitHub-tag | Discrepantie |
 |-----------|---------------------------|-------------------|-------------|
-| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | Tag achter: publicatie v2.2.2 vs tag 2.2.0 |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v3.0.0](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | Tag achter: publicatie v3.0.0 vs tag 2.2.0 |
 
 ### Details OIN-Stelsel
 
 - **Bekende tags:** `2.2.0`, `2.0.3`, `2.0.2`, `2.0.2r`, `2.0.1`
 - **Laatste GitHub Release:** `2.0.3` (gepubliceerd 2022-11-29) — ver achter op de laatste tag `2.2.0`
-- De tag `2.2.0` bestaat, maar de gepubliceerde versie op gitdocumentatie is `v2.2.2` — twee patchversies verder
-- Er zijn geen tags `2.2.1` of `2.2.2` in de repository
+- De tag `2.2.0` bestaat, maar de gepubliceerde versie op gitdocumentatie is `v3.0.0` (gepubliceerd 2026-03-19) — een major-versie verder
+- v3.0.0 introduceert onder andere de Dezi-stelsel prefixen (Dezi-nummer voor zorgaanbieders, voorheen UZI-nummer)
+- Er zijn geen tags `2.2.1`, `2.2.2` of `3.0.0` in de repository
 
 **Let op:** OIN-Stelsel wordt ook gerefereerd vanuit `/ls-dk` (Digikoppeling). Dezelfde discrepantie is gedocumenteerd in [ls-dk/conflicts.md](../ls-dk/conflicts.md).
 
@@ -67,7 +68,7 @@ De skill gebruikt **"verkort expertonderzoek"**, conform het intakeadvies-docume
 
 ## Keuze in SKILL.md
 
-De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies (OIN-Stelsel v2.2.2, OAuth-Beheermodel v1.0). Voor het expertonderzoek-type van OAuth v1.1 volgt de skill het intakeadvies-document ("verkort"). OAuth-Beheermodel heeft een afwijkende tag (`0.2` vs DEF v1.0) maar is gearchiveerd. Als de GitHub-tags of de Forum-hoofdpagina worden bijgewerkt, moet dit conflict opnieuw worden beoordeeld.
+De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies (OIN-Stelsel v3.0.0, OAuth-Beheermodel v1.0). Voor het expertonderzoek-type van OAuth v1.1 volgt de skill het intakeadvies-document ("verkort"). OAuth-Beheermodel heeft een afwijkende tag (`0.2` vs DEF v1.0) maar is gearchiveerd. Als de GitHub-tags of de Forum-hoofdpagina worden bijgewerkt, moet dit conflict opnieuw worden beoordeeld.
 
 ## Licentie-status GitHub-repositories
 
