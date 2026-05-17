@@ -359,8 +359,8 @@ server {
 
 Bij het profiel `osb-rm` gelden de volgende retry-regels:
 - **Acknowledgement timeout**: Wacht maximaal de afgesproken tijd op een bevestiging
-- **Retry interval**: Exponential backoff (bijv. 30s, 60s, 120s, 240s)
-- **Max retries**: Configureerbaar in de CPA (typisch 3-5 pogingen)
+- **Retry interval**: Configureerbaar in de CPA via `RetryInterval`; geen voorgeschreven backoff-strategie
+- **Max retries**: Configureerbaar in de CPA; geen voorgeschreven aantal. Zonder afspraak geldt een `PersistDuration` van 5 dagen
 - **Duplicate elimination**: Ontvanger herkent duplicaten op basis van MessageId
 - **At-most-once delivery**: Berichten worden nooit dubbel afgeleverd
 
