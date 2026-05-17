@@ -148,7 +148,7 @@ Clients moeten vooraf worden geregistreerd bij de OpenID Provider. Bij registrat
 - **Publieke sleutels**: voor token validatie en client authenticatie
 - **Client metadata**: naam, logo, privacy policy URL, terms of service URL
 
-**Dynamische registratie**: OpenID Connect ondersteunt dynamische client registratie (RFC 7591), maar voor overheidstoepassingen wordt handmatige registratie aanbevolen om strikte controle te behouden.
+**Dynamische registratie**: het OIDC NL GOV profiel beveelt dynamische client registratie (RFC 7591) aan ("Clients SHOULD use Dynamic Registration") om handwerk en configuratiefouten te beperken. Voor native clients met per-instance registratie is dynamische registratie verplicht (MUST); voor web- en browser-applicaties blijft handmatige registratie toegestaan.
 
 **Client credentials**: Bij confidential clients worden credentials uitgegeven:
 - Bij mTLS: een PKIoverheid-certificaat

@@ -58,7 +58,7 @@ Het Nederlandse OAuth 2.0 profiel scherpt de basisspecificatie (RFC 6749) aan me
 
 ### Verplichte beveiligingseisen
 
-- **PKCE (Proof Key for Code Exchange)** is verplicht voor public clients. Confidential clients die zich authenticeren met `private_key_jwt` of mTLS zijn vrijgesteld. Dit voorkomt authorization code interception aanvallen. Clients genereren een `code_verifier` en sturen een `code_challenge` mee in het authorization request.
+- **PKCE (Proof Key for Code Exchange)** is verplicht voor *alle* clients per het OIDC NL GOV profiel ("Clients MUST use PKCE to protect calls to the Token Endpoint"), inclusief confidential clients die zich met `private_key_jwt` of mTLS authenticeren — er is geen vrijstelling. Dit voorkomt authorization code interception aanvallen. Clients genereren een `code_verifier` en sturen een `code_challenge` mee in het authorization request.
 - **Grant types**: `authorization_code` is verplicht (MUST); `client_credentials` is toegestaan (MAY) voor machine-to-machine communicatie. Implicit grant en Resource Owner Password Credentials zijn expliciet verboden vanwege bekende beveiligingsrisico's.
 - **Tokens als HTTP headers**: access tokens worden als HTTP `Authorization` header (Bearer scheme) meegegeven. Transport via query parameters is verboden (MUST NOT). Form-encoded body parameters (RFC 6750 Section 2.2) zijn wel toegestaan.
 
