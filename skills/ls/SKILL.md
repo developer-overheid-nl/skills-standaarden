@@ -37,9 +37,9 @@ Niet alle standaarden hebben al een vastgestelde versie. De domeinen ADR, Digiko
 
 Niet alle Logius-standaarden staan op de 'pas-toe-of-leg-uit'-lijst van het Forum Standaardisatie:
 
-- **Verplicht**: [API Design Rules](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules), [Digikoppeling](https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling), [Authenticatie-standaarden (OIDC+SAML)](https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden), [OAuth-NL-profiel v1.0](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20), [CloudEvents v1.0](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents), [NLCIUS](https://www.forumstandaardisatie.nl/open-standaarden/nlcius)
+- **Verplicht**: [API Design Rules](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules), [Digikoppeling](https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling) (inclusief FSC sinds 5 november 2025), [Authenticatie-standaarden (OIDC+SAML)](https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden), [OAuth-NL-profiel v1.0](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20), [CloudEvents v1.0](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents), [NLCIUS](https://www.forumstandaardisatie.nl/open-standaarden/nlcius)
 - **Aanbevolen**: Peppol BIS
-- **Niet op de lijst**: BOMOS (raamwerk, geen interoperabiliteitsstandaard), FSC (onderdeel Digikoppeling), Logboek (in ontwikkeling), Digimelding/Terugmelding, e-procurement
+- **Niet op de lijst**: BOMOS (raamwerk, geen interoperabiliteitsstandaard), Logboek (in ontwikkeling), Digimelding/Terugmelding, e-procurement
 
 > OAuth-NL-profiel v1.1 is vastgesteld door Logius (DEF), maar op het Forum Standaardisatie nog ["in procedure"](https://www.forumstandaardisatie.nl/intakeadvies-nl-gov-assurance-profile-oauth-20-versie-11) (intake goedgekeurd 24-09-2025); v1.0 is de verplichte versie.
 
