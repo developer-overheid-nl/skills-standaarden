@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD052 MD034 MD013 -->
+<!-- markdownlint-disable MD052 MD034 MD013 MD038 -->
 # Audit ls-dk — 2026-05-17
 
 > Automatisch gegenereerd door audit-tooling. Niet handmatig bewerken; wijzig SKILL.md / reference.md en regenereer.
@@ -7,2406 +7,1489 @@
 
 | Status | Aantal | % |
 |--------|--------|---|
-| UNSUPPORTED_ASSERTION | 9 | 18% |
-| CONTRADICTED | 0 | 0% |
-| PARTIALLY_GROUNDED | 11 | 22% |
-| UNGROUNDED | 5 | 10% |
+| UNSUPPORTED_ASSERTION | 7 | 13% |
+| CONTRADICTED | 3 | 5% |
+| PARTIALLY_GROUNDED | 10 | 18% |
+| UNGROUNDED | 1 | 2% |
 | NO_SOURCE | 0 | 0% |
 | UNVERIFIABLE | 0 | 0% |
-| KNOWN_DISCREPANCY | 3 | 6% |
-| GROUNDED | 22 | 44% |
+| KNOWN_DISCREPANCY | 2 | 4% |
+| GROUNDED | 32 | 58% |
 
-*Geverifieerd met sonnet, 44 calls, $5.0213.*
+*Geverifieerd met sonnet, 27 calls, $3.6773.*
 
-## UNSUPPORTED_ASSERTION — stellige bewering zonder enige bronsteun (mogelijke hallucinatie) (9)
+## UNSUPPORTED_ASSERTION — stellige bewering zonder enige bronsteun (mogelijke hallucinatie) (7)
 
-### `ls-dk-0003` — SKILL.md:41 *(§ Repositories)*
+### `ls-dk-0006` — SKILL.md:43 *(§ Repositories)*
 
-> Digikoppeling-Koppelvlakstandaard-REST-API is vastgesteld als v4.0.0.
+> Digikoppeling-Koppelvlakstandaard-WUS is vastgesteld als v3.8.1.
 
-**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling REST-API koppelvlakstandaard
+**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS koppelvlakstandaard
 
-<details><summary>27x NOT_FOUND (klap uit)</summary>
+<details><summary>8x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
+  - *De bron verwijst naar de Digikoppeling Koppelvlakstandaard WUS maar noemt geen versienummer v3.8.1.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding. Geen inhoud over versienummers van de REST-API koppelvlakstandaard.*
+  - *De bron behandelt de REST-API koppelvlakstandaard; het versienummer van de WUS-standaard wordt niet vermeld.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst gaat over ebMS2, niet over de REST-API koppelvlakstandaard. Versienummer v4.0.0 wordt niet vermeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Versie-informatie over de REST-API koppelvlakstandaard staat niet in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron noemt REST-API als voorbeeld van een koppelvlakspecificatie maar geeft geen versienummers van specifieke standaarden.*
+  - *De bron vermeldt geen versienummer voor de WUS koppelvlakstandaard.*
 - **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
+  - *De brontekst bevat geen versie-informatie over de WUS koppelvlakstandaard.*
 - **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
-  - *De bron vermeldt de REST-API koppelvlakstandaard als bestaand document maar noemt geen versienummer.*
+  - *De bron vermeldt de WUS koppelvlakstandaard als gerelateerd document maar geeft geen versienummer.*
 - **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De brontekst toont alleen de GitHub repository-pagina met releases (de latest is '1.1.1 release' van Dec 9, 2022) en vermeldt geen versienummer v4.0.0. De getoonde releaseinfo suggereert eerder v1.1.1 als laatste release, maar de brontekst bevat geen volledige releaselijst. Geen vermelding van v4.0.0.*
+  - *De bron betreft uitsluitend de REST-API koppelvlakstandaard repository. Informatie over de WUS koppelvlakstandaard staat niet in deze bron.*
 - **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron is de werkversie van de REST-API koppelvlakstandaard maar noemt geen versienummer v4.0.0. De status is 'werkversie 25 maart 2026', geen vastgestelde versie.*
+  - *De brontekst bevat geen informatie over versienummers van de WUS koppelvlakstandaard.*
 - **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst betreft uitsluitend de ebMS2 repository. Er is geen informatie over de REST-API koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De bron vermeldt in de documentbeheer-tabel versie 3.3.2 als meest recente ebMS2-versie en noemt het REST-API koppelvlak alleen terloops (versie 3.3.1: 'Vermelding REST-API koppelvlak'), maar geeft geen versienummer v4.0.0 voor de REST-API standaard.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst gaat over de WUS koppelvlakstandaard repository. Geen informatie over de REST-API koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst vermeldt het bestaan van een REST-API koppelvlak maar geeft geen versienummer. Er staat alleen: 'Naast de Koppelvlakstandaard WUS zijn er ook de ebMS2- en REST-API-standaarden.' Geen versie-informatie aanwezig.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron gaat over Digikoppeling-Koppelvlakstandaard-GB (Grote Berichten), niet over de REST-API koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron vermeldt geen versienummer van de REST-API koppelvlakstandaard. Er is slechts een noot dat Digikoppeling ook een REST API profiel kent.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron gaat over de beveiligingsstandaarden repository. Geen informatie over de REST-API koppelvlakstandaard of diens versienummer.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron behandelt beveiligingsstandaarden en verwijst niet naar de REST-API koppelvlakstandaard of enig versienummer daarvan.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De brontekst gaat over Digikoppeling-Identificatie-en-Authenticatie, niet over de REST-API koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De bron vermeldt de REST-API koppelvlakstandaard slechts zijdelings ('Vermelding REST-API koppelvlak' in documentbeheer), maar geeft geen versienummer v4.0.0.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel)
-  - *De brontekst bevat geen informatie over de REST-API koppelvlakstandaard of versienummers.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel)
-  - *De bron gaat over het OIN-Stelsel. De Digikoppeling-Koppelvlakstandaard-REST-API wordt niet behandeld.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel)
-  - *De brontekst bevat geen informatie over versienummers van de REST-API koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel)
-  - *De REST API koppelvlakstandaard wordt wel genoemd als voorbeeld van een toevoeging aan Digikoppeling, maar geen versienummer wordt vermeld in deze bron.*
+  - *De bron gaat over ebMS2, niet over de WUS koppelvlakstandaard.*
 </details>
 
-### `ls-dk-0007` — SKILL.md:45 *(§ Repositories)*
-
-> Digikoppeling-Beveiligingsstandaarden-en-voorschriften is vastgesteld als v3.0.0.
-
-**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling beveiligingsstandaarden
-
-<details><summary>27x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst verwijst naar Digikoppeling Beveiligingsstandaarden en voorschriften als referentie maar noemt geen versienummer v3.0.0.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Versie-informatie over Digikoppeling-Beveiligingsstandaarden-en-voorschriften staat niet in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Beveiligingsstandaarden wordt kort aangehaald als toegevoegd document maar zonder versienummer v3.0.0.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
-  - *De bron vermeldt de Beveiligingsstandaarden en voorschriften als bestaand document maar noemt geen versienummer.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron betreft de REST-API repository; er is geen informatie over Digikoppeling-Beveiligingsstandaarden-en-voorschriften of versienummers daarvan.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron verwijst naar Digikoppeling Beveiligingsstandaarden en voorschriften als referentie [DK-beveiliging] maar noemt geen versienummer v3.0.0.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst betreft uitsluitend de ebMS2 repository. Er is geen informatie over Digikoppeling-Beveiligingsstandaarden-en-voorschriften.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De bron verwijst naar 'Digikoppeling Beveiligingsstandaarden en voorschriften' als normatieve referentie maar noemt geen versienummer v3.0.0.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst gaat over de WUS koppelvlakstandaard repository. Geen informatie over Digikoppeling-Beveiligingsstandaarden-en-voorschriften.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst verwijst naar 'Digikoppeling Beveiligingsstandaarden en voorschriften' als normatieve referentie maar geeft geen versienummer van dat document.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron gaat over Digikoppeling-Koppelvlakstandaard-GB (Grote Berichten), niet over Digikoppeling-Beveiligingsstandaarden-en-voorschriften.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron vermeldt Digikoppeling-Beveiligingsstandaarden-en-voorschriften alleen als normatieve referentie [DK-beveiliging] zonder versienummer.*
-- **NOT_FOUND** (medium) — [https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron is de GitHub-repositorypagina voor Digikoppeling-Beveiligingsstandaarden-en-voorschriften. Er worden 5 releases vermeld (meest recent: '1.4 (rerelease)' van jan 2022), maar v3.0.0 wordt nergens in de aangeleverde brontekst vermeld. De versie-claim kan niet worden bevestigd noch ontkracht op basis van deze tekst.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron is het beveiligingsstandaarden-document zelf. Het documentbeheer toont versies 1.0 t/m 2.0.1; versie 3.0.0 wordt nergens vermeld. De meest recente versie in het documentbeheer is 2.0.1 (24/06/2025).*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De brontekst gaat over Digikoppeling-Identificatie-en-Authenticatie, niet over Beveiligingsstandaarden-en-voorschriften.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De bron bevat geen informatie over Digikoppeling-Beveiligingsstandaarden-en-voorschriften of versienummer v3.0.0.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel)
-  - *De brontekst bevat geen informatie over Digikoppeling-Beveiligingsstandaarden-en-voorschriften of versienummers.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel)
-  - *De bron gaat over het OIN-Stelsel. De Digikoppeling-Beveiligingsstandaarden-en-voorschriften wordt niet behandeld.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel)
-  - *De brontekst bevat geen informatie over versienummers van Digikoppeling-Beveiligingsstandaarden-en-voorschriften.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel)
-  - *Digikoppeling Beveiligingsstandaarden en voorschriften wordt in de documentbeheer-tabel vermeld als toegevoegd in versie 1.4 (april 2016) van het beheermodel, maar een versienummer van het document zelf (v3.0.0) staat niet in de bron.*
-</details>
-
-### `ls-dk-0009` — SKILL.md:47 *(§ Repositories)*
-
-> OIN-Stelsel is vastgesteld als v3.0.0.
-
-**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** OIN-Stelsel
-
-<details><summary>27x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *OIN-Stelsel als document met versienummer v3.0.0 wordt niet vermeld. OIN wordt wel beschreven als identificatiemechanisme maar zonder verwijzing naar een stelsel-document.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Versie-informatie over het OIN-Stelsel staat niet in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *OIN-Stelsel wordt vermeld in de impactmatrix maar zonder versienummer v3.0.0.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
-  - *Het OIN-Stelsel als afzonderlijk document met versienummer wordt in de bron niet vermeld.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron betreft de REST-API repository; er is geen informatie over het OIN-Stelsel of versienummers daarvan.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *OIN-Stelsel wordt niet als document of versie genoemd in de bron. Het OIN wordt functioneel beschreven maar zonder verwijzing naar een OIN-Stelsel standaard met versienummer.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst betreft uitsluitend de ebMS2 repository. Er is geen informatie over het OIN-Stelsel.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *OIN-Stelsel als apart document met versienummer v3.0.0 wordt niet vermeld. De bron noemt OIN (Organisatie Identificatie Nummer) functioneel maar niet als versioned standaard.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst gaat over de WUS koppelvlakstandaard repository. Geen informatie over het OIN-Stelsel.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst bevat geen informatie over het OIN-Stelsel of een versienummer daarvan. OIN wordt wel kort genoemd in de context van adressering maar zonder verwijzing naar een vastgesteld OIN-Stelsel document.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron gaat over Digikoppeling-Koppelvlakstandaard-GB (Grote Berichten), niet over het OIN-Stelsel.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB)
-  - *OIN-Stelsel wordt niet als document met versienummer vermeld in de bron. OIN wordt wel gebruikt als concept (authenticatie op basis van OIN), maar zonder verwijzing naar een OIN-Stelsel document.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron gaat over de beveiligingsstandaarden repository. Geen informatie over het OIN-Stelsel of diens versienummer.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *Het OIN-Stelsel wordt niet als zelfstandig document of versie vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De brontekst gaat over Digikoppeling-Identificatie-en-Authenticatie, niet over het OIN-Stelsel.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De bron verwijst naar het OIN-stelsel en OIN-beleid, maar geeft geen versienummer v3.0.0 voor het OIN-Stelsel document.*
-- **NOT_FOUND** (medium) — [https://github.com/logius-standaarden/OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel)
-  - *De brontekst is de GitHub-pagina van de OIN-Stelsel repository zelf, maar bevat geen versienummer (zoals v3.0.0). De gepubliceerde URL wordt wel vermeld (gitdocumentatie.logius.nl/publicatie/dk/oin/), maar versie-metadata staat niet in de repository-overzichtspagina.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel)
-  - *De bron is het OIN-Stelsel document zelf (werkversie 13 maart 2026), maar een vastgesteld versienummer 'v3.0.0' wordt nergens in de brontekst vermeld. De status is expliciet 'werkversie', niet een vastgestelde versie.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel)
-  - *De brontekst bevat geen informatie over versienummers van het OIN-Stelsel.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel)
-  - *OIN en het OIN-stelsel worden meerdere keren vermeld in de impactmatrix en elders, maar een vastgesteld versienummer zoals v3.0.0 voor het OIN-Stelsel document staat niet in de bron.*
-</details>
-
-### `ls-dk-0023` — reference.md:39 *(§ REST-API)*
-
-> De REST-API koppelvlakstandaard is gebaseerd op de API Design Rules (ADR) van het Kennisplatform API's, vastgesteld door het Forum Standaardisatie.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling REST-API koppelvlakstandaard
-
-<details><summary>17x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst gaat over ebMS2; API Design Rules en het Kennisplatform API's worden niet vermeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De relatie tussen de REST-API koppelvlakstandaard en de API Design Rules van het Kennisplatform wordt niet behandeld in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De relatie tussen REST-API koppelvlakstandaard en ADR van het Kennisplatform API's wordt niet beschreven in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *API Design Rules en het Kennisplatform API's worden niet genoemd in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *API Design Rules en het Kennisplatform API's worden niet vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt geen REST-API koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *REST-API koppelvlakstandaard en API Design Rules worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *API Design Rules en het Kennisplatform API's worden niet vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *De bron noemt de REST API koppelvlakstandaard maar verwijst niet naar de API Design Rules (ADR) van het Kennisplatform API's als grondslag.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0024` — reference.md:40 *(§ REST-API)*
-
-> Het service contract voor REST-API is een OpenAPI Specification (OAS) 3.x.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling REST-API koppelvlakstandaard
-
-<details><summary>17x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *OpenAPI Specification wordt niet vermeld in de brontekst; de bron gaat over ebMS2.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *OpenAPI Specification als service contract voor REST-API wordt niet behandeld in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *OpenAPI Specification als service contract voor REST-API wordt niet vermeld in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *OpenAPI Specification als service contract voor REST-API wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *OpenAPI Specification wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt geen REST-API of OAS.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *OpenAPI Specification voor REST-API wordt niet behandeld in deze WUS Best Practices bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *OpenAPI Specification als service contract voor REST-API wordt niet vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *OpenAPI Specification (OAS) wordt niet genoemd in de brontekst.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0026` — reference.md:58 *(§ WUS (SOAP))*
-
-> WUS profiel 2W-be-S gebruikt WS-Security en XML Digital Signature (XMLDSIG) voor digitale ondertekening en garandeert integriteit en onweerlegbaarheid.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS 2W-be-S profiel
-
-<details><summary>17x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *WUS-profielen worden niet behandeld in de brontekst; de bron gaat over ebMS2.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *WUS profiel 2W-be-S en WS-Security/XMLDSIG worden niet behandeld in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *WS-Security en XMLDSIG voor het 2W-be-S profiel worden niet besproken in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *WUS profiel 2W-be-S en WS-Security/XMLDSIG worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *WUS profiel 2W-be-S en WS-Security/XMLDSIG worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt geen WUS profielen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Het WUS profiel 2W-be-S en WS-Security/XMLDSIG voor ondertekening worden niet specifiek behandeld in deze Best Practices bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *WS-Security, XMLDSIG en het 2W-be-S profiel worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *Het specifieke WUS profiel '2W-be-S' en WS-Security / XMLDSIG worden niet bij naam behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0027` — reference.md:59 *(§ WUS (SOAP))*
-
-> WUS profiel 2W-be-SE gebruikt WS-Security en XML Encryption voor ondertekening en versleuteling en garandeert integriteit, onweerlegbaarheid en vertrouwelijkheid.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS 2W-be-SE profiel
-
-<details><summary>15x NOT_FOUND + 2x OUT_OF_SCOPE (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *Deze bron behandelt de ebMS2 koppelvlakstandaard, niet de WUS koppelvlakstandaard. Claims over WUS profielen zijn buiten scope van deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron beschrijft de Grote Berichten koppelvlakstandaard, niet de WUS koppelvlakstandaard. WUS-profielen (2W-be-SE, WS-Security, XML Encryption) worden niet behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron is het Digikoppeling Beheermodel en bevat geen technische specificaties van WUS-profielen zoals 2W-be-SE, WS-Security of XML Encryption.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *WUS profiel 2W-be-SE en XML Encryption worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *WUS profiel 2W-be-SE en XML Encryption worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt geen WUS profielen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Het WUS profiel 2W-be-SE en XML Encryption worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *WS-Security, XML Encryption en het 2W-be-SE profiel worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *Het specifieke WUS profiel '2W-be-SE' en XML Encryption worden niet bij naam behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0036` — reference.md:116 *(§ Grote Berichten)*
-
-> Er is geen bovengrens gedefinieerd voor de bestandsgrootte bij Grote Berichten.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling Grote Berichten
-
-<details><summary>17x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *Bovengrens voor bestandsgrootte bij Grote Berichten wordt niet behandeld in deze bron. Er is wel een opmerking over payload-groottes bij ebMS in sectie 6.5, maar die gaat niet over Grote Berichten als apart koppelvlak.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron definieert een ondergrens van 20 MiB (VW001) maar vermeldt nergens expliciet dat er geen bovengrens is voor bestandsgrootte.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Geen informatie over een bovengrens (of afwezigheid daarvan) voor bestandsgrootte bij Grote Berichten.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *De bron gaat uitsluitend over PKIoverheid-certificaten en hun gebruik binnen Digikoppeling. Grote Berichten worden nergens behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Bovengrens voor bestandsgrootte bij Grote Berichten wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *Dit document gaat over ebMS2 best practices, niet over Grote Berichten. Geen vermelding van bestandsgroottes of Grote Berichten.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Bovengrens bestandsgrootte bij Grote Berichten wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *De brontekst beschrijft wat grote berichten zijn en hoe ze werken, maar noemt nergens een bovengrens (of het ontbreken daarvan) voor bestandsgrootte.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *De bron noemt alleen de ondergrens van 20 MiB voor grote berichten. Er wordt geen uitspraak gedaan over een bovengrens.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0049` — reference.md:157 *(§ Berichtniveau-beveiliging)*
-
-> Berichtniveau-versleuteling gebruikt AES-128 of AES-256 voor de payload en asymmetrische RSA voor de sessiesleutel.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling berichtniveau-beveiliging encryptie
-
-<details><summary>16x NOT_FOUND + 1x OUT_OF_SCOPE (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De bron vermeldt XML-versleuteling (xmlenc-core) voor End-to-End Security, maar specificeert geen algoritmen zoals AES-128/AES-256 of RSA voor sessiesleutels. Die details staan in het beveiligingsvoorschriftendocument waarnaar verwezen wordt.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron beschrijft bestandsoverdracht via HTTP/TLS, niet berichtniveau-versleuteling met AES of RSA. Dit valt buiten het scope van de Grote Berichten standaard.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *AES-128/256 en RSA voor berichtniveau-versleuteling worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Berichtniveau-versleuteling met AES-128/AES-256 of RSA voor sessiesleutels wordt niet beschreven in deze bron. De bron vermeldt asymmetrische encryptie in algemene termen maar niet de specifieke algoritmen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *AES-128/256 en RSA voor berichtniveau-versleuteling worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *AES of RSA voor payload-encryptie wordt niet vermeld. In 3.4.15 staat expliciet: 'Geen gebruik van Signing of (payload) Encryption. (Alleen op HTTP nivo wordt informatie beveiligd)' — dit is eerder een indicatie dat payload-encryptie buiten scope valt voor de beschreven profielen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Berichtniveau-versleuteling met AES en RSA wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *AES-128, AES-256 of RSA voor sessiesleutels worden niet vermeld in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *AES-128, AES-256 en RSA voor sessiesleutels worden niet vermeld. De bron noemt het versleutelen van berichten als functionaliteit maar zonder algoritmische details.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-## PARTIALLY_GROUNDED — bron ondersteunt deel van de claim (11)
-
-### `ls-dk-0012` — SKILL.md:83 *(§ Profielkeuze)*
-
-> Bij berichten via een niet-vertrouwde intermediair moet de signed (-S) of signed+encrypted (-SE/-E) variant worden gekozen.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling profielkeuze beveiliging
-
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > End-to-End Security: op basis van Reliable Messaging of Best Effort wordt een bericht beveiligd tussen de uiteindelijke Consumer en de uiteindelijke Provider, ook wanneer er zich intermediairs bevinden in het pad tussen die twee.
-  - *De bron beschrijft dat End-to-End Security (signed/encrypted variant) wordt gebruikt wanneer er intermediairs zijn, wat de claim ondersteunt voor het ebMS2 domein. De claim stelt dit echter als algemene Digikoppeling-eis; de bron beperkt zich tot ebMS2-profielen.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > Het versleutelen van berichtinhoud (berichtenniveau versleuteling) kan worden toegepast indien de intermediair niet vertrouwd wordt.
-  - *De bron bevestigt dat encryptie kan worden toegepast bij niet-vertrouwde intermediairs, maar gebruikt 'kan' (MAY) in plaats van een verplichting (MUST). De claim stelt dat signed/encrypted variant 'moet' worden gekozen; de bron maakt dit optioneel.*
-<details><summary>15x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Profielkeuze op basis van vertrouwde/niet-vertrouwde intermediairs wordt niet behandeld in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron gaat niet in op specifieke profielkeuzes rondom signed/encrypted varianten bij niet-vertrouwde intermediairs.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Profielkeuze bij niet-vertrouwde intermediairs wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt geen profielkeuze op basis van vertrouwde/niet-vertrouwde intermediairs.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Profielkeuze bij niet-vertrouwde intermediairs wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *De bron behandelt geen profielkeuze voor signed of encrypted varianten bij niet-vertrouwde intermediairs.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *De bron beschrijft dat berichtinhoud kan worden versleuteld bij niet-vertrouwde intermediairs, maar specifieke profielkeuze-vereisten voor signed/encrypted varianten worden niet uitgewerkt in dit document.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0013` — SKILL.md:91 *(§ Profielkenmerken Matrix)*
-
-> REST-API profiel is synchroon en ondersteunt geen berichtniveau signing of encryptie; TLS wordt gebruikt voor transportbeveiliging.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling REST-API profiel
-
-- **PARTIALLY_SUPPORTED** (low) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Noot : REST API Zie het [ Digikoppeling REST API profiel ] voor de ondersteuning van signing en encryptie voor REST API's
-  - *De bron verwijst naar het REST API profiel voor signing en encryptie, maar bevestigt noch ontkent dat het profiel synchroon is of dat TLS de enige transportbeveiliging is. Dat signing/encryptie apart beschreven staan voor REST API suggereert dat het niet inherent aanwezig is, maar de claim als geheel is niet volledig bevestigd.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Een gevolg van het REST principe is wel dat het koppelvlak in principe vooral geschikt is voor bevragingen. [...] Een belangrijk principe van REST is dat de bevraging stateless is.
-  - *De bron bevestigt het synchrone karakter (REST geschikt voor bevragingen). Berichtniveau signing/encryptie en TLS als transportbeveiliging worden niet expliciet voor REST API behandeld in deze bron.*
-<details><summary>15x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst gaat over ebMS2, niet over het REST-API profiel. Synchroniciteit en afwezigheid van berichtniveau signing bij REST worden niet behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Eigenschappen van het REST-API profiel (synchroon, signing, encryptie) worden niet behandeld in deze Grote Berichten spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron beschrijft het beheermodel, niet de technische kenmerken van het REST-API profiel.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *De bron bespreekt REST API alleen in de context van OIN-gebruik in querystrings; geen uitspraken over synchroniciteit of het ontbreken van berichtniveau signing/encryptie.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt geen REST-API profiel.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *REST-API profiel wordt niet behandeld in deze WUS Best Practices bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *De bron beschrijft REST-API als koppelvlak voor Grote Berichten maar gaat niet in op synchroniciteit, berichtniveau signing/encryptie of TLS als transportbeveiliging in de context van het REST-API profiel als zodanig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0015` — SKILL.md:105 *(§ Profielkenmerken Matrix)*
-
-> Grote Berichten gebruikt TLS voor transport; payload-encryptie kan aanvullend worden toegepast maar is niet voorgeschreven in het profiel.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MAY  ·  **Scope:** Digikoppeling Grote Berichten
-
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > GB006 PUSH / PULL Het HTTP transport MOET beveiligd zijn met TLS. [...] GB007 PUSH / PULL De minimaal ondersteunde TLS encryptie algoritmen en sleutellengtes worden beschreven in het [Digikoppeling Beveiligingsdocument].
-  - *TLS voor transport wordt bevestigd. Payload-encryptie als aanvullende optie wordt niet expliciet behandeld in de bron; de bron verwijst voor beveiligingsdetails naar het Digikoppeling Beveiligingsdocument.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > Ten behoeve van Digikoppeling grote berichten dient gebruik gemaakt te worden van OIN gerelateerde certificaten. Alleen verbindingen waarbij zowel de client als de server over een geldig certificaat beschikken zijn toegestaan (TLS).
-  - *De bron bevestigt TLS als vereiste voor transport. Over aanvullende payload-encryptie zegt de bron niets, en de formulering 'niet voorgeschreven in het profiel' is niet bevestigd of ontkracht.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Voor ophalen van het grote bestand maakt de standaard gebruik van HTTPS-downloads. Daardoor zijn reliability en security gelijkwaardig aan WUS en ebMS2.
-  - *HTTPS (TLS) voor transport wordt bevestigd. Payload-encryptie als aanvullende optie wordt niet expliciet behandeld in deze bron.*
-<details><summary>14x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst behandelt Grote Berichten niet. TLS voor transport wordt wel beschreven voor ebMS2 maar niet in de context van Grote Berichten.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Technische details over transportbeveiliging en payload-encryptie voor Grote Berichten ontbreken in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Grote Berichten en payload-encryptie worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Grote Berichten en payload-encryptie worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt het Grote Berichten koppelvlak niet.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Grote Berichten wordt niet behandeld in deze WUS Best Practices bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0018` — SKILL.md:365 *(§ Retry Strategie (ebMS2 Reliable Messaging))*
-
-> Bij het profiel osb-rm geldt at-most-once delivery: berichten worden nooit dubbel afgeleverd.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST_NOT  ·  **Scope:** Digikoppeling ebMS2 osb-rm reliable messaging
-
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Reliable Messaging profile 2, Once-And-Only-Once Reliable Messaging at the End-To-End level only based upon end-to-end retransmission. [...] The ToParty MSH must also filter any duplicate messages based on ebXML MessageId.
-  - *De bron beschrijft 'Once-And-Only-Once' delivery en duplicate eliminatie, wat at-most-once delivery impliceert. De claim stelt expliciet 'berichten worden nooit dubbel afgeleverd', maar de standaard garandeert dit via duplicate eliminatie op MessageId-niveau, niet als absolute garantie. De formulering 'nooit dubbel afgeleverd' is sterker dan wat de bron letterlijk stelt.*
-<details><summary>16x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *At-most-once delivery bij osb-rm wordt niet behandeld in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *At-most-once delivery semantics worden niet beschreven in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *At-most-once delivery en osb-rm worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *At-most-once delivery wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron beschrijft reliable messaging en duplicate-eliminatie, maar de term 'at-most-once delivery' wordt niet gebruikt. De ebMS2 once-and-only-once semantiek wijst eerder op exactly-once dan at-most-once. De specifieke claim over at-most-once wordt niet gestaafd of tegengesproken.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *ebMS2 osb-rm at-most-once delivery wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *At-most-once delivery bij osb-rm wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *Het profiel 'osb-rm' en at-most-once delivery worden niet specifiek behandeld in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0025` — reference.md:51 *(§ WUS (SOAP))*
-
-> WUS staat voor WSDL, UDDI en SOAP. Het service contract is een WSDL en het berichtformaat is SOAP XML.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS koppelvlakstandaard
-
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  > In WSDL 1.1 [...] is een Authoring Style advies opgenomen... De meest gangbare zijn... [en] het berichtformaat is SOAP... messaging (SOAP)
-  - *De bron bevestigt dat WUS gebruik maakt van WSDL en SOAP, maar de expansie 'WUS staat voor WSDL, UDDI en SOAP' als acroniem staat niet expliciet in de bron. UDDI wordt nergens genoemd. De claim over WSDL als service contract en SOAP als berichtformaat wordt wel ondersteund.*
-- **PARTIALLY_SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > De naam WUS staat voor WSDL, UDDI en SOAP, drie belangrijke deelstandaarden. [...] Een WSDL is een formeel xml-document om de gebruikte functionele en technische eigenschappen van de berichtuitwisseling via WUS vast te leggen.
-  - *WUS staat voor WSDL, UDDI en SOAP wordt bevestigd, evenals WSDL als servicecontract. SOAP XML als berichtformaat wordt impliciet bevestigd via de WUS-standaard maar niet expliciet als 'SOAP XML berichtformaat' omschreven.*
-<details><summary>15x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *WUS (WSDL, UDDI, SOAP) wordt niet behandeld in de brontekst; de bron gaat over ebMS2.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *WUS (WSDL, UDDI, SOAP) als koppelvlak wordt niet inhoudelijk behandeld in deze Grote Berichten spec, enkel zijdelings vermeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De afkorting WUS en de technische details (WSDL, UDDI, SOAP) worden niet uitgelegd in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *WUS (WSDL, UDDI, SOAP) en WSDL als service contract worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *WUS, WSDL, UDDI, SOAP als afkortingen of definities worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt geen WUS koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *De afkorting WUS en WSDL/UDDI/SOAP-definitie worden niet uitgelegd in deze bron. WUS wordt wel vermeld als koppelvlak maar niet nader gespecificeerd.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0028` — reference.md:60 *(§ WUS (SOAP))*
-
-> WUS gebruikt de standaarden WS-Security 1.1, WS-Addressing, SOAP 1.1 (document-literal binding) en MTOM voor binaire bijlagen.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS koppelvlakstandaard
-
-- **PARTIALLY_SUPPORTED** (low) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > WUS: in de querystring van de endpointuri in de SOAP ws-addressing header.
-  - *De bron noemt WS-addressing en SOAP in de context van WUS, maar behandelt niet WS-Security 1.1, SOAP 1.1 document-literal binding of MTOM. Slechts een klein deel van de claim wordt bevestigd.*
-<details><summary>14x NOT_FOUND + 2x OUT_OF_SCOPE (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *Deze bron behandelt de ebMS2 koppelvlakstandaard, niet de WUS koppelvlakstandaard. Claims over WUS-specifieke standaarden zijn buiten scope.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron beschrijft de Grote Berichten koppelvlakstandaard, niet de WUS koppelvlakstandaard. WS-Security, WS-Addressing, SOAP 1.1 en MTOM worden niet behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron bevat geen technische details over WUS-standaarden (WS-Security 1.1, WS-Addressing, SOAP 1.1, MTOM). Het beheermodel verwijst alleen globaal naar WUS als open standaard.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *WS-Security 1.1, WS-Addressing, SOAP 1.1 en MTOM als WUS-standaarden worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt geen WUS standaarden.*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *De bron vermeldt WS-Addressing en SOAP, maar noemt niet expliciet WS-Security 1.1, SOAP 1.1 document-literal binding als combinatie, en MTOM. De combinatie als volledige claim is niet te bevestigen vanuit deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *WS-Security 1.1, WS-Addressing, SOAP 1.1 en MTOM worden niet vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *WS-Security 1.1, WS-Addressing, SOAP 1.1 document-literal binding en MTOM worden niet specifiek vermeld in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0030` — reference.md:71 *(§ ebMS2)*
-
-> ebMS2 berichtformaat is SOAP 1.1 met ebMS2 headers en payload als MIME-attachment.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 koppelvlakstandaard
-
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Dit document specificeert de Koppelvlakstandaard ebMS2 voor berichtenuitwisseling over Digikoppeling (voorheen OverheidsServiceBus) als een toepassing van de EBXML-MSG standaard, de ebXML Message Service Specification versie 2.0 [EBXML-MSG].
-  - *De bron bevestigt het gebruik van SOAP (via EBXML-MSG) en MIME-attachments (Manifest/payload containers). SOAP 1.1 wordt indirect bevestigd via de verwijzing naar [SOAP] (Simple Object Access Protocol 1.1). De combinatie van SOAP met ebMS2 headers en MIME-attachments is consistent met de bron, maar niet als één expliciete definitie beschreven.*
-<details><summary>15x NOT_FOUND + 1x OUT_OF_SCOPE (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron beschrijft de Grote Berichten koppelvlakstandaard, niet ebMS2. ebMS2 berichtformaat wordt niet behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Geen technische beschrijving van het ebMS2 berichtformaat (SOAP 1.1, ebMS2 headers, MIME-attachment) in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *ebMS2 berichtformaat (SOAP 1.1 met ebMS2 headers en MIME-attachment) wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *SOAP 1.1 met ebMS2 headers en MIME-attachment worden niet behandeld in deze bron.*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron beschrijft CPA gebruik en kenmerken maar specificeert het berichtformaat (SOAP 1.1 met ebMS2 headers en MIME-attachment) niet expliciet.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *ebMS2 berichtformaat wordt niet behandeld in deze WUS Best Practices bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *ebMS2 berichtformaat (SOAP 1.1 met ebMS2 headers en MIME-attachment) wordt niet beschreven in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *De bron beschrijft ebMS2 en vermeldt dat het op web-service standaarden is gebaseerd, maar noemt SOAP 1.1 met ebMS2 headers en MIME-attachment niet expliciet.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0034` — reference.md:94 *(§ Grote Berichten)*
-
-> Grote Berichten ondersteunt HTTP 1.1 met BYTE-RANGE (RFC 7233) voor hervatbare downloads.
-
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling Grote Berichten
-
-- **PARTIALLY_SUPPORTED** (medium) — [https://www.rfc-editor.org/rfc/rfc7233.txt](https://www.rfc-editor.org/rfc/rfc7233.txt)
-  > This document defines HTTP/1.1 range requests, partial responses, and the multipart/byteranges media type. [...] HTTP clients often encounter interrupted data transfers as a result of canceled requests or dropped connections. When a client has stored a partial representation, it is desirable to request the remainder of that representation in a subsequent request rather than transfer the entire ...
-  - *De bron bevestigt dat RFC 7233 de BYTE-RANGE mechanismen voor HTTP/1.1 definieert, inclusief hervatbare downloads. Echter, de bron maakt geen enkele vermelding van 'Digikoppeling' of 'Grote Berichten' — dat Digikoppeling Grote Berichten specifiek HTTP 1.1 met BYTE-RANGE (RFC 7233) ondersteunt, is niet te verifiëren uit deze brontekst. De bron is de RFC zelf, niet de Digikoppeling-specificatie. Het technische mechanisme wordt bevestigd, maar de koppeling aan Digikoppeling Grote Berichten ontbreekt.*
-
-### `ls-dk-0041` — reference.md:131 *(§ TLS-vereisten)*
-
-> TLS004: Cipher suites moeten voldoen aan de NCSC-richtlijnen voor TLS. Zwakke cipher suites zijn niet toegestaan.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling beveiligingsstandaard TLS004
-
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > GB006 PUSH / PULL Het HTTP transport MOET beveiligd zijn met TLS. Aanbieder en afnemer ondersteunen de minimaal ondersteunde TLS encryptie algoritmen en sleutellengtes zoals beschreven in het [Digikoppeling Beveiligingsdocument]
-  - *De bron bevestigt dat er eisen zijn aan TLS-encryptie-algoritmen en sleutellengtes, maar verwijst voor de details naar het Digikoppeling Beveiligingsdocument. De specifieke eis over NCSC-richtlijnen en verbod op zwakke cipher suites staat niet in deze bron.*
-<details><summary>16x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De bron verwijst voor cipher suites naar 'Digikoppeling Beveiligingsstandaarden en voorschriften' zonder zelf specifieke cipher suites of NCSC-richtlijnen te noemen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *TLS004 en NCSC-richtlijnen voor cipher suites worden niet beschreven in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *NCSC-richtlijnen voor cipher suites worden niet vermeld in deze bron. De bron verwijst voor beveiligingseisen naar een apart document.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *NCSC-richtlijnen voor cipher suites worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *Cipher suites of NCSC-richtlijnen worden niet vermeld in dit document. Er wordt verwezen naar het Digikoppeling Beveiligingsdocument voor actuele protocolvereisten.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Cipher suites en NCSC-richtlijnen (TLS004) worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *NCSC-richtlijnen voor cipher suites worden niet vermeld in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *Cipher suites en NCSC-richtlijnen worden niet vermeld in deze bron. De bron verwijst voor beveiligingsdetails naar het apart document 'Digikoppeling Beveiligingsstandaarden en voorschriften'.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0042` — reference.md:132 *(§ TLS-vereisten)*
-
-> TLS005: Certificaten moeten geldig zijn en de volledige keten tot aan de PKIoverheid-root moet verifieerbaar zijn. Revocation checking (CRL/OCSP) is verplicht.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling beveiligingsstandaard TLS005
-
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > The use of certificate revocation lists (CRL) from the trusted CAs is required. [...] What certificate verification policies and procedures must be followed? PKI overheid procedures are described in Certificate Policy/Programme of Requirements PKIoverheid. The use of certificate revocation lists (CRL) from the trusted CA's is required.
-  - *De bron bevestigt CRL-verificatie als verplicht en geldigheid via PKIoverheid. OCSP wordt niet expliciet genoemd. De 'volledige keten tot PKIoverheid-root' is impliciet via PKIoverheid-procedures maar niet letterlijk geformuleerd.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > GB011 PUSH / PULL De server moet certificaat-revocatie-lijsten (CRL) gebruiken [PKI Policy].
-  - *De bron bevestigt CRL-gebruik. OCSP wordt niet vermeld. De eis over geldigheid van de volledige keten tot PKIoverheid-root wordt niet expliciet beschreven in deze bron.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Een certificaat is geldig als het aan de volgende drie eisen voldoet: De ondertekening van het certificaat berust op een geldige hiërarchie van certificaten afgeleid van het overheid stamcertificaat. De geldigheidsduur van het certificaat is niet verstreken. Het certificaat is niet ingetrokken door de TSP.
-  - *De bron ondersteunt ketenvalidatie en revocation checking via CRL (en optioneel OCSP), maar stelt OCSP niet verplicht ('voor TSP's niet verplicht'). De claim zegt dat revocation checking verplicht is; de bron maakt CRL-raadpleging noodzakelijk maar OCSP optioneel. Ketenvalidatie tot stamcertificaat wordt wel bevestigd.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > Het spreekt voor zich dat de gebruikte certificaten worden gecontroleert op geldigheid en revocation.
-  - *De bron bevestigt dat certificaten op geldigheid en revocation gecontroleerd moeten worden, maar noemt de PKIoverheid-root-keten verificatie en CRL/OCSP niet expliciet als technische methoden.*
-<details><summary>13x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *TLS005 en vereisten rondom certificaatgeldigheid, ketenverificatie en revocation checking (CRL/OCSP) komen niet voor in het beheermodel.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *CRL/OCSP revocation checking en PKIoverheid-root verificatie worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *Certificaatvalidatie, CRL/OCSP of revocation checking worden niet behandeld in dit document.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Certificaatgeldigheid en revocation checking CRL/OCSP (TLS005) worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *CRL/OCSP revocation checking wordt niet vermeld. De bron noemt PKIoverheid-certificaten maar gaat niet in op specifieke validatie-eisen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0048` — reference.md:156 *(§ Berichtniveau-beveiliging)*
-
-> Berichtniveau-ondertekening gebruikt XML Digital Signature (XMLDSIG) met minimaal SHA-256; SHA-1 is niet meer toegestaan.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling berichtniveau-beveiliging signing
-
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Required in this profile. [...] What canonicalization method(s) must be applied to the data to be signed? The use of XML canonicalization is required. [xml-exc-c14n] [...] What signature method(s) must be applied? The applied signature method is described in Digikoppeling Beveiligingsstandaarden en voorschriften
-  - *De bron bevestigt gebruik van XML Digital Signature (XMLDSIG) voor End-to-End Security. De specifieke eis van SHA-256 minimum en het verbod op SHA-1 staat niet in deze bron; daarvoor wordt verwezen naar 'Digikoppeling Beveiligingsstandaarden en voorschriften'.*
-<details><summary>15x NOT_FOUND + 1x OUT_OF_SCOPE (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron beschrijft bestandsoverdracht via HTTP/TLS, niet berichtniveau-ondertekening met XMLDSIG. Dit valt buiten het scope van de Grote Berichten standaard.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Berichtniveau-ondertekening met XMLDSIG, SHA-256 of verbod op SHA-1 worden niet beschreven in het beheermodel.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *De bron noemt signing-profielen (signed, signed en encrypted) voor WUS en ebMS2, maar bevat geen specificaties over XMLDSIG, SHA-256 of het verbod op SHA-1 voor berichtniveau-ondertekening.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *XML Digital Signature, SHA-256 en het verbod op SHA-1 worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *XML Digital Signature, XMLDSIG, SHA-256 of SHA-1 worden niet vermeld in dit document. Berichtniveau-ondertekening via signing wordt niet behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Berichtniveau-ondertekening met XMLDSIG en SHA-256 vereisten worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *XML Digital Signature, XMLDSIG, SHA-256 of berichtniveau-ondertekening worden niet besproken in deze bron over Grote Berichten.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *XMLDSIG, SHA-256 en SHA-1 worden niet vermeld. De bron noemt wel dat berichten beveiligd kunnen worden met een technische handtekening, maar zonder technische details over algoritmen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-## UNGROUNDED — geen bron ondersteunt de claim (5)
-
-### `ls-dk-0011` — SKILL.md:73 *(§ Profielkeuze)*
-
-> Bij gebruik van REST-API profiel is FSC (Federated Service Connectivity) verplicht.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling REST-API profiel
-
-<details><summary>17x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *FSC (Federated Service Connectivity) wordt niet vermeld in de brontekst; de bron gaat over ebMS2.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *FSC als verplicht onderdeel van het REST-API profiel wordt niet behandeld in deze Grote Berichten spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *FSC (Federated Service Connectivity) wordt niet genoemd in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *FSC (Federated Service Connectivity) wordt niet genoemd in deze bron. De bron gaat over certificaten.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *FSC (Federated Service Connectivity) wordt niet vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt ebMS2; FSC en REST-API profiel komen niet aan bod.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *REST-API profiel en FSC worden niet behandeld in deze WUS Best Practices bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *FSC (Federated Service Connectivity) wordt in deze bron niet vermeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *FSC (Federated Service Connectivity) wordt nergens in de brontekst genoemd. De bron beschrijft OAuth als relevant voor REST API koppelvlakken, maar noemt FSC niet.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0016` — SKILL.md:145 *(§ REST-API Koppelvlak met OIN (Python/FastAPI))*
-
-> REST-API foutresponses moeten RFC 9457 problem+json formaat gebruiken conform de API Design Rules.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling REST-API foutafhandeling
-
-- **NOT_FOUND** (high) — [https://www.rfc-editor.org/rfc/rfc9457.txt](https://www.rfc-editor.org/rfc/rfc9457.txt)
-  - *RFC 9457 definieert het problem+json formaat zelf, maar bevat geen verwijzing naar Digikoppeling, de Nederlandse API Design Rules, of enige verplichting voor specifieke API-profielen om dit formaat te gebruiken. De bron beschrijft wat problem+json is en hoe het gebruikt kan worden, maar legt geen MUST-verplichting op voor Digikoppeling REST-API's.*
-
-### `ls-dk-0022` — reference.md:45 *(§ REST-API)*
-
-> Het gebruik van FSC is verplicht bij Digikoppeling REST-API vanaf v3.0.1. FSC verzorgt de federatieve autorisatie en logging van API-aanroepen tussen organisaties.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling REST-API koppelvlakstandaard
-
-<details><summary>17x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *FSC wordt niet vermeld in de brontekst; de bron gaat over ebMS2. Verwijzing naar v3.0.1 en FSC als verplichte component bij REST-API ontbreekt volledig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *FSC als verplicht onderdeel van de REST-API koppelvlakstandaard en de versiedrempel v3.0.1 worden niet behandeld in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *FSC en verplicht gebruik ervan bij REST-API worden niet besproken in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *FSC en verplicht gebruik bij REST-API v3.0.1 worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *FSC en versie v3.0.1 worden niet vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt geen REST-API koppelvlakstandaard of FSC.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *FSC en REST-API v3.0.1 worden niet behandeld in deze WUS Best Practices bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *FSC en verplicht gebruik ervan bij REST-API v3.0.1 worden niet vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *FSC wordt niet genoemd in de brontekst. Er is geen vermelding van FSC als verplichting bij Digikoppeling REST-API v3.0.1.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0038` — reference.md:128 *(§ TLS-vereisten)*
-
-> TLS001: TLS 1.2 is minimaal vereist. Eerdere versies (SSL 3.0, TLS 1.0, TLS 1.1) zijn niet toegestaan.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling beveiligingsstandaard TLS001
-
-<details><summary>17x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De bron verwijst voor specifieke TLS-versies naar 'Digikoppeling Beveiligingsstandaarden en voorschriften' zonder de versienummers zelf te noemen. Er staat alleen 'The currently allowed protocol versions for TLS are described in Digikoppeling Beveiligingsstandaarden en voorschriften' en 'TLS implementations must NOT support SSL v3 backwards compatibility mode.' De specifieke eis TLS 1.2 minimum staat niet in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron verwijst voor TLS-vereisten naar het Digikoppeling Beveiligingsdocument maar specificeert zelf geen minimale TLS-versies. TLS 1.2 als minimum en verbod op SSL 3.0/TLS 1.0/1.1 worden niet in deze bron beschreven.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *TLS001 en versievereisten (TLS 1.2 minimaal, SSL 3.0/TLS 1.0/1.1 verboden) worden niet beschreven in het beheermodel.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *De bron verwijst naar Digikoppeling Beveiligingsstandaarden en -voorschriften voor specifieke TLS-versie-eisen, maar bevat zelf geen concrete TLS-versienummers of verboden versies.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *TLS-versievereisten (minimaal TLS 1.2, verbod op SSL 3.0/TLS 1.0/1.1) worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron noemt TLS als verplicht maar specificeert geen minimale versie (1.2) en verbiedt geen eerdere versies expliciet. Er staat alleen een noot: 'voor de actuele versies van het te gebruiken protocol bij de uitwisseling zie [Digikoppeling Beveiligingsdocument]'.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *TLS-versievereisten (TLS001) worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *De bron vermeldt TLS als vereiste maar specificeert nergens minimale versies (TLS 1.2) of verbod op oudere versies (SSL 3.0, TLS 1.0, TLS 1.1).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *De bron verwijst naar het document 'Digikoppeling Beveiligingsstandaarden en voorschriften' voor beveiligingseisen, maar bevat zelf geen specifieke TLS-versievereisten.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0039` — reference.md:129 *(§ TLS-vereisten)*
-
-> TLS002: TLS 1.3 wordt aanbevolen wanneer beide partijen dit ondersteunen.
-
-**Type:** normative_requirement  ·  **Modaliteit:** SHOULD  ·  **Scope:** Digikoppeling beveiligingsstandaard TLS002
-
-<details><summary>17x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *TLS 1.3 aanbeveling wordt niet vermeld in deze bron. De bron verwijst voor TLS-versies naar een apart beveiligingsdocument.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron verwijst voor TLS-details naar het Digikoppeling Beveiligingsdocument. TLS 1.3 aanbeveling wordt niet in deze bron behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *TLS002 en aanbeveling voor TLS 1.3 komen niet voor in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *TLS 1.3 en aanbevelingen daarvoor komen niet voor in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *TLS 1.3 aanbeveling wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *TLS 1.3 wordt nergens in dit document vermeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *TLS 1.3 aanbeveling (TLS002) wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *TLS 1.3 wordt niet genoemd in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *TLS 1.3 wordt nergens in de bron vermeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-## KNOWN_DISCREPANCY — gedocumenteerd in conflicts.md (3)
-
-### `ls-dk-0002` — SKILL.md:40 *(§ Repositories)*
-
-> Digikoppeling-Architectuur is vastgesteld als v2.1.1 en gepubliceerd op gitdocumentatie.logius.nl.
-
-**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling-Architectuur
-
-**Erkend in conflicts.md** *(§ Discrepanties)*: conflicts.md: 'Tag achter: publicatie v2.1.1 vs tag 2.0.2'. GitHub toont oudere tag; gitdocumentatie.logius.nl is leidend. De CONTRADICTED-verdicts komen van GitHub/logius-standaarden.github.io, niet van de gezaghebbende publicatiebron.
-
-- **PARTIALLY_SUPPORTED** (low) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  > Redirecting to v2.1.1
-  - *De redirect verwijst naar v2.1.1, wat de versieclaim ondersteunt. Maar de publicatie-URL en verdere inhoud zijn niet beschikbaar in de aangeleverde brontekst.*
-- **CONTRADICTED** (medium) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
-  > Releases: Release 2.0.2 Latest Dec 9, 2022 + 2 releases
-  - *De bron vermeldt release 2.0.2 als meest recente versie, niet v2.1.1. De gepubliceerde URL klopt wel (gitdocumentatie.logius.nl), maar het versienummer wijkt af.*
-- **CONTRADICTED** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
-  > Deze versie: https://gitdocumentatie.logius.nl/publicatie/dk/architectuur/2.1.0/
-  - *De bron vermeldt expliciet versie 2.1.0, niet 2.1.1 zoals de claim stelt. Het tweede deel van de claim (gepubliceerd op gitdocumentatie.logius.nl) klopt wel.*
-<details><summary>24x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding. Geen inhoud over versienummers van Digikoppeling-Architectuur.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst verwijst naar de Digikoppeling Architectuur als referentie maar vermeldt geen versienummer v2.1.1.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Versie-informatie over Digikoppeling-Architectuur staat niet in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron vermeldt de Digikoppeling Architectuur als apart document maar noemt geen versienummer v2.1.1.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De brontekst is de GitHub repository-pagina voor de REST-API koppelvlakstandaard. Er is geen informatie over Digikoppeling-Architectuur v2.1.1 of publicatie op gitdocumentatie.logius.nl.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron verwijst nergens naar Digikoppeling-Architectuur als document of versienummer. De brontekst behandelt uitsluitend de REST-API koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst betreft uitsluitend de Digikoppeling-Koppelvlakstandaard-ebMS2 repository. Er is geen informatie over Digikoppeling-Architectuur.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst verwijst naar Digikoppeling Architectuur als normatieve referentie (URL: https://gitdocumentatie.logius.nl/publicatie/dk/architectuur/) maar noemt geen versienummer v2.1.1.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst gaat over de WUS koppelvlakstandaard repository. Geen informatie over Digikoppeling-Architectuur v2.1.1.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst gaat over de Digikoppeling Koppelvlakstandaard WUS en bevat geen informatie over het versienummer of publicatiestatus van de Digikoppeling-Architectuur.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron gaat over Digikoppeling-Koppelvlakstandaard-GB (Grote Berichten), niet over Digikoppeling-Architectuur. Versie-informatie over Digikoppeling-Architectuur staat niet in deze brontekst.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron vermeldt geen versienummer van Digikoppeling-Architectuur. Het document verwijst wel naar 'Digikoppeling_Architectuur' als document maar geeft geen versienummer.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De brontekst betreft de repository voor Digikoppeling-Beveiligingsstandaarden-en-voorschriften, niet Digikoppeling-Architectuur. Geen informatie over versie of publicatie van de Architectuur-standaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron verwijst naar de Digikoppeling Architectuur documentatie (informatieve referentie DK-Architectuur) maar noemt geen versienummer. Publicatie-metadata zoals versienummers staan zelden in een andere standaard.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De brontekst gaat over Digikoppeling-Identificatie-en-Authenticatie, niet over Digikoppeling-Architectuur. Versie-informatie voor dat document staat niet in deze bron.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De bron gaat uitsluitend over Digikoppeling Identificatie en Authenticatie. Geen informatie over Digikoppeling-Architectuur v2.1.1.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel)
-  - *De brontekst is de GitHub repository-pagina van OIN-Stelsel. Er staat geen informatie over Digikoppeling-Architectuur of versienummers daarvan.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel)
-  - *De bron gaat over het OIN-Stelsel, niet over de Digikoppeling-Architectuur. Versienummers van andere Digikoppeling-documenten worden niet vermeld.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel)
-  - *De brontekst bevat alleen de GitHub repository-pagina van het Digikoppeling Beheermodel. Er staat geen informatie over versienummers van Digikoppeling-Architectuur of publicatielocaties.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel)
-  - *De bron verwijst naar de Digikoppeling Architectuur via een normatieve referentie [DK-Architectuur] met URL, maar noemt geen versienummer. Versie-metadata zoals 'v2.1.1' staat niet in deze beheermodeldocumentatie.*
-</details>
-
-### `ls-dk-0004` — SKILL.md:42 *(§ Repositories)*
-
-> Digikoppeling-Koppelvlakstandaard-ebMS2 is vastgesteld als v3.3.2.
-
-**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 koppelvlakstandaard
-
-**Erkend in conflicts.md** *(§ Discrepanties)*: conflicts.md: 'Geen discrepantie (tag komt overeen)' voor ebMS2 v3.3.2. Het CONTRADICTED-verdict komt van github.com (repo-tag), maar gitdocumentatie.logius.nl/publicatie/dk/ebms geeft SUPPORTED. GitHub-tag loopt achter conform gedocumenteerd patroon.
-
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Digikoppeling Koppelvlakstandaard ebMS2 3.3.2 Logius Standaard Vastgestelde versie 31 mei 2024
-- **CONTRADICTED** (medium) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  > Releases 4 — 3.3.1 Latest Apr 11, 2022 + 3 releases
-  - *De bron toont 3.3.1 als de Latest release. De claim stelt v3.3.2, maar de bron kent geen v3.3.2 als vastgestelde versie. Strikt genomen tegenstrijdig: bron noemt 3.3.1 als meest recente, niet 3.3.2. Confidence medium omdat de bron alleen de GitHub-pagina betreft en releases kunnen zijn bijgewerkt na de paginatekst.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  > 31-05-2024 3.3.2 Logius Herstel tabel onder 2.3 Ondersteunde varianten
-  - *De bron bevestigt dat versie 3.3.2 bestaat en de meest recente versie is in de documentbeheer-tabel, maar dit is een werkversie (werkversie 09 maart 2026). De claim dat v3.3.2 'vastgesteld' is wordt niet expliciet bevestigd — de bron zelf heeft de status 'werkversie'.*
-<details><summary>24x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Versie-informatie over de ebMS2 koppelvlakstandaard staat niet in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Geen versienummer voor ebMS2 koppelvlakstandaard vermeld in de bron.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
-  - *De bron vermeldt de ebMS2 koppelvlakstandaard als bestaand document maar noemt geen versienummer.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron betreft de REST-API repository; er is geen informatie over de ebMS2 koppelvlakstandaard of versienummers daarvan.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron behandelt de REST-API koppelvlakstandaard, niet ebMS2. Geen versie-informatie over ebMS2 aanwezig.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst gaat over de WUS koppelvlakstandaard repository. Geen informatie over de ebMS2 koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst vermeldt ebMS2 als alternatieve standaard maar geeft geen versienummer voor de ebMS2 koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron gaat over Digikoppeling-Koppelvlakstandaard-GB (Grote Berichten), niet over de ebMS2 koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron vermeldt geen versienummer van de ebMS2 koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron gaat over de beveiligingsstandaarden repository. Geen informatie over de ebMS2 koppelvlakstandaard of diens versienummer.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron verwijst naar de ebMS2 koppelvlakstandaard (DK-gbachtcert) als informatieve referentie, maar noemt geen versienummer v3.3.2.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De brontekst gaat over Digikoppeling-Identificatie-en-Authenticatie, niet over de ebMS2 koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De bron bevat geen informatie over de ebMS2 koppelvlakstandaard of versienummer v3.3.2.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel)
-  - *De brontekst bevat geen informatie over de ebMS2 koppelvlakstandaard of versienummers.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel)
-  - *De bron gaat over het OIN-Stelsel. De Digikoppeling-Koppelvlakstandaard-ebMS2 wordt niet behandeld.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel)
-  - *De brontekst bevat geen informatie over versienummers van de ebMS2 koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel)
-  - *ebMS2 wordt terloops genoemd in de context van internationale standaarden (ebMS [EBXML-MSG]), maar een versienummer voor de Digikoppeling-Koppelvlakstandaard-ebMS2 ontbreekt volledig.*
-</details>
-
-### `ls-dk-0006` — SKILL.md:44 *(§ Repositories)*
+### `ls-dk-0007` — SKILL.md:44 *(§ Repositories)*
 
 > Digikoppeling-Koppelvlakstandaard-GB (Grote Berichten) is vastgesteld als v3.8.1.
 
 **Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling Grote Berichten koppelvlakstandaard
 
-**Erkend in conflicts.md** *(§ Discrepanties)*: conflicts.md: 'Geen discrepantie (tag komt overeen, al zijn er ook sub-releases 3.8.1-2, 3.8.1-3)' voor GB v3.8.1. SUPPORTED op gitdocumentatie.logius.nl/publicatie/dk/gb; CONTRADICTED op logius-standaarden.github.io door sub-releases. Dit is gedocumenteerde situatie.
-
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > Digikoppeling Koppelvlakstandaard Grote Berichten 3.8.1 Logius Standaard Vastgestelde versie 11 april 2022
-- **CONTRADICTED** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB)
-  > Vorige versie: https://gitdocumentatie.logius.nl/publicatie/dk/gb/3.8/ ... Documentbeheer: 06/10/2020 3.8 Logius RFC 2020-2, RFC 2020-3 | 11/04/2022 3.8.1 Logius Vermelding REST-API koppelvlak
-  - *De bron toont dat de meest recente gepubliceerde versie v3.8 of v3.8.1 is (werkversie is nog niet vastgesteld). De claim stelt v3.8.1 als vastgesteld, maar de bron is een werkversie die nog niet door het TO is goedgekeurd. De vorige gepubliceerde versie was 3.8, met 3.8.1 als meest recente documentbeheer-entry. Een expliciete vaststelling als 'v3.8.1' is niet bevestigd.*
-<details><summary>25x NOT_FOUND (klap uit)</summary>
+<details><summary>8x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
+  - *De bron verwijst naar de Digikoppeling Koppelvlakstandaard Grote Berichten maar noemt geen versienummer v3.8.1.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *De bron behandelt de REST-API koppelvlakstandaard; het versienummer van de Grote Berichten-standaard wordt niet vermeld.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst gaat over ebMS2; Grote Berichten koppelvlakstandaard en versienummer v3.8.1 worden niet vermeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Geen versienummer voor Grote Berichten koppelvlakstandaard vermeld in de bron.*
+  - *De bron vermeldt geen versienummer voor de Grote Berichten koppelvlakstandaard.*
 - **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
+  - *De brontekst bevat geen versie-informatie over de Grote Berichten koppelvlakstandaard.*
 - **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
-  - *De bron vermeldt de Grote Berichten koppelvlakstandaard als bestaand document maar noemt geen versienummer.*
+  - *De bron vermeldt de Grote Berichten koppelvlakstandaard als gerelateerd document maar geeft geen versienummer.*
 - **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron betreft de REST-API repository; er is geen informatie over de Grote Berichten koppelvlakstandaard of versienummers daarvan.*
+  - *De bron betreft uitsluitend de REST-API koppelvlakstandaard repository. Informatie over de Grote Berichten koppelvlakstandaard staat niet in deze bron.*
 - **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron behandelt de REST-API koppelvlakstandaard, niet Grote Berichten. Geen versie-informatie over GB aanwezig.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst betreft uitsluitend de ebMS2 repository. Er is geen informatie over de Grote Berichten koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst behandelt de ebMS2 standaard. Digikoppeling Grote Berichten of versienummer v3.8.1 worden niet vermeld.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst gaat over de WUS koppelvlakstandaard repository. Geen informatie over de Grote Berichten koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst gaat uitsluitend over de WUS koppelvlakstandaard en bevat geen informatie over de Grote Berichten koppelvlakstandaard of een versienummer daarvan.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB)
-  - *Hoewel de bron wel over Digikoppeling-Koppelvlakstandaard-GB gaat, bevat de aangeleverde brontekst geen versienummer. De GitHub-pagina toont alleen dat het repository bestaat en gepubliceerd is op gitdocumentatie.logius.nl/publicatie/dk/gb/, maar geen vastgestelde versie v3.8.1.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron gaat over de beveiligingsstandaarden repository. Geen informatie over de Grote Berichten koppelvlakstandaard of diens versienummer.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron noemt Grote Berichten in de onderbouwing van TLS-gebruik, maar bevat geen versienummer voor die standaard.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De brontekst gaat over Digikoppeling-Identificatie-en-Authenticatie, niet over de Grote Berichten koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De bron bevat geen informatie over de Grote Berichten koppelvlakstandaard of versienummer v3.8.1.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel)
-  - *De brontekst bevat geen informatie over de Grote Berichten koppelvlakstandaard of versienummers.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel)
-  - *De bron gaat over het OIN-Stelsel. De Digikoppeling-Koppelvlakstandaard-GB wordt niet behandeld.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel)
   - *De brontekst bevat geen informatie over versienummers van de Grote Berichten koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel)
-  - *Grote Berichten wordt als voorbeeld aangehaald ('Grote Berichten Push variant'), maar geen versienummer voor de koppelvlakstandaard wordt vermeld.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
+  - *De bron gaat over ebMS2, niet over Grote Berichten.*
 </details>
 
-## GROUNDED — minstens één bron ondersteunt de claim (22)
+### `ls-dk-0008` — SKILL.md:45 *(§ Repositories)*
+
+> Digikoppeling-Beveiligingsstandaarden-en-voorschriften is vastgesteld als v3.0.0.
+
+**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling beveiligingsstandaarden
+
+<details><summary>8x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De bron verwijst naar Digikoppeling Beveiligingsstandaarden en voorschriften maar noemt geen versienummer v3.0.0.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *De bron verwijst naar Digikoppeling Beveiligingsstandaarden en voorschriften maar noemt geen versienummer.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron vermeldt geen versienummer voor Digikoppeling-Beveiligingsstandaarden-en-voorschriften, alleen een verwijzing naar het document.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
+  - *De brontekst bevat geen versie-informatie over Digikoppeling-Beveiligingsstandaarden-en-voorschriften.*
+- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
+  - *De bron vermeldt de Beveiligingsstandaarden en voorschriften als gerelateerd document maar geeft geen versienummer.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
+  - *De bron betreft uitsluitend de REST-API koppelvlakstandaard repository. Informatie over Digikoppeling-Beveiligingsstandaarden-en-voorschriften staat niet in deze bron.*
+- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
+  - *De brontekst verwijst naar Digikoppeling Beveiligingsstandaarden en voorschriften als normatieve referentie, maar vermeldt geen versienummer.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
+  - *De bron gaat over ebMS2, niet over beveiligingsstandaarden en voorschriften.*
+</details>
+
+### `ls-dk-0009` — SKILL.md:46 *(§ Repositories)*
+
+> Digikoppeling-Identificatie-en-Authenticatie is vastgesteld als v1.5.0.
+
+**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling identificatie en authenticatie
+
+<details><summary>8x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De bron verwijst naar Digikoppeling Identificatie en Authenticatie maar noemt geen versienummer v1.5.0.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *De bron verwijst naar Digikoppeling Identificatie en Authenticatie maar noemt geen versienummer.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron vermeldt geen versienummer voor Digikoppeling-Identificatie-en-Authenticatie.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
+  - *De brontekst bevat geen versie-informatie over Digikoppeling-Identificatie-en-Authenticatie.*
+- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
+  - *De bron vermeldt Digikoppeling Identificatie en Authenticatie als gerelateerd document maar geeft geen versienummer.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
+  - *De bron betreft uitsluitend de REST-API koppelvlakstandaard repository. Informatie over Digikoppeling-Identificatie-en-Authenticatie staat niet in deze bron.*
+- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
+  - *De brontekst verwijst naar Digikoppeling Identificatie en Authenticatie als normatieve referentie, maar vermeldt geen versienummer.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
+  - *De bron gaat over ebMS2, niet over Identificatie en Authenticatie.*
+</details>
+
+### `ls-dk-0010` — SKILL.md:47 *(§ Repositories)*
+
+> OIN-Stelsel is vastgesteld als v3.0.0.
+
+**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** OIN-Stelsel
+
+<details><summary>8x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *OIN-Stelsel als apart document of versie v3.0.0 wordt in deze bron niet vermeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *OIN-Stelsel als document of versienummer wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron vermeldt het OIN-stelsel maar geen versienummer voor het OIN-Stelsel document.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
+  - *De brontekst bevat geen informatie over het OIN-Stelsel of versienummers daarvan.*
+- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
+  - *Het OIN-Stelsel als afzonderlijk vastgesteld document met versienummer wordt in de bron niet vermeld.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
+  - *De bron betreft uitsluitend de REST-API koppelvlakstandaard repository. Informatie over het OIN-Stelsel staat niet in deze bron.*
+- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
+  - *De brontekst bevat geen informatie over het OIN-Stelsel of versienummers daarvan.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
+  - *De bron gaat over ebMS2, niet over het OIN-Stelsel.*
+</details>
+
+### `ls-dk-0037` — reference.md:94 *(§ Grote Berichten)*
+
+> Grote Berichten gebruikt HTTP 1.1 met ondersteuning voor BYTE-RANGE (RFC 7233) voor hervatbare downloads.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling Grote Berichten
+
+- **OUT_OF_SCOPE** (high) — [https://www.rfc-editor.org/rfc/rfc7233.txt](https://www.rfc-editor.org/rfc/rfc7233.txt)
+  - *De bron is RFC 7233 zelf (de HTTP Range Requests specificatie). Deze bron beschrijft de technische werking van byte-range requests, maar bevat geen informatie over Digikoppeling Grote Berichten of hoe dat profiel HTTP 1.1 en RFC 7233 toepast. De claim gaat over een specifiek Digikoppeling-profiel, niet over RFC 7233 zelf.*
+
+### `ls-dk-0039` — reference.md:116 *(§ Grote Berichten)*
+
+> Er is geen bovengrens gedefinieerd voor de bestandsgrootte bij Grote Berichten.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling Grote Berichten
+
+<details><summary>8x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De bron noemt alleen de ondergrens van 20 MiB maar doet geen uitspraak over een bovengrens of het ontbreken daarvan.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *Bovengrens voor bestandsgrootte bij Grote Berichten wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt uitsluitend ebMS2. Bestandsgroottes bij Grote Berichten worden niet behandeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *Geen bovengrens voor bestandsgrootte bij Grote Berichten: onderwerp Grote Berichten ontbreekt volledig in deze bron.*
+- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *De bron stelt een ondergrens van 20 MiB maar noemt geen bovengrens. De afwezigheid van een bovengrens is impliciet, maar de bron spreekt dit nergens expliciet uit.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen bovengrens voor bestandsgrootte bij Grote Berichten.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *Bestandsgrootte bij Grote Berichten wordt niet besproken in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *Geen informatie over Grote Berichten of bestandsgroottes in deze bron.*
+</details>
+
+## CONTRADICTED — bron spreekt de claim expliciet tegen (3)
+
+### `ls-dk-0015` — SKILL.md:103 *(§ Profielkenmerken Matrix)*
+
+> REST-API profiel maakt gebruik van TLS voor transportbeveiliging; signing en encryptie op berichtniveau zijn niet gestandaardiseerd binnen het REST-API-profiel.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling REST-API profiel
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Versleuteling op basis van mTLS conform de Digikoppeling Beveiligings voorschriften [...] Digikoppeling REST API kent nog geen gestandaardiseerde versies voor signing of encryptie
+- **CONTRADICTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > Vanaf versie 2.0 van het Digikoppeling REST API profiel wordt signing en encryptie ondersteund (zie 3.5 Signing & Encryptie (in HTTP REST Context)). [...] Indien signing van HTTP body/header wordt toegepast is het Verplicht om dit te doen volgens de regels van de ADR Module ADR-HTTP Message and payload signing with JAdES
+  - *De claim stelt dat signing en encryptie op berichtniveau 'niet gestandaardiseerd' zijn binnen het REST-API-profiel, maar de bron beschrijft expliciet dat signing en encryptie wel gestandaardiseerd zijn (via JAdES en ADR-modules), zij het optioneel toepasbaar.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt het REST-API profiel niet; dit is een ebMS2-specificatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt het REST-API profiel niet inhoudelijk.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *Het REST-API profiel en berichtniveau signing/encryptie worden niet behandeld in deze bron over Grote Berichten.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen REST-API profiel specifiek. TLS wordt algemeen behandeld maar niet in relatie tot het REST-API profiel.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *REST-API profiel en TLS voor transportbeveiliging worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *REST-API profiel en TLS-transportbeveiliging worden niet besproken in deze OIN-handreiking.*
+</details>
+
+### `ls-dk-0020` — SKILL.md:365 *(§ Retry Strategie (ebMS2 Reliable Messaging))*
+
+> ebMS2 osb-rm garandeert at-most-once delivery: berichten worden nooit dubbel afgeleverd.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 osb-rm profiel
+
+- **CONTRADICTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > Reliable Messaging profile 2, Once-And-Only-Once Reliable Messaging at the End-To-End level only based upon end-to-end retransmission. [...] The ToParty MSH must also filter any duplicate messages based on ebXML MessageId.
+  - *De bron beschrijft 'Once-And-Only-Once' delivery, wat exactly-once betekent, niet at-most-once. At-most-once zou betekenen dat berichten nooit dubbel worden afgeleverd maar eventueel verloren kunnen gaan zonder herlevering. Reliable messaging combineert herlevering (dus at-least-once op transport) met duplicate eliminatie, resulterend in exactly-once, niet at-most-once.*
+<details><summary>7x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De brontekst beschrijft het ebMS2 osb-rm profiel als betrouwbaar ('precies één keer afgeleverd'), maar de specifieke term 'at-most-once delivery' en de garantie dat berichten nooit dubbel worden afgeleverd worden niet als zodanig benoemd. De bron beschrijft 'Betrouwbaar: Garantie dat een bericht met zekerheid (precies één keer) wordt afgeleverd', wat eerder at-least-once of exactly-once suggereert, maar de exacte delivery-semantiek van at-most-once staat niet expliciet benoemd.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *ebMS2 delivery-garanties worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt ebMS2 osb-rm delivery guarantees niet.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *ebMS2 osb-rm delivery guarantees worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen at-most-once delivery garanties van ebMS2.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *at-most-once delivery bij ebMS2 wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *At-most-once delivery bij ebMS2 osb-rm wordt niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0055` — reference.md:83 *(§ ebMS2)*
+
+> ebMS2 Message Ordering is optionele volgordelijkheid van berichten via ConversationId en SequenceNumber.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 osb-rm profiel
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Volgorde van berichten zo mogelijk handhaven [...] Asynchroon berichten correleren d.m.v. message ID [...] Meerdere berichten logisch samenvoegen
+  - *De bron bevestigt dat ebMS2 volgordelijkheid ondersteunt en berichten via message ID correleert. ConversationId wordt elders in de bron vermeld als ebMS-concept. 'SequenceNumber' als specifiek technisch element en de kwalificatie 'optioneel' voor de volgordelijkheid worden niet expliciet in de bron benoemd; de bron zegt 'zo mogelijk handhaven', wat optionaliteit impliceert maar niet via de term 'optioneel' bevestigt.*
+- **CONTRADICTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > Message Order is strongly discouraged in these profiles. Many organisations use message handlers that do not support this functionality. Therefore, it can only be used if communicating parties agree to this option in advance.
+  - *De claim stelt dat Message Ordering een optionele mogelijkheid is. De bron markeert het als 'Optional' maar voegt expliciet toe dat het 'strongly discouraged' is. Bovendien werkt Message Ordering in ebMS2 niet via ConversationId en SequenceNumber als gecombineerd mechanisme zoals de claim suggereert — de bron koppelt volgordelijkheid aan het Message Order module (Section 9), niet aan ConversationId. ConversationId dient voor correlatie van berichten, niet voor volgordelijkheid. De beschrijving van het mechanisme in de claim klopt niet met wat de bron beschrijft.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *De brontekst gaat over het Digikoppeling REST API profiel. Het ebMS2 osb-rm profiel wordt enkel kort vermeld in een vergelijkingstabel, maar Message Ordering via ConversationId en SequenceNumber wordt niet behandeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *ebMS2 en Message Ordering via ConversationId en SequenceNumber komen niet voor in deze WUS-standaard. De bron vermeldt zelfs expliciet dat WS-RM (Reliable Messaging) verwijzingen zijn verwijderd in versie 3.5.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *ebMS2 Message Ordering, ConversationId en SequenceNumber worden niet behandeld in deze Grote Berichten koppelvlakstandaard.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen ebMS2 Message Ordering, ConversationId of SequenceNumber.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *ebMS2 Message Ordering via ConversationId en SequenceNumber wordt niet behandeld in deze bron over Identificatie en Authenticatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *ebMS2, Message Ordering, ConversationId en SequenceNumber worden niet behandeld in deze bron.*
+</details>
+
+## PARTIALLY_GROUNDED — bron ondersteunt deel van de claim (10)
+
+### `ls-dk-0014` — SKILL.md:83 *(§ Profielkeuze)*
+
+> Bij routering via een niet-vertrouwde intermediair moet de signed (-S) of signed+encrypted (-SE/-E) variant van het gekozen profiel worden gekozen.
+
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling profielkeuze beveiliging
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Bevind zich tussen partijen een niet vertrouwde (transparante) intermediair? Kies dan voor een Signed profiel. Mag een niet vertrouwde intermediair informatie niet inzien? Kies dan voor een Encyrpted profiel.
+  - *De bron adviseert ('kies dan voor') signed/encrypted profielen bij niet-vertrouwde intermediairs, maar formuleert dit als aanbeveling/hulpmiddel bij profielkeuze, niet als expliciete MUST-verplichting.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > End-to-End Security: op basis van Reliable Messaging of Best Effort wordt een bericht beveiligd tussen de uiteindelijke Consumer en de uiteindelijke Provider, ook wanneer er zich intermediairs bevinden in het pad tussen die twee.
+  - *De bron beschrijft End-to-End Security voor het geval van intermediairs, maar formuleert dit niet expliciet als een verplichting bij 'niet-vertrouwde intermediairs'. De bron beschrijft de profielen, maar niet een keuzeregel op basis van vertrouwen van de intermediair.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > End-to-End Security: een bericht wordt beveiligd tussen de uiteindelijke consumer en de uiteindelijke provider, ook wanneer er zich intermediairs bevinden in het pad tussen die twee. [...] voor End-to-End Security, door middel van signing (ondertekening) en (optioneel) encryptie (versleuteling) op berichtniveau
+  - *De bron bevestigt dat end-to-end beveiliging (signing/encryptie) primair van toepassing is bij intermediairs. De claim stelt dat het gekozen profiel de -S of -SE/-E variant MOET zijn bij niet-vertrouwde intermediairs — de bron zegt dit is 'primair van toepassing' maar legt geen expliciete MUST-verplichting op specifiek bij niet-vertrouwde intermediairs. De claim is breder dan wat de bron normatief stelt.*
+<details><summary>5x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *De bron beschrijft geen keuzeregels voor profielkeuze bij niet-vertrouwde intermediairs voor signed/encrypted varianten.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *Profielkeuze bij niet-vertrouwde intermediairs (signed/encrypted varianten) wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen profielkeuze op basis van intermediairs of signed/encrypted varianten.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *Profielkeuze beveiliging bij niet-vertrouwde intermediair wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *Profielkeuze bij routering via niet-vertrouwde intermediair wordt niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0016` — SKILL.md:105 *(§ Profielkenmerken Matrix)*
+
+> Grote Berichten gebruikt TLS voor transport; payload-encryptie kan aanvullend worden toegepast maar is niet voorgeschreven in het profiel.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling Grote Berichten
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  > GB006 PUSH / PULL Het HTTP transport MOET beveiligd zijn met TLS.
+  - *TLS voor transport wordt bevestigd. Payload-encryptie als aanvullende mogelijkheid wordt niet vermeld in de bron; het tweede deel van de claim (payload-encryptie kan aanvullend maar is niet voorgeschreven) is NOT_FOUND.*
+<details><summary>7x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De brontekst beschrijft Grote Berichten in secties 4.4.5, 5.4, 6.6 en 9.1.1, maar maakt geen specifieke uitspraak over of payload-encryptie niet voorgeschreven is als aanvullende optie. De bron noemt wel dat Grote Berichten gebruik maakt van HTTPS-downloads en dat security gelijkwaardig is aan andere koppelvlakstandaarden, maar de specifieke claim over payload-encryptie als niet-voorgeschreven optie staat niet in de brontekst.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *Grote Berichten en payload-encryptie worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt Grote Berichten niet; dit is een ebMS2-specificatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt Grote Berichten niet.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen Grote Berichten profiel specifiek.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *Grote Berichten en TLS/payload-encryptie worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *Grote Berichten en TLS-transport komen niet voor in deze bron.*
+</details>
+
+### `ls-dk-0018` — SKILL.md:362 *(§ Retry Strategie (ebMS2 Reliable Messaging))*
+
+> Bij ebMS2 profiel osb-rm geldt geen voorgeschreven backoff-strategie voor het retry interval; dit is configureerbaar in de CPA via RetryInterval.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 osb-rm profiel
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > Where possible, the values of Retries and RetryInterval should be set to allow reliable delivery of messages even after prolonged unavailability. If no value is defined by the parties, a value of 5 days is used.
+  - *De bron bevestigt dat RetryInterval configureerbaar is in de CPA en dat er geen vaste waarde is opgelegd, maar noemt geen expliciete backoff-strategie als wel of niet voorgeschreven. De claim over 'geen voorgeschreven backoff-strategie' wordt indirect ondersteund.*
+<details><summary>7x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De brontekst bevat geen informatie over backoff-strategieën of RetryInterval configuratie in de CPA voor het ebMS2 osb-rm profiel. Dit niveau van detail ontbreekt volledig in de architectuurdocumentatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *ebMS2 en CPA/RetryInterval worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt ebMS2 osb-rm niet.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *ebMS2 osb-rm backoff-strategie en CPA RetryInterval worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen ebMS2 retry-strategie of CPA RetryInterval.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *ebMS2 osb-rm backoff-strategie en RetryInterval worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *ebMS2 osb-rm backoff-strategie en RetryInterval worden niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0025` — reference.md:45 *(§ REST-API)*
+
+> Het gebruik van Federated Service Connectivity (FSC) is verplicht bij Digikoppeling REST-API vanaf v3.0.1.
+
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling REST-API koppelvlakstandaard
+
+- **PARTIALLY_SUPPORTED** (low) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Het Digikoppeling Koppelvlakstandaard REST-API is gebaseerd op de Federated Services Connectivity (FSC) standaard en de REST API Design Rules die in 2020 door het Kennisplatform API's zijn ontwikkeld.
+  - *De bron bevestigt dat de REST-API koppelvlakstandaard gebaseerd is op FSC, maar maakt geen uitspraak over een specifieke versienummer (v3.0.1) of dat FSC 'verplicht' is in de zin van een absolute must. De bron beschrijft FSC als basis maar noemt geen versienummer.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > Gebruik van de FSC-standaard binnen het Digikoppeling REST API profiel is verplicht [...] Voor bestaande implementaties is het toegestaan tot 1/1/2027 gebruik te maken van versie 1.1 van de Digikoppeling REST-API Koppelvlakstandaard.
+  - *FSC is inderdaad verplicht, maar de claim stelt 'vanaf v3.0.1'. De bron bevestigt de verplichting maar koppelt die aan v4.0.0; versie 3.0.1 wordt alleen vermeld als de vorige versie die tot 2027 nog gebruikt mag worden. Of FSC al in 3.0.1 verplicht was, is niet te bepalen uit deze bron.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt het REST-API profiel en FSC niet; dit is een ebMS2-specificatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt het REST-API profiel en FSC-verplichting niet inhoudelijk.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *FSC-verplichting bij REST-API v3.0.1 wordt niet behandeld in deze bron over Grote Berichten.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen REST-API koppelvlakstandaard v3.0.1 of FSC-verplichting.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *FSC-verplichting bij Digikoppeling REST-API v3.0.1 wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *FSC-verplichting bij Digikoppeling REST-API v3.0.1 wordt niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0027` — reference.md:40 *(§ REST-API)*
+
+> Het service contract bij REST-API koppelvlak is een OpenAPI Specification (OAS) 3.x.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling REST-API koppelvlakstandaard
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Een servicecontract voor een REST API service heet een OAS. Deze beschrijving wordt opgesteld door de aanbieder van de service. [...] Voor het beschrijven van DK-Rest API's is het gebruik van OAS verplicht.
+  - *De bron bevestigt dat OAS verplicht is voor DK-REST API's, maar noemt geen specifieke versie '3.x'. De bron verwijst naar [Pas-toe-of-leg-uit] voor de te gebruiken versie: 'Op [Pas-toe-of-leg-uit] staat beschreven welke versie toegepast moet worden.'*
+<details><summary>7x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *OpenAPI Specification (OAS) als service contract voor het REST-API koppelvlak wordt niet vermeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt uitsluitend de ebMS2 koppelvlakstandaard. REST-API of OpenAPI Specification wordt niet behandeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt het REST-API profiel en OpenAPI Specification niet.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *OpenAPI Specification als service contract voor REST-API wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen OpenAPI Specification of service contracts bij REST-API.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *OpenAPI Specification als service contract bij REST-API wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *OpenAPI Specification als service contract bij REST-API koppelvlak wordt niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0029` — reference.md:58 *(§ WUS (SOAP))*
+
+> WUS 2W-be-S garandeert integriteit en onweerlegbaarheid via digitale ondertekening met WS-Security en XML Digital Signature (XMLDSIG).
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS 2W-be-S profiel
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > WB003 Indien WS-Security wordt toegepast, is ondertekenen verplicht [...] WB004 Ondertekenen van bericht onderdelen SOAP:body, SOAP:headers (WS-Addressing headers en Timestamp) is verplicht bij toepassing van End-to-End beveiliging. [...] Met het ondertekenen wordt authenticatie, integriteit en onweerlegbaarheid ondersteund.
+  - *De bron bevestigt dat signing via WS-Security verplicht is voor het 2W-be-S profiel en dat dit integriteit en onweerlegbaarheid ondersteunt. De claim noemt specifiek 'XML Digital Signature (XMLDSIG)' — de bron vermeldt XMLDSIG niet expliciet bij naam, maar verwijst naar WS-I BSP 1.1 en WS-Security, waaronder XMLDSIG valt.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > SIGN002 Signing conform XMLDSIG is verplicht [...] SIGN001 Signing met SHA-2 is verplicht. Minimaal SHA-256.
+  - *De bron bevestigt XMLDSIG en SHA-2 signing, maar specificeert dit niet in relatie tot het WUS 2W-be-S profiel of WS-Security. De claims over integriteit en onweerlegbaarheid zijn niet letterlijk terug te vinden.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De brontekst vermeldt dat het WUS 2W-be-S profiel bestaat voor signing, maar beschrijft niet specifiek de technische mechanismen WS-Security en XML Digital Signature (XMLDSIG). De architectuurdocumentatie verwijst voor deze details naar de koppelvlakstandaard WUS zelf.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *WUS 2W-be-S profiel en WS-Security/XMLDSIG worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt uitsluitend ebMS2. WUS-profielen worden niet behandeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *WUS 2W-be-S profiel met WS-Security en XMLDSIG wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *WUS 2W-be-S profiel en WS-Security/XMLDSIG worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *WUS 2W-be-S profiel en WS-Security/XMLDSIG worden niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0030` — reference.md:59 *(§ WUS (SOAP))*
+
+> WUS 2W-be-SE garandeert integriteit, onweerlegbaarheid en vertrouwelijkheid via ondertekening en versleuteling met WS-Security en XML Encryption.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS 2W-be-SE profiel
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > WB003 Indien WS-Security wordt toegepast, is ondertekenen verplicht en versleutelen optioneel (keuze profiel Digikoppeling 2W-be-S, Digikoppeling 2W-be-SE,). [...] WB005 Bij toepassen van versleutelen geldt dit voor de volgende bericht onderdelen: SOAP:body
+  - *De bron bevestigt ondertekening én versleuteling voor 2W-be-SE, en dat dit integriteit, onweerlegbaarheid en vertrouwelijkheid biedt. 'XML Encryption' als term wordt niet expliciet genoemd; de bron verwijst naar WS-Security en Digikoppeling Beveiligingsstandaarden voor de algoritmen.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > ENC001 Indien er gebruik wordt gemaakt van XML encryption op payload niveau dient de FIPS 197 standaard (AES) te worden gebruikt. ENC002 Encryptie conform XML versleuteling is verplicht
+  - *De bron bevestigt XML Encryption en AES, maar koppelt dit niet specifiek aan het WUS 2W-be-SE profiel of WS-Security. Integriteit en onweerlegbaarheid via XMLDSIG worden elders in de bron bevestigd, maar niet gecombineerd in relatie tot dit specifieke profiel.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De brontekst vermeldt dat het WUS 2W-be-SE profiel bestaat voor signing en encryption, maar beschrijft niet specifiek de technische mechanismen WS-Security en XML Encryption. De architectuurdocumentatie verwijst voor deze details naar de koppelvlakstandaard WUS zelf.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *WUS 2W-be-SE profiel wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt uitsluitend ebMS2. WUS-profielen worden niet behandeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *WUS 2W-be-SE profiel wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *WUS 2W-be-SE profiel en XML Encryption worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *WUS 2W-be-SE profiel en XML Encryption worden niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0033` — reference.md:71 *(§ ebMS2)*
+
+> ebMS2 gebruikt SOAP 1.1 met ebMS2 headers en payload als MIME-attachment als berichtformaat.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 koppelvlakstandaard
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > Manifest elements must only reference business documents or other payloads that are included in the ebXML message as a MIME part
+  - *De bron bevestigt het gebruik van MIME-attachments voor payload en verwijst naar SOAP, maar benoemt niet expliciet 'SOAP 1.1 met ebMS2 headers' als berichtformaat. De MIME-attachment structuur wordt bevestigd; de SOAP 1.1-specificatie wordt impliciet gehanteerd via referentie aan [SOAP] (versie 1.1) in de normatieve referenties.*
+<details><summary>7x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De bron beschrijft ebMS2 functioneel maar vermeldt nergens dat SOAP 1.1 specifiek wordt gebruikt of dat de payload als MIME-attachment wordt verstuurd. Dit is technisch detailniveau dat buiten de architectuurdocumentatie valt.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *ebMS2 berichtformaat (SOAP 1.1 met MIME-attachment) wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt ebMS2 niet inhoudelijk.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *ebMS2 berichtformaat (SOAP 1.1 met MIME-attachments) wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen ebMS2 berichtformaat of MIME-attachments.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *ebMS2 berichtformaat (SOAP 1.1 met MIME-attachment) wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *ebMS2 berichtformaat met SOAP 1.1 en MIME-attachment wordt niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0050` — reference.md:165 *(§ Berichtniveau-beveiliging)*
+
+> Encryptie op berichtniveau gebruikt symmetrische versleuteling met AES-128 of AES-256 voor de payload en asymmetrische versleuteling (RSA) voor de sessiesleutel.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling berichtniveau-beveiliging
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > ENC001 Indien er gebruik wordt gemaakt van XML encryption op payload niveau dient de FIPS 197 standaard (AES) te worden gebruikt. ENC003 De ondersteunde data encryption algoritmen zijn: 3DES(*) AES128 AES256 ENC004 Het Key transport algorithm maakt gebruik van de RSA-OAEP algoritmen.
+  - *AES-128 en AES-256 voor payload worden bevestigd, evenals RSA voor sleuteltransport. De bron noemt echter geen 'sessiesleutel' expliciet en spreekt van RSA-OAEP, niet generiek 'asymmetrische versleuteling (RSA)'. De strekking klopt grotendeels.*
+<details><summary>7x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De bron vermeldt 'Encrypted' als profiel voor versleuteling van payload en attachments, maar geeft geen informatie over AES-128, AES-256 of RSA als specifieke algoritmen. Algoritme-eisen vallen buiten scope van dit architectuurdocument.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *AES-128/AES-256 en RSA voor sessiesleutels worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron verwijst voor encryptie-algoritmen naar 'Digikoppeling Beveiligingsstandaarden en voorschriften'. Specifieke vermelding van AES-128, AES-256 of RSA voor sessiesleutelversleuteling ontbreekt in deze bron.*
+- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron beschrijft encryptie (WB005, WB006, WB008) maar verwijst voor concrete algoritmen (AES-128, AES-256, RSA) naar het externe beveiligingsdocument. De specifieke algoritmen staan niet in deze brontekst.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *Berichtniveau-encryptie met AES of RSA wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *Berichtniveau-encryptie met AES en RSA wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *AES- of RSA-encryptie op berichtniveau wordt niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0052` — reference.md:45 *(§ REST-API)*
+
+> FSC verzorgt de federatieve autorisatie en logging van API-aanroepen tussen organisaties bij Digikoppeling REST-API.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling REST-API FSC-integratie
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Het Digikoppeling Koppelvlakstandaard REST-API is gebaseerd op de Federated Services Connectivity (FSC) standaard en de REST API Design Rules [...] De standaard FSC schrijft voor hoe gekoppeld kan worden met een API's, hoe API's in een netwerk gevonden kunnen worden en wanneer en hoe log regels moeten worden weggeschreven.
+  - *De bron bevestigt dat FSC de basis is voor het REST-API koppelvlak en dat FSC logging en discovery regelt. 'Federatieve autorisatie' als term staat niet in de bron; de bron noemt wel 'Mechanisme voor het autoriseren van koppelingen met een API' als functionaliteit van de DK REST-API standaard. Het woord 'federatief' in relatie tot autorisatie is niet expliciet aanwezig.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > Hoe de identiteit van een organisatie wordt bepaald en vertrouwd. Hoe een autorisatie om te mogen koppelen met een API gegeven, geweigerd of ontnomen wordt. [...] Hoe logregels weggeschreven moet worden.
+  - *De bron bevestigt dat FSC autorisatie en logging regelt, maar de term 'federatieve autorisatie' als zodanig staat niet in de bron. De claim is een goede parafrase maar de specifieke formulering 'federatieve autorisatie van API-aanroepen' is iets specifieker dan wat de bron letterlijk zegt.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt uitsluitend ebMS2. FSC (Federated Service Connectivity) of federatieve autorisatie bij REST-API wordt niet behandeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *FSC (Federated Service Connectivity) en REST-API worden in deze WUS-standaard niet behandeld als onderwerp.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *FSC (Federated Service Connectivity) wordt niet vermeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen FSC of federatieve autorisatie en logging bij REST-API.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *FSC en federatieve autorisatie bij Digikoppeling REST-API worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *FSC en federatieve autorisatie van API-aanroepen worden niet behandeld in deze bron.*
+</details>
+
+## UNGROUNDED — geen bron ondersteunt de claim (1)
+
+### `ls-dk-0017` — SKILL.md:145 *(§ Implementatievoorbeelden)*
+
+> RFC 9457 problem+json foutafhandeling is verplicht per API Design Rules voor REST-API foutresponses.
+
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling REST-API foutafhandeling
+
+- **NOT_FOUND** (high) — [https://www.rfc-editor.org/rfc/rfc9457.txt](https://www.rfc-editor.org/rfc/rfc9457.txt)
+  - *RFC 9457 definieert het problem+json formaat zelf, maar bevat geen verwijzing naar API Design Rules of Digikoppeling. De claim dat gebruik verplicht is 'per API Design Rules' is een normatieve uitspraak over een externe standaard (API Design Rules) die niet in deze brontekst staat. De bron beschrijft alleen het formaat en zegt dat het gebruikt KAN worden; een verplichting opgelegd door API Design Rules staat hier niet in.*
+
+## KNOWN_DISCREPANCY — gedocumenteerd in conflicts.md (2)
+
+### `ls-dk-0003` — SKILL.md:40 *(§ Repositories)*
+
+> Digikoppeling-Architectuur is vastgesteld als v2.1.1.
+
+**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling-Architectuur
+
+**Erkend in conflicts.md** *(§ Discrepanties)*: conflicts.md tabel: 'Digikoppeling-Architectuur publicatie v2.1.1 vs tag 2.0.2'. CONTRADICTED door logius-standaarden.github.io (GitHub-tag 2.0.2), maar gitdocumentatie.logius.nl is leidend per gedocumenteerde keuze: 'De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies.'
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Digikoppeling Architectuur 2.1.1 Logius Standaard Vastgestelde versie 30 januari 2025
+- **CONTRADICTED** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
+  > Digikoppeling Architectuur 2.1.0 Logius Standaard Vastgestelde versie 30 januari 2025
+  - *De bron vermeldt expliciet versie 2.1.0, niet 2.1.1 zoals de claim stelt.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *De bron gaat over de REST-API koppelvlakstandaard, niet over de Digikoppeling-Architectuur. Versienummers van andere documenten worden niet vermeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron vermeldt geen versienummer voor Digikoppeling-Architectuur. Er wordt alleen naar het document verwezen als referentie.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
+  - *De brontekst vermeldt alleen versie 2.0 (vastgesteld maart 2021) en release 2.0.2 (dec 2022). Versie 2.1.1 wordt nergens genoemd.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
+  - *De brontekst betreft de GitHub-repository van de REST-API koppelvlakstandaard. Versie-informatie over Digikoppeling-Architectuur staat niet in deze bron.*
+- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
+  - *De brontekst bevat geen informatie over versienummers van Digikoppeling-Architectuur.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
+  - *De brontekst betreft de GitHub-repository van Digikoppeling-Koppelvlakstandaard-ebMS2, niet Digikoppeling-Architectuur. Versie-informatie over dat document staat hier niet.*
+</details>
+
+### `ls-dk-0004` — SKILL.md:41 *(§ Repositories)*
+
+> Digikoppeling-Koppelvlakstandaard-REST-API is vastgesteld als v4.0.0.
+
+**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling REST-API koppelvlakstandaard
+
+**Erkend in conflicts.md** *(§ Discrepanties)*: conflicts.md tabel: 'Digikoppeling-Koppelvlakstandaard-REST-API publicatie v4.0.0 vs tag 3.0.0'. CONTRADICTED door GitHub-tag 3.0.0, maar gitdocumentatie.logius.nl is leidend per gedocumenteerde keuze: 'De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarheid voor vastgestelde (DEF) versies.'
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > Digikoppeling Koppelvlakstandaard REST-API 4.0.0 Logius Standaard Vastgestelde versie 21 april 2026
+- **CONTRADICTED** (medium) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
+  > 1.1.1 release Latest Dec 9, 2022 + 8 releases
+  - *De meest recente release die zichtbaar is in de bron is v1.1.1 (dec 2022). Er is geen v4.0.0 vermeld. De claim dat de standaard als v4.0.0 is vastgesteld wordt niet ondersteund; de bron toont een significant lager versienummer als laatste release.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De bron verwijst naar de Digikoppeling Koppelvlakstandaard REST-API maar noemt geen versienummer. Versie-metadata van afzonderlijke koppelvlakstandaarden staat niet in dit architectuurdocument.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron bevat geen informatie over de REST-API koppelvlakstandaard versie.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
+  - *De bron verwijst alleen naar het bestaan van een REST API profiel; versienummers van koppelvlakstandaarden staan niet in deze brontekst.*
+- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
+  - *De bron vermeldt de REST-API koppelvlakstandaard als gerelateerd document maar geeft geen versienummer.*
+- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
+  - *De brontekst is de werkversie van de REST-API koppelvlakstandaard zelf, maar vermeldt geen vastgesteld versienummer v4.0.0. De vorige versie wordt aangeduid als 3.0.0 via de URL, maar een vastgesteld v4.0.0 wordt niet genoemd.*
+- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
+  - *De bron gaat over ebMS2, niet over de REST-API koppelvlakstandaard.*
+</details>
+
+## GROUNDED — minstens één bron ondersteunt de claim (32)
 
 <details>
 <summary>Klap uit voor alle GROUNDED claims</summary>
 
 ### `ls-dk-0001` — SKILL.md:25 *(§ Digikoppeling)*
 
+> Digikoppeling is de Nederlandse standaard voor beveiligde elektronische gegevensuitwisseling tussen overheidsorganisaties.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling algemeen
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Digikoppeling is een standaard voor gestructureerde gegevensuitwisseling waarmee overheden op een veilige manier gegevens met elkaar kunnen uitwisselen.
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > Het Digikoppeling Rest API profiel is gericht op Machine-to-Machine (M2M) en Government-to-Government (G2G) interacties conform de algemene uitgangspunten van de Digikoppeling standaard
+  - *De bron bevestigt dat Digikoppeling een standaard is voor gegevensuitwisseling tussen overheidsorganisaties, maar gebruikt niet de formulering 'Nederlandse standaard voor beveiligde elektronische gegevensuitwisseling'. De scope en aard worden impliciet bevestigd maar niet als definitie uitgeschreven.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > Digikoppeling biedt de mogelijkheid om op een sterk gestandaardiseerde wijze berichten uit te wisselen tussen service aanbieders en service afnemers.
+  - *De bron beschrijft Digikoppeling als standaard voor gegevensuitwisseling, maar beperkt het niet expliciet tot 'overheidsorganisaties' en noemt 'beveiligde elektronische gegevensuitwisseling' niet als samengevatte omschrijving. Het gaat over 'service aanbieders en service afnemers' in algemene zin.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  > Digikoppeling biedt de mogelijkheid om op een gestandaardiseerde wijze berichten uit te wisselen tussen partijen.
+  - *De bron bevestigt dat Digikoppeling een standaard is voor gestandaardiseerde berichtenuitwisseling, maar vermeldt niet expliciet 'beveiligde' uitwisseling als kernkenmerk in de definitie, noch beperkt het zich expliciet tot 'overheidsorganisaties' in de definitiezin. Beveiliging wordt wel elders beschreven (TLS, PKIoverheid).*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > Digikoppeling biedt de mogelijkheid om op een sterk gestandaardiseerde wijze berichten uit te wisselen tussen serviceaanbieders (service providers) en serviceafnemers (service requesters of consumers).
+  - *De bron bevestigt dat Digikoppeling een standaard is voor gegevensuitwisseling, maar noemt niet expliciet 'overheidsorganisaties' als exclusieve doelgroep, noch wordt 'de Nederlandse standaard' als zodanig gepositioneerd.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  > Digikoppeling maakt het mogelijk voor overheidsorganisaties om op een gestandaardiseerde wijze gebruik te maken van elkaars services, conform de NORA (Nederlandse Overheids Referentie Architectuur).
+  - *De bron bevestigt dat Digikoppeling een gestandaardiseerde uitwisseling biedt tussen overheidsorganisaties, maar omschrijft het niet expliciet als 'de Nederlandse standaard voor beveiligde elektronische gegevensuitwisseling'. Het beveiligingsaspect en de kwalificatie 'de Nederlandse standaard' worden niet letterlijk zo gesteld.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  > Het Organisatie-identificatienummer OIN, voorheen Overheidsidentificatienummer, is onderdeel van de Digikoppeling standaard. De standaard wordt gebruikt in elektronische gegevensuitwisseling met en door de overheid.
+  - *De bron bevestigt dat Digikoppeling een standaard is voor elektronische gegevensuitwisseling met/door de overheid, maar beschrijft het niet expliciet als 'beveiligd' of beperkt tot 'tussen overheidsorganisaties'. De bron is een OIN-handreiking, niet de Digikoppeling-standaard zelf.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron beschrijft de WUS koppelvlakstandaard maar definieert Digikoppeling niet expliciet als 'de Nederlandse standaard voor beveiligde elektronische gegevensuitwisseling tussen overheidsorganisaties'. De tekst noemt wel dat het gaat om gegevensuitwisseling via Digikoppeling, maar de bredere definitieclaim staat er niet in.*
+
+### `ls-dk-0002` — SKILL.md:25 *(§ Digikoppeling)*
+
 > Digikoppeling is opgenomen op de 'pas toe of leg uit'-lijst van het Forum Standaardisatie.
 
 **Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling algemeen
 
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  > Digikoppeling is opgenomen op de pas toe of leg uit lijst van het Forum Standaardisatie.
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > De Digikoppeling standaard is opgenomen in de lijst met 'pas toe of leg uit'-standaarden van het College Standaardisatie. Het betreft de koppelvlakstandaarden ebMS2, WUS, REST API en Grote Berichten.
-<details><summary>15x NOT_FOUND (klap uit)</summary>
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Het OBDO heeft Digikoppeling daarom op de 'Pas toe of leg uit'-lijst geplaatst.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > Het Digikoppeling Rest API profiel is gericht op Machine-to-Machine (M2M) en Government-to-Government (G2G) interacties conform de algemene uitgangspunten van de Digikoppeling standaard en het toepassingsgebied van Digikoppeling op de Pas-toe-of-leg-uit lijst (PTLU) van het Forum Standaardisatie
+- **SUPPORTED** (high) — [https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling](https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling)
+  > Verplicht ('Pas toe leg uit') [...] Digikoppeling staat sinds 20 mei 2009 op de 'Pas toe of leg uit'-lijst.
+<details><summary>5x NOT_FOUND (klap uit)</summary>
 
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *De brontekst bevat alleen een redirect-melding ('Redirecting to v2.1.1') en geen inhoudelijke tekst over de pas-toe-of-leg-uit-lijst.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De brontekst bevat alleen een redirect-melding ('Redirecting to v4.0.0') en geen inhoudelijke tekst over de Forum Standaardisatie-lijst.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst (ebMS2 koppelvlakstandaard) bevat geen vermelding van de 'pas toe of leg uit'-lijst van het Forum Standaardisatie.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *De brontekst bevat alleen een redirect-melding ('Redirecting to v3.8.1'). Er is geen inhoudelijke tekst beschikbaar om deze claim te verifiëren.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron behandelt de koppelvlakstandaard Grote Berichten; de 'pas toe of leg uit'-lijst van Forum Standaardisatie wordt niet vermeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *De brontekst bevat alleen een redirect-melding ('Redirecting to v3.0.0') en geen inhoudelijke tekst over het Forum Standaardisatie of de pas-toe-of-leg-uit-lijst.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *De aangeleverde brontekst bevat alleen een redirect-melding ('Redirecting to v2.2.2') en geen inhoudelijke informatie over het OIN-stelsel of Digikoppeling algemeen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *De bron behandelt certificaten en PKIoverheid binnen Digikoppeling. De 'pas toe of leg uit'-lijst van het Forum Standaardisatie wordt nergens genoemd.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *De bron behandelt adressering en routering met OIN; geen vermelding van de 'pas toe of leg uit'-lijst van het Forum Standaardisatie.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt de 'pas toe of leg uit'-lijst van het Forum Standaardisatie niet.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *De brontekst behandelt de Best Practices WUS en bevat geen informatie over de 'pas toe of leg uit'-lijst van het Forum Standaardisatie.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
   - *De bron vermeldt niets over de 'pas toe of leg uit'-lijst van het Forum Standaardisatie.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *De aangeleverde brontekst bevat alleen een redirect-melding ('Redirecting to v1.13.0'). Er is geen inhoudelijke tekst beschikbaar om de claim te verifiëren.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *De aangeleverde brontekst bevat alleen een redirect-melding ('Redirecting to v2026-2027') en geen inhoudelijke informatie over Digikoppeling of de pas-toe-of-leg-uit-lijst.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron maakt geen melding van de 'pas toe of leg uit'-lijst van het Forum Standaardisatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *De bron maakt geen melding van de 'pas toe of leg uit'-lijst van het Forum Standaardisatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron vermeldt niets over de 'pas toe of leg uit'-lijst van het Forum Standaardisatie.*
+- **NOT_FOUND** (low) — [https://www.forumstandaardisatie.nl/open-standaarden](https://www.forumstandaardisatie.nl/open-standaarden)
+  - *De brontekst is een navigatiepagina van het Forum Standaardisatie met alleen menustructuur en linklijsten. Digikoppeling wordt nergens specifiek genoemd. De tekst bevestigt wel dat er een 'pas toe of leg uit'-lijst bestaat, maar of Digikoppeling daarop staat is niet te verifiëren uit deze bron.*
 </details>
 
-### `ls-dk-0005` — SKILL.md:43 *(§ Repositories)*
+### `ls-dk-0005` — SKILL.md:42 *(§ Repositories)*
 
-> Digikoppeling-Koppelvlakstandaard-WUS is vastgesteld als v3.8.1.
+> Digikoppeling-Koppelvlakstandaard-ebMS2 is vastgesteld als v3.3.2.
 
-**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS koppelvlakstandaard
+**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 koppelvlakstandaard
 
-- **SUPPORTED** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS)
-  > Releases 4 — 3.8.1 Latest Apr 11, 2022 + 3 releases
-  - *De bron toont expliciet dat release 3.8.1 de 'Latest' release is van de Digikoppeling-Koppelvlakstandaard-WUS repository.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS)
-  > 11/04/2022 3.8.1 Logius Vermelding REST-API koppelvlak
-  - *De documentbeheer-tabel vermeldt versie 3.8.1 als de meest recente gepubliceerde versie. Echter is de huidige brontekst een werkversie (werkversie 20 april 2026) die nog niet vastgesteld is: 'Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door het TO goedgekeurde consultatieversie.' De claim dat v3.8.1 'vastgesteld' is wordt impliciet ondersteund door de documentbeheer-tabel, maar de bron zelf is een latere werkversie, niet de vastgestelde versie.*
-<details><summary>25x NOT_FOUND (klap uit)</summary>
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > Digikoppeling Koppelvlakstandaard ebMS2 3.3.2 Logius Standaard Vastgestelde versie 31 mei 2024
+- **PARTIALLY_SUPPORTED** (medium) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
+  > Releases 4 — 3.3.1 Latest Apr 11, 2022 + 3 releases
+  - *De bron bevestigt dat dit de ebMS2-repository is en toont 3.3.1 als latest release. Claim stelt v3.3.2, maar de bron vermeldt 3.3.1 als meest recente zichtbare release. Mogelijk bestaat 3.3.2 in een latere release die niet zichtbaar is in de aangeleverde tekst. CONTRADICTED is te sterk omdat de paginatekst mogelijk afgekapt is; PARTIALLY_SUPPORTED omdat de repository klopt maar het versienummer afwijkt.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
+  - *De bron verwijst naar de Digikoppeling Koppelvlakstandaard ebMS2 maar noemt geen versienummer v3.3.2.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst gaat over ebMS2, niet over de WUS koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Versie-informatie over de WUS koppelvlakstandaard staat niet in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Geen versienummer voor WUS koppelvlakstandaard vermeld in de bron.*
+  - *De bron behandelt de REST-API koppelvlakstandaard; het versienummer van de ebMS2-standaard wordt niet vermeld.*
 - **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
+  - *De brontekst bevat geen versie-informatie over de ebMS2 koppelvlakstandaard.*
 - **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
-  - *De bron vermeldt de WUS koppelvlakstandaard als bestaand document maar noemt geen versienummer.*
+  - *De bron vermeldt de ebMS2 koppelvlakstandaard als gerelateerd document maar geeft geen versienummer.*
 - **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron betreft de REST-API repository; er is geen informatie over de WUS koppelvlakstandaard of versienummers daarvan.*
+  - *De bron betreft uitsluitend de REST-API koppelvlakstandaard repository. Informatie over de ebMS2 koppelvlakstandaard staat niet in deze bron.*
 - **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron behandelt de REST-API koppelvlakstandaard, niet WUS. Geen versie-informatie over WUS aanwezig.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst betreft uitsluitend de ebMS2 repository. Er is geen informatie over de WUS koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst gaat uitsluitend over de ebMS2 koppelvlakstandaard. De WUS koppelvlakstandaard en versienummer v3.8.1 worden niet genoemd.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron gaat over Digikoppeling-Koppelvlakstandaard-GB (Grote Berichten), niet over de WUS koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron vermeldt geen versienummer van de WUS koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron gaat over de beveiligingsstandaarden repository. Geen informatie over de WUS koppelvlakstandaard of diens versienummer.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron verwijst niet naar de WUS koppelvlakstandaard en noemt geen versienummer.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De brontekst gaat over Digikoppeling-Identificatie-en-Authenticatie, niet over de WUS koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De bron bevat geen informatie over de WUS koppelvlakstandaard of versienummer v3.8.1.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel)
-  - *De brontekst bevat geen informatie over de WUS koppelvlakstandaard of versienummers.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel)
-  - *De bron gaat over het OIN-Stelsel. De Digikoppeling-Koppelvlakstandaard-WUS wordt niet behandeld.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel)
-  - *De brontekst bevat geen informatie over versienummers van de WUS koppelvlakstandaard.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel)
-  - *WUS wordt meerdere keren genoemd als onderliggende standaard, maar geen versienummer voor de Digikoppeling-Koppelvlakstandaard-WUS wordt vermeld.*
+  - *De brontekst behandelt de REST-API koppelvlakstandaard. Er is geen informatie over versienummers van de ebMS2 koppelvlakstandaard.*
 </details>
 
-### `ls-dk-0008` — SKILL.md:46 *(§ Repositories)*
+### `ls-dk-0011` — SKILL.md:68 *(§ Profielkeuze)*
 
-> Digikoppeling-Identificatie-en-Authenticatie is vastgesteld als v1.5.0.
-
-**Type:** version_claim  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling identificatie en authenticatie
-
-- **SUPPORTED** (high) — [https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie)
-  > Digikoppeling Identificatie en Authenticatie 1.5.0 Logius Standaard Vastgestelde versie 15 mei 2025
-<details><summary>26x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *Digikoppeling-Identificatie-en-Authenticatie en versienummer v1.5.0 worden niet vermeld in de brontekst.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Versie-informatie over Digikoppeling-Identificatie-en-Authenticatie staat niet in deze spec.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Geen versienummer voor Identificatie-en-Authenticatie vermeld in de bron.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur)
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Architectuur](https://logius-standaarden.github.io/Digikoppeling-Architectuur)
-  - *De bron vermeldt Digikoppeling Identificatie en Authenticatie als bestaand document maar noemt geen versienummer.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron betreft de REST-API repository; er is geen informatie over Digikoppeling-Identificatie-en-Authenticatie of versienummers daarvan.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API)
-  - *De bron verwijst naar Digikoppeling Identificatie en Authenticatie als referentie [DK-IDAuth] maar noemt geen versienummer v1.5.0.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *De brontekst betreft uitsluitend de ebMS2 repository. Er is geen informatie over Digikoppeling-Identificatie-en-Authenticatie.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2)
-  - *Digikoppeling-Identificatie-en-Authenticatie en versienummer v1.5.0 worden niet vermeld in de brontekst.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst gaat over de WUS koppelvlakstandaard repository. Geen informatie over Digikoppeling-Identificatie-en-Authenticatie.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS)
-  - *De brontekst bevat geen informatie over het document Digikoppeling-Identificatie-en-Authenticatie of een versienummer daarvan.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB)
-  - *De bron gaat over Digikoppeling-Koppelvlakstandaard-GB (Grote Berichten), niet over Digikoppeling-Identificatie-en-Authenticatie.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB)
-  - *Digikoppeling-Identificatie-en-Authenticatie wordt niet vermeld in de bron.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron gaat over de beveiligingsstandaarden repository. Geen informatie over Digikoppeling-Identificatie-en-Authenticatie of diens versienummer.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften)
-  - *De bron verwijst naar Digikoppeling Identificatie en Authenticatie als informatieve referentie (DK-IDAuth), maar noemt geen versienummer.*
-- **NOT_FOUND** (medium) — [https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie)
-  - *De brontekst betreft inderdaad de GitHub-repo van Digikoppeling-Identificatie-en-Authenticatie, maar bevat geen versienummer (v1.5.0). De README vermeldt alleen werkversie- en publicatielinks, geen vastgesteld versienummer.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel)
-  - *De brontekst bevat geen informatie over Digikoppeling-Identificatie-en-Authenticatie of versienummers.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/OIN-Stelsel](https://logius-standaarden.github.io/OIN-Stelsel)
-  - *De bron gaat over het OIN-Stelsel. Digikoppeling-Identificatie-en-Authenticatie als apart document met versienummer wordt niet behandeld.*
-- **NOT_FOUND** (high) — [https://github.com/logius-standaarden/Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel)
-  - *De brontekst bevat geen informatie over versienummers van Digikoppeling-Identificatie-en-Authenticatie.*
-- **NOT_FOUND** (high) — [https://logius-standaarden.github.io/Digikoppeling-Beheermodel](https://logius-standaarden.github.io/Digikoppeling-Beheermodel)
-  - *Digikoppeling-Identificatie-en-Authenticatie wordt niet als document genoemd in deze bron; geen versienummer beschikbaar.*
-</details>
-
-### `ls-dk-0010` — SKILL.md:68 *(§ Profielkeuze)*
-
-> Berichten groter dan 20 MiB moeten via het Grote Berichten koppelvlak worden uitgewisseld.
+> Berichten groter dan 20 MiB moeten via de koppelvlakstandaard Grote Berichten worden uitgewisseld.
 
 **Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling Grote Berichten
 
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Grote berichten vormen een functionele uitbreiding op Digikoppeling uitwisseling voor de veilige bestandsoverdracht van berichten groter dan 20 MiB.
+  - *De bron beschrijft dat berichten groter dan 20 MiB via Grote Berichten worden uitgewisseld als functionele uitbreiding, maar formuleert dit als een situatie die 'zich kan voordoen' en een alternatieve aanpak, niet als expliciete MUST-verplichting met die drempelwaarde.*
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
   > VW001 Als partijen niet tot overeenstemming komen MOETEN zij berichten groter dan 20 MiB via het Koppelvlak Grote Berichten afhandelen.
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Berichten (Bevragingen of Meldingen) die een grootte hebben van meer dan 20 MiB kunnen op een andere wijze worden uitgewisseld. Hiervoor gelden specifieke afspraken.
-  - *De bron zegt 'kunnen op een andere wijze worden uitgewisseld', niet dat dit verplicht (MUST) is. De claim stelt 'moeten', maar de bron formuleert het als mogelijkheid, niet als verplichting.*
-<details><summary>15x NOT_FOUND (klap uit)</summary>
+  - *Exact overeenkomstig, met de nuance dat VW000 bilaterale afwijking toestaat.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *De drempelwaarde van 20 MiB voor Grote Berichten wordt niet vermeld in deze bron over de REST-API koppelvlakstandaard.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De brontekst gaat over ebMS2 en vermeldt geen drempelwaarde van 20 MiB voor Grote Berichten.*
+  - *De bron bevat geen informatie over de grens van 20 MiB voor Grote Berichten. Dit is een ebMS2-specificatie, niet een Grote Berichten document.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
+  - *De bron gaat over de WUS koppelvlakstandaard en behandelt geen Grote Berichten of een grens van 20 MiB.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron gaat over beveiligingsstandaarden en -voorschriften. Er is geen vermelding van een drempelwaarde van 20 MiB of de koppelvlakstandaard Grote Berichten.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *De brontekst gaat over Identificatie en Authenticatie binnen Digikoppeling. Grote Berichten en de 20 MiB drempelwaarde worden niet behandeld.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron vermeldt Grote Berichten als onderdeel van Digikoppeling maar specificeert geen grenswaarde van 20 MiB.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *De bron gaat over certificaten en PKIoverheid. Grote Berichten en drempelwaarden worden niet behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *De bron gaat niet over Grote Berichten of een drempelwaarde van 20 MiB.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron gaat over ebMS2 best practices; het Grote Berichten koppelvlak en de 20 MiB drempelwaarde worden niet behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *De brontekst gaat over WUS Best Practices en bevat geen informatie over Grote Berichten of de 20 MiB drempelwaarde.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *De bron noemt geen drempelwaarde van 20 MiB. Er wordt wel gesproken over grote berichten die niet efficiënt door adapters verwerkt kunnen worden, maar zonder specifieke grenswaarde.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt het OIN-stelsel. Drempelwaarden voor Grote Berichten komen niet voor in deze tekst.*
 </details>
 
-### `ls-dk-0014` — SKILL.md:96 *(§ Profielkenmerken Matrix)*
+### `ls-dk-0012` — SKILL.md:74 *(§ Profielkeuze)*
 
-> Het profiel osb-rm biedt reliable, asynchrone berichtuitwisseling met signing mogelijk via osb-rm-S.
+> Bij gebruik van REST-API profiel is FSC verplicht.
+
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling REST-API profiel
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Het Digikoppeling Koppelvlakstandaard REST-API is gebaseerd op de Federated Services Connectivity (FSC) standaard en de REST API Design Rules die in 2020 door het Kennisplatform API's zijn ontwikkeld. De standaard FSC schrijft voor hoe gekoppeld kan worden met een API's, hoe API's in een netwerk gevonden kunnen worden en wanneer en hoe log regels moeten worden weggeschreven.
+  - *De bron stelt dat het REST-API profiel gebaseerd is op FSC en dat FSC schrijft voor hoe gekoppeld wordt, maar formuleert FSC niet als een expliciete MUST-verplichting ('is verplicht') voor gebruikers van het REST-API profiel.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > Gebruik van de FSC-standaard binnen het Digikoppeling REST API profiel is verplicht
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron bevat geen informatie over het REST-API profiel of FSC. Dit is een ebMS2-specificatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt het REST-API profiel niet inhoudelijk; er is alleen een korte vermelding dat naast WUS ook ebMS2- en REST-API-standaarden bestaan.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *De bron gaat over Grote Berichten, niet over het REST-API profiel en FSC-verplichting.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen REST-API profiel of FSC-verplichting.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *De brontekst behandelt geen REST-API profiel of FSC-verplichting.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *REST-API profiel en FSC-verplichting worden niet besproken in deze OIN-handreiking.*
+</details>
+
+### `ls-dk-0013` — SKILL.md:79 *(§ Profielkeuze)*
+
+> Het ebMS2 reliable profiel (osb-rm) biedt betrouwbare aflevering.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 osb-rm profiel
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Digikoppeling ebMS heeft reliable profiel (osb-rm) dat de bevestiging van ontvangst borgt.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > Reliable Messaging: asynchrone uitwisseling met ontvangst bevestigingen en duplicaateliminatie door de ontvangende message handler*. Dit profiel is onder meer geschikt voor alle berichtenstromen die leiden tot updates van gegevensverzamelingen.
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *Het ebMS2 reliable profiel en betrouwbare aflevering worden niet inhoudelijk beschreven in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron gaat over WUS. ebMS2 en het osb-rm profiel worden niet inhoudelijk behandeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *De bron behandelt het ebMS2 osb-rm profiel niet.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen ebMS2 profielen of reliable messaging.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *ebMS2 reliable profiel wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *ebMS2 osb-rm profiel komt niet voor in deze bron.*
+</details>
+
+### `ls-dk-0019` — SKILL.md:363 *(§ Retry Strategie (ebMS2 Reliable Messaging))*
+
+> Bij ebMS2 osb-rm geldt zonder afspraak een PersistDuration van 5 dagen.
 
 **Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 osb-rm profiel
 
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Reliable Messaging: asynchrone uitwisseling met ontvangst bevestigingen en duplicaateliminatie door de ontvangende message handler. [...] Best Effort – Signed 1 osb-be-s [...] Reliable – Signed 1 osb-rm-s
-  - *De bron bevestigt dat osb-rm asynchroon is met reliable messaging (ontvangstbevestigingen) en dat een signed variant osb-rm-s bestaat.*
-<details><summary>16x NOT_FOUND (klap uit)</summary>
+  > Depends on the retry interval as defined in the particular collaboration, defined by the involved parties. If no value is defined by the parties, a value of 5 days is used.
+<details><summary>7x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
+  - *De brontekst bevat geen informatie over PersistDuration of een standaardwaarde van 5 dagen voor het ebMS2 osb-rm profiel.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *ebMS2 osb-rm PersistDuration wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
+  - *De bron behandelt ebMS2 osb-rm PersistDuration niet.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Het osb-rm profiel van ebMS2 wordt niet behandeld in deze spec.*
+  - *PersistDuration bij ebMS2 osb-rm wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt geen PersistDuration of ebMS2 osb-rm configuratie.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *PersistDuration bij ebMS2 osb-rm wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Het osb-rm profiel wordt niet beschreven in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Het osb-rm profiel en reliable/asynchrone berichtuitwisseling worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Het profiel osb-rm wordt niet besproken in deze bron.*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt wel ebMS2 reliable messaging in algemene zin, maar noemt het profiel 'osb-rm' of 'osb-rm-S' niet expliciet als profielnaam.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *ebMS2 osb-rm profiel wordt niet behandeld in deze WUS Best Practices bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *Het osb-rm profiel en bijbehorende kenmerken worden niet beschreven in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *Het specifieke profiel 'osb-rm' wordt niet bij naam genoemd in de bron. De bron beschrijft ebMS2 en reliable messaging in algemene termen maar noemt geen specifieke profielnamen zoals osb-rm of osb-rm-S.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *PersistDuration bij ebMS2 osb-rm komt niet voor in deze bron.*
 </details>
 
-### `ls-dk-0017` — SKILL.md:364 *(§ Retry Strategie (ebMS2 Reliable Messaging))*
+### `ls-dk-0021` — SKILL.md:364 *(§ Retry Strategie (ebMS2 Reliable Messaging))*
 
-> Bij het profiel osb-rm geldt duplicate-eliminatie: ontvanger herkent duplicaten op basis van MessageId.
+> ebMS2 osb-rm duplicate elimination herkent duplicaten op basis van MessageId.
 
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling ebMS2 osb-rm reliable messaging
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 osb-rm profiel
 
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Duplicate Elimination is required [...] The ToParty MSH must also filter any duplicate messages based on ebXML MessageId.
-- **SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > tns:duplicateElimination = "always"
-  - *De bron toont dat duplicateElimination op 'always' staat in de MessagingCharacteristics. Dit ondersteunt de claim dat duplicate-eliminatie op MessageId van toepassing is, hoewel het mechanisme (MessageId) niet expliciet wordt benoemd.*
-<details><summary>15x NOT_FOUND (klap uit)</summary>
+  > The ToParty MSH must also filter any duplicate messages based on ebXML MessageId.
+<details><summary>7x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
+  - *De brontekst noemt geen duplicate elimination op basis van MessageId voor het ebMS2 osb-rm profiel. Dit detailniveau ontbreekt in de architectuurdocumentatie.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *ebMS2 duplicate elimination op basis van MessageId wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
+  - *De bron behandelt ebMS2 duplicate elimination niet.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Duplicate-eliminatie op basis van MessageId bij osb-rm wordt niet behandeld in deze Grote Berichten spec.*
+  - *ebMS2 duplicate elimination op basis van MessageId wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt geen duplicate elimination of MessageId in ebMS2.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *ebMS2 duplicate elimination op basis van MessageId wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Duplicate-eliminatie en MessageId worden niet besproken in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Duplicate-eliminatie en osb-rm reliable messaging worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Duplicate-eliminatie en MessageId worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *ebMS2 osb-rm en duplicate-eliminatie worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *Duplicate-eliminatie op basis van MessageId bij osb-rm wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *Het profiel 'osb-rm' en duplicate-eliminatie op basis van MessageId worden niet specifiek behandeld in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *Duplicate elimination op basis van MessageId wordt niet behandeld in deze bron.*
 </details>
 
-### `ls-dk-0019` — reference.md:7 *(§ Architectuur)*
+### `ls-dk-0022` — reference.md:7 *(§ Architectuur)*
 
 > De Digikoppeling-architectuur is gebaseerd op een drielagenmodel dat inhoud, logistiek en transport van elkaar scheidt.
 
 **Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling architectuur
 
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > De drie lagen (inhoud, logistiek en transport) zijn in hoge mate ontkoppeld en dus onafhankelijk van elkaar. Afspraken over de inhoud van een bericht (payload) staan los van de logistieke laag. [...] De keuzes in de logistieke laag hebben op hun beurt geen invloed op de inrichting van de transportlaag
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > De uitwisseling tussen partijen wordt in drie lagen opgedeeld: Inhoud [...] Logistiek [...] Transport [...] Digikoppeling richt zich dus uitsluitend op de logistieke laag.
+  > De uitwisseling tussen partijen wordt in drie lagen opgedeeld: Inhoud: Op deze laag worden de afspraken gemaakt de inhoud van het uit te wisselen bericht [...] Logistiek: Op deze laag bevinden zich de afspraken betreffende transportprotocollen [...] Transport: deze laag verzorgt het daadwerkelijke transport van het bericht.
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > De uitwisseling tussen partijen wordt in drie lagen opgedeeld: Inhoud [...] Logistiek [...] Transport [...] Digikoppeling richt zich dus uitsluitend op de logistieke laag.
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  > Digikoppeling vormt de logistieke laag voor standaardisatie van communicatie tussen systemen bij overheidsorganisatie op basis van webservice standaarden. Digikoppeling is daardoor een laag die zich bevindt tussen het transportnetwerk (b.v. Diginetwerk of Internet) en de applicatielaag (functionele berichtinhoud).
-  - *De bron bevestigt de scheiding tussen transport, logistiek (Digikoppeling) en applicatielaag (inhoud), maar beschrijft dit niet expliciet als een 'drielagenmodel' met die terminologie.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > De uitwisseling tussen partijen is in drie lagen opgedeeld: Inhoud (gegevens) [...] Logistiek (processen) [...] Transport (techniek): deze laag verzorgt het daadwerkelijke transport van het bericht (TCP/IP). Digikoppeling richt zich uitsluitend op de logistieke laag.
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  > De uitwisseling tussen service providers en - requesters is in drie lagen opgedeeld: Inhoud: deze laag bevat afspraken over de inhoud van het uit te wisselen bericht... Logistiek: op deze laag bevinden zich de afspraken betreffende transportprotocollen... Transport: deze laag verzorgt het daadwerkelijke transport van het bericht.
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > De uitwisseling tussen partijen wordt in drie lagen opgedeeld: Inhoud: Op deze laag worden de afspraken gemaakt over de inhoud van het uit te wisselen bericht... Logistiek: Op deze laag bevinden zich de afspraken betreffende transportprotocollen... Transport: deze laag verzorgt het daadwerkelijke transport van het bericht.
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Om digitale berichten uit te wisselen moeten organisaties op drie niveaus afspraken maken: Over de inhoud en betekenis van berichten (payload en eventuele bijlagen) [...] Over de logistiek (envelop) [...] Over het transport (netwerk)
-<details><summary>10x NOT_FOUND (klap uit)</summary>
+  > De uitwisseling tussen partijen wordt in drie lagen opgedeeld: Inhoud [...] Logistiek [...] Transport
+  - *Het drielagenmodel (inhoud, logistiek, transport) wordt expliciet beschreven.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > De uitwisseling tussen service providers en requesters wordt in drie lagen opgedeeld: Inhoud: op deze laag worden de afspraken gemaakt over de inhoud van het uit te wisselen bericht [...] Logistiek: op deze laag bevinden zich de afspraken betreffende transportprotocollen [...] Transport: deze laag verzorgt het daadwerkelijke transport van het bericht
+<details><summary>4x NOT_FOUND (klap uit)</summary>
 
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *Het drielagenmodel van de Digikoppeling-architectuur wordt niet beschreven in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron beschrijft de WUS koppelvlakstandaard en noemt dat Digikoppeling 'over logistiek gaat, dus over de envelop en niet over de inhoud', maar een expliciet drielagenmodel (inhoud, logistiek, transport) wordt niet beschreven.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *Het drielagenmodel (inhoud, logistiek, transport) wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Het drielagenmodel (inhoud, logistiek, transport) wordt niet beschreven in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Het drielagenmodel (inhoud, logistiek, transport) wordt niet besproken in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *Het drielagenmodel van Digikoppeling (inhoud, logistiek, transport) wordt niet beschreven in deze OIN-handreiking.*
 </details>
 
-### `ls-dk-0020` — reference.md:11 *(§ Drielagenmodel)*
+### `ls-dk-0023` — reference.md:11 *(§ Drielagenmodel)*
 
 > Digikoppeling is payload-agnostisch: het maakt niet uit of het om XML, JSON, PDF of een ander formaat gaat.
 
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling architectuur inhoudlaag
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling architectuur
 
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Digikoppeling gaat over logistiek, dus over de envelop en niet over de inhoud. [...] Inhoud: Op deze laag worden de afspraken gemaakt de inhoud van het uit te wisselen bericht, dus de structuur, semantiek en waardebereiken. Digikoppeling houdt zich niet met de inhoud bezig, 'heeft geen boodschap aan de boodschap'.
-  - *De bron bevestigt payload-agnosticiteit, al worden geen specifieke formaten (XML, JSON, PDF) opgesomd. De strekking is volledig ondersteund.*
-- **PARTIALLY_SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > Digikoppeling heeft geen boodschap aan de boodschap [...] Merk op dat dit ook een "groot" xml bestand kan zijn, een CAD bestand, een PDF document, een ZIP bestand, et cetera.
-  - *De bron bevestigt dat Digikoppeling payload-agnostisch is en meerdere formaten noemt. JSON wordt niet expliciet vermeld, maar het principe wordt wel onderbouwd.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Digikoppeling heeft 'Geen boodschap aan de boodschap'. [...] Digikoppeling bemoeit zich niet met de inhoud
+  - *De bron ondersteunt het principe van payload-agnosticiteit ('geen boodschap aan de boodschap'). Echter, elders stelt de bron dat WUS/ebMS berichten XML vereisen ('De payload van een bericht moet beschreven zijn in valide XML') en dat REST API JSON of XML retourneert. De claim dat PDF of elk ander formaat door alle koppelvlakken wordt ondersteund wordt niet volledig bevestigd; bijlagen mogen andere formaten hebben, maar de payload zelf kent beperkingen.*
+- **SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > Digikoppeling richt zich dus uitsluitend op de logistieke laag. [...] Digikoppeling gaat over logistiek, dus over de envelop en niet over de inhoud.
+  - *De bron stelt dat Digikoppeling payload-neutraal is ('heeft geen boodschap aan de boodschap'), wat de claim over payload-agnosticiteit ondersteunt, al worden XML/JSON/PDF niet expliciet genoemd.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > Digikoppeling gaat over logistiek, dus over de envelop en niet over de inhoud.
+  - *De bron ondersteunt het idee dat Digikoppeling over de logistieke laag gaat en niet over de inhoud, wat payload-agnosticiteit impliceert. De expliciete claim dat het 'niet uitmaakt of het XML, JSON, PDF of een ander formaat betreft' staat niet letterlijk in de bron.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  > Digikoppeling houdt zich niet met de inhoud bezig, 'Digikoppeling heeft geen boodschap aan de boodschap'. [...] Merk op dat dit ook een "groot" xml bestand kan zijn, een CAD bestand, een PDF document, een ZIP bestand, et cetera.
+  - *Payload-agnosticiteit wordt zowel expliciet als via voorbeelden bevestigd.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
   > Digikoppeling houdt zich niet met de inhoud bezig, 'heeft geen boodschap aan de boodschap'.
-  - *De bron bevestigt dat Digikoppeling payload-agnostisch is, al worden specifieke formaten zoals XML, JSON of PDF niet opgesomd.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  > Digikoppeling houdt zich niet met de inhoud bezig, "heeft geen boodschap aan de boodschap".
-  - *De bron bevestigt dat Digikoppeling payload-agnostisch is, maar noemt geen specifieke formaten zoals XML, JSON of PDF. De strekking klopt, maar de claim is specifieker dan wat de bron zegt.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > Digikoppeling houdt zich niet met de inhoud bezig, 'heeft geen boodschap aan de boodschap'.
-  - *De bron bevestigt dat Digikoppeling payload-agnostisch is, maar noemt geen specifieke formaten zoals XML, JSON of PDF.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Digikoppeling richt zich op de 'envelop' van het bericht, niet op de inhoud. Daardoor kan iedere organisatie die Digikoppeling gebruikt, de postverzending onafhankelijk van de inhoud inrichten.
-  - *De bron bevestigt dat Digikoppeling zich richt op de envelop en niet de inhoud, wat payload-agnosticiteit impliceert. Specifieke bestandsformaten (XML, JSON, PDF) worden niet benoemd.*
-<details><summary>11x NOT_FOUND (klap uit)</summary>
+  - *De bron bevestigt payload-agnosticiteit impliciet maar duidelijk. Expliciete vermelding van XML, JSON, PDF ontbreekt, maar de strekking is gelijk.*
+<details><summary>3x NOT_FOUND (klap uit)</summary>
 
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *Payload-agnosticiteit van Digikoppeling wordt niet expliciet beschreven in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *Payload-agnosticiteit van Digikoppeling wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Payload-agnosticiteit (XML, JSON, PDF, etc.) wordt niet besproken in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Payload-agnosticiteit (XML, JSON, PDF) wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Payload-agnosticiteit (XML, JSON, PDF) wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *Payload-agnosticiteit van Digikoppeling wordt niet behandeld in deze bron.*
 </details>
 
-### `ls-dk-0021` — reference.md:15 *(§ Drielagenmodel)*
+### `ls-dk-0024` — reference.md:15 *(§ Drielagenmodel)*
 
 > Digikoppeling schrijft het gebruik van HTTPS (TLS) voor als transportprotocol.
 
 **Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling transportlaag
 
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Gebruik van HTTPS [...] Gebruik van HTTPS voor grote berichten. Gebruik van tweezijdig TLS voor het veilig transporteren van gegevens via internet is verplicht.
+- **SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > De Digikoppeling Beveilingsstandaarden en voorschriften verplichten het gebruik van 2-zijdig TLS met minimaal TLS versie 1.2
+  - *De bron bevestigt TLS als verplicht transportprotocol (via verwijzing naar de beveiligingsstandaarden), maar de expliciete verwijzing naar HTTPS als zodanig is indirect. De bron vermeldt ook poort 443 voor dataverkeer, wat HTTPS impliceert.*
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
   > HTTPS is the required transport protocol. [...] Voor alle profielen wordt twee-zijdig TLS gebruikt op transport niveau (HTTPS).
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > WT001 Authenticatie op transportniveau gebeurt op basis TLS met tweezijdige authenticatie. [...] Client and Server authenticatie is vereist gebruikmakend van HTTPS en alle in Digikoppeling Beveiligingsstandaarden en voorschriften genoemde TLS versies.
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
   > GB006 PUSH / PULL Het HTTP transport MOET beveiligd zijn met TLS. [...] GB012 PUSH / PULL Het HTTPS transport MOET over poort 443 plaatsvinden.
-- **PARTIALLY_SUPPORTED** (low) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  > Een groot aantal ICT leveranciers biedt ondersteuning aan de voor Digikoppeling benodigde open standaarden (WUS, ebMS, HTTPS) in hun producten en dienstverlening.
-  - *HTTPS wordt als basisstandaard genoemd, maar de bron schrijft het niet expliciet voor als verplicht transportprotocol met een MUST-verplichting.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Digikoppeling schrijft voor dat het transport kanaal (internet of diginetwerk) wordt beveiligd via tweezijdig TLS.
-  - *De bron bevestigt dat TLS verplicht is voor het transportkanaal, maar noemt HTTPS niet expliciet. Tweezijdig TLS wordt bevestigd, wat consistent is met de claim.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > Voor de authenticatie van de zender en de ontvanger in het berichtenverkeer tussen overheidspartijen worden PKIo-certificaten gebruikt. Het PKIo-certificaat wordt zowel gebruikt om het transport van de berichten veilig te laten verlopen (gebruikmakend van het TLS-protocol) als voor authenticatie.
-  - *De bron bevestigt dat TLS wordt gebruikt voor transport, maar schrijft HTTPS niet expliciet voor als verplichting (MUST). De claim is specifieker dan wat de bron stelt.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > tns:TransportProtocol tns:version = "1.1" > HTTP [...] tns:TransportSecurityProtocol tns:version = "1.0" > TLS
-  - *De bron bevestigt HTTP met TLS als transportprotocol voor ebMS2, maar spreekt niet van een algemeen voorschrift voor HTTPS/TLS over alle Digikoppeling koppelvlakken. Het betreft hier de ebMS2 context specifiek.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  > Logistiek: op deze laag bevinden zich de afspraken betreffende transportprotocollen (HTTP), messaging (SOAP), adressering, beveiliging (authenticatie en encryptie) en betrouwbaarheid.
-  - *De bron noemt HTTP als transportprotocol maar niet expliciet HTTPS of TLS als verplichting in deze passage. TLS wordt elders in de bron impliciet aangeduid (bij foutcodes: 'protocolfouten, hebben betrekking op TLS of HTTP fouten') maar niet als expliciete must.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > Logistiek: Op deze laag bevinden zich de afspraken betreffende transportprotocollen (HTTP), messaging (SOAP/REST), beveiliging (authenticatie en encryptie) en betrouwbaarheid.
-  - *De bron noemt HTTP als transportprotocol en TLS als vereiste bij Grote Berichten, maar schrijft HTTPS niet expliciet voor als algemeen verplicht transportprotocol voor alle Digikoppeling-varianten.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Voor ophalen van het grote bestand maakt de standaard gebruik van HTTPS-downloads. [...] transportprotocollen (HTTP)
-  - *De bron noemt HTTP als transportprotocol en HTTPS voor grote berichten, maar schrijft dit niet expliciet voor als MUST-vereiste voor alle koppelvlakken. TLS/HTTPS wordt impliciet vereist via beveiliging maar niet als expliciete MUST geformuleerd in dit document.*
-<details><summary>8x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *HTTPS/TLS als verplicht transportprotocol wordt expliciet voorgeschreven.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > op deze laag bevinden zich de afspraken betreffende transportprotocollen (HTTP & TLS) [...] TLS005 Het is verplicht voor communicatie over HTTPS port 443 te gebruiken
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *HTTPS/TLS als verplicht transportprotocol wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *HTTPS/TLS als verplicht transportprotocol wordt niet voorgeschreven in deze OIN-handreiking.*
+
+### `ls-dk-0026` — reference.md:39 *(§ REST-API)*
+
+> De REST-API koppelvlakstandaard is gebaseerd op de API Design Rules (ADR) van het Kennisplatform API's, zoals vastgesteld door het Forum Standaardisatie.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling REST-API koppelvlakstandaard
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Het Digikoppeling Koppelvlakstandaard REST-API is gebaseerd op de Federated Services Connectivity (FSC) standaard en de REST API Design Rules die in 2020 door het Kennisplatform API's zijn ontwikkeld.
+  - *De bron bevestigt de ADR-basis. De toevoeging 'zoals vastgesteld door het Forum Standaardisatie' wordt indirect ondersteund door de verwijzing naar [ADR] en [Pas-toe-of-leg-uit] in de referenties.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > Het Digikoppeling REST API profiel is o.a. gebaseerd op de REST-API Design Rules standaard zoals ontwikkeld door het Kennisplatform API's en in beheer gebracht bij Logius Stelsels & Standaarden
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt de REST-API koppelvlakstandaard en API Design Rules niet; dit is een ebMS2-specificatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt het REST-API profiel en API Design Rules niet.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *API Design Rules en Forum Standaardisatie worden niet vermeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen REST-API koppelvlakstandaard of ADR-referentie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *Relatie tussen REST-API koppelvlakstandaard en ADR/Forum Standaardisatie wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *De relatie tussen REST-API koppelvlakstandaard en ADR/Forum Standaardisatie wordt niet behandeld in deze bron.*
 </details>
 
-### `ls-dk-0029` — reference.md:70 *(§ ebMS2)*
+### `ls-dk-0028` — reference.md:51 *(§ WUS (SOAP))*
 
-> ebMS2 service contract is een CPA (Collaboration Protocol Agreement): een XML-document dat door beide partijen wordt overeengekomen.
+> WUS staat voor WSDL, UDDI en SOAP en biedt synchrone berichtuitwisseling op basis van webservices.
 
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 koppelvlakstandaard
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS koppelvlakstandaard
 
-- **SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Een deployment specificatie is niet hetzelfde als een ebXML samenwerkingsprotocol overeenkomst (ook wel aangeduid met een "Collaboration Protocol Profile and Agreement) [ISO 15000-1]. Wel hebben sommige onderdelen van een deployment specificatie gevolgen voor de specifieke invulling van CPA-elementen.
-  - *De bron bevestigt dat een CPA (Collaboration Protocol Agreement) gebruikt wordt en dat beide partijen dit overeenkomen, maar beschrijft het indirect via meerdere verwijzingen naar CPA-elementen en het CPA-register. De definitie als 'XML-document dat door beide partijen wordt overeengekomen' is impliciet aanwezig maar niet letterlijk zo geformuleerd.*
-- **SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Bij Digikoppeling op basis van ebMS2 worden certificaten echter ook opgenomen in de CPA's die organisaties uitwisselen.
-  - *De bron bevestigt het bestaan van CPA's als uitgewisseld document bij ebMS2, maar omschrijft de CPA niet volledig als 'XML-document dat door beide partijen wordt overeengekomen'. De kernstelling dat ebMS2 CPA's gebruikt die partijen uitwisselen is ondersteund.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > ebMS: OIN van zender en ontvanger worden vastgelegd als PartyId in het CPA (berichtencontract). De ebMS-berichtenheader wordt gegenereerd op basis van de CPA.
-  - *De bron bevestigt dat CPA een berichtencontract is en dat ebMS gebruik maakt van CPA. De claim dat het een 'XML-document dat door beide partijen wordt overeengekomen' is wordt niet expliciet bevestigd, maar de term 'berichtencontract' impliceert dit deels.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > Een CPA is een formeel xml document om de gebruikte functionele en technische eigenschappen van de ebMS2 protocol-karakteristieken vast te leggen. Het is dus een formele beschrijving voor het vastleggen van de gegevensuitwisseling.
-  - *De bron bevestigt dat een CPA een XML-document is dat door beide partijen wordt overeengekomen voor de ebMS2 gegevensuitwisseling.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Een CPA is een formeel xml-document om de gebruikte functionele en technische eigenschappen van de ebMS2 protocol-karakteristieken vast te leggen. [...] Een CPA moet worden gecreëerd als twee partijen afspreken om van elkaars ebMS2 services gebruik te maken. Beide partijen moeten de CPA importeren
-<details><summary>11x NOT_FOUND + 1x OUT_OF_SCOPE (klap uit)</summary>
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > De naam WUS staat voor WSDL, UDDI en SOAP, drie belangrijke deelstandaarden. [...] De Digikoppeling Koppelvlakstandaard WUS ondersteunt het uitvoeren van synchrone requests tussen geautomatiseerde informatiesystemen.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > WUS is een acroniem voor WSDL, UDDI en SOAP: WUS dus. Daarmee wordt een familie van internationale standaarden van OASIS en W3C bedoeld; deze worden ook vaak met WS-* aangeduid. Deze standaarden gaan over application-to-application webservices.
+  - *De bron bevestigt de expansie van het acroniem en de aard als synchrone webservice-standaard. 'Synchrone berichtuitwisseling' volgt uit WS003 (alleen request/response) en de beschrijving van Best Effort als 'synchrone uitwisselingen'.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron beschrijft de Grote Berichten koppelvlakstandaard, niet ebMS2. CPA wordt niet behandeld.*
+  - *WUS (WSDL, UDDI, SOAP) wordt niet inhoudelijk beschreven in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt uitsluitend ebMS2. WUS (WSDL, UDDI, SOAP) wordt niet behandeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *WUS (WSDL, UDDI, SOAP) en synchrone berichtuitwisseling worden niet behandeld in deze bron over Grote Berichten.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt geen WUS koppelvlakstandaard of de betekenis van het acroniem.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *WUS (WSDL, UDDI, SOAP) wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron vermeldt het CPA-register wel als hulpmiddel, maar beschrijft niet dat het ebMS2 service contract een CPA is of wat de inhoud daarvan is.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *ebMS2 CPA (Collaboration Protocol Agreement) wordt niet behandeld in deze WUS Best Practices bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *CPA (Collaboration Protocol Agreement) als service contract voor ebMS2 wordt niet beschreven in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *WUS (WSDL, UDDI, SOAP) en synchrone berichtuitwisseling worden niet behandeld in deze OIN-handreiking.*
 </details>
 
-### `ls-dk-0031` — reference.md:74 *(§ ebMS2)*
+### `ls-dk-0031` — reference.md:60 *(§ WUS (SOAP))*
 
-> ebMS2 profiel osb-rm garandeert once-and-only-once (exactly-once) delivery, duplicate-eliminatie en Message Acknowledgements.
+> WUS gebruikt de standaarden WS-Security 1.1, WS-Addressing, SOAP 1.1 (document-literal binding), en MTOM voor binaire bijlagen.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling WUS koppelvlakstandaard
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > WB001 Toepassen WS-Security 1.0 en WS-Security 1.1 [...] WA001 Digikoppeling WUS gebruikt de volgende velden uit WS-Addressing [...] WW001 Voor de SOAP berichten wordt SOAP 1.1 en 'document-literal binding' gehanteerd [...] WM001 Toepassen MTOM wordt door webservice provider bepaald.
+  - *Alle genoemde standaarden (WS-Security 1.1, WS-Addressing, SOAP 1.1 document-literal, MTOM) worden in de bron bevestigd.*
+<details><summary>7x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De brontekst noemt WUS als gebaseerd op OASIS WS-BRSP standaarden en benoemt WSDL, UDDI en SOAP, maar specificeert niet de exacte versies zoals WS-Security 1.1, WS-Addressing, SOAP 1.1 document-literal binding, of MTOM. Dit detailniveau ontbreekt in de architectuurdocumentatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *WS-Security, WS-Addressing, SOAP 1.1 en MTOM worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron behandelt uitsluitend ebMS2. WUS-standaarden worden niet behandeld.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *WUS-specifieke standaarden (WS-Security 1.1, WS-Addressing, SOAP, MTOM) worden niet behandeld in deze bron over Grote Berichten.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen WUS koppelvlakstandaard specifiek, WS-Security 1.1, WS-Addressing, SOAP 1.1 of MTOM.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *WS-Security 1.1, WS-Addressing, SOAP 1.1 en MTOM worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *WS-Security 1.1, WS-Addressing, SOAP 1.1 en MTOM worden niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0032` — reference.md:74 *(§ ebMS2)*
+
+> ebMS2 osb-rm biedt once-and-only-once (exactly-once) delivery, duplicate-eliminatie en Message Acknowledgements.
 
 **Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 osb-rm profiel
 
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Een betrouwbaar profiel garandeert dat een bericht met zekerheid (precies één keer) wordt afgeleverd en dat berichten zo mogelijk in de juiste volgorde worden afgeleverd, ook als de ontvanger tijdelijk niet beschikbaar is.
+  - *De bron bevestigt 'exactly-once delivery' en hertransmissies (impliciet duplicate-eliminatie), en noemt 'Hertransmissies op protocolniveau totdat ontvangst is bevestigd' en 'Onweerlegbaarheid op protocolniveau (non-repudiation)'. Message Acknowledgements worden indirect bevestigd via 'ontvangstbevestigingen'. De term 'duplicate-eliminatie' als expliciete functionaliteit staat niet letterlijk in de bron.*
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
   > Reliable Messaging Required in this profile. Reliable Messaging profile 2, Once-And-Only-Once Reliable Messaging at the End-To-End level only based upon end-to-end retransmission. In this profile the FromParty MSH (message origination) must request, and the ToParty MSH (message final destination) must send an acknowledgment message. The ToParty MSH must also filter any duplicate messages based ...
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > tns:duplicateElimination = "always" [...] tns:ackRequested = "always"
-  - *De bron bevestigt duplicate-eliminatie en acknowledgements. 'Once-and-only-once' wordt niet met die term benoemd; het osb-rm profielnaam wordt niet als zodanig vermeld.*
-<details><summary>14x NOT_FOUND + 1x OUT_OF_SCOPE (klap uit)</summary>
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *ebMS2 osb-rm delivery-garanties worden niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron beschrijft de Grote Berichten koppelvlakstandaard, niet het ebMS2 osb-rm profiel. Once-and-only-once delivery en Message Acknowledgements worden niet behandeld.*
+  - *De bron behandelt ebMS2 osb-rm niet. WS-RM (reliable messaging) wordt juist expliciet vermeld als verwijderd in versie 3.5: 'Verwijzingen naar WS-RM verwijderd'.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *ebMS2 osb-rm once-and-only-once delivery en Message Acknowledgements worden niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt geen ebMS2 osb-rm profiel of once-and-only-once delivery.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *ebMS2 osb-rm once-and-only-once delivery en Message Acknowledgements worden niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Het ebMS2 osb-rm profiel en eigenschappen als once-and-only-once delivery worden niet beschreven in het beheermodel.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Once-and-only-once delivery, duplicate-eliminatie en Message Acknowledgements voor osb-rm worden niet behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Once-and-only-once delivery en Message Acknowledgements worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *ebMS2 osb-rm profiel en once-and-only-once delivery worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *Once-and-only-once delivery en Message Acknowledgements bij osb-rm worden niet beschreven in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *Het specifieke profiel 'osb-rm' en termen als 'once-and-only-once' of 'exactly-once delivery' worden niet in de bron gebruikt. De bron beschrijft reliable messaging in algemene termen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *Once-and-only-once delivery en Message Acknowledgements bij ebMS2 osb-rm worden niet behandeld in deze bron.*
 </details>
 
-### `ls-dk-0032` — reference.md:92 *(§ Grote Berichten)*
+### `ls-dk-0034` — reference.md:70 *(§ ebMS2)*
 
-> Grote Berichten hanteert een drempelwaarde: berichten groter dan 20 MiB moeten via Grote Berichten worden uitgewisseld.
+> Het service contract bij ebMS2 is een CPA (Collaboration Protocol Agreement), een XML-document dat door beide partijen wordt overeengekomen.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling ebMS2 koppelvlakstandaard
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Een CPA is een formeel xml-document om de gebruikte functionele en technische eigenschappen van de ebMS2 protocol-karakteristieken vast te leggen. Het is dus een formele beschrijving voor het vastleggen van de gegevensuitwisseling. Een CPA moet worden gecreëerd als twee partijen afspreken om van elkaars ebMS2 services gebruik te maken. Beide partijen moeten de CPA importeren in hun Digikoppelin...
+  - *CPA staat voor Collaboration Protocol Agreement, is XML-gebaseerd en wordt door beide partijen overeengekomen. Volledig ondersteund.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > It is required to specify the resulting ebMS collaboration with a CPA. [...] Is a specific registry for storing CPA's required? [...] It is highly recommended to use the "CPA Register" facility. A web-based program is available by which CPA's are created and stored.
+  - *De bron bevestigt dat een CPA vereist is en dat dit een XML-document is dat door beide partijen wordt overeengekomen (Collaboration Protocol Agreement).*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *CPA als service contract bij ebMS2 wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron behandelt ebMS2 en CPA niet.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *CPA als service contract voor ebMS2 wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  - *De bron behandelt geen CPA of service contracts bij ebMS2.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *CPA als service contract bij ebMS2 wordt niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *CPA als service contract bij ebMS2 wordt niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0035` — reference.md:92 *(§ Grote Berichten)*
+
+> De drempelwaarde voor Grote Berichten is 20 MiB: berichten groter dan 20 MiB moeten via Grote Berichten worden uitgewisseld.
 
 **Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling Grote Berichten
 
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Grote berichten vormen een functionele uitbreiding op Digikoppeling uitwisseling voor de veilige bestandsoverdracht van berichten groter dan 20 MiB
+  - *De bron bevestigt dat de drempelwaarde 20 MiB is, maar stelt niet expliciet dat berichten groter dan 20 MiB 'moeten' via Grote Berichten worden uitgewisseld (MUST). De bron beschrijft het als een uitwisselingsoptie voor die gevallen, niet als harde verplichting in de architectuurtekst.*
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
   > VW001 Als partijen niet tot overeenstemming komen MOETEN zij berichten groter dan 20 MiB via het Koppelvlak Grote Berichten afhandelen.
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Berichten (Bevragingen of Meldingen) die een grootte hebben van meer dan 20 MiB kunnen op een andere wijze worden uitgewisseld. Hiervoor gelden specifieke afspraken.
-  - *De drempelwaarde van 20 MiB wordt bevestigd. De claim stelt 'moeten' (MUST), maar de bron formuleert dit als 'kunnen', niet als harde verplichting.*
-<details><summary>15x NOT_FOUND (klap uit)</summary>
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *De drempelwaarde van 20 MiB voor Grote Berichten wordt niet vermeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *De bron behandelt de ebMS2 koppelvlakstandaard en vermeldt nergens een drempelwaarde van 20 MiB voor Grote Berichten. Grote Berichten is een apart Digikoppeling-onderdeel dat niet in deze spec beschreven wordt.*
+  - *De bron behandelt uitsluitend ebMS2. Grote Berichten of een drempelwaarde van 20 MiB wordt niet behandeld.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
+  - *De brontekst gaat over Digikoppeling WUS. Grote Berichten en een drempelwaarde van 20 MiB worden niet behandeld.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt geen drempelwaarde van 20 MiB of Grote Berichten.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De drempelwaarde van 20 MiB voor Grote Berichten wordt niet genoemd in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
   - *De 20 MiB drempelwaarde voor Grote Berichten wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Grote Berichten en de 20 MiB drempelwaarde worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt het Grote Berichten koppelvlak en de 20 MiB drempelwaarde niet.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Grote Berichten en de 20 MiB drempelwaarde worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *Een drempelwaarde van 20 MiB wordt niet vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *De 20 MiB drempelwaarde voor Grote Berichten wordt niet behandeld in deze OIN-handreiking.*
 </details>
 
-### `ls-dk-0033` — reference.md:90 *(§ Grote Berichten)*
+### `ls-dk-0036` — reference.md:90 *(§ Grote Berichten)*
 
-> Grote Berichten gebruikt het claim-check patroon: het grote bestand wordt buiten de reguliere berichtenuitwisseling overgedragen, terwijl een referentie via het normale kanaal wordt verstuurd.
+> Grote Berichten gebruikt het claim-check patroon: het grote bestand wordt buiten de reguliere berichtenuitwisseling om overgedragen, terwijl een referentie via het normale kanaal wordt verstuurd.
 
 **Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** Digikoppeling Grote Berichten
 
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Het principe dat Digikoppeling grote berichten toepast is het 'claim-check' principe. Dit betekent dat het bericht zelf (WUS/ebMS2/REST) alleen een referentie (claim-check) naar het grote bestand bevat. Deze referentie wordt vervolgens gebruikt om het bestand zelf op te halen.
+  - *Volledig ondersteund, inclusief de overdrachtsmethode buiten de reguliere berichtenuitwisseling.*
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
   > De verzender stelt metadata samen over het grote bestand en deelt deze metadata in een Digikoppeling-bericht [in een zgn. stuurbericht]. Uitwisseling van het grote bestand vindt plaats via een PULL of een PUSH principe.
-  - *Het claim-check patroon wordt beschreven: het grote bestand wordt buiten de reguliere berichtenuitwisseling overgedragen, terwijl een referentie (stuurbericht met metadata) via het normale kanaal wordt verstuurd.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > De verzender stelt metadata samen over het grote bestand en deelt deze metadata in een Digikoppeling-bericht [in een zgn. stuurbericht]. Uitwisseling van het grote bestand vindt plaats via een PULL of een PUSH principe.
-  - *De bron beschrijft het claim-check patroon in andere bewoordingen: het grote bestand wordt buiten de reguliere berichtenstroom overgedragen terwijl een stuurbericht met metadata via het normale kanaal wordt verstuurd.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Het principe dat Digikoppeling grote berichten toepast is het 'claim-check' principe. Dit betekent dat het bericht zelf (WUS of ebMS2) alleen een referentie (claim-check) naar het grote bestand bevat. Deze referentie wordt vervolgens gebruikt om het bestand zelf op te halen.
-<details><summary>14x NOT_FOUND (klap uit)</summary>
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *Het claim-check patroon bij Grote Berichten wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *Het claim-check patroon voor Grote Berichten wordt niet besproken in deze ebMS2 koppelvlakstandaard.*
+  - *De bron behandelt uitsluitend ebMS2. Het claim-check patroon voor Grote Berichten wordt niet behandeld.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
+  - *Het claim-check patroon voor Grote Berichten komt niet voor in deze WUS-specificatie.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt geen claim-check patroon of Grote Berichten.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *De brontekst behandelt Digikoppeling Identificatie en Authenticatie. Grote Berichten en het claim-check patroon worden niet besproken in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Het claim-check patroon voor Grote Berichten wordt niet beschreven in het beheermodel.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Het claim-check patroon voor Grote Berichten wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Het claim-check patroon voor Grote Berichten wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt het Grote Berichten koppelvlak en het claim-check patroon niet.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Grote Berichten en het claim-check patroon worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron gaat over het OIN-stelsel, niet over Digikoppeling Grote Berichten of het claim-check patroon.*
 </details>
 
-### `ls-dk-0035` — reference.md:115 *(§ Grote Berichten)*
+### `ls-dk-0038` — reference.md:115 *(§ Grote Berichten)*
 
 > Grote Berichten is altijd een aanvulling op een ander koppelvlak (REST-API, WUS of ebMS2); het reguliere bericht met de claim-check wordt via een van deze protocollen verstuurd.
 
 **Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling Grote Berichten
 
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > VW002 Voor de overdracht van metadata MOET gebruik gemaakt worden van Digikoppeling, zoals aangeven in het hoofdstuk Metadata in dit document. [...] De metadata zelf wordt verzonden via een (WUS/ebMS/API) Digikoppeling Koppelvlak
-  - *De bron bevestigt expliciet dat Grote Berichten altijd gecombineerd wordt met een ander koppelvlak (WUS, ebMS of API).*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > De metadata zelf wordt verzonden via het REST-API, ebMS of WUS Koppelvlak... Voorafgaand aan deze actie dient altijd een meta-bericht verstuurd te worden door de verzender. Dit kan met behulp van het REST-API, WUS of ebMS profiel.
-- **SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Met WUS of ebMS2 wordt een referentie (link) verstuurd, De referentie wordt gebruikt om een groot bestand te downloaden. [...] De Digikoppeling Koppelvlakstandaard Grote Berichten (KVS GB) maakt gebruik van WUS en ebMS2 voor het verzenden van metadata.
-  - *De bron bevestigt dat Grote Berichten een aanvulling is op WUS of ebMS2. REST-API wordt hier niet expliciet als derde optie genoemd — de bron noemt alleen WUS en ebMS2 in deze context.*
-<details><summary>14x NOT_FOUND (klap uit)</summary>
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > De Digikoppeling Koppelvlakstandaard Grote Berichten maakt gebruik van WUS, ebMS2 of REST voor het verzenden van metadata. Voor ophalen van het grote bestand maakt de standaard gebruik van HTTPS-downloads.
+  - *De bron bevestigt dat Grote Berichten altijd een aanvulling is op WUS, ebMS2 of REST, en dat de claim-check via een van deze protocollen wordt verstuurd.*
+- **PARTIALLY_SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  > De metadata zelf wordt verzonden via een (WUS/ebMS/API) Digikoppeling Koppelvlak
+  - *De bron bevestigt dat Grote Berichten altijd gecombineerd wordt met WUS, ebMS2 of REST-API voor het stuurbericht. De claim noemt echter 'altijd een aanvulling' als harde vereiste; de bron formuleert dit als feitelijke werking maar niet expliciet als MUST. Technisch correct, maar de modaliteit MUST wordt niet letterlijk zo gesteld.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *Grote Berichten als aanvulling op andere koppelvlakken wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  - *Grote Berichten als aanvulling op andere koppelvlakken wordt niet behandeld in deze ebMS2 koppelvlakstandaard.*
+  - *De bron behandelt uitsluitend ebMS2. Grote Berichten als aanvullend koppelvlak wordt niet behandeld.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
+  - *Grote Berichten als aanvulling op een koppelvlak wordt niet besproken in deze WUS-standaard.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt geen Grote Berichten als aanvulling op andere koppelvlakken.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *Grote Berichten als aanvulling op andere koppelvlakken wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron beschrijft niet dat Grote Berichten altijd een aanvulling is op een ander koppelvlak.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *Grote Berichten als aanvulling op andere koppelvlakken wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Grote Berichten als aanvulling op andere koppelvlakken wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *De bron behandelt het Grote Berichten koppelvlak niet.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Grote Berichten als aanvulling op andere koppelvlakken wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt het OIN-stelsel; geen informatie over Grote Berichten of koppelvlakken.*
 </details>
 
-### `ls-dk-0037` — reference.md:124 *(§ TLS-vereisten)*
+### `ls-dk-0040` — reference.md:128 *(§ TLS-vereisten)*
 
-> TLS is verplicht voor alle Digikoppeling-communicatie.
+> TLS001: Authenticatie is verplicht met TLS en PKIoverheid-certificaten voor alle Digikoppeling-communicatie.
 
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling beveiliging TLS
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling TLS-vereisten
 
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > In Digikoppeling is ervoor gekozen om PKIoverheid certificaten te gebruiken op het niveau van het communicatiekanaal (TLS) om de directe communicatiepartners te authenticeren (enkele hop).
+  - *De bron bevestigt dat PKIoverheid-certificaten en TLS worden gebruikt voor authenticatie, maar formuleert dit niet als een expliciete 'TLS001'-verplichting met de exacte formulering uit de claim. De verplichting van tweezijdig TLS staat elders in de bron bevestigd.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > De Digikoppeling Beveiligingsstandaarden en voorschriften gaan specifiek in op het verplichte gebruik van PKIO certificaten
+  - *De bron bevestigt het verplichte gebruik van PKIoverheid-certificaten en TLS, maar de specifieke formulering 'TLS001' en de volledige claim-tekst zijn niet te verifiëren; de bron verwijst door naar een ander document.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > Client and Server authentication is required using HTTPS and TLS. [...] The use of PKI Overheid certificates is required in which an OIN is used in the Subject.serialNumber.
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > WT001 Authenticatie op transportniveau gebeurt op basis TLS met tweezijdige authenticatie. [...] WT002 De te gebruiken certificaten in de productie omgeving voldoen aan de eisen van PKIoverheid (PvE 3b)
+  - *De bron bevestigt TLS met PKIoverheid-certificaten voor Digikoppeling WUS. Het claim spreekt van 'alle Digikoppeling-communicatie', terwijl de bron alleen WUS dekt. De claim verwijst ook naar een specifiek voorschrift 'TLS001' dat niet als zodanig in de bron staat.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  > GB008 PUSH / PULL Zowel de client als de server organisatie MOET zich authentiseren met een PKIoverheid certificaat [PKI CA], [PKIoverheid Certificaten]. De basis voor authenticatie en autorisatie in Digikoppeling is OIN.
+  - *De bron bevestigt PKIoverheid-certificaten en TLS voor Grote Berichten specifiek (GB006, GB008). De claim spreekt over 'alle Digikoppeling-communicatie', maar de bron dekt alleen de Grote Berichten koppelvlakstandaard. Voor de bredere claim over alle Digikoppeling-communicatie verwijst de bron naar het Digikoppeling Beveiligingsdocument dat niet beschikbaar is.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > TLS001 Authenticatie is verplicht met TLS en PKIoverheid certificaten
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *TLS-vereisten worden niet behandeld in deze bron over Identificatie en Authenticatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *De bron beschrijft het OIN-stelsel. TLS-vereisten voor Digikoppeling worden niet behandeld.*
+
+### `ls-dk-0041` — reference.md:129 *(§ TLS-vereisten)*
+
+> TLS002: Tweezijdig TLS (mutual TLS) is verplicht voor alle vormen van berichtuitwisseling via Digikoppeling.
+
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling TLS-vereisten
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Gebruik van tweezijdig TLS voor het veilig transporteren van gegevens via internet is verplicht.
+  - *Volledig ondersteund; tweezijdig TLS (mutual TLS) is expliciet als verplicht aangemerkt.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > De Digikoppeling Beveilingsstandaarden en voorschriften verplichten het gebruik van 2-zijdig TLS met minimaal TLS versie 1.2
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
   > Voor alle profielen gelden de volgende eigenschappen: Vertrouwelijkheid en authenticatie van zender en ontvanger wordt als volgt gerealiseerd: Voor Point-to-Point Security, door middel van twee-zijdig TLS op transport-niveau (in het HTTP kanaal). (De toepassing ervan wordt dus ook verplicht verklaard bij gebruik van security op berichtniveau.)
-  - *De bron stelt expliciet dat twee-zijdig TLS verplicht is voor alle profielen. De profieltabel bevestigt ook: 'Voor alle profielen wordt twee-zijdig TLS gebruikt op transport niveau (HTTPS)'.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > GB006 PUSH / PULL Het HTTP transport MOET beveiligd zijn met TLS.
-  - *De bron bevestigt TLS-verplichting voor bestandsoverdracht bij Grote Berichten. De bron beperkt zich tot de Grote Berichten context.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Digikoppeling schrijft voor dat het transport kanaal (internet of diginetwerk) wordt beveiligd via tweezijdig TLS.
-  - *De bron bevestigt dat TLS verplicht is voor het transportkanaal, maar specificeert niet expliciet dat dit voor 'alle' Digikoppeling-communicatie geldt zonder uitzondering. De claim zegt 'alle', de bron spreekt over het transportkanaal in het algemeen.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > Het PKIo-certificaat wordt zowel gebruikt om het transport van de berichten veilig te laten verlopen (gebruikmakend van het TLS-protocol) als voor authenticatie. Bij het gebruik van Digikoppeling wordt tweezijdige authenticatie vereist.
-  - *De bron bevestigt TLS-gebruik voor berichttransport en dat tweezijdige authenticatie vereist is, maar stelt TLS niet expliciet als verplicht voor álle Digikoppeling-communicatie in de zin van een normerende uitspraak.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > TransportProtocol over HTTP met TLS met server certificaat [...] Client Authentication over HTTP met client certificaat. Dit is verplicht.
-  - *De bron bevestigt TLS als verplicht transportprotocol voor ebMS2, maar doet geen uitspraak over alle Digikoppeling-communicatie in het algemeen. De claim is breder dan wat de bron afdekt.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > Alleen verbindingen waarbij zowel de client als de server over een geldig certificaat beschikken zijn toegestaan (TLS).
-  - *De bron bevestigt TLS-verplichting in de context van Grote Berichten, maar dit is een Best Practices document en geen normatieve koppelvlakstandaard. De claim stelt dat TLS verplicht is voor 'alle Digikoppeling-communicatie', wat breder is dan wat deze bron dekt.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Digikoppeling schrijft het gebruik van PKIoverheidcertificaten met een OIN voor om de identiteit van een website of server te controleren (authenticatie). Voor het opzetten van een beveiligde verbinding tussen servers en voor de ondertekening en versleuteling van berichten moet het OIN van de organisatie in de PKIoverheidcertificaten worden opgenomen.
-  - *De bron vermeldt beveiligde verbindingen en PKIoverheid-certificaten, maar specificeert TLS niet expliciet als verplicht protocol voor alle communicatie. HTTPS-downloads worden wel genoemd voor Grote Berichten.*
-<details><summary>10x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > WT001 Authenticatie op transportniveau gebeurt op basis TLS met tweezijdige authenticatie. [...] Alle Digikoppeling profielen verplichten point-to-point beveiliging.
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  > GB008 PUSH / PULL Zowel de client als de server organisatie MOET zich authentiseren met een PKIoverheid certificaat [...] (2-zijdig TLS).
+  - *De bron bevestigt 2-zijdig TLS (mutual TLS) voor Grote Berichten. De claim stelt dit voor 'alle vormen van berichtuitwisseling via Digikoppeling'; de bron dekt alleen Grote Berichten en verwijst voor bredere TLS-eisen naar het Digikoppeling Beveiligingsdocument.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > TLS002 Tweezijdig TLS is verplicht Digikoppeling schrijft het gebruik van twee-zijdig TLS voor en verplicht dit voor alle vormen van berichtuitwisseling via Digikoppeling.
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *Tweezijdig TLS wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron bevat geen normatieve vereisten over TLS voor Digikoppeling-communicatie.*
-- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *TLS wordt in de bron wel impliciet aangeduid (bij foutcategorieën) maar niet als expliciete verplichting voor alle Digikoppeling-communicatie geformuleerd.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
+  - *Geen TLS-vereisten in deze bron.*
 
-### `ls-dk-0040` — reference.md:130 *(§ TLS-vereisten)*
+### `ls-dk-0042` — reference.md:130 *(§ TLS-vereisten)*
 
-> TLS003: Mutual TLS (mTLS) is verplicht: zowel client als server moeten zich authenticeren met een PKIoverheid-certificaat.
+> TLS003: De TLS-implementatie mag niet op SSL v3 en eerdere versies terugvallen; backward compatibility mode voor SSL v3 en eerder dient te worden uitgezet.
 
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling beveiligingsstandaard TLS003
+**Type:** normative_requirement  ·  **Modaliteit:** MUST_NOT  ·  **Scope:** Digikoppeling TLS-vereisten
 
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Client and Server authentication is required using HTTPS and TLS. [...] Client-side authentication is required.
-  - *De bron bevestigt mutual TLS (zowel client als server authenticatie) en PKIoverheid-certificaten. De eis staat in secties 5.2.3 en 5.11.4.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > GB008 PUSH / PULL Zowel de client als de server organisatie MOET zich authentiseren met een PKIoverheid certificaat [PKI CA], [PKIoverheid Certificaten]. De basis voor authenticatie en autorisatie in Digikoppeling is OIN. [...] (2-zijdig TLS).
-  - *De bron bevestigt mutual TLS met PKIoverheid-certificaten.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Digikoppeling schrijft voor dat het transport kanaal (internet of diginetwerk) wordt beveiligd via tweezijdig TLS. Beide partijen wisselen hun publieke sleutels uit en zetten hiermee een tweezijdig versleutelde TLS verbinding op.
-  - *De bron bevestigt tweezijdig TLS (mTLS) en het gebruik van PKIoverheid-certificaten, maar vermeldt niet expliciet dat dit als 'verplicht' (MUST) is vastgelegd in een genummerde standaard TLS003.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > Bij het gebruik van Digikoppeling wordt tweezijdige authenticatie vereist. Zender en ontvanger moeten elkaars certificaat vertrouwen en elkaars publieke TLS-sleutel kennen.
-  - *De bron bevestigt tweezijdige authenticatie en certificaatgebruik, maar noemt PKIoverheid niet expliciet als vereiste en gebruikt niet de term 'mTLS'. De claim is specifieker dan wat de bron stelt.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > Client Authentication over HTTP met client certificaat. Dit is verplicht. In het client certificaat staat in het subject.Serialnumber de PartyId van de 'client' organisatie.
-  - *De bron bevestigt dat mutual TLS (client én server certificaat) verplicht is en dat het PKIoverheid-certificaten betreft. Echter, de term 'PKIoverheid' wordt in 3.4.16 vermeld: 'Er moet gebruik gemaakt worden van certificaten die voldoen aan de eisen van de PKI Overheid.' De combinatie is aanwezig maar niet zo expliciet als de claim stelt.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > Alleen verbindingen waarbij zowel de client als de server over een geldig certificaat beschikken zijn toegestaan (TLS).
-  - *De bron bevestigt mutual TLS (beide partijen met certificaat), maar vermeldt 'PKIoverheid-certificaat' niet expliciet in deze zin. Elders wordt OIN-gerelateerde certificaten en PKIoverheid-hiërarchie wel vermeld, maar de specifieke term 'mTLS' of 'Mutual TLS' als verplichting staat niet letterlijk in de bron.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Digikoppeling schrijft het gebruik van PKIoverheidcertificaten met een OIN voor om de identiteit van een website of server te controleren (authenticatie). Voor het opzetten van een beveiligde verbinding tussen servers en voor de ondertekening en versleuteling van berichten moet het OIN van de organisatie in de PKIoverheidcertificaten worden opgenomen.
-  - *De bron bevestigt dat beide partijen PKIoverheid-certificaten gebruiken voor authenticatie, wat mTLS impliceert. De term 'mutual TLS' of 'mTLS' wordt echter niet expliciet genoemd, en de verplichting wordt niet in die exacte terminologie gesteld.*
-<details><summary>10x NOT_FOUND (klap uit)</summary>
+  > Note: Message service handlers should NOT be able to operate in SSL v3 backward compatibility mode. [...] TLS implementations must NOT support SSL v3 backwards compatiblity mode.
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > De TLS implementatie mag niet op een oudere TLS of SSL versie terug kunnen vallen.
+  - *De bron verbiedt terugvallen op oudere TLS of SSL versies in het algemeen, maar noemt SSL v3 niet expliciet. De claim specificeert 'SSL v3 en eerdere versies', wat iets preciezer is dan wat de bron stelt.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > TLS003 De TLS implementatie mag niet op SSL v3 en eerdere versies terugvallen Backward compatibility mode voor SSL v3 en eerdere versies dient te worden uitgezet.
+<details><summary>5x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *TLS003 en mTLS-verplichting met PKIoverheid-certificaten worden niet behandeld in het beheermodel.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Mutual TLS en PKIoverheid-certificaten als verplichting (TLS003) worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-</details>
-
-### `ls-dk-0043` — reference.md:133 *(§ TLS-vereisten)*
-
-> TLS006: Het OIN van de organisatie moet opgenomen zijn in het Subject.SerialNumber-veld van het PKIoverheid-certificaat.
-
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling beveiligingsstandaard TLS006
-
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > The use of PKI Overheid certificates is required in which an OIN is used in the Subject.serialNumber.
-- **PARTIALLY_SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Voor de unieke identificatie en authenticatie van deze organisaties wordt het OIN opgenomen in een PKIoverheid certificaat in het zogenaamde Subject.serialNumber-veld door de TSP.
-  - *De bron bevestigt dat het OIN in Subject.serialNumber wordt opgenomen. De claim zegt 'Subject.SerialNumber' (hoofdletter S), de bron zegt 'Subject.serialNumber' — dit is dezelfde veldnaam. De claim is volledig ondersteund voor het OIN-veld. Echter de claim stelt dit als MUST (TLS006-standaard), terwijl de bron de verplichting wel impliceert maar niet als genummerde standaard presenteert. PARTIALLY_SUPPORTED vanwege het ontbreken van de TLS006-standaardnummering.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > Een PKIo-certificaat dat gebruikt wordt voor berichtenuitwisseling met Digikoppeling bevat het OIN van de organisatie of organisatieonderdeel. Dit OIN wordt opgeslagen in het Subject.SerialNumber veld van het certificaat.
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > In het client certificaat staat in het subject.Serialnumber de PartyId van de 'client' organisatie. [...] Het nummer zal ook gebruikt worden in het cliënt certificaat voor het subject.Serialnumber veld.
-  - *De bron bevestigt expliciet dat het OIN (als PartyId) in het subject.SerialNumber van het certificaat wordt opgenomen.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Voor het opzetten van een beveiligde verbinding tussen servers en voor de ondertekening en versleuteling van berichten moet het OIN van de organisatie in de PKIoverheidcertificaten worden opgenomen.
-  - *De bron bevestigt dat het OIN in het PKIoverheid-certificaat moet worden opgenomen, maar specificeert niet het veld 'Subject.SerialNumber' expliciet.*
-<details><summary>12x NOT_FOUND (klap uit)</summary>
-
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
+  - *De bron vermeldt nergens een verbod op SSL v3 of het uitschakelen van backward compatibility mode. Dit detailniveau staat in de Digikoppeling Beveiligingsstandaarden, niet in de Architectuur.*
+- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *SSL v3 en backward compatibility worden niet expliciet vermeld in deze bron. De bron verwijst naar de Beveiligingsstandaarden voor TLS-details maar reproduceert die regels niet.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron vermeldt OIN in relatie tot certificaten en autorisatie, maar beschrijft niet specifiek dat het OIN in het Subject.SerialNumber-veld moet worden opgenomen.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron verwijst voor TLS-algoritmen naar het Digikoppeling Beveiligingsdocument maar bevat zelf geen specificaties over SSL v3 of backward compatibility.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *SSL v3 backward compatibility wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *TLS006 en het opnemen van het OIN in Subject.SerialNumber worden niet beschreven in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *OIN in Subject.SerialNumber van PKIoverheid-certificaat (TLS006) wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *De bron vermeldt dat OIN in certificaten zit en gebruikt wordt, maar specificeert niet het Subject.SerialNumber-veld als de verplichte locatie voor het OIN.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *Geen TLS-vereisten of SSL-versiebeleid in deze bron.*
 </details>
 
-### `ls-dk-0044` — reference.md:137 *(§ PKIoverheid Certificaten)*
+### `ls-dk-0043` — reference.md:131 *(§ TLS-vereisten)*
 
-> Alle Digikoppeling-deelnemers moeten PKIoverheid-certificaten gebruiken voor authenticatie.
+> TLS004: Een serviceaanbieder is verplicht TLS 1.2 te ondersteunen; daarnaast is het aanbevolen om TLS 1.3 te ondersteunen.
 
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling PKIoverheid certificaten
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling TLS-vereisten
 
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > The use of PKI Overheid certificates is required in which an OIN is used in the Subject.serialNumber. [...] Client-side authentication is required. What client Certificate Authorities are acceptable? PKI overheid maintains a list of approved trusted service providers.
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > GB008 PUSH / PULL Zowel de client als de server organisatie MOET zich authentiseren met een PKIoverheid certificaat [PKI CA], [PKIoverheid Certificaten].
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  > "De Digikoppeling-standaard en in het bijzonder 'Gebruik en achtergrond Digikoppeling-certificaten' sluiten aan bij de PKI.Overheid."
-  - *De bron bevestigt de relatie met PKIoverheid maar legt geen expliciete MUST-verplichting op dat alle deelnemers PKIoverheid-certificaten moeten gebruiken voor authenticatie.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Een belangrijk aspect voor beveiliging van Digikoppeling is de juiste identificatie, authenticatie en autorisatie van organisaties. Voor Digikoppeling is daarbij gekozen om certificaten toe te passen die voldoen aan de eisen van PKIoverheid.
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > Voor de authenticatie van de zender en de ontvanger in het berichtenverkeer tussen overheidspartijen worden PKIo-certificaten gebruikt.
-  - *De bron bevestigt gebruik van PKIo-certificaten voor authenticatie, maar stelt dit niet expliciet als MUST-verplichting voor alle Digikoppeling-deelnemers, en noemt 'PKIoverheid' niet letterlijk (alleen 'PKIo').*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > Er moet gebruik gemaakt worden van certificaten die voldoen aan de eisen van de PKI Overheid.
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > Ten behoeve van Digikoppeling grote berichten dient gebruik gemaakt te worden van OIN gerelateerde certificaten.
-  - *De bron spreekt van 'OIN gerelateerde certificaten' en verwijst naar 'certificaat-hierarchie (root-certificaat van Staat der Nederlanden)', wat naar PKIoverheid verwijst, maar de term 'PKIoverheid-certificaten' als expliciete verplichting staat niet letterlijk in de bron.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Digikoppeling schrijft het gebruik van PKIoverheidcertificaten met een OIN voor om de identiteit van een website of server te controleren (authenticatie). Voor het opzetten van een beveiligde verbinding tussen servers en voor de ondertekening en versleuteling van berichten moet het OIN van de organisatie in de PKIoverheidcertificaten worden opgenomen.
-<details><summary>9x NOT_FOUND (klap uit)</summary>
+- **SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > De Digikoppeling Beveilingsstandaarden en voorschriften verplichten het gebruik van 2-zijdig TLS met minimaal TLS versie 1.2
+  - *De bron bevestigt TLS 1.2 als minimumvereiste, maar het aanbevolen gebruik van TLS 1.3 wordt niet vermeld in de brontekst. PARTIALLY_SUPPORTED zou ook verdedigbaar zijn, maar de kerneis (TLS 1.2 verplicht) wordt bevestigd.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > TLS004 Een Serviceaanbieder is verplicht TLS versie 1.2 te ondersteunen, daarnaast is het aanbevolen voor een Serviceaanbieder om TLS versie 1.3 te ondersteunen.
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *De bron verwijst voor beveiligingsstandaarden naar het document 'Digikoppeling Beveiligingsstandaarden en voorschriften' maar noemt zelf geen specifieke TLS-versievereisten zoals TLS 1.2 of 1.3.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron verwijst voor specifieke TLS-versies naar het document 'Digikoppeling Beveiligingsstandaarden en voorschriften' maar noemt zelf geen specifieke vereiste voor TLS 1.2 of aanbeveling voor TLS 1.3.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron verwijst voor toegestane TLS-versies naar het externe document 'Digikoppeling Beveiligingsstandaarden en voorschriften' maar noemt TLS 1.2 of TLS 1.3 niet expliciet in de brontekst zelf.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *De bron noemt TLS als vereiste en verwijst naar het Digikoppeling Beveiligingsdocument voor specifieke versies en algoritmen, maar vermeldt TLS 1.2 of TLS 1.3 niet expliciet.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *TLS versie-vereisten worden niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *PKIoverheid-certificaten als verplichting voor alle deelnemers worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *Geen TLS-versievereisten in deze bron.*
 </details>
 
-### `ls-dk-0045` — reference.md:147 *(§ OIN-identificatie)*
+### `ls-dk-0044` — reference.md:132 *(§ TLS-vereisten)*
 
-> Het OIN wordt opgenomen in het PKIoverheid-certificaat (Subject.SerialNumber) en wordt gebruikt voor adressering en routering van berichten.
+> TLS005: Voor communicatie over HTTPS is het verplicht poort 443 te gebruiken.
 
-**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling OIN-identificatie
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling TLS-vereisten
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > De Digikoppeling Beveiligingsstandaarden en voorschriften verplichten het gebruik van de netwerkpoort 443 voor data verkeer.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > WT006 Voor communicatie over HTTPS wordt port 443 gebruikt.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  > GB012 PUSH / PULL Het HTTPS transport MOET over poort 443 plaatsvinden.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > TLS005 Het is verplicht voor communicatie over HTTPS port 443 te gebruiken
+<details><summary>4x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *Poort 443 wordt niet genoemd in de brontekst.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron vermeldt HTTPS als verplicht transportprotocol maar noemt geen specifieke poortverplichting (poort 443).*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *Poort 443 vereisten worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *Geen poort- of HTTPS-vereisten in deze bron.*
+</details>
+
+### `ls-dk-0045` — reference.md:133 *(§ TLS-vereisten)*
+
+> TLS006: Het is verplicht te voldoen aan de NCSC ICT-beveiligingsrichtlijnen voor TLS.
+
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling TLS-vereisten
 
 - **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > The use of PKI Overheid certificates is required in which an OIN is used in the Subject.serialNumber. [...] Partners who are going to use ebMS for the first time must use an OIN (Organisatie Identificatie Nummer) for identification.
-  - *De bron bevestigt OIN in Subject.SerialNumber en gebruik voor identificatie. Het gebruik voor 'adressering en routering van berichten' is niet expliciet zo beschreven; de bron noemt OIN primair in de context van PartyId voor identificatie van partijen.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  > GB008 [...] De basis voor authenticatie en autorisatie in Digikoppeling is OIN. GB009 PUSH / PULL De server organisatie MOET het transport autoriseren op basis van het OIN van een valide client certificaat.
-  - *De bron bevestigt OIN in het certificaat voor authenticatie en autorisatie, maar beschrijft niet expliciet het Subject.SerialNumber-veld of het gebruik van OIN voor routering en adressering van berichten.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Voor de unieke identificatie en authenticatie van deze organisaties wordt het OIN opgenomen in een PKIoverheid certificaat in het zogenaamde Subject.serialNumber-veld door de TSP. Identificatie van organisaties vindt voor Digikoppeling plaats aan de hand van het OIN dat is opgenomen in het certificaat.
-  - *De bron bevestigt OIN in Subject.serialNumber en gebruik voor identificatie/authenticatie. De claim noemt ook 'adressering en routering van berichten'; de bron vermeldt dit aspect niet expliciet — alleen authenticatie en autorisatie worden benoemd. Daarom PARTIALLY_SUPPORTED.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > Een PKIo-certificaat dat gebruikt wordt voor berichtenuitwisseling met Digikoppeling bevat het OIN van de organisatie of organisatieonderdeel. Dit OIN wordt opgeslagen in het Subject.SerialNumber veld van het certificaat. [...] Adresseren en Routeren vindt plaats op het niveau van de berichtheader. Voor het routeren kan gebruik gemaakt worden van het OIN, het opgegeven endpointadres of beide.
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > Het nummer zal ook gebruikt worden in het cliënt certificaat voor het subject.Serialnumber veld. [...] De PartyId is de (logische) aanduiding waarmee de organisatie geïdentificeerd wordt.
-  - *De bron bevestigt dat OIN in Subject.SerialNumber staat en gebruikt wordt voor identificatie. Het gebruik voor 'adressering en routering' wordt niet expliciet zo benoemd in dit document.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > Autorisatie kan vervolgens op basis van een OIN uit dit geldige certificaat ingericht worden.
-  - *De bron bevestigt dat OIN in certificaten zit en voor autorisatie gebruikt wordt, en ook voor adressering in URLs. Het specifieke Subject.SerialNumber-veld wordt echter niet vermeld, en 'routering van berichten' als expliciet gebruik staat niet letterlijk in de bron.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Voor het opzetten van een beveiligde verbinding tussen servers en voor de ondertekening en versleuteling van berichten moet het OIN van de organisatie in de PKIoverheidcertificaten worden opgenomen. Elke overheidsorganisatie die digitaal zaken doet kan een uniek Organisatieidentificatienummer (OIN) krijgen.
-  - *De bron bevestigt dat het OIN in het PKIoverheid-certificaat moet worden opgenomen en voor authenticatie wordt gebruikt. Adressering en routering via OIN worden impliciet vermeld (adresseringsinformatie voor routering in de ebMS2/WUS-secties), maar het specifieke veld 'Subject.SerialNumber' wordt niet expliciet benoemd.*
-<details><summary>10x NOT_FOUND (klap uit)</summary>
+  > The currently allowed protocol versions for TLS are described in Digikoppeling Beveiligingsstandaarden en voorschriften
+  - *De bron bevestigt dat er TLS-beveiligingsrichtlijnen van toepassing zijn, maar verwijst voor de inhoud naar een extern document (Digikoppeling Beveiligingsstandaarden en voorschriften). NCSC-richtlijnen worden niet expliciet bij naam genoemd in deze bron.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > TLS006 Het is verplicht te voldoen aan de NCSC ICT-beveiligingsrichtlijnen voor TLS Zie [ NCSC 2025 ]
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *NCSC ICT-beveiligingsrichtlijnen worden niet vermeld in de brontekst. Dit detailniveau staat in de Digikoppeling Beveiligingsstandaarden.*
+- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *NCSC ICT-beveiligingsrichtlijnen worden niet expliciet vermeld in deze brontekst.*
+- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron verwijst naar NCSC in de context van TLS-algoritmen ('conform de aanbevelingen in WS-I BSP 1.0 voor beveiliging op transport/kanaal niveau en aanbevelingen van NIST en NCSC'), maar een expliciet voorschrift om te voldoen aan NCSC ICT-beveiligingsrichtlijnen voor TLS staat niet als zodanig in de bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *De bron verwijst naar het Digikoppeling Beveiligingsdocument voor TLS-algoritmen en sleutellengtes, maar noemt de NCSC ICT-beveiligingsrichtlijnen niet expliciet.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *NCSC ICT-beveiligingsrichtlijnen voor TLS worden niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron noemt het OIN-register wel als hulpmiddel maar beschrijft niet dat het OIN in Subject.SerialNumber wordt opgenomen of wordt gebruikt voor adressering en routering.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *OIN in PKIoverheid-certificaat voor adressering en routering wordt niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *NCSC-richtlijnen voor TLS worden niet behandeld in deze bron.*
 </details>
 
-### `ls-dk-0046` — reference.md:149 *(§ OIN-identificatie)*
+### `ls-dk-0046` — reference.md:139 *(§ TLS-vereisten)*
 
-> Het OIN-stelsel wordt beheerd door Logius.
+> PKI001: Het OIN van de organisatie moet opgenomen zijn in het subject:serialNumber-veld van het PKIoverheid-certificaat.
 
-**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** OIN-stelsel
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling PKI-vereisten
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > Het PeerID binnen de context van FSC is OIN. Het OIN wordt bij PKIO certificaten geplaatst in het SerialNumber veld van het Subject.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > The use of PKI Overheid certificates is required in which an OIN is used in the Subject.serialNumber.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > PKI001 Gebruik OIN in subject:serialNumber veld is verplicht Dit is afgesproken met de TSP's in de Digikoppeling Overeenkomsten.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  > De waarde van het OIN in het OIN Register en in het veld subject.serialNumber is inclusief de prefix en suffix en daarbij behorende voorloopnullen. [...] Het gehele nummer wordt opgenomen in het certificaat (subject.serialNumber). Dat gehele nummer geldt dus als OIN.
+  - *De bron bevestigt dat het OIN (inclusief prefix en suffix) wordt opgenomen in subject.serialNumber van het PKIoverheid-certificaat.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  > Het OIN of SubOIN wordt opgenomen in het subject serialNumber veld van het PKIoverheid certificaat. [...] De TSP raadpleegt het OIN van de aanvrager via de COR en neemt dit nummer en naam op in het PKIoverheid certificaat.
+  - *De bron bevestigt expliciet dat het OIN in het Subject.serialNumber-veld wordt opgenomen.*
+<details><summary>3x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De bron vermeldt dat PKIoverheid-certificaten worden gebruikt voor identificatie en authenticatie, en dat het OIN een uniek identificatienummer is, maar beschrijft niet dat het OIN specifiek in het subject:serialNumber-veld moet worden opgenomen.*
+- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron noemt PKIoverheid-certificaten en OIN in WS-Addressing velden (wsa:To/wsa:From via querystring), maar een voorschrift dat het OIN in het subject:serialNumber-veld van het certificaat moet staan ontbreekt in deze brontekst.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *De bron vermeldt OIN als basis voor authenticatie en autorisatie en PKIoverheid-certificaten als vereiste, maar beschrijft niet het subject:serialNumber-veld specifiek.*
+</details>
+
+### `ls-dk-0047` — reference.md:140 *(§ TLS-vereisten)*
+
+> PKI002: Het PKIoverheid-certificaat moet geldig zijn (niet verlopen of ingetrokken); revocation checking is vereist.
+
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling PKI-vereisten
 
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > OIN stands for Organisatie Identificatie Nummer and is maintained by Logius in the COR (Centrale OIN Raadpleegvoorziening).
-- **SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  > "Bij de Digikoppeling horen de volgende ondersteunende hulpmiddelen en ICT voorzieningen: Digikoppeling OIN Register en het hieraan gekoppelde CPA-register" en de gehele bron is gepubliceerd door Logius als beheerder van Digikoppeling.
-  - *De bron bevestigt impliciet dat Logius het OIN-register beheert als onderdeel van de Digikoppeling-voorzieningen, maar een expliciete zin 'Het OIN-stelsel wordt beheerd door Logius' ontbreekt.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > Om certificaten te kunnen bestellen, moet de organisatie een identificerend nummer hebben: het OIN. Dit nummer wordt verkregen bij de beheerorganisatie van Digikoppeling volgens de procedure die is beschreven op de website van Logius.
-  - *De bron noemt Logius als beheerorganisatie van Digikoppeling en OIN-uitgever, wat het beheer door Logius impliceert. Het OIN-stelsel als zodanig wordt niet expliciet 'beheerd door Logius' genoemd; het is een indirecte bevestiging.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  > Als de organisatie nog geen OIN heeft moet een nummer aangevraagd worden bij Logius. De COR (De Centrale OIN Raadpleegvoorziening) wordt gebruikt om informatie vast te leggen over de organisatie en het OIN.
-  - *De bron noemt Logius als de instantie waar OIN aangevraagd wordt, wat impliceert dat Logius het OIN-stelsel beheert, maar 'beheer door Logius' wordt niet expliciet zo geformuleerd.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Logius biedt ondersteuning bij aansluiten en gebruik door middel van: Verstrekken van het benodigde Organisatieidentificatienummer (OIN)
-  - *De bron stelt dat Logius OIN-nummers verstrekt, wat beheer impliceert, maar het 'OIN-stelsel' als zodanig en expliciet beheer ervan door Logius wordt niet met die terminologie benoemd.*
-<details><summary>12x NOT_FOUND (klap uit)</summary>
+  > The use of certificate revocation lists (CRL) from the trusted CAs is required. [...] The requirements as stated in Certificate Policy/Programme of Requirements PKIoverheid have to be used.
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > WT004 De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL) die voldoet aan de eisen van PKIoverheid.
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  > GB011 PUSH / PULL De server moet certificaat-revocatie-lijsten (CRL) gebruiken [PKI Policy].
+  - *Revocation checking via CRL wordt bevestigd. De claim spreekt ook over 'niet verlopen' certificaten, maar de bron vermeldt dit niet expliciet als aparte vereiste.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > PKI002 PKIoverheid certificaat moet geldig zijn (het mag niet zijn verlopen of ingetrokken). PKI003 (WT004) De geldigheid van het certificaat wordt getoetst met betrekking tot de geldigheidsdatum en de Certificate Revocation List(CRL)
+<details><summary>4x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
+  - *De bron vermeldt PKIoverheid-certificaten voor authenticatie maar stelt geen expliciete eisen over geldigheid, verlopen certificaten of revocation checking.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron vermeldt het OIN in de context van certificaten en autorisatie, maar zegt niets over het beheer van het OIN-stelsel door Logius.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *Revocation checking en certificaatgeldigheid worden niet expliciet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *Revocation checking en geldigheidscontrole van certificaten worden niet expliciet besproken in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  - *Logius als beheerder van het OIN-stelsel wordt niet vermeld in deze bron (de bron vermeldt Logius als auteur van het document, maar niet als beheerder van het OIN-stelsel).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *OIN-stelsel en beheer door Logius worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *Het OIN-stelsel en het beheer ervan door Logius wordt niet als zodanig besproken in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron beschrijft het OIN-stelsel maar behandelt geen revocation checking of geldigheidscontrole van certificaten als vereiste.*
 </details>
 
-### `ls-dk-0047` — reference.md:150 *(§ OIN-identificatie)*
+### `ls-dk-0048` — reference.md:141 *(§ TLS-vereisten)*
 
-> Sub-OIN's zijn mogelijk voor organisatieonderdelen of specifieke systemen.
+> PKI005: Certificaten moeten van het type PKIoverheid private root zijn (verplicht sinds 1-1-2021).
 
-**Type:** factual_assertion  ·  **Modaliteit:** MAY  ·  **Scope:** OIN-stelsel
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling PKI-vereisten
 
-- **PARTIALLY_SUPPORTED** (low) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > The number is unique and allows identification of partners, even if they are not themselves legal entities, but departments or units of larger organizations.
-  - *De bron bevestigt dat OIN gebruikt kan worden voor afdelingen/onderdelen van grotere organisaties, wat de richting van sub-OINs ondersteunt. Maar de term 'sub-OIN' wordt niet gebruikt en het mechanisme van sub-OINs is niet expliciet beschreven.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  > In specifieke gevallen kan autorisatie op een gedetailleerder niveau noodzakelijk zijn. Voor overheidsorganisaties is het bijvoorbeeld mogelijk om een subOIN aan te vragen.
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > Het SubOIN is een afgeleide van het OIN en is opgesteld volgens de OIN-nummersystematiek en wordt gebruikt voor een organisatieonderdeel, samenwerkingsverband of voorziening. SubOIN's kunnen worden gebruikt om fijnmazig te identificeren. (Aan een OIN kunnen meerdere SubOIN's gekoppeld worden).
-<details><summary>14x NOT_FOUND (klap uit)</summary>
+- **SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > De Trust Anchor voor de FSC Group moet daarom de PKIO Private Root zijn.
+  - *De bron bevestigt PKIO Private Root als vereiste Trust Anchor, wat overeenkomt met de claim over PKIoverheid private root certificaten. De ingangsdatum 1-1-2021 wordt niet vermeld.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > PKI005 Het certificaat moet zijn van het type PKIoverheid private root (PKI Staat der Nederlanden Private Root) Voor Serviceaanbieders en Servicegebruikers geldt dat zij vanaf 1-1-2021 gebruik moeten maken van private root certificaten
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *De bron vermeldt PKIoverheid certificaten herhaaldelijk maar beschrijft nergens het onderscheid 'private root' versus andere root-typen, noch een datum van 1-1-2021 als verplichting. PKI-details staan in het afzonderlijke document 'Digikoppeling Beveiligingsstandaarden en voorschriften', niet in deze Architectuur.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron vermeldt PKIoverheid-certificaten als vereiste maar maakt geen onderscheid tussen private root en public root, noch een ingangsdatum van 1-1-2021.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
+  - *PKIoverheid private root als verplicht type certificaat (verplicht sinds 1-1-2021) wordt niet vermeld in deze brontekst.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *Sub-OIN's worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron vermeldt PKIoverheid-certificaten als vereiste maar noemt het onderscheid private root vs. andere roots, noch de datum 1-1-2021.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
+  - *PKIoverheid private root en de verplichting daarvan per 1-1-2021 wordt niet behandeld in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *Sub-OIN's voor organisatieonderdelen of systemen worden niet beschreven in het beheermodel. De impactmatrix noemt wel OIN-nummers maar niet sub-OIN's.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *Sub-OIN's worden niet als concept vermeld. Wel wordt gesproken over deel-organisaties met eigen OIN's, maar niet over sub-OIN's specifiek.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  - *Sub-OIN's worden niet behandeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  - *Sub-OIN's worden niet vermeld in de bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  - *Sub-OIN's worden niet vermeld in deze bron.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *PKIoverheid private root-certificaatvereisten worden niet behandeld in deze bron.*
 </details>
 
-### `ls-dk-0050` — reference.md:159 *(§ Berichtniveau-beveiliging)*
+### `ls-dk-0049` — reference.md:164 *(§ Berichtniveau-beveiliging)*
+
+> Signing gebruikt XML Digital Signature (XMLDSIG) met minimaal SHA-256; SHA-1 is niet meer toegestaan.
+
+**Type:** normative_requirement  ·  **Modaliteit:** MUST  ·  **Scope:** Digikoppeling berichtniveau-beveiliging
+
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > The applied signature method is described in Digikoppeling Beveiligingsstandaarden en voorschriften
+  - *De bron bevestigt dat XML Digital Signature (XMLDSIG) vereist is voor End-to-End Security, maar verwijst voor de specifieke hash-algoritmen (SHA-256, uitsluiting van SHA-1) naar het externe document 'Digikoppeling Beveiligingsstandaarden en voorschriften'. De SHA-256/SHA-1 claim kan niet direct worden bevestigd of weerlegd vanuit deze bron.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > SIGN001 Signing met SHA-2 is verplicht. Minimaal SHA-256. SIGN002 Signing conform XMLDSIG is verplicht [...] Certificaten met SHA-1 als hashfunctie worden vervangen door certificaten met hashfuncties uit de SHA-2-familie
+<details><summary>6x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  - *De bron noemt signing als profiel-optie (Signed, XMLDSIG niet expliciet) maar geen specificaties over SHA-256 of de afschaffing van SHA-1. Cryptografische algoritme-eisen staan in 'Digikoppeling Beveiligingsstandaarden en voorschriften'.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *XML Digital Signature (XMLDSIG) en SHA-256/SHA-1 vereisten worden niet behandeld in deze bron; de bron verwijst voor signing naar JAdES (HTTP context).*
+- **NOT_FOUND** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *De bron schrijft signing voor (WB003, WB004, WB007) en verwijst voor algoritmen naar 'Digikoppeling Beveiligingsstandaarden en voorschriften'. SHA-256 als minimum en het verbod op SHA-1 staan niet in de brontekst zelf.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *De bron behandelt bestandsoverdracht en metadata; XML Digital Signature, XMLDSIG, SHA-256 of berichtniveau-signing worden niet besproken.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  - *XML Digital Signature, SHA-256 en berichtniveau-signing worden niet behandeld in deze bron.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *XMLDSIG, SHA-256 of berichtniveau-signing worden niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0051` — reference.md:167 *(§ Berichtniveau-beveiliging)*
 
 > Berichtniveau-beveiliging is essentieel wanneer er niet-vertrouwde intermediairs in de keten zitten, omdat TLS alleen de point-to-point verbinding beveiligt.
 
 **Type:** normative_requirement  ·  **Modaliteit:** SHOULD  ·  **Scope:** Digikoppeling berichtniveau-beveiliging
 
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Het versleutelen van berichtinhoud (berichtenniveau versleuteling) kan worden toegepast indien de intermediair niet vertrouwd wordt. [...] TLS kan niet toegepast worden om end-to-end authenticatie uit te voeren in een multi-hop omgeving; zie daarvoor beveiliging op berichtniveau (signed of signed en encrypted profielen).
+  - *De bron ondersteunt de strekking volledig: berichtniveau-beveiliging is nodig bij niet-vertrouwde intermediairs omdat TLS alleen point-to-point werkt.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  > TLS beschermt alleen via één TLS-verbinding en het pad tussen de client en de server kan bestaan uit meerdere onafhankelijke TLS-verbindingen [...] In dergelijke gevallen kan TLS geen end-to-end berichtintegriteit of authenticiteit tussen de client en de server garanderen. HTTP Message signing kan dit geval gebruikt worden om end-to-end bescherming tegen manipulatie te realiseren
 - **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
-  > Voor End-to-End Security, door middel van signing (ondertekening) en (optioneel) encryptie (versleuteling) op bericht-niveau in combinatie met (point-to-point) twee-zijdig TLS in het HTTP kanaal. [...] op basis van Reliable Messaging of Best Effort wordt een bericht beveiligd tussen de uiteindelijke Consumer en de uiteindelijke Provider, ook wanneer er zich intermediairs bevinden in het pad tus...
-  - *De bron stelt expliciet dat berichtniveau-beveiliging nodig is wanneer er intermediairs aanwezig zijn, omdat TLS alleen point-to-point werkt.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpadres](https://gitdocumentatie.logius.nl/publicatie/dk/bpadres)
-  > Het versleutelen van berichtinhoud (berichtenniveau versleuteling) kan worden toegepast indien de intermediair niet vertrouwd wordt.
-  - *De bron bevestigt dat berichtniveau-encryptie relevant is bij niet-vertrouwde intermediairs, en dat TLS point-to-point is (impliciet via de uitleg over knooppunten). De claim zegt 'SHOULD' (essentieel), de bron zegt 'kan' (MAY). Gedeeltelijke ondersteuning voor de redenering, niet voor de normering.*
-- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpwus](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus)
-  > Indien het bericht ondertekend en versleuteld is, hoeven gateway 1 en gateway 2 het bericht niet te valideren of ontcijferen. Zolang de addressing informatie niet veranderd wordt, is de meegestuurde 'signature' nog steeds valide.
-  - *De bron bevestigt impliciet het belang van berichtniveau-beveiliging bij intermediairs (gateways hoeven niet te ontcijferen), maar formuleert niet expliciet dat TLS alleen point-to-point beveiligt of dat berichtniveau-beveiliging 'essentieel' is bij niet-vertrouwde intermediairs als normatieve aanbeveling.*
-- **PARTIALLY_SUPPORTED** (low) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpgb](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb)
-  > Bij transparante intermediairs vindt geen tussentijdse opslag van het grote bestand plaats bij de intermediair... Bij Niet-transparante intermediairs is in Digikoppeling-termen de intermediair te zien als een endpoint.
-  - *De bron bespreekt intermediairs en het verschil tussen transparante en niet-transparante varianten, wat de stelling over TLS als point-to-point beveiliging indirect ondersteunt. De claim over berichtniveau-beveiliging als essentieel bij niet-vertrouwde intermediairs wordt echter niet expliciet gemaakt in de bron.*
-- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/watisdk](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk)
-  > Een transparante intermediair stuurt berichten door naar het eindpunt (ontvanger) zonder de berichten te bewerken. Een transparante intermediair is zelf dus geen eindpunt in Digikoppeling. Het versleutelen van berichtinhoud (berichtenniveau versleuteling) kan worden toegepast indien de intermediair niet vertrouwd wordt.
-<details><summary>11x NOT_FOUND + 1x OUT_OF_SCOPE (klap uit)</summary>
+  > End-to-End Security: op basis van Reliable Messaging of Best Effort wordt een bericht beveiligd tussen de uiteindelijke Consumer en de uiteindelijke Provider, ook wanneer er zich intermediairs bevinden in het pad tussen die twee.
+  - *De bron bevestigt impliciet dat berichtniveau-beveiliging noodzakelijk is bij aanwezigheid van intermediairs, omdat TLS alleen point-to-point beveiligt.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  > End-to-End beveiliging is primair van toepassing in de scenario's waar intermediairs betrokken zijn gedurende de gegevensuitwisseling en in scenario's waarbij onweerlegbaarheid van belang is.
+  - *De bron ondersteunt de strekking dat berichtniveau-beveiliging essentieel is bij niet-vertrouwde intermediairs, omdat TLS alleen point-to-point beveiligt.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > TLS kan niet toegepast worden om end-to-end authenticatie uit te voeren in een multi-hop (voor ebMS2) omgeving; zie daarvoor berichtniveau beveiliging in de Digikoppeling Architectuur documentatie.
+  - *De bron bevestigt dat TLS alleen point-to-point beveiligt en berichtniveau beveiliging nodig is bij multi-hop. Het woord 'essentieel' en 'niet-vertrouwde intermediairs' wordt niet letterlijk gebruikt, maar de strekking wordt ondersteund.*
+- **PARTIALLY_SUPPORTED** (low) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  > In het geval van een logistiek koppelpunt heeft de aanbieder feitelijk te maken met de identiteit van de achterliggende afnemer. [...] Uiteraard kan dat alleen als er voldoende waarborgen en afspraken (bijvoorbeeld bewerkerovereenkomst) zijn.
+  - *De bron bespreekt intermediairs en koppelpunten maar behandelt dit vanuit een identiteits- en autorisatieperspectief, niet vanuit TLS point-to-point beveiliging. De claim over berichtniveau-beveiliging bij niet-vertrouwde intermediairs wordt niet specifiek ondersteund; slechts de context van intermediairs is aanwezig.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *De bron bespreekt geen niet-vertrouwde intermediairs of het onderscheid tussen point-to-point TLS en end-to-end berichtniveau-beveiliging.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  - *Berichtniveau-beveiliging en intermediairs worden niet behandeld in deze bron.*
+
+### `ls-dk-0053` — reference.md:157 *(§ OIN-identificatie)*
+
+> Het OIN-stelsel wordt beheerd door Logius.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** OIN-stelsel
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
+  > Logius beheert de Centrale OIN Raadpleegvoorziening (COR) waarin uitgegeven Organisatie identificatienummers zijn gepubliceerd.
+- **PARTIALLY_SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  > The OIN stands for Organisatie Identificatie Nummer and is maintained by Logius in the COR (Centrale OIN Raadpleegvoorziening).
+  - *De bron bevestigt dat Logius het OIN beheert via de COR. De term 'OIN-stelsel' als zodanig wordt niet gebruikt, maar de strekking (Logius beheert het OIN) wordt ondersteund. Niet volledig SUPPORTED omdat de bron niet spreekt van een 'stelsel' maar enkel van het nummer en de raadpleegvoorziening.*
+- **PARTIALLY_SUPPORTED** (medium) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
+  > Het organisatie identificatienummer (OIN) is het identificerende nummer voor organisaties die gebruik maken van Digikoppeling. [...] Het OIN kan worden opgezocht in het OIN Register. [...] Het OIN register is bereikbaar via het Digikoppeling Portaal.
+  - *De bron noemt Logius als beheerder van het Digikoppeling Portaal en het OIN Register impliciet, maar noemt 'Logius beheert het OIN-stelsel' niet letterlijk. PKI-CA referentie verwijst naar 'Aansluiten als Trust Service Provider' van Logius.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  > ofwel het OIN wordt uitgereikt door Logius als beheerder van Digikoppeling wanneer noch een RSIN, noch een KvK nummer beschikbaar is. [...] Daarom beslist de beheerder van Digikoppeling over alle verzoeken die afwijken van de in deze notitie aangegeven lijn.
+  - *De bron bevestigt meerdere malen dat Logius beheerder is van het OIN-stelsel en Digikoppeling.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  > Logius beheert het OIN Stelsel. Het OIN valt onder de Digikoppeling Standaard. Het Centrum voor Standaarden, van Logius is beheerder van de Digikoppeling standaard en voert ook het beheer over van het OIN-stelsel, voorwaarden en overeenkomsten.
+<details><summary>3x NOT_FOUND (klap uit)</summary>
+
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
+  - *De brontekst vermeldt Logius als beheerder van de Digikoppeling REST API standaard en gerelateerde standaarden, maar het OIN-stelsel zelf en het beheer daarvan worden niet expliciet besproken.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
+  - *Het OIN-stelsel en het beheer ervan door Logius worden niet besproken in deze WUS-specificatie.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *Het OIN-stelsel en het beheer ervan door Logius worden niet behandeld in deze bron.*
+</details>
+
+### `ls-dk-0054` — reference.md:158 *(§ OIN-identificatie)*
+
+> Sub-OIN's zijn mogelijk voor organisatieonderdelen of specifieke systemen.
+
+**Type:** factual_assertion  ·  **Modaliteit:** STATEMENT  ·  **Scope:** OIN-stelsel
+
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
+  > Zo kunnen overheidsorganisaties (formeel organisaties met Publiekrechtelijke Rechtspersoonlijkheid) eenvoudig een subOIN aanvragen voor samenwerkingsverbanden waar ze zelf deel aan nemen, eigen organisatieonderdelen en voorzieningen waar ze beheer over voeren
+  - *De bron bevestigt dat sub-OINs mogelijk zijn voor organisatieonderdelen en voorzieningen. De claim noemt ook 'specifieke systemen', wat overeenkomt met 'voorzieningen waar ze beheer over voeren'.*
+- **SUPPORTED** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
+  > Het SubOIN is een afgeleide van het OIN en is opgesteld volgens de OIN-nummersystematiek en wordt gebruikt voor een organisatieonderdeel, samenwerkingsverband of voorziening dat niet zélf in het Handelsregister voorkomt.
+  - *De bron noemt organisatieonderdelen expliciet. 'Specifieke systemen' worden in de bron aangeduid als 'voorzieningen', wat nagenoeg equivalent is.*
+<details><summary>6x NOT_FOUND (klap uit)</summary>
 
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/architectuur](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur)
-  - *Aangeleverde brontekst was leeg of onbruikbaar; alleen een redirect-melding aanwezig.*
+  - *De bron beschrijft het OIN en HRN als identificatienummers voor organisaties, maar noemt sub-OIN's voor organisatieonderdelen of specifieke systemen nergens. Dit detailniveau valt buiten dit architectuurdocument.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/restapi](https://gitdocumentatie.logius.nl/publicatie/dk/restapi)
-  - *De aangeleverde brontekst is leeg/alleen een redirect-melding.*
+  - *De brontekst noemt het OIN (Organisatie Identificatie Nummer) in de context van PKIO-certificaten en FSC, maar sub-OIN's worden nergens besproken.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/ebms](https://gitdocumentatie.logius.nl/publicatie/dk/ebms)
+  - *De bron vermeldt dat het OIN ook gebruikt kan worden voor 'departments or units of larger organizations' die geen zelfstandige rechtspersonen zijn, maar het concept 'sub-OIN' wordt nergens expliciet genoemd of beschreven.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/wus](https://gitdocumentatie.logius.nl/publicatie/dk/wus)
-  - *Brontekst is enkel een redirect-melding, geen inhoudelijke documentatie beschikbaar.*
-- **OUT_OF_SCOPE** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
-  - *De bron beschrijft de Grote Berichten koppelvlakstandaard. Berichtniveau-beveiliging in relatie tot niet-vertrouwde intermediairs wordt niet behandeld in deze bron.*
+  - *Sub-OIN's worden niet besproken in deze brontekst.*
+- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gb](https://gitdocumentatie.logius.nl/publicatie/dk/gb)
+  - *Sub-OIN's worden niet besproken in deze bron.*
 - **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beveilig](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/idauth](https://gitdocumentatie.logius.nl/publicatie/dk/idauth)
-  - *aangeleverde brontekst was leeg of onbruikbaar — alleen redirect-melding ontvangen*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/oin](https://gitdocumentatie.logius.nl/publicatie/dk/oin)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/beheer](https://gitdocumentatie.logius.nl/publicatie/dk/beheer)
-  - *De bron behandelt het onderwerp van berichtniveau-beveiliging bij niet-vertrouwde intermediairs niet.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert](https://gitdocumentatie.logius.nl/publicatie/dk/gbachtcert)
-  - *De bron gaat niet in op de verhouding tussen TLS (point-to-point) en berichtniveau-beveiliging bij niet-vertrouwde intermediairs. Dit onderwerp wordt niet behandeld.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/bpebms](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms)
-  - *Het concept van niet-vertrouwde intermediairs en de beperking van TLS tot point-to-point beveiliging als argument voor berichtniveau-beveiliging wordt niet behandeld in dit document.*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/actueel](https://gitdocumentatie.logius.nl/publicatie/dk/actueel)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
-- **NOT_FOUND** (high) — [https://gitdocumentatie.logius.nl/publicatie/dk/roadmap](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap)
-  - *Aangeleverde brontekst was leeg of onbruikbaar (alleen redirect-melding).*
+  - *De bron behandelt geen sub-OIN's voor organisatieonderdelen of specifieke systemen.*
 </details>
 
 </details>
