@@ -108,7 +108,7 @@ Geen technische details (stack traces, interne hints) in foutmeldingen.
 - **Meervoud** voor collecties: `/users`, `/orders`
 - **Enkelvoud** voor individuele resources: `/users/{id}`
 - Definieer interfaces in het **Nederlands** tenzij er een officieel Engelstalig begrippenkader bestaat
-- Verberg implementatiedetails (geen framework- of databasenamen)
+- Geen implementatiedetails in URI's: een API SHOULD geen framework-, platform- of databasenamen blootleggen in resource-paden (ADR)
 
 ### OpenAPI Documentatie
 
