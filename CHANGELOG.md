@@ -5,6 +5,16 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.4.7](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.6...v0.4.7) (2026-05-17)
+
+
+### Opgelost
+
+* corrigeer 8 geverifieerde fouten in ls-bomos, ls-notif, ls-dk (audit sweep [#3](https://github.com/developer-overheid-nl/skills-standaarden/issues/3)) ([#616](https://github.com/developer-overheid-nl/skills-standaarden/issues/616)) ([a76f1b4](https://github.com/developer-overheid-nl/skills-standaarden/commit/a76f1b4a284e75d52d7643efb1579dba3dcdc12b))
+* **ls-api:** scherp implementatiedetails-regel aan naar ADR-formulering ([#613](https://github.com/developer-overheid-nl/skills-standaarden/issues/613)) ([186e56f](https://github.com/developer-overheid-nl/skills-standaarden/commit/186e56fd42adc0a6ea127a595517984a28e3847f))
+* **ls-iam:** PKCE verplicht voor alle clients; dynamische registratie aanbevolen ([#611](https://github.com/developer-overheid-nl/skills-standaarden/issues/611)) ([51d5e60](https://github.com/developer-overheid-nl/skills-standaarden/commit/51d5e60bc1264d8a3a1edaf42f7a5ab0ced322ca))
+* **ls:** FSC staat sinds 5 nov 2025 wel op de Forum-lijst ([#610](https://github.com/developer-overheid-nl/skills-standaarden/issues/610)) ([bcf332c](https://github.com/developer-overheid-nl/skills-standaarden/commit/bcf332c6448ef4f5784344132f183b4d6c20b5a9))
+
 ## [0.4.6](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.5...v0.4.6) (2026-05-09)
 
 
