@@ -3,12 +3,18 @@ name: ls-api
 description: "API Design Rules (ADR) voor NL GOV REST APIs: Spectral-linting, naming, transport security, signing, encryption, problem+json errors, geo-extensie."
 model: sonnet
 allowed-tools:
+  - AskUserQuestion
   - Bash(gh api *)
   - Bash(gh issue list *)
   - Bash(gh pr list *)
   - Bash(gh search *)
   - Bash(curl -s *)
+  - Bash(npx github:developer-overheid-nl/oas-generator *)
+  - Bash(npx @developer-overheid-nl/don-checker *)
   - Bash(npx @stoplight/spectral-cli *)
+  - Bash(npx @redocly/cli *)
+  - Bash(npx @openapitools/openapi-generator-cli *)
+  - Bash(git clone *)
   - WebFetch(*)
 metadata:
   created-with-ai: "true"
@@ -21,9 +27,126 @@ metadata:
 
 # API Design Rules (NL GOV)
 
-**Agent-instructie:** Deze skill helpt bij het implementeren van APIs conform de NL GOV API Design Rules. Gebruik de Spectral linter om OpenAPI specs te valideren. De regels zijn verplicht onder ['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules) van het Forum Standaardisatie.
+**Agent-instructie:** Deze skill helpt bij het ontwerpen en implementeren van APIs conform de NL GOV API Design Rules volgens een **design-first werkwijze** (zie [Design-first werkwijze](#design-first-werkwijze-verplicht)). Valideer **altijd** elke OpenAPI-spec met de DON Checker voordat je hem oplevert. De regels zijn verplicht onder ['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules) van het Forum Standaardisatie.
 
 De API Design Rules (ADR) zijn de Nederlandse standaard voor het ontwerpen van RESTful APIs bij de overheid. Ze zijn verplicht onder het "pas-toe-of-leg-uit" regime van het Forum Standaardisatie. De standaard bevat concrete, toetsbare regels voor URI-ontwerp, HTTP-methoden, versiebeheer, beveiliging, foutafhandeling en meer.
+
+## Design-first werkwijze (verplicht)
+
+Bij het ontwerpen of bouwen van een nieuwe API volg je de [design-first tutorial van developer.overheid.nl](https://developer.overheid.nl/kennisbank/api-ontwikkeling/tutorials/bouw-een-api/): eerst de OpenAPI Specification (OAS) als contract, daarna pas code. Doorloop deze flow in volgorde; gebruik `AskUserQuestion` voor elke vraag aan de gebruiker en valideer **altijd** (stap 6 en 10) voordat je een OAS oplevert.
+
+1. **Onderwerp & titel** — vraag waarover de API gaat en stel op basis daarvan een `title` en `description` voor.
+2. **Contactgegevens** — vraag `name`, `email` en `url`. Dit moet het **beheerteam** zijn, nooit een individu (wisselt van rol) of een algemene helpdesk (`info@…`); gebruik als `url` bij voorkeur een **issuetracker** waar consumenten problemen kunnen melden, niet een homepage. Stuur de gebruiker hier actief op bij twijfel.
+3. **Resources** — vraag welke resources de API bevat. Bepaal per resource:
+   1. **`readonly` of niet** — `readonly: true` genereert enkel `GET`; anders ook `POST` (collectie) en `PUT`/`DELETE` (item).
+   2. **Naam** — bepaal zelf enkelvoud (`name`) en meervoud (`plural`) op basis van de input.
+   3. **Schema** — doe voorstellen op basis van zoekopdrachten in het schema-register en laat de gebruiker kiezen (zie [Schema's kiezen of voorstellen](#schemas-kiezen-of-voorstellen-oas-31)). Bied aan een voorbeeld te tonen, desnoods via de register-link in de console.
+4. **Bevestig de `input.json`** — toon de samengestelde input en laat de gebruiker bevestigen vóór je genereert.
+5. **Genereer de OAS** (CLI; de [web-tool](https://developer-overheid-nl.github.io/oas-generator) is het handmatige alternatief):
+
+   ```bash
+   npx github:developer-overheid-nl/oas-generator input.json -o openapi.json
+   ```
+
+6. **Valideer de OAS** met de DON Checker (zie [OAS valideren](#oas-valideren)):
+
+   ```bash
+   npx @developer-overheid-nl/don-checker@latest validate --ruleset adr-21 --input openapi.json
+   ```
+
+7. **Server-URL invullen** — de boilerplate bevat een `@TODO`-server-URL, dus stap 6 faalt sowieso op `include-major-version-in-uri`. Vraag de gebruiker om de server-URL **mét major versie** (bijv. `https://api.example.com/v1`) en zet die in `servers`. Geen URL? Default dan naar `http://localhost:8080/v1` — validatie is dan schoon op één `servers-use-https`-waarschuwing na (acceptabel voor lokale ontwikkeling).
+8. **Extra functionaliteit** — vraag per operatie naar extra functionaliteit zoals filtering en zoeken. Query- en padparameters zijn **altijd lowerCamelCase**, óók in de OAS (bijv. `?sorteerOp=naam`, niet `?sorteer_op`).
+9. **Voeg de functionaliteit toe** aan de OAS (parameters, query's, schema's). Hergebruik standaard headers/foutresponses via externe `$ref`s (zie [Standaardcomponenten hergebruiken](#standaardcomponenten-hergebruiken)).
+10. **Valideer opnieuw** (herhaal stap 6) tot er geen errors meer zijn; documenteer bewuste afwijkingen.
+11. **Oplevering & vervolg** — toon de definitieve OAS en stel een vervolgstap voor: opslaan en bekijken in [editor.swagger.io](https://editor.swagger.io), of doorgaan met servercode-generatie (zie [Code genereren](#code-genereren)).
+
+> **ALTIJD valideren:** elke OAS die je genereert of wijzigt MOET stap 6/10 doorlopen vóórdat je hem aan de gebruiker presenteert.
+
+### Standaardcomponenten hergebruiken
+
+De ADR levert herbruikbare headers en foutresponses op `https://static.developer.overheid.nl/adr/components.yaml`. Verwijs ernaar met externe `$ref`s in plaats van ze inline te herdefiniëren — zo blijft je OAS gelijk aan de generator-output en consistent met de standaard. Beschikbaar: headers `API-Version` en `Link`; responses `400` (problem+json), `401`, `403`, `404`, `204`, `501`.
+
+```yaml
+paths:
+  /bieren/{id}:
+    get:
+      responses:
+        "200":
+          description: OK
+          headers:
+            API-Version:
+              $ref: 'https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version'
+        "404":
+          $ref: 'https://static.developer.overheid.nl/adr/components.yaml#/responses/404'
+        "400":
+          $ref: 'https://static.developer.overheid.nl/adr/components.yaml#/responses/400'
+```
+
+> **Let op:** `components.yaml` heeft `headers:` en `responses:` op rootniveau (geen `components:`-wrapper), dus de `$ref`-paden zijn `#/headers/...` en `#/responses/...`.
+
+### Schema's kiezen of voorstellen (OAS 3.1)
+
+In **OAS 3.1** kun je per resource direct een JSON Schema koppelen via het `schema`-veld in de generator-input (alleen toegestaan bij `oasVersion: "3.1"`). Bepaal per resource een schema en **laat de gebruiker kiezen**:
+
+1. **Zoek in het DON-schema-register** op een trefwoord uit de resource-naam/context:
+
+   ```bash
+   curl -s 'https://schemas.don.projects.digilab.network/self/v1/api/schemas/search?q=adres'
+   # → [{ "path": "/api-register/.../adresuitgebreid", "title": "AdresUitgebreid", "description": "..." }, ...]
+   ```
+
+2. **Leg de treffers als keuzes voor** met `AskUserQuestion`: maak per treffer een optie met de `title` als label en de `description` als toelichting, plus altijd een optie **"Zelf een schema voorstellen"**. (Max 4 opties per vraag — toon de relevantste treffers; via "Other" kan de gebruiker een specifiek schema benoemen.)
+3. **Verwerk de keuze:**
+   - **Bestaand schema** → gebruik de resolvebare URL `https://schemas.don.projects.digilab.network{path}` als waarde van het `schema`-veld (externe verwijzing, JSON Schema draft 2020-12). Bladeren kan ook in de [register-UI](https://schemas.don.projects.digilab.network).
+   - **Zelf voorstellen** → stel op basis van de resource-naam en context een **human-readable** inline JSON Schema-object voor en bevestig het bij de gebruiker.
+
+Voorbeeld-input voor de generator met beide varianten (URL-schema én inline schema):
+
+```json
+{
+  "oasVersion": "3.1",
+  "title": "Bier API",
+  "description": "API voor het beheren van bieren en adressen van brouwerijen.",
+  "contact": { "name": "API Team", "email": "api@example.com", "url": "https://github.com/example/api/issues" },
+  "resources": [
+    {
+      "name": "adres",
+      "plural": "adressen",
+      "readonly": true,
+      "schema": "https://schemas.don.projects.digilab.network/api-register/dienst-voor-het-kadaster-en-de-openbare-registers/imbag-api-van-de-lvbag-7fnzbuehg/adresuitgebreid"
+    },
+    {
+      "name": "bier",
+      "plural": "bieren",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "naam": { "type": "string" },
+          "stijl": { "type": "string" },
+          "alcoholpercentage": { "type": "number" }
+        },
+        "required": ["naam"]
+      }
+    }
+  ]
+}
+```
+
+`adres` is hier alleen-lezen (`readonly: true` → enkel `GET`); `bier` krijgt de volledige set operaties (`GET`/`POST` op de collectie, `GET`/`PUT`/`DELETE` op het item). Een URL-schema wordt direct met een `$ref` aangehaald; een inline schema komt onder `components/schemas` te staan en wordt lokaal gerefereerd.
+
+### Code genereren
+
+Optionele vervolgstap (flow-stap 11) na een goedgekeurde OAS: bundel de spec en genereer een server uit de officiële templates.
+
+```bash
+npx @redocly/cli bundle ./openapi.json --output openapi.bundled.json --ext json
+git clone https://github.com/developer-overheid-nl/codegen-templates.git
+npx @openapitools/openapi-generator-cli generate \
+  -i ./openapi.bundled.json -g nodejs-express-server \
+  -o ./api -t ./codegen-templates/nodejs-express-server
+```
+
+Vereist Node.js 22+ en Java 11+. Start een mock met `npm install && npm run start-mock`.
 
 ## Versiemodel
 
@@ -114,7 +237,7 @@ Geen technische details (stack traces, interne hints) in foutmeldingen.
 
 - OpenAPI 3.0+ specificatie verplicht
 - Publiceer JSON op standaardlocatie: `/openapi.json` (VERPLICHT); YAML (`/openapi.yaml`) is OPTIONEEL
-- Contactinformatie (`info.contact` met `name`, `email`, `url`) wordt sterk aanbevolen voor publieke APIs (ADR `/core/doc-openapi-contact`: SHOULD); de Spectral linter dwingt deze velden af als error voor publieke APIs
+- Contactinformatie (`info.contact` met `name`, `email`, `url`) wordt sterk aanbevolen voor publieke APIs (ADR `/core/doc-openapi-contact`: SHOULD); de Spectral linter dwingt deze velden af als error voor publieke APIs. Verwijs naar het verantwoordelijke **team**, niet naar een individu of algemene helpdesk (`info@…`); gebruik als `url` bij voorkeur een issuetracker i.p.v. een homepage
 - CORS ondersteunen voor documentatie-toegang
 
 ## Modules
@@ -167,7 +290,7 @@ app = FastAPI(
     openapi_url="/v1/openapi.json",
     title="Zaakgericht Werken API",
     version="1.2.0",
-    contact={"name": "API Team", "url": "https://example.com/support", "email": "api@example.com"},
+    contact={"name": "API Team", "url": "https://github.com/example/api/issues", "email": "api@example.com"},
     servers=[{"url": "https://api.example.com"}],
 )
 
@@ -232,16 +355,35 @@ async def problem_json_handler(request: Request, exc: HTTPException):
 - [ ] Geen gevoelige data in URIs
 - [ ] CORS geconfigureerd
 
-## Spectral Linter
+## OAS valideren
 
-De Spectral linter valideert OpenAPI specs tegen ADR regels. De DON-hosted ruleset bevat 11 regels; de GitHub-versie bevat 22 regels (inclusief extra checks voor datum/tijd, naamgeving en foutafhandeling).
+Valideer elke OpenAPI-spec tegen de ADR met de **DON Checker** — dit is de aanbevolen validator. De online [OAS Checker](https://developer-overheid-nl.github.io/oas-checker) gebruikt dezelfde ruleset; onder de motorkap draait de Spectral ADR-ruleset.
 
 ```bash
-# Optie 1: Publieke DON-hosted ruleset (geen GitHub auth nodig, aanbevolen)
+# Aanbevolen: DON Checker (lokaal/CI); --input accepteert een bestandspad of URL
+npx @developer-overheid-nl/don-checker@latest validate \
+  --ruleset adr-21 \
+  --input ./openapi.json
+
+# Voorbeeld tegen een live spec
+npx @developer-overheid-nl/don-checker@latest validate \
+  --ruleset adr-21 \
+  --input https://api.developer.overheid.nl/api-register/v1/openapi.json
+```
+
+De DON Checker draait de DON-hosted ruleset (11 regels); de GitHub-versie van de Spectral-ruleset bevat 17 regels (inclusief extra checks zoals `query-keys-camel-case`, `semver` en `info-contact`).
+
+### Alternatief: Spectral CLI direct
+
+De Spectral linter valideert OpenAPI specs tegen ADR regels. De DON-hosted ruleset bevat 11 regels; de GitHub-versie bevat 22 regels (inclusief extra checks voor datum/tijd, naamgeving en foutafhandeling).
+Wanneer je de ruleset zelf wilt inspecteren of een specifieke variant wilt draaien:
+
+```bash
+# Spectral met de publieke DON-hosted ruleset
 npx @stoplight/spectral-cli lint <jouw-spec.yaml> \
   --ruleset https://static.developer.overheid.nl/adr/ruleset.yaml
 
-# Optie 2: Ruleset ophalen via GitHub API
+# Ruleset ophalen via GitHub API
 gh api repos/logius-standaarden/API-Design-Rules/contents/media/linter.yaml \
   -H "Accept: application/vnd.github.raw" > /tmp/adr-linter.yaml
 npx @stoplight/spectral-cli lint <jouw-spec.yaml> --ruleset /tmp/adr-linter.yaml
