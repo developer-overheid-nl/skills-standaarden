@@ -84,7 +84,6 @@ Pas per skill aan. Niet elke skill heeft alle tools nodig. Standaard set:
 - `Bash(curl -s *)`, `WebFetch(*)`
 
 Extra tools alleen waar relevant:
-- `/ls-api` (design-first API-pijplijn): `AskUserQuestion` (intake + schemakeuze), `Bash(npx github:developer-overheid-nl/oas-generator *)` (OAS genereren), `Bash(npx @developer-overheid-nl/don-checker *)` (valideren), `Bash(npx @stoplight/spectral-cli *)` (alternatieve linter), `Bash(npx @redocly/cli *)` + `Bash(npx @openapitools/openapi-generator-cli *)` + `Bash(git clone *)` (codegen)
 - `Bash(npx markdownlint *)`, `Bash(npx @axe-core/cli *)`, `Bash(npx muffet *)` alleen voor `/ls-pub`
 
 ### Maximale omvang
