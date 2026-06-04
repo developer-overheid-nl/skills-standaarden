@@ -20,7 +20,7 @@ metadata:
 
 # API Design Rules (NL GOV)
 
-**Agent-instructie:** Deze skill bevat de normatieve regels uit de NL GOV API Design Rules (ADR), verplicht onder ['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules) van het Forum Standaardisatie. Voor de praktische bouw-flow (design-first met OAS-generator, validatie met don-checker, schema-register lookup, codegen) zie de `don-tools` skill in [developer-overheid-nl/agent-skills](https://github.com/developer-overheid-nl/agent-skills).
+**Agent-instructie:** Deze skill bevat de normatieve regels uit de NL GOV API Design Rules (ADR), verplicht onder ['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules) van het Forum Standaardisatie. Voor de praktische bouw-flow (design-first met OAS-generator, validatie met don-checker, schema-register lookup, codegen) zie de `don-tools` skill in [developer-overheid-nl/skills-developer-overheid-nl](https://github.com/developer-overheid-nl/skills-developer-overheid-nl).
 
 De API Design Rules (ADR) zijn de Nederlandse standaard voor het ontwerpen van RESTful APIs bij de overheid. Ze zijn verplicht onder het "pas-toe-of-leg-uit" regime van het Forum Standaardisatie. De standaard bevat concrete, toetsbare regels voor URI-ontwerp, HTTP-methoden, versiebeheer, beveiliging, foutafhandeling en meer.
 
@@ -260,7 +260,7 @@ OpenAPI-specs worden tegen de ADR-ruleset gevalideerd. Er zijn twee varianten va
 - **DON-hosted** (`https://static.developer.overheid.nl/adr/ruleset.yaml`) — 11 regels
 - **GitHub** (`logius-standaarden/API-Design-Rules`, `media/linter.yaml`) — 22 regels, met aanvullende checks voor naamgeving, contactinformatie, datum/tijd en foutafhandeling
 
-Voor de praktische uitvoering (CLI-commando's voor de DON Checker en Spectral, CI-integratie, ruleset inspecteren) zie de `don-tools` skill in [developer-overheid-nl/agent-skills](https://github.com/developer-overheid-nl/agent-skills).
+Voor de praktische uitvoering (CLI-commando's voor de DON Checker en Spectral, CI-integratie, ruleset inspecteren) zie de `don-tools` skill in [developer-overheid-nl/skills-developer-overheid-nl](https://github.com/developer-overheid-nl/skills-developer-overheid-nl).
 
 ### Belangrijke regels
 
