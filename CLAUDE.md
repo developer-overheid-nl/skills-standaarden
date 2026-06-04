@@ -84,7 +84,6 @@ Pas per skill aan. Niet elke skill heeft alle tools nodig. Standaard set:
 - `Bash(curl -s *)`, `WebFetch(*)`
 
 Extra tools alleen waar relevant:
-- `Bash(npx @stoplight/spectral-cli *)` alleen voor `/ls-api`
 - `Bash(npx markdownlint *)`, `Bash(npx @axe-core/cli *)`, `Bash(npx muffet *)` alleen voor `/ls-pub`
 
 ### Maximale omvang

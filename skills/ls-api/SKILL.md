@@ -1,6 +1,6 @@
 ---
 name: ls-api
-description: "API Design Rules (ADR) voor NL GOV REST APIs: Spectral-linting, naming, transport security, signing, encryption, problem+json errors, geo-extensie."
+description: "NL GOV API Design Rules (ADR): normatieve regels voor REST APIs: naming, versioning, problem+json, transport security, signing, encryption, geo, Spectral ADR-ruleset."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -8,7 +8,6 @@ allowed-tools:
   - Bash(gh pr list *)
   - Bash(gh search *)
   - Bash(curl -s *)
-  - Bash(npx @stoplight/spectral-cli *)
   - WebFetch(*)
 metadata:
   created-with-ai: "true"
@@ -21,9 +20,31 @@ metadata:
 
 # API Design Rules (NL GOV)
 
-**Agent-instructie:** Deze skill helpt bij het implementeren van APIs conform de NL GOV API Design Rules. Gebruik de Spectral linter om OpenAPI specs te valideren. De regels zijn verplicht onder ['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules) van het Forum Standaardisatie.
+**Agent-instructie:** Deze skill bevat de normatieve regels uit de NL GOV API Design Rules (ADR), verplicht onder ['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules) van het Forum Standaardisatie. Voor de praktische bouw-flow (design-first met OAS-generator, validatie met don-checker, schema-register lookup, codegen) zie de `don-tools` skill in [developer-overheid-nl/skills-developer-overheid-nl](https://github.com/developer-overheid-nl/skills-developer-overheid-nl).
 
 De API Design Rules (ADR) zijn de Nederlandse standaard voor het ontwerpen van RESTful APIs bij de overheid. Ze zijn verplicht onder het "pas-toe-of-leg-uit" regime van het Forum Standaardisatie. De standaard bevat concrete, toetsbare regels voor URI-ontwerp, HTTP-methoden, versiebeheer, beveiliging, foutafhandeling en meer.
+
+## Standaardcomponenten hergebruiken
+
+De ADR levert herbruikbare headers en foutresponses op `https://static.developer.overheid.nl/adr/components.yaml`. Verwijs ernaar met externe `$ref`s in plaats van ze inline te herdefiniëren — zo blijft je OAS consistent met de standaard en hoef je deze componenten niet zelf bij te houden. Beschikbaar: headers `API-Version` en `Link`; responses `400` (problem+json), `401`, `403`, `404`, `204`, `501`.
+
+```yaml
+paths:
+  /bieren/{id}:
+    get:
+      responses:
+        "200":
+          description: OK
+          headers:
+            API-Version:
+              $ref: 'https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version'
+        "404":
+          $ref: 'https://static.developer.overheid.nl/adr/components.yaml#/responses/404'
+        "400":
+          $ref: 'https://static.developer.overheid.nl/adr/components.yaml#/responses/400'
+```
+
+> **Let op:** `components.yaml` heeft `headers:` en `responses:` op rootniveau (geen `components:`-wrapper), dus de `$ref`-paden zijn `#/headers/...` en `#/responses/...`.
 
 ## Versiemodel
 
@@ -114,7 +135,7 @@ Geen technische details (stack traces, interne hints) in foutmeldingen.
 
 - OpenAPI 3.0+ specificatie verplicht
 - Publiceer JSON op standaardlocatie: `/openapi.json` (VERPLICHT); YAML (`/openapi.yaml`) is OPTIONEEL
-- Contactinformatie (`info.contact` met `name`, `email`, `url`) wordt sterk aanbevolen voor publieke APIs (ADR `/core/doc-openapi-contact`: SHOULD); de Spectral linter dwingt deze velden af als error voor publieke APIs
+- Contactinformatie (`info.contact` met `name`, `email`, `url`) wordt sterk aanbevolen voor publieke APIs (ADR `/core/doc-openapi-contact`: SHOULD); de Spectral linter dwingt deze velden af als error voor publieke APIs. Verwijs naar het verantwoordelijke **team**, niet naar een individu of algemene helpdesk (`info@…`); gebruik als `url` bij voorkeur een issuetracker i.p.v. een homepage
 - CORS ondersteunen voor documentatie-toegang
 
 ## Modules
@@ -167,7 +188,7 @@ app = FastAPI(
     openapi_url="/v1/openapi.json",
     title="Zaakgericht Werken API",
     version="1.2.0",
-    contact={"name": "API Team", "url": "https://example.com/support", "email": "api@example.com"},
+    contact={"name": "API Team", "url": "https://github.com/example/api/issues", "email": "api@example.com"},
     servers=[{"url": "https://api.example.com"}],
 )
 
@@ -232,28 +253,18 @@ async def problem_json_handler(request: Request, exc: HTTPException):
 - [ ] Geen gevoelige data in URIs
 - [ ] CORS geconfigureerd
 
-## Spectral Linter
+## OAS valideren
 
-De Spectral linter valideert OpenAPI specs tegen ADR regels. De DON-hosted ruleset bevat 11 regels; de GitHub-versie bevat 22 regels (inclusief extra checks voor datum/tijd, naamgeving en foutafhandeling).
+OpenAPI-specs worden tegen de ADR-ruleset gevalideerd. Er zijn twee varianten van de Spectral-ruleset in omloop:
 
-```bash
-# Optie 1: Publieke DON-hosted ruleset (geen GitHub auth nodig, aanbevolen)
-npx @stoplight/spectral-cli lint <jouw-spec.yaml> \
-  --ruleset https://static.developer.overheid.nl/adr/ruleset.yaml
+- **DON-hosted** (`https://static.developer.overheid.nl/adr/ruleset.yaml`) — 11 regels
+- **GitHub** (`logius-standaarden/API-Design-Rules`, `media/linter.yaml`) — 22 regels, met aanvullende checks voor naamgeving, contactinformatie, datum/tijd en foutafhandeling
 
-# Optie 2: Ruleset ophalen via GitHub API
-gh api repos/logius-standaarden/API-Design-Rules/contents/media/linter.yaml \
-  -H "Accept: application/vnd.github.raw" > /tmp/adr-linter.yaml
-npx @stoplight/spectral-cli lint <jouw-spec.yaml> --ruleset /tmp/adr-linter.yaml
+Voor de praktische uitvoering (CLI-commando's voor de DON Checker en Spectral, CI-integratie, ruleset inspecteren) zie de `don-tools` skill in [developer-overheid-nl/skills-developer-overheid-nl](https://github.com/developer-overheid-nl/skills-developer-overheid-nl).
 
-# Bekijk beschikbare regels (DON-versie)
-curl -s https://static.developer.overheid.nl/adr/ruleset.yaml | grep -oE "^\s{2}\S+:" | sed 's/^\s*//;s/:$//'
+### Belangrijke regels
 
-# Linter testcases bekijken
-gh api repos/logius-standaarden/API-Design-Rules/contents/linter/testcases --jq '.[].name'
-```
-
-Belangrijke Spectral regels (DON-naam / GitHub-naam):
+Kern (DON-naam / GitHub-naam):
 - `include-major-version-in-uri` / `nlgov:include-major-version-in-uri` - Major versie in URI pad
 - `paths-no-trailing-slash` / `nlgov:paths-no-trailing-slash` - Geen trailing slashes
 - `paths-kebab-case` / `nlgov:paths-kebab-case` - Kebab-case padsegmenten
