@@ -5,6 +5,18 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.5.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.7...v0.5.0) (2026-06-04)
+
+
+### Toegevoegd
+
+* ls-api gebruikt don-checker en oas-generator om te valideren en genereren ([#673](https://github.com/developer-overheid-nl/skills-standaarden/issues/673)) ([db11acd](https://github.com/developer-overheid-nl/skills-standaarden/commit/db11acd068225415e76a450d2052c77e36500288))
+
+
+### Opgelost
+
+* **ls-iam:** SAML-spec vastgesteld als v1.0.0 (1 juni 2026) ([#685](https://github.com/developer-overheid-nl/skills-standaarden/issues/685)) ([a67a9a8](https://github.com/developer-overheid-nl/skills-standaarden/commit/a67a9a8a17edb2e3412b28e050565544fa527a8c))
+
 ## [0.4.7](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.6...v0.4.7) (2026-05-17)
 
 
