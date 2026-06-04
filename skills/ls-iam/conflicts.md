@@ -1,6 +1,6 @@
 # IAM - Bronconflicten
 
-Geconstateerd: 2026-02-21 (OIN-Stelsel sectie bijgewerkt 2026-05-09: v3.0.0)
+Geconstateerd: 2026-02-21 (OIN-Stelsel sectie bijgewerkt 2026-05-09: v3.0.0; st-saml-spec sectie toegevoegd 2026-06-04: DEF v1.0.0)
 
 Dit document beschrijft bekende discrepanties in bronnen die relevant zijn voor de IAM-skill.
 
@@ -42,6 +42,20 @@ Voor compleetheid worden hier ook de IAM-repositories vermeld waar tags en publi
 - De repository is **gearchiveerd**
 - De gepubliceerde DEF-versie op gitdocumentatie is `v1.0`
 - De tag `0.2` is een conceptversie; de definitieve versie v1.0 is gepubliceerd zonder bijbehorende Git-tag
+
+---
+
+## 1c. Vastgestelde versie zonder GitHub-tag en zonder gitdocumentatie-pagina: st-saml-spec
+
+De SAML-specificatie is op **1 juni 2026 vastgesteld als versie 1.0.0** (repo-commit `Publiceer versie 1.0.0 (#14)`, develop weer op werkversie sinds `#16`). De gepubliceerde versie op [logius-standaarden.github.io/st-saml-spec](https://logius-standaarden.github.io/st-saml-spec/) toont sindsdien een "Vastgestelde versie" 1.0.0.
+
+| Repository | Vastgestelde versie (DEF) | Laatste GitHub-tag | gitdocumentatie-pagina | Discrepantie |
+|-----------|---------------------------|-------------------|------------------------|-------------|
+| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | v1.0.0 (vastgesteld 2026-06-01) | geen | nog niet aanwezig | DEF bestaat, maar zonder Git-tag/Release en zonder publicatie op gitdocumentatie.logius.nl |
+
+### Keuze in SKILL.md
+
+De skill verwijst voor de DEF-versie naar de gepubliceerde ReSpec-versie op `logius-standaarden.github.io/st-saml-spec` (toont "Vastgestelde versie 1.0.0"), omdat er nog geen pagina op `gitdocumentatie.logius.nl/publicatie/...` bestaat. Zodra de standaard daar gepubliceerd wordt, moet de DEF-link in de SKILL.md-tabel naar die gitdocumentatie-URL wijzen (conform de bron-van-waarheid-conventie).
 
 ---
 
