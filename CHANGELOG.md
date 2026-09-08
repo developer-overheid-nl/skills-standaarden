@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.6.4](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.3...v0.6.4) (2026-09-08)
+
+
+### Opgelost
+
+* neem gitdocumentatie.logius.nl weer op in de linkcheck ([#830](https://github.com/developer-overheid-nl/skills-standaarden/issues/830)) ([2377f41](https://github.com/developer-overheid-nl/skills-standaarden/commit/2377f41a1f505b64c536e819d23acb6da44ca10a))
+
 ## [0.6.3](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.2...v0.6.3) (2026-09-08)
 
 
