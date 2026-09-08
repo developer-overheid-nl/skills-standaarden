@@ -44,7 +44,7 @@ De skill gebruikt versienummers van gitdocumentatie.logius.nl als bron van waarh
 
 ## Ontbrekende licentie in GitHub-repositories
 
-De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en [logius-standaarden.github.io](https://logius-standaarden.github.io) vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
+De meeste Logius-standaarden repositories bevatten geen expliciet `LICENSE`-bestand in GitHub. De gepubliceerde standaarden op [gitdocumentatie.logius.nl](https://gitdocumentatie.logius.nl) en `logius-standaarden.github.io` vermelden echter CC-BY-4.0 als licentie via de ReSpec-configuratie.
 
 | Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
 |-----------|--------------|----------------------|--------|
