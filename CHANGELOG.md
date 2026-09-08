@@ -5,6 +5,15 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.6.3](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.2...v0.6.3) (2026-09-08)
+
+
+### Opgelost
+
+* **ls-api:** markeer zaakgericht-werken-api als gearchiveerd ([#827](https://github.com/developer-overheid-nl/skills-standaarden/issues/827)) ([72897e0](https://github.com/developer-overheid-nl/skills-standaarden/commit/72897e08fd5a655b218740ccfdd6eec7023d561a))
+* **ls-fsc:** fsc-external-contract v1.0.0 is vastgesteld (DEF) ([#826](https://github.com/developer-overheid-nl/skills-standaarden/issues/826)) ([114c37a](https://github.com/developer-overheid-nl/skills-standaarden/commit/114c37a799308980dc01d6afb7f161ee8f6b5568))
+* **ls-pub:** documenteer specStatus- en branch-checks in build.yml ([#828](https://github.com/developer-overheid-nl/skills-standaarden/issues/828)) ([283a491](https://github.com/developer-overheid-nl/skills-standaarden/commit/283a49134cf83368e0fa05288d6020bfa570a23b))
+
 ## [0.6.2](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.1...v0.6.2) (2026-09-03)
 
 
