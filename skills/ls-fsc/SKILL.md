@@ -29,7 +29,7 @@ Net als andere Logius-standaarden kent FSC twee publicatiekanalen (vergelijkbaar
 - **Vastgestelde versie (DEF)**: officieel goedgekeurd, gepubliceerd op `gitdocumentatie.logius.nl`
 - **Werkversie (draft)**: werk-in-uitvoering, gepubliceerd op `logius-standaarden.github.io`
 
-FSC heeft **vastgestelde versies** voor fsc-core en fsc-logging. De overige modules hebben alleen werkversies; fsc-external-contract heeft een consultatieversie (CV). Modulestatus hangt samen met de core-specificatie maar wordt apart vastgesteld.
+FSC heeft **vastgestelde versies** voor fsc-core, fsc-logging en fsc-external-contract (v1.0.0, vastgesteld september 2026, daarvoor een consultatieversie). De overige modules hebben alleen werkversies. Modulestatus hangt samen met de core-specificatie maar wordt apart vastgesteld.
 
 ## Repositories
 
@@ -39,11 +39,9 @@ FSC heeft **vastgestelde versies** voor fsc-core en fsc-logging. De overige modu
 | [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | Module: logging specificatie voor FSC transacties | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.1.0](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) | [Draft](https://logius-standaarden.github.io/fsc-logging/) |
 | [fsc-properties](https://github.com/logius-standaarden/fsc-properties) | Module: metadata-properties voor FSC services | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/fsc-properties/) |
 | [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | Module: Regulated Area specificatie (governance zones) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/fsc-regulated-area/) |
-| [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | Module: External Contract specificatie (afspraken tussen partijen) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [CV v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/)¹ | [Draft](https://logius-standaarden.github.io/fsc-external-contract/) |
+| [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | Module: External Contract specificatie (afspraken tussen partijen) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/) | [Draft](https://logius-standaarden.github.io/fsc-external-contract/) |
 | [fsc-extensie-template](https://github.com/logius-standaarden/fsc-extensie-template) | Richtlijn voor nieuwe FSC extensies | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/fsc-extensie-template/) |
 | [fsc-test-suite](https://github.com/logius-standaarden/fsc-test-suite) | Integratietests en componenttests | Niet gespecificeerd | - | - |
-
-¹ CV = consultatieversie, nog niet definitief vastgesteld.
 
 ## Service Connectivity Flow
 
