@@ -110,10 +110,11 @@ Alle standaarden-repos roepen centrale workflows aan uit de `Automatisering` rep
 
 ### build.yml - Document Generatie
 
-1. Branch-detectie: `consultatie/*` branches krijgen automatisch `specStatus: "cv"` (via sed op `config.mjs`)
-2. HTML generatie: `npx respec --localhost --src index.html --out ~/static/index.html --haltonwarn`
-3. PDF generatie via Puppeteer/headless Chrome (met `scripts/pdf.js`)
-4. Cache opslag als GitHub Actions cache
+1. Branch-check op pull requests (sinds september 2026): een directe PR van `develop` naar `main`/`master` of andersom wordt geweigerd; maak een tussenbranch. Een PR naar `main`/`master` vereist `specStatus: "DEF"` of `"VV"` in `js/config.mjs`, een PR naar `develop` vereist `"WV"`. Zo kan een werkversie niet per ongeluk als vastgestelde versie worden gepubliceerd.
+2. Branch-detectie: `consultatie/*` branches krijgen automatisch `specStatus: "cv"` (via sed op `config.mjs`)
+3. HTML generatie: `npx respec --localhost --src index.html --out ~/static/index.html --haltonwarn`
+4. PDF generatie via Puppeteer/headless Chrome (met `scripts/pdf.js`)
+5. Cache opslag als GitHub Actions cache
 
 ### check.yml - Kwaliteitschecks (3 parallelle checks)
 
@@ -190,10 +191,13 @@ muffet http://localhost:8080/index.html
 | `markdownlint MD013: Line length` | Regel te lang | Breek af op ~120 karakters |
 | `muffet: 404 Not Found` | Dode link | Verwijder of update de link |
 | `PDF generation failed` | Puppeteer crash | Controleer of document valid HTML genereert |
+| `Zet de specStatus op DEF voor publicatie` | PR naar `main`/`master` met `specStatus: "WV"` | Zet `specStatus` in `js/config.mjs` op `"DEF"` (of `"VV"`) vóór de release-PR |
+| `Zet de specStatus op WV voor een werkversie` | PR naar `develop` met `specStatus: "DEF"` | Zet `specStatus` terug op `"WV"` in de develop-branch |
+| `Maak geen directe PR aan vanaf develop naar main.` | PR rechtstreeks tussen `develop` en `main`/`master` | Maak een branch vanaf `develop` en open daaruit de PR naar `main` (of andersom) |
 
 ### Consultatie Branch Gedrag
 
-Op `consultatie/*` branches wordt `specStatus` automatisch overschreven naar `"cv"`. Na merge naar `main` wordt `specStatus` uit `js/config.mjs` gebruikt.
+Op `consultatie/*` branches wordt `specStatus` automatisch overschreven naar `"cv"`. Na merge naar `main` wordt `specStatus` uit `js/config.mjs` gebruikt. Sinds september 2026 controleert `build.yml` bij een PR naar `main`/`master` dat `js/config.mjs` op `"DEF"` of `"VV"` staat en bij een PR naar `develop` dat die op `"WV"` staat.
 
 ## Achtergrondinfo
 
