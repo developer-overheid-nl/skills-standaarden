@@ -11,7 +11,7 @@ Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en d
 |-----------|---------------------------|-------------------|-------------|
 | [fsc-core](https://github.com/logius-standaarden/fsc-core) | [v2.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/core/) | `1.1.0-rc` | Tag ver achter: publicatie v2.0.0 vs tag 1.1.0-rc (release candidate) |
 | [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | [v1.1.0](https://gitdocumentatie.logius.nl/publicatie/fsc/logging/) | _(geen tags)_ | Geen tags: publicatie v1.1.0 bestaat maar de repo heeft nul Git-tags |
-| [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | [CV v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/) | _(geen tags)_ | Geen tags: publicatie CV v1.0.0 bestaat maar de repo heeft nul Git-tags |
+| [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/) | _(geen tags)_ | Geen tags: publicatie v1.0.0 (DEF sinds september 2026) bestaat maar de repo heeft nul Git-tags |
 
 ### Details fsc-core
 
@@ -29,8 +29,8 @@ Dit document beschrijft bekende discrepanties tussen GitHub-repository tags en d
 ### Details fsc-external-contract
 
 - De repository heeft **nul Git-tags** en **nul GitHub Releases**
-- Op gitdocumentatie bestaat een gepubliceerde versie [CV v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/)
-- **Let op:** Dit is een **CV** (Consultatieversie), geen DEF-versie — het document is nog niet definitief vastgesteld
+- Op gitdocumentatie bestaat een gepubliceerde versie [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/fsc/ext/)
+- Tot september 2026 stond deze versie als **CV** (consultatieversie) gepubliceerd; op 2026-09-07 is `specStatus` in de repo op `DEF` gezet en is v1.0.0 opnieuw gepubliceerd als vastgestelde versie (publicatie-commit `1830bde`)
 - Het publicatieproces heeft hier volledig buiten Git-tagging om plaatsgevonden
 
 ## Keuze in SKILL.md
