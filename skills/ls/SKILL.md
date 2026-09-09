@@ -52,11 +52,11 @@ Gebruik de beslisboom bij vragen als "welke standaarden gelden voor mijn project
 ```bash
 # Alle standaarden die de beslisboom kan aanraden
 curl -s -H "Accept: application/vnd.api+json" \
-  "https://www.forumstandaardisatie.nl/jsonapi/node/decision_tree?include=decisionTreeSteps.questions.answers.standards&fields%5Bnode--standaarden%5D=title%2Cpath" \
+  "https://www.forumstandaardisatie.nl/jsonapi/node/decision_tree?include=decisionTreeSteps.questions.answers.standards&fields%5Bnode--decision_tree%5D=title%2CdecisionTreeSteps&fields%5Bparagraph--decision_tree_step%5D=title%2Cquestions&fields%5Bparagraph--decision_tree_question%5D=question%2Canswers&fields%5Bparagraph--decision_tree_answer%5D=answer%2Cstandards&fields%5Bnode--standaarden%5D=title%2Cpath" \
   | jq -r '.included[] | select(.type=="node--standaarden") | .attributes.title' | sort -u
 ```
 
-> De `fields[node--standaarden]=title,path` parameter is bewust: zonder die beperking levert elke standaard ook `description`, `metatag` en `field_alert_message` mee. Dat is ~40 KB redactionele tekst die bij elke tekstuele aanpassing op de Forum-site verandert, terwijl de standaardenlijst zelf gelijk blijft. Voor monitoring is dat pure ruis; met de beperking slaat de check alleen aan als er daadwerkelijk een standaard bij komt of af gaat.
+> De `fields[...]`-parameters zijn bewust. Zonder die beperking levert elke standaard ook `description`, `metatag` en `field_alert_message` mee (~40 KB redactionele tekst), en dragen de boom, stappen, vragen en antwoorden hun `introduction`- en `explanation`-teksten mee. Al die tekst verandert bij elke redactionele aanpassing op de Forum-site. Met deze fieldsets blijven alleen de structuur (titel, vraag, antwoord) en de standaardnamen over, precies het signaal dat telt: een toegevoegde of verwijderde standaard, of een gewijzigde vraag of antwoordoptie.
 
 ### Dekking en scope
 
