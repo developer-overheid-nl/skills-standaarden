@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.6.6](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.5...v0.6.6) (2026-09-09)
+
+
+### Opgelost
+
+* **ls:** beperk beslisboom-API tot structuur en standaardnamen ([#835](https://github.com/developer-overheid-nl/skills-standaarden/issues/835)) ([9e8246b](https://github.com/developer-overheid-nl/skills-standaarden/commit/9e8246b5f3d2d1e9059f1ff1249267ccb011e97b))
+
 ## [0.6.5](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.4...v0.6.5) (2026-09-08)
 
 
