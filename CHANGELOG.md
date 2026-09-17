@@ -5,6 +5,14 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.6.7](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.6...v0.6.7) (2026-09-17)
+
+
+### Opgelost
+
+* DEF-versies gelijktrekken met gitdocumentatie en automatisch bewaken ([#847](https://github.com/developer-overheid-nl/skills-standaarden/issues/847)) ([8aaf69d](https://github.com/developer-overheid-nl/skills-standaarden/commit/8aaf69dba732bebaf284c80d32c6e7e08c60818c))
+* OIN-Stelsel vastgestelde versie terug naar v2.2.2 ([#845](https://github.com/developer-overheid-nl/skills-standaarden/issues/845)) ([ebba3c5](https://github.com/developer-overheid-nl/skills-standaarden/commit/ebba3c5e640ba3e123b7136bf33352e912213fc3))
+
 ## [0.6.6](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.5...v0.6.6) (2026-09-09)
 
 
