@@ -12,14 +12,15 @@ De **gepubliceerde versie op gitdocumentatie.logius.nl is leidend** voor DEF-ver
 
 | Repository | Gepubliceerde versie (DEF) | Laatste GitHub-tag | Discrepantie |
 |-----------|---------------------------|-------------------|-------------|
-| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | Publicatie teruggezet van v3.0.1 naar v2.2.2 (2026-09-15) |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | *Latest* wees naar VV-versie v3.0.1; teruggezet naar laatste DEF v2.2.2 (2026-09-15) |
 
 ### Details OIN-Stelsel
 
 - **Bekende tags:** `2.2.0`, `2.0.3`, `2.0.2`, `2.0.2r`, `2.0.1`
 - **Laatste GitHub Release:** `2.0.3` (gepubliceerd 2022-11-29) — ver achter op de laatste tag `2.2.0`
-- Op 2026-09-15 heeft Logius de laatste versie op gitdocumentatie teruggezet van `v3.0.1` naar `v2.2.2` (publicatie-commit dc90a94, "Verwijs laatste versie OIN naar 2.2.2"). De 3.x-paden blijven bereikbaar maar zijn niet meer de actuele versie.
-- v3.0.0 introduceerde onder andere de Dezi-stelsel prefixen (Dezi-nummer voor zorgaanbieders, voorheen UZI-nummer); die staan dus niet in de nu geldende v2.2.2
+- De *latest*-verwijzing op gitdocumentatie wees naar `v3.0.1`. Logius zette die op 2026-09-15 terug naar `v2.2.2` (publicatie-commit dc90a94): "In plaats van dat we verwijzen naar de versie ter vaststelling verwijzen we nu weer naar de laatste definitieve versie."
+- Zowel `v3.0.0` als `v3.0.1` hebben `specStatus: VV` (versie ter vaststelling), niet DEF. Ze zijn dus nooit vastgesteld geweest; de skill vermeldde v3.0.0 eerder ten onrechte als vastgestelde versie.
+- De Dezi-stelsel prefixen (Dezi-nummer voor zorgaanbieders, voorheen UZI-nummer) zijn in de 3.x-lijn geïntroduceerd en staan daarmee nog niet in een vastgestelde versie
 - Er zijn geen tags `2.2.1`, `2.2.2`, `3.0.0` of `3.0.1` in de repository
 
 **Let op:** OIN-Stelsel wordt ook gerefereerd vanuit `/ls-dk` (Digikoppeling). Dezelfde discrepantie is gedocumenteerd in [ls-dk/conflicts.md](../ls-dk/conflicts.md).
