@@ -18,6 +18,7 @@ Alle content in deze repo is in het **Nederlands**: skill descriptions, body tek
 - `.github/workflows/release-please.yml` - Automatische releases via conventional commits
 - `.github/workflows/monitoring-content.yml` - Dagelijkse content monitoring (07:00 UTC)
 - `.github/workflows/monitoring-links.yml` - Dagelijkse link checks met lychee (06:00 UTC)
+- `.github/workflows/monitoring-def-versions.yml` - Wekelijkse controle van DEF-versies tegen gitdocumentatie (maandag 07:30 UTC)
 - `.github/workflows/labeler.yml` - Automatische PR-labels op basis van gewijzigde bestanden
 
 ## Conventies voor skills
@@ -146,6 +147,13 @@ gh pr checkout <nr> && git commit --allow-empty -m "chore: trigger CI" && git pu
 - Maakt GitHub Issues aan bij gedetecteerde wijzigingen (na 3 opeenvolgende failures voor errors)
 
 **Link monitoring** (`monitoring-links.yml`) draait dagelijks om 06:00 UTC met lychee.
+
+**DEF-versie monitoring** (`scripts/check_def_versions.py`, wekelijks via `monitoring-def-versions.yml`) vergelijkt elke `[vX.Y.Z](gitdocumentatie-url)` in de skills met de gepubliceerde pagina, op twee dingen:
+
+- **versie**: komt de versie in de skill overeen met wat de pagina noemt (de `<title>` is leidend; `publishVersion` noemt soms de vórige versie)
+- **status**: heeft de gelinkte pagina `specStatus: DEF`? Een `VV` (versie ter vaststelling) of `WV` hoort niet in een "Vastgesteld"-kolom
+
+Draai lokaal met `uv run python scripts/check_def_versions.py`. Aanleiding: het OIN-Stelsel stond een half jaar als vastgesteld `v3.0.0` in de skills terwijl zowel 3.0.0 als 3.0.1 `specStatus: VV` hebben; dat viel pas op toen Logius de *latest*-verwijzing terugzette naar de laatste échte DEF (v2.2.2). Een versienummer dat "nieuwer" oogt is dus geen bewijs dat het vastgesteld is.
 
 ### Monitoring issues afhandelen
 
