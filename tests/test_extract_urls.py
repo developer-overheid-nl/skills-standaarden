@@ -112,6 +112,13 @@ class TestNormalizeGithubUrl:
             == "https://github.com/logius-standaarden/test-repo"
         )
 
+    def test_pull_request_verwijderd(self):
+        """Een link naar een PR wijst naar de repo, niet naar een aparte bron."""
+        assert (
+            normalize_github_url("https://github.com/logius-standaarden/test-repo/pull/65")
+            == "https://github.com/logius-standaarden/test-repo"
+        )
+
     def test_tree_main_verwijderd(self):
         assert (
             normalize_github_url("https://github.com/logius-standaarden/test-repo/tree/main")

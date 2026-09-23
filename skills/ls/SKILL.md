@@ -1,6 +1,6 @@
 ---
 name: ls
-description: "Overzicht van alle Logius standaarden. Gebruik deze skill wanneer de gebruiker vraagt over 'Logius standaarden', 'Nederlandse overheidsstandaarden', 'interoperabiliteit', 'welke standaarden zijn er', 'standaarden overzicht', 'welke standaard moet ik gebruiken', of een vraag heeft die niet duidelijk bij een domein past."
+description: "Overzicht van Logius standaarden voor de Nederlandse overheid. Routeert naar sub-skills (Digikoppeling, API Design Rules, OAuth, FSC, BOMOS, etc.) of geeft hulp bij interoperabiliteitsvragen."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -37,11 +37,39 @@ Niet alle standaarden hebben al een vastgestelde versie. De domeinen ADR, Digiko
 
 Niet alle Logius-standaarden staan op de 'pas-toe-of-leg-uit'-lijst van het Forum Standaardisatie:
 
-- **Verplicht**: [API Design Rules](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules), [Digikoppeling](https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling), [Authenticatie-standaarden (OIDC+SAML)](https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden), [OAuth-NL-profiel v1.0](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20), [CloudEvents v1.0](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents), [NLCIUS](https://www.forumstandaardisatie.nl/open-standaarden/nlcius)
+- **Verplicht**: [API Design Rules](https://www.forumstandaardisatie.nl/open-standaarden/rest-api-design-rules), [Digikoppeling](https://www.forumstandaardisatie.nl/open-standaarden/digikoppeling) (inclusief FSC sinds 5 november 2025), [Authenticatie-standaarden (OIDC+SAML)](https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden), [OAuth-NL-profiel v1.0](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20), [CloudEvents v1.0](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents), [NLCIUS](https://www.forumstandaardisatie.nl/open-standaarden/nlcius)
 - **Aanbevolen**: Peppol BIS
-- **Niet op de lijst**: BOMOS (raamwerk, geen interoperabiliteitsstandaard), FSC (onderdeel Digikoppeling), Logboek (in ontwikkeling), Digimelding/Terugmelding, e-procurement
+- **Niet op de lijst**: BOMOS (raamwerk, geen interoperabiliteitsstandaard), Logboek (in ontwikkeling), Digimelding/Terugmelding, e-procurement
 
 > OAuth-NL-profiel v1.1 is vastgesteld door Logius (DEF), maar op het Forum Standaardisatie nog ["in procedure"](https://www.forumstandaardisatie.nl/intakeadvies-nl-gov-assurance-profile-oauth-20-versie-11) (intake goedgekeurd 24-09-2025); v1.0 is de verplichte versie.
+
+## Forum Beslisboom Open Standaarden
+
+Het Forum Standaardisatie heeft een [Beslisboom Open Standaarden](https://www.forumstandaardisatie.nl/beslisboom/beslisboom-open-standaarden): zes vragen over sector, communicatiekanaal en gegevenssoort, met als uitkomst de standaarden die waarschijnlijk relevant zijn. Waar deze skills routeren op domein (je weet al dat je Digikoppeling nodig hebt), routeert de beslisboom op situatie.
+
+Gebruik de beslisboom bij vragen als "welke standaarden gelden voor mijn project" in plaats van "hoe implementeer ik standaard X". De onderliggende data is als JSON:API op te halen:
+
+```bash
+# Alle standaarden die de beslisboom kan aanraden
+curl -s -H "Accept: application/vnd.api+json" \
+  "https://www.forumstandaardisatie.nl/jsonapi/node/decision_tree?include=decisionTreeSteps.questions.answers.standards&fields%5Bnode--decision_tree%5D=title%2CdecisionTreeSteps&fields%5Bparagraph--decision_tree_step%5D=title%2Cquestions&fields%5Bparagraph--decision_tree_question%5D=question%2Canswers&fields%5Bparagraph--decision_tree_answer%5D=answer%2Cstandards&fields%5Bnode--standaarden%5D=title%2Cpath" \
+  | jq -r '.included[] | select(.type=="node--standaarden") | .attributes.title' | sort -u
+```
+
+> De `fields[...]`-parameters zijn bewust. Zonder die beperking levert elke standaard ook `description`, `metatag` en `field_alert_message` mee (~40 KB redactionele tekst), en dragen de boom, stappen, vragen en antwoorden hun `introduction`- en `explanation`-teksten mee. Al die tekst verandert bij elke redactionele aanpassing op de Forum-site. Met deze fieldsets blijven alleen de structuur (titel, vraag, antwoord) en de standaardnamen over, precies het signaal dat telt: een toegevoegde of verwijderde standaard, of een gewijzigde vraag of antwoordoptie.
+
+### Dekking en scope
+
+De beslisboom kent 55 standaarden. Deze plugins dekken er 27. De rest valt in drie groepen:
+
+| Groep | Standaarden | Waarom |
+|-------|------------|--------|
+| **Sectorstandaarden — bewust buiten scope** | Aquo, GWSW, NLCS, SIKB0101, SIKB0102, Stosag, VISI, SETU, XBRL, EML_NL, Erfgoedstandaard, E-Portfolio NL, WDO Datamodel | Eigen sectorcommunities met eigen tooling en documentatie. Deze skills dekken de generieke overheidsstandaarden (Logius, Geonovum, internet.nl); sectorstandaarden dekken zou betekenen dat we een Forum-mirror worden. |
+| **Backlog — reële gaten** | ACME, STIX en TAXII, AdES Baseline Profiles, NEN-ISO/IEC 27001, NEN-ISO/IEC 27002 | Passen wel bij de scope maar zijn nog niet uitgewerkt. 27001/27002 worden nu alleen genoemd als grondslag van de BIO, niet als standaard behandeld. |
+| **Juridisch en documentformaten — geen eigenaar** | BWB, ECLI, JCDR, ODF, PDF/A, PDF/UA, EPUB, iCalendar, CMIS, ISO 3166-1, WPA2 Enterprise | Geen van de huidige domein-skills claimt dit. ECLI en BWB (wetgeving en jurisprudentie) zijn het meest kansrijk om alsnog op te pakken. |
+| **StUF — bewust niet** | StUF | Verplicht en centraal in gemeentelijke interoperabiliteit, maar niet correct te dekken in een skill: de standaard leunt op sectormodellen en implementatiekeuzes die per koppelvlak verschillen. Een half-correcte StUF-skill is schadelijker dan geen. Advies van Eelco Hotting, 2026-08-31. |
+
+> **Let op bij dekkingsanalyses:** naam-matching geeft in twee richtingen een verkeerd beeld. Het onderschat de dekking wanneer inhoud onder een andere noemer staat: HTTPS en HSTS worden behandeld in `/inet-web` en ACME-certificaatautomatisering in `/inet-toolbox`. Het overschat de dekking wanneer een standaard alleen terloops genoemd wordt: NEN-ISO/IEC 27001 en 27002 komen voor als grondslag van de BIO, maar worden nergens als standaard behandeld. Controleer bij twijfel wat de skill daadwerkelijk over de standaard zegt, niet of de naam voorkomt.
 
 ## Domeinen
 

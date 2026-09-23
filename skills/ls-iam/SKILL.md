@@ -1,6 +1,6 @@
 ---
 name: ls-iam
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'OAuth', 'OpenID Connect', 'OIDC', 'authenticatie', 'autorisatie', 'AuthZEN', 'SAML', 'identity management', 'toegangsbeheer', 'OAuth NL profiel', 'OIDC NL GOV', 'NL GOV profiel', 'authorization decision', 'OIN authenticatie', 'token endpoint', 'JWT', 'private_key_jwt', 'client credentials', 'authorization_code', 'PKCE'."
+description: "OAuth, OpenID Connect, AuthZEN, SAML voor authenticatie en autorisatie bij de overheid. NL GOV profielen, JWT, PKCE, private_key_jwt, OIN authenticatie."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -47,7 +47,7 @@ Op het Forum Standaardisatie staat het OAuth-NL-profiel **v1.0** als verplicht (
 | [OAuth-Beheermodel](https://github.com/logius-standaarden/OAuth-Beheermodel) | Beheermodel voor OAuth standaarden — **gearchiveerd** | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0](https://gitdocumentatie.logius.nl/publicatie/api/oauth-beheer/) | - |
 | [authzen-nlgov](https://github.com/logius-standaarden/authzen-nlgov) | AuthZEN NL GOV profiel (autorisatiebeslissingen) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/authzen-nlgov/) |
 | [authorization-decision-log](https://github.com/logius-standaarden/authorization-decision-log) | Logging van autorisatiebeslissingen | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/authorization-decision-log/) |
-| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | SAML specificatie — onderdeel van verplichte "Authenticatie-standaarden"; voor nieuwe implementaties wordt OIDC aanbevolen | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/st-saml-spec/) |
+| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | SAML specificatie — onderdeel van verplichte "Authenticatie-standaarden"; voor nieuwe implementaties wordt OIDC aanbevolen | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0.0](https://logius-standaarden.github.io/st-saml-spec/) | [Draft](https://logius-standaarden.github.io/st-saml-spec/) |
 | [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Organisatie Identificatie Nummer (ook in `/ls-dk`) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | [Draft](https://logius-standaarden.github.io/OIN-Stelsel/) |
 
 ---
@@ -58,7 +58,7 @@ Het Nederlandse OAuth 2.0 profiel scherpt de basisspecificatie (RFC 6749) aan me
 
 ### Verplichte beveiligingseisen
 
-- **PKCE (Proof Key for Code Exchange)** is verplicht voor public clients. Confidential clients die zich authenticeren met `private_key_jwt` of mTLS zijn vrijgesteld. Dit voorkomt authorization code interception aanvallen. Clients genereren een `code_verifier` en sturen een `code_challenge` mee in het authorization request.
+- **PKCE (Proof Key for Code Exchange)** is verplicht voor *alle* clients per het OIDC NL GOV profiel ("Clients MUST use PKCE to protect calls to the Token Endpoint"), inclusief confidential clients die zich met `private_key_jwt` of mTLS authenticeren — er is geen vrijstelling. Dit voorkomt authorization code interception aanvallen. Clients genereren een `code_verifier` en sturen een `code_challenge` mee in het authorization request.
 - **Grant types**: `authorization_code` is verplicht (MUST); `client_credentials` is toegestaan (MAY) voor machine-to-machine communicatie. Implicit grant en Resource Owner Password Credentials zijn expliciet verboden vanwege bekende beveiligingsrisico's.
 - **Tokens als HTTP headers**: access tokens worden als HTTP `Authorization` header (Bearer scheme) meegegeven. Transport via query parameters is verboden (MUST NOT). Form-encoded body parameters (RFC 6750 Section 2.2) zijn wel toegestaan.
 
@@ -117,7 +117,7 @@ Het ID Token moet minimaal de volgende claims bevatten:
 | `exp` | Verloopdatum van het token (expiration) |
 | `iat` | Tijdstip van uitgifte (issued at) |
 | `nonce` | Waarde uit het authorization request (voorkomt replay attacks) |
-| `acr` | Betrouwbaarheidsniveau (SHOULD — aanbevolen, niet verplicht) |
+| `acr` | Betrouwbaarheidsniveau (OPTIONAL per OIDC NL GOV; **als gezet MOET de waarde minimaal het gevraagde betrouwbaarheidsniveau zijn**) |
 
 ### ID Token validatie
 
@@ -128,7 +128,7 @@ Bij het valideren van een OIDC ID Token MOETEN de volgende stappen worden doorlo
 3. **aud** - MOET de `client_id` van de relying party bevatten
 4. **nonce** - MOET exact overeenkomen met de nonce uit het authorization request
 5. **exp** - MOET in de toekomst liggen (token niet verlopen)
-6. **iat** - MAG niet te ver in het verleden liggen (max 5 minuten aanbevolen)
+6. **iat** - MOET in het verleden liggen; de acceptabele afstand is per Client te bepalen (OIDC NL GOV laat dit expliciet aan de Client; veelvoorkomende keuze in de praktijk: enkele minuten)
 7. **acr** - MOET minimaal het gevraagde betrouwbaarheidsniveau bevatten
 8. **jti** - MOET uniek zijn (bewaar voldoende lang om hergebruik te detecteren)
 
@@ -220,55 +220,80 @@ Bij een weigering kan het PDP een reden meegeven:
 
 ## Authorization Decision Log
 
-De Authorization Decision Log standaard definieert een gestructureerd formaat voor het vastleggen van autorisatiebeslissingen. Dit is essentieel voor audit, verantwoording en het kunnen reproduceren van historische beslissingen.
+De ADL-standaard definieert een gestructureerd formaat voor het vastleggen van autorisatiebeslissingen voor audit, verantwoording en replay. De werkversie volgt sinds april 2026 een **OpenTelemetry-vorm** op basis van het AuthZEN-informatiemodel. Het record-model is transport-onafhankelijk; OTLP wordt aanbevolen, maar elke transport (REST, gRPC, messaging) is toegestaan zolang het record de gespecificeerde velden draagt.
 
-### Verplichte velden
+### Record-velden
 
-| Veld | Beschrijving |
-|------|-------------|
-| `timestamp` | Tijdstip van de beslissing (ISO 8601) |
-| `type` | Type van het record, bijvoorbeeld `evaluation` |
-| `request` | Het oorspronkelijke autorisatieverzoek (subject, action, resource, context) |
-| `response` | De autorisatiebeslissing (decision en eventuele context) |
+| Veld | Type | Verplicht? | Beschrijving |
+|------|------|-----------|-------------|
+| `trace_id` | 16 byte hex (32 chars) | Ja | Trace-id conform [W3C Trace Context](https://www.w3.org/TR/trace-context/), cryptografisch random |
+| `span_id` | 8 byte hex (16 chars) | Ja | Span-id voor deze beslissing |
+| `parent_span_id` | 8 byte hex (16 chars) | Conditioneel | Verplicht bij upstream `traceparent`; alleen weglaatbaar bij root-span |
+| `event_name` | string | Ja | Een van vijf vaste waarden (zie hieronder) |
+| `timestamp` | uint64 | Ja | Milliseconden sinds Unix epoch |
+| `status` | enum | Ja | `Unset` (default, ook bij denial), `Ok`, of `Error` (PDP kon geen beslissing produceren) |
+| `attributes` | object | Optioneel | Source-referenties en metadata (`adl.core.*`) |
+| `resource` | object | Optioneel | OpenTelemetry resource-object (component-context) |
+| `body` | object | Optioneel | Raw payload (`adl.core.request`, `adl.core.response`, etc.) |
 
-### Aanbevolen velden (SHOULD)
+Een denial (`decision: false`) is `Unset`, niet `Error`.
 
-| Veld | Beschrijving |
-|------|-------------|
-| `trace_id` | Unieke trace identifier conform W3C Trace Context |
-| `span_id` | Span identifier binnen de trace |
+### `event_name` waarden
 
-### Optionele velden
+| AuthZEN API | `event_name` |
+|-------------|--------------|
+| Access Evaluation API | `adl.access_evaluation` |
+| Access Evaluations API | `adl.access_evaluations` |
+| Subject Search API | `adl.search_subject` |
+| Action Search API | `adl.search_action` |
+| Resource Search API | `adl.search_resource` |
 
-| Veld | Beschrijving |
-|------|-------------|
-| `policies` | Referenties naar toegepaste beleidsregels, inclusief versienummers |
-| `information` | Aanvullende data die het PIP heeft geleverd voor de besluitvorming |
-| `configuration` | Configuratie van het PDP ten tijde van de beslissing |
+### `attributes.adl.core.*`
 
-### Voorbeeld log record
+Source-referenties — geen raw data, die hoort in `body`. Een veld MOET in precies één van beide locaties staan.
+
+| Attribute | Beschrijving |
+|-----------|-------------|
+| `adl.core.request` | Input van de beslissing (AuthZEN-formaat) |
+| `adl.core.response` | Output (verplicht retrieveerbaar bij `status: Unset`/`Ok`) |
+| `adl.core.policies` | Object met per policy-source een versie-identifier (timestamp, hash, semver) |
+| `adl.core.information` | Referenties naar PIP-data |
+| `adl.core.configuration` | Configuratie van PDP/PIP/PAP |
+| `adl.fsc.transaction_id` | FSC transaction-id voor correlatie met FSC logs |
+
+Aanvullende keys volgen `<vendor>.<area>.<name>`. Onbekende keys MOETEN door consumers worden genegeerd.
+
+### Levels of detail
+
+Vier niveaus van replayability (zie [reference.md](reference.md)): (1) request+response, (2) + `adl.core.policies`, (3) + `adl.core.information`, (4) + `adl.core.configuration`.
+
+### Voorbeeld log record (Level 1)
 
 ```json
 {
-  "timestamp": "2025-09-07T10:14:18Z",
   "trace_id": "28dbeec32e77635cc19bc3204ec56c41",
-  "span_id": "893e1b2ac52d712f",
-  "type": "evaluation",
-  "request": {
-    "subject": { "type": "user", "id": "alice" },
-    "action": { "name": "approve" },
-    "resource": { "type": "holiday-request", "id": "446epbc8y7" }
-  },
-  "response": {
-    "decision": false,
-    "context": {
-      "reason": {
-        "48": "No signing authority"
-      }
+  "span_id": "5e3c8a4f9b2d1e07",
+  "parent_span_id": "893e1b2ac52d712f",
+  "event_name": "adl.access_evaluation",
+  "timestamp": 1757240058042,
+  "status": "Unset",
+  "body": {
+    "adl.core.request": {
+      "subject": {"type": "user", "id": "alice"},
+      "action": {"name": "approve"},
+      "resource": {"type": "holiday-request", "id": "446epbc8y7"}
+    },
+    "adl.core.response": {
+      "decision": false,
+      "context": {"reason": {"48": "No signing authority"}}
     }
   }
 }
 ```
+
+### Trace context en ingestion
+
+Alle componenten (PEP, PDP, PIP, PAP) MOETEN W3C Trace Context propageren; `trace_id` blijft ongewijzigd over organisatiegrenzen, ook bij sampling=0 (records worden altijd geproduceerd). Ingestion MOET idempotent zijn met `(trace_id, span_id)` of content-hash als sleutel. Zie [reference.md](reference.md) voor details.
 
 ---
 

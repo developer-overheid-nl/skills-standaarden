@@ -14,7 +14,7 @@ De strategielaag bepaalt de koers en randvoorwaarden voor het beheer van de stan
 - **Visie** - Langetermijnvisie op de standaard: doelgroep, toepassingsgebied, en gewenste marktpositie
 - **Financiering** - Structurele financiering van beheeractiviteiten, begrotingsmodel, en verantwoording
 
-**Rollen:** Eigenaar, Financier
+**Rollen:** Houder, Financier
 
 ### 2. Tactiek
 
@@ -68,7 +68,7 @@ BOMOS definieert een rollenmodel dat de verantwoordelijkheden binnen het standaa
 
 | Rol | Verantwoordelijkheid |
 |-----|---------------------|
-| **Eigenaar** | Eindverantwoordelijk voor de ontwikkeling van de standaard, bepaalt scope en principes |
+| **Houder** | Eindverantwoordelijk voor de ontwikkeling van de standaard, bepaalt scope en principes |
 | **Financier** | Draagt financieringsverantwoordelijkheid voor het beheer en de doorontwikkeling |
 | **Autorisator** | Goedkeuringsautoriteit voor wijzigingen (kan een individu of groep/commissie zijn) |
 | **Functioneel Beheerder** | Procesverantwoordelijk voor de ontwikkeling en het onderhoud van de standaard |
@@ -99,7 +99,7 @@ Een beheerorganisatie werkt conform BOMOS wanneer een beheerdocument is gepublic
 
 BOMOS beschrijft een versneld ontwikkelmodel voor situaties waarin snel een standaard nodig is:
 
-1. **Intensieve workshop** (1 week) - Minimaal 15 deelnemers werken in een week-lange pressure cooker aan de eerste versie van de standaard
+1. **Intensieve workshop** (1 week) - Gemiddeld 15 deelnemers werken in een week-lange pressure cooker aan de eerste versie van de standaard (gebaseerd op het afvalbranche-voorbeeld in BOMOS-Verdieping)
 2. **Expert-verfijning** (2 weken) - Externe experts verfijnen en verbeteren het resultaat
 3. **Community review** (2 weken) - Bredere community beoordeelt en geeft feedback
 4. **Afronding en governance** - Formele vaststelling en inrichting van structureel beheer

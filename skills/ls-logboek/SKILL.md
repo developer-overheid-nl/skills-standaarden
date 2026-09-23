@@ -1,6 +1,6 @@
 ---
 name: ls-logboek
-description: "Gebruik deze skill wanneer de gebruiker vraagt over 'Logboek Dataverwerkingen', 'dataverwerkingen logging', 'transparantie dataverwerkingen', 'NEN 7513', 'logging API overheid', 'logboek extensie', 'AVG logging', 'GDPR logging', 'verwerkingenlogging', 'OpenTelemetry', 'OTLP', 'dpl.core', 'verwerkingsactiviteit loggen'."
+description: "Logboek Dataverwerkingen voor AVG/GDPR-transparantie. NEN 7513, OpenTelemetry/OTLP, dpl.core, verwerkingenlogging in overheidssystemen."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -43,7 +43,7 @@ De normatieve hoofdspecificatie **logboek-dataverwerkingen** heeft sinds 9 april
 | [logboek-dataverwerkingen](https://github.com/logius-standaarden/logboek-dataverwerkingen) | Normatieve hoofdspecificatie (logging-interface) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/1.0.0/) | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen/) |
 | [logboek-dataverwerkingen-inleiding](https://github.com/logius-standaarden/logboek-dataverwerkingen-inleiding) | Introductie en achtergrond | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/) |
 | [logboek-dataverwerkingen-juridisch-beleidskader](https://github.com/logius-standaarden/logboek-dataverwerkingen-juridisch-beleidskader) | Juridisch en beleidskader | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/) |
-| [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo) | Docker demo-omgeving met meerdere services | [EUPL-1.2](https://eupl.eu/1.2/en) | - | - |
+| [logboek-dataverwerkingen-demo](https://github.com/logius-standaarden/logboek-dataverwerkingen-demo) | Docker demo-omgeving met meerdere services — **gearchiveerd** augustus 2026, README meldt dat de demo verouderd is | [EUPL-1.2](https://eupl.eu/1.2/en) | - | - |
 | [logboek-extensie-lezen](https://github.com/logius-standaarden/logboek-extensie-lezen) | Extensie: leesoperaties op het logboek | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-lezen/) |
 | [logboek-extensie-nen7513](https://github.com/logius-standaarden/logboek-extensie-nen7513) | Extensie: NEN 7513 (logging in de zorg) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-nen7513/) |
 | [logboek-extensie-object](https://github.com/logius-standaarden/logboek-extensie-object) | Extensie: objectgegevens bij verwerkingen | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/logboek-extensie-object/) |
@@ -72,9 +72,9 @@ Elk log record volgt de OpenTelemetry Span-structuur met verplichte en optionele
 
 | Veld | Type | Verplicht | Beschrijving |
 |------|------|-----------|--------------|
-| `trace_id` | 16 bytes | Ja | Uniek trace ID over systemen heen (W3C Trace Context) |
-| `span_id` | 8 bytes | Ja | Uniek action ID binnen een verwerking |
-| `parent_span_id` | 8 bytes | Nee | ID van de aanroepende actie (voor parent-child relaties) |
+| `trace_id` | 16 bytes | Ja | Uniek trace ID over systemen heen (W3C Trace Context). Als hexadecimale string: 32 karakters |
+| `span_id` | 8 bytes | Ja | Uniek action ID binnen een verwerking. Als hexadecimale string: 16 karakters |
+| `parent_span_id` | 8 bytes | Nee | ID van de aanroepende actie (voor parent-child relaties). Als hexadecimale string: 16 karakters |
 | `status` | enum | Ja | `Unset`, `Ok`, of `Error` |
 | `name` | string | Ja | Mensleesbare actienaam (bijv. "Opvragen persoonsgegevens") |
 | `start_time` | uint64 | Ja | Starttijd in milliseconden sinds Unix Epoch |
@@ -84,7 +84,7 @@ Elk log record volgt de OpenTelemetry Span-structuur met verplichte en optionele
 
 **Toelichting:**
 
-- `trace_id` en `span_id` worden automatisch gegenereerd conform W3C Trace Context.
+- `trace_id` en `span_id` worden automatisch gegenereerd conform W3C Trace Context. De specificatie geeft de lengte in bytes; bytes kunnen hexadecimaal of binair worden geëncodeerd, dus een 16-byte `trace_id` is als hex-string 32 karakters lang (zie de [OpenTelemetry-documentatie](https://opentelemetry.io/docs/specs/otel/trace/api/#retrieving-the-traceid-and-spanid)).
 - `parent_span_id` maakt het mogelijk om een boom van gerelateerde acties op te bouwen.
 - `status` geeft aan of de verwerking succesvol was; bij `Error` is aanvullende foutinformatie aan te raden.
 - `resource` identificeert het systeem (naam, versie, omgeving) dat de logregel produceert.
@@ -148,7 +148,7 @@ De standaard schrijft geen specifiek transportprotocol voor, maar beveelt **Open
 
 **Vereisten:**
 
-- Het Logboek **MOET** TLS kunnen afdwingen voor alle communicatie.
+- Het Logboek **MOET** TLS kunnen afdwingen (capability-eis aan de software). De spec verduidelijkt expliciet dat hiermee niet wordt bedoeld dat TLS verplicht is — of TLS-connecties daadwerkelijk worden toegepast is een organisatie-keuze.
 - Het Logboek **MOET** elke schrijfactie bevestigen met een bevestigingsbericht (acknowledgement). De applicatie weet hierdoor zeker dat de logregel is opgeslagen.
 - OTLP ondersteunt zowel gRPC als HTTP/protobuf als transportlaag (standaard OTLP-poorten: 4317 voor gRPC, 4318 voor HTTP — niet voorgeschreven door de Logboek-standaard zelf).
 
@@ -354,8 +354,8 @@ with tracer.start_as_current_span("verwerk-gegevens") as span:
 ### Verplichte Velden Validatie
 
 Een logregel MOET minimaal bevatten:
-- `trace_id` (16 bytes) - uniek per verwerkingsketen
-- `span_id` (8 bytes) - uniek per actie
+- `trace_id` (16 bytes, 32 hex-karakters) - uniek per verwerkingsketen
+- `span_id` (8 bytes, 16 hex-karakters) - uniek per actie
 - `name` - beschrijvende naam van de actie
 - `start_time` en `end_time` - milliseconden sinds Epoch
 - `status` - Unset, Ok, of Error

@@ -1,0 +1,66 @@
+name: Monitoring - DEF Versies
+
+on:
+  schedule:
+    - cron: '30 7 * * 1'  # wekelijks, maandag 07:30 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: monitoring-def-versions
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-def-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Installeer uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Installeer dependencies
+        run: uv sync
+
+      - name: Zorg dat labels bestaan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "monitoring" --color "0E8A16" --description "Automatische monitoring" --force 2>/dev/null || true
+          gh label create "def-versie" --color "D93F0B" --description "Vastgestelde versie wijkt af van publicatie" --force 2>/dev/null || true
+
+      - name: Controleer DEF-versies tegen gitdocumentatie
+        id: check
+        run: |
+          set +e
+          uv run python scripts/check_def_versions.py | tee /tmp/def-versies.txt
+          echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Maak of werk issue bij
+        if: steps.check.outputs.exit_code != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          titel="[monitoring] DEF-versies wijken af van gitdocumentatie"
+          body="$(printf 'De wekelijkse controle vond verschillen tussen de vastgestelde versies in de skills en wat er op gitdocumentatie.logius.nl gepubliceerd staat.\n\n```\n%s\n```\n\nControleer per melding of de skill bijgewerkt moet worden. Let op het onderscheid:\n\n- **versie**: de skill noemt een andere versie dan de gepubliceerde\n- **status**: de gelinkte pagina heeft `specStatus` VV of WV, dus is niet vastgesteld en hoort niet in een Vastgesteld-kolom\n- **onbereikbaar**: de pagina was niet te lezen; kan tijdelijk zijn\n' "$(cat /tmp/def-versies.txt)")"
+
+          bestaand="$(gh issue list --label def-versie --state open --json number,title --jq ".[] | select(.title == \"$titel\") | .number" | head -1)"
+          if [ -n "$bestaand" ]; then
+            gh issue comment "$bestaand" --body "$body"
+          else
+            gh issue create --title "$titel" --body "$body" --label monitoring --label def-versie
+          fi
+
+      - name: Sluit issue als alles klopt
+        if: steps.check.outputs.exit_code == '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          titel="[monitoring] DEF-versies wijken af van gitdocumentatie"
+          bestaand="$(gh issue list --label def-versie --state open --json number,title --jq ".[] | select(.title == \"$titel\") | .number" | head -1)"
+          if [ -n "$bestaand" ]; then
+            gh issue close "$bestaand" --comment "Alle DEF-versies komen weer overeen met gitdocumentatie.logius.nl."
+          fi

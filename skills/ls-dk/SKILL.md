@@ -1,6 +1,6 @@
 ---
 name: ls-dk
-description: "Gebruik deze skill wanneer de gebruiker vraagt over Digikoppeling, koppelvlakstandaarden, ebMS2, WUS, WSDL, SOAP, REST-API koppelvlak, grote berichten, OIN, Organisatie Identificatie Nummer, PKIoverheid, beveiligingsstandaarden overheid, routering en adressering, CPA, berichtuitwisseling tussen overheidsorganisaties."
+description: "Digikoppeling koppelvlakken (ebMS2, WUS, REST-API, grote berichten) voor berichtuitwisseling tussen overheidsorganisaties. Ook OIN, PKIoverheid, CPA, routering."
 model: sonnet
 allowed-tools:
   - Bash(gh api *)
@@ -38,11 +38,11 @@ Net als andere Logius-standaarden kent Digikoppeling twee publicatiekanalen:
 | Repository | Beschrijving | Licentie | Vastgesteld | Draft |
 |-----------|-------------|--------|------------|-------|
 | [Digikoppeling-Architectuur](https://github.com/logius-standaarden/Digikoppeling-Architectuur) | Overkoepelende architectuurbeschrijving | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v2.1.1](https://gitdocumentatie.logius.nl/publicatie/dk/architectuur/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Architectuur/) |
-| [Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API) | REST-API koppelvlakspecificatie | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.0.1](https://gitdocumentatie.logius.nl/publicatie/dk/restapi/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API/) |
+| [Digikoppeling-Koppelvlakstandaard-REST-API](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-REST-API) | REST-API koppelvlakspecificatie | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v4.0.1](https://gitdocumentatie.logius.nl/publicatie/dk/restapi/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-REST-API/) |
 | [Digikoppeling-Koppelvlakstandaard-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-ebMS2) | ebMS2 koppelvlakspecificatie | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.3.2](https://gitdocumentatie.logius.nl/publicatie/dk/ebms/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-ebMS2/) |
 | [Digikoppeling-Koppelvlakstandaard-WUS](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-WUS) | WUS (WSDL/UDDI/SOAP) koppelvlakspecificatie | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.8.1](https://gitdocumentatie.logius.nl/publicatie/dk/wus/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-WUS/) |
 | [Digikoppeling-Koppelvlakstandaard-GB](https://github.com/logius-standaarden/Digikoppeling-Koppelvlakstandaard-GB) | Grote Berichten koppelvlakspecificatie | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.8.1](https://gitdocumentatie.logius.nl/publicatie/dk/gb/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Koppelvlakstandaard-GB/) |
-| [Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften) | Beveiligingsstandaarden en -voorschriften | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v2.0.1](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/) |
+| [Digikoppeling-Beveiligingsstandaarden-en-voorschriften](https://github.com/logius-standaarden/Digikoppeling-Beveiligingsstandaarden-en-voorschriften) | Beveiligingsstandaarden en -voorschriften | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.0.1](https://gitdocumentatie.logius.nl/publicatie/dk/beveilig/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Beveiligingsstandaarden-en-voorschriften/) |
 | [Digikoppeling-Identificatie-en-Authenticatie](https://github.com/logius-standaarden/Digikoppeling-Identificatie-en-Authenticatie) | Identificatie en authenticatie | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.5.0](https://gitdocumentatie.logius.nl/publicatie/dk/idauth/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Identificatie-en-Authenticatie/) |
 | [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | Organisatie Identificatie Nummer stelsel | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | [Draft](https://logius-standaarden.github.io/OIN-Stelsel/) |
 | [Digikoppeling-Beheermodel](https://github.com/logius-standaarden/Digikoppeling-Beheermodel) | Beheermodel voor Digikoppeling | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.8](https://gitdocumentatie.logius.nl/publicatie/dk/beheer/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Beheermodel/) |
@@ -56,9 +56,9 @@ Net als andere Logius-standaarden kent Digikoppeling twee publicatiekanalen:
 | [Digikoppeling-Best-Practices-ebMS2](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-ebMS2) | Best practices voor ebMS2 implementatie | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/bpebms/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-ebMS2/) |
 | [Digikoppeling-Best-Practices-WUS](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-WUS) | Best practices voor WUS implementatie | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.10.2](https://gitdocumentatie.logius.nl/publicatie/dk/bpwus/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-WUS/) |
 | [Digikoppeling-Best-Practices-GB](https://github.com/logius-standaarden/Digikoppeling-Best-Practices-GB) | Best practices voor Grote Berichten | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v3.2.0](https://gitdocumentatie.logius.nl/publicatie/dk/bpgb/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Best-Practices-GB/) |
-| [Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance](https://github.com/logius-standaarden/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance) | Overzicht documentatie en compliance | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.12.2](https://gitdocumentatie.logius.nl/publicatie/dk/actueel/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance/) |
+| [Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance](https://github.com/logius-standaarden/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance) | Overzicht documentatie en compliance | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.13.0](https://gitdocumentatie.logius.nl/publicatie/dk/actueel/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Overzicht-Actuele-Documentatie-en-Compliance/) |
 | [Digikoppeling-Wat-is-Digikoppeling](https://github.com/logius-standaarden/Digikoppeling-Wat-is-Digikoppeling) | Introductie en uitleg | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.1.2](https://gitdocumentatie.logius.nl/publicatie/dk/watisdk/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Wat-is-Digikoppeling/) |
-| [Digikoppeling-Algemeen](https://github.com/logius-standaarden/Digikoppeling-Algemeen) | Digikoppeling Roadmap | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v2024-2025](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Algemeen/) |
+| [Digikoppeling-Algemeen](https://github.com/logius-standaarden/Digikoppeling-Algemeen) | Digikoppeling Roadmap | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v2026-2027](https://gitdocumentatie.logius.nl/publicatie/dk/roadmap/) | [Draft](https://logius-standaarden.github.io/Digikoppeling-Algemeen/) |
 
 ## Profielkeuze
 
@@ -359,8 +359,8 @@ server {
 
 Bij het profiel `osb-rm` gelden de volgende retry-regels:
 - **Acknowledgement timeout**: Wacht maximaal de afgesproken tijd op een bevestiging
-- **Retry interval**: Exponential backoff (bijv. 30s, 60s, 120s, 240s)
-- **Max retries**: Configureerbaar in de CPA (typisch 3-5 pogingen)
+- **Retry interval**: Configureerbaar in de CPA via `RetryInterval`; geen voorgeschreven backoff-strategie
+- **Max retries**: Configureerbaar in de CPA; geen voorgeschreven aantal. Zonder afspraak geldt een `PersistDuration` van 5 dagen
 - **Duplicate elimination**: Ontvanger herkent duplicaten op basis van MessageId
 - **At-most-once delivery**: Berichten worden nooit dubbel afgeleverd
 

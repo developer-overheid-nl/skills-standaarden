@@ -5,6 +5,150 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.6.7](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.6...v0.6.7) (2026-09-17)
+
+
+### Opgelost
+
+* DEF-versies gelijktrekken met gitdocumentatie en automatisch bewaken ([#847](https://github.com/developer-overheid-nl/skills-standaarden/issues/847)) ([8aaf69d](https://github.com/developer-overheid-nl/skills-standaarden/commit/8aaf69dba732bebaf284c80d32c6e7e08c60818c))
+* OIN-Stelsel vastgestelde versie terug naar v2.2.2 ([#845](https://github.com/developer-overheid-nl/skills-standaarden/issues/845)) ([ebba3c5](https://github.com/developer-overheid-nl/skills-standaarden/commit/ebba3c5e640ba3e123b7136bf33352e912213fc3))
+
+## [0.6.6](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.5...v0.6.6) (2026-09-09)
+
+
+### Opgelost
+
+* **ls:** beperk beslisboom-API tot structuur en standaardnamen ([#835](https://github.com/developer-overheid-nl/skills-standaarden/issues/835)) ([9e8246b](https://github.com/developer-overheid-nl/skills-standaarden/commit/9e8246b5f3d2d1e9059f1ff1249267ccb011e97b))
+
+## [0.6.5](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.4...v0.6.5) (2026-09-08)
+
+
+### Opgelost
+
+* normaliseer /pull/N-links naar de repo in extract_urls ([#832](https://github.com/developer-overheid-nl/skills-standaarden/issues/832)) ([f94eb12](https://github.com/developer-overheid-nl/skills-standaarden/commit/f94eb122f7cecd395146bb41cdcad804bba4fdb9))
+
+## [0.6.4](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.3...v0.6.4) (2026-09-08)
+
+
+### Opgelost
+
+* neem gitdocumentatie.logius.nl weer op in de linkcheck ([#830](https://github.com/developer-overheid-nl/skills-standaarden/issues/830)) ([2377f41](https://github.com/developer-overheid-nl/skills-standaarden/commit/2377f41a1f505b64c536e819d23acb6da44ca10a))
+
+## [0.6.3](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.2...v0.6.3) (2026-09-08)
+
+
+### Opgelost
+
+* **ls-api:** markeer zaakgericht-werken-api als gearchiveerd ([#827](https://github.com/developer-overheid-nl/skills-standaarden/issues/827)) ([72897e0](https://github.com/developer-overheid-nl/skills-standaarden/commit/72897e08fd5a655b218740ccfdd6eec7023d561a))
+* **ls-fsc:** fsc-external-contract v1.0.0 is vastgesteld (DEF) ([#826](https://github.com/developer-overheid-nl/skills-standaarden/issues/826)) ([114c37a](https://github.com/developer-overheid-nl/skills-standaarden/commit/114c37a799308980dc01d6afb7f161ee8f6b5568))
+* **ls-pub:** documenteer specStatus- en branch-checks in build.yml ([#828](https://github.com/developer-overheid-nl/skills-standaarden/issues/828)) ([283a491](https://github.com/developer-overheid-nl/skills-standaarden/commit/283a49134cf83368e0fa05288d6020bfa570a23b))
+
+## [0.6.2](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.1...v0.6.2) (2026-09-03)
+
+
+### Opgelost
+
+* **ls:** beperk beslisboom-API tot titel en pad ([#813](https://github.com/developer-overheid-nl/skills-standaarden/issues/813)) ([613642c](https://github.com/developer-overheid-nl/skills-standaarden/commit/613642cc58042cae89e0705561043e5fc8eee8b5))
+
+## [0.6.1](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.0...v0.6.1) (2026-09-01)
+
+
+### Opgelost
+
+* **ls-api:** actualiseer naar ADR v2.2.0 ([#807](https://github.com/developer-overheid-nl/skills-standaarden/issues/807)) ([7fc3654](https://github.com/developer-overheid-nl/skills-standaarden/commit/7fc3654602a40ee05f653509fadb7d44e4b74ea4))
+
+## [0.6.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.5.1...v0.6.0) (2026-09-01)
+
+
+### Toegevoegd
+
+* **ls:** documenteer Forum beslisboom en scope-afbakening ([#804](https://github.com/developer-overheid-nl/skills-standaarden/issues/804)) ([1f9a482](https://github.com/developer-overheid-nl/skills-standaarden/commit/1f9a482ca8baa89b9b6869025f9904eca488ecf1))
+
+
+### Opgelost
+
+* **ls:** corrigeer dekkingscijfer en verwerk feedback op scope ([#806](https://github.com/developer-overheid-nl/skills-standaarden/issues/806)) ([76ee28e](https://github.com/developer-overheid-nl/skills-standaarden/commit/76ee28e5f560de91cd97d1ff40f182a1fbe714b2))
+
+## [0.5.1](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.5.0...v0.5.1) (2026-08-31)
+
+
+### Opgelost
+
+* **ls-egov,ls-logboek:** markeer gearchiveerde Logius-repositories ([#801](https://github.com/developer-overheid-nl/skills-standaarden/issues/801)) ([e7e8476](https://github.com/developer-overheid-nl/skills-standaarden/commit/e7e8476546aee5aa5d1815ff160ef4a619c3e6de))
+* sluit gitdocumentatie.logius.nl uit van de linkcheck ([#802](https://github.com/developer-overheid-nl/skills-standaarden/issues/802)) ([b2780ad](https://github.com/developer-overheid-nl/skills-standaarden/commit/b2780ad01fb9fbf56558d1e67820ee1db0f5b368))
+
+## [0.5.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.7...v0.5.0) (2026-06-04)
+
+
+### Toegevoegd
+
+* ls-api gebruikt don-checker en oas-generator om te valideren en genereren ([#673](https://github.com/developer-overheid-nl/skills-standaarden/issues/673)) ([db11acd](https://github.com/developer-overheid-nl/skills-standaarden/commit/db11acd068225415e76a450d2052c77e36500288))
+
+
+### Opgelost
+
+* **ls-iam:** SAML-spec vastgesteld als v1.0.0 (1 juni 2026) ([#685](https://github.com/developer-overheid-nl/skills-standaarden/issues/685)) ([a67a9a8](https://github.com/developer-overheid-nl/skills-standaarden/commit/a67a9a8a17edb2e3412b28e050565544fa527a8c))
+
+## [0.4.7](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.6...v0.4.7) (2026-05-17)
+
+
+### Opgelost
+
+* corrigeer 8 geverifieerde fouten in ls-bomos, ls-notif, ls-dk (audit sweep [#3](https://github.com/developer-overheid-nl/skills-standaarden/issues/3)) ([#616](https://github.com/developer-overheid-nl/skills-standaarden/issues/616)) ([a76f1b4](https://github.com/developer-overheid-nl/skills-standaarden/commit/a76f1b4a284e75d52d7643efb1579dba3dcdc12b))
+* **ls-api:** scherp implementatiedetails-regel aan naar ADR-formulering ([#613](https://github.com/developer-overheid-nl/skills-standaarden/issues/613)) ([186e56f](https://github.com/developer-overheid-nl/skills-standaarden/commit/186e56fd42adc0a6ea127a595517984a28e3847f))
+* **ls-iam:** PKCE verplicht voor alle clients; dynamische registratie aanbevolen ([#611](https://github.com/developer-overheid-nl/skills-standaarden/issues/611)) ([51d5e60](https://github.com/developer-overheid-nl/skills-standaarden/commit/51d5e60bc1264d8a3a1edaf42f7a5ab0ced322ca))
+* **ls:** FSC staat sinds 5 nov 2025 wel op de Forum-lijst ([#610](https://github.com/developer-overheid-nl/skills-standaarden/issues/610)) ([bcf332c](https://github.com/developer-overheid-nl/skills-standaarden/commit/bcf332c6448ef4f5784344132f183b4d6c20b5a9))
+
+## [0.4.6](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.5...v0.4.6) (2026-05-09)
+
+
+### Opgelost
+
+* **ls-dk,ls-iam:** update OIN-Stelsel naar v3.0.0 ([#588](https://github.com/developer-overheid-nl/skills-standaarden/issues/588)) ([89cccea](https://github.com/developer-overheid-nl/skills-standaarden/commit/89ccceae66becc88233b78dacde1a9b29e79dc45))
+
+## [0.4.5](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.4...v0.4.5) (2026-05-06)
+
+
+### Opgelost
+
+* kort skill descriptions in om listing budget te ontlasten ([#578](https://github.com/developer-overheid-nl/skills-standaarden/issues/578)) ([a5af9ab](https://github.com/developer-overheid-nl/skills-standaarden/commit/a5af9abf2a72e9c1620b4c30cc379f2950590b91))
+
+## [0.4.4](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.3...v0.4.4) (2026-05-05)
+
+
+### Opgelost
+
+* corrigeer 5 onjuistheden in skill-content gevonden tijdens fact-grounding audit ([#576](https://github.com/developer-overheid-nl/skills-standaarden/issues/576)) ([b944d43](https://github.com/developer-overheid-nl/skills-standaarden/commit/b944d43bd8b6e66cdec5076880b2146cf2ab060d))
+
+## [0.4.3](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.2...v0.4.3) (2026-04-30)
+
+
+### Opgelost
+
+* **ls-iam:** update Authorization Decision Log naar OpenTelemetry-vorm ([#574](https://github.com/developer-overheid-nl/skills-standaarden/issues/574)) ([9a1f58a](https://github.com/developer-overheid-nl/skills-standaarden/commit/9a1f58a02d2d34a3658d035e76199450ac6840e3))
+
+## [0.4.2](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.1...v0.4.2) (2026-04-20)
+
+
+### Opgelost
+
+* bump pygments 2.19.2 -&gt; 2.20.0 (GHSA-5239-wwwm-4pmq) ([#517](https://github.com/developer-overheid-nl/skills-standaarden/issues/517)) ([b6dbe9c](https://github.com/developer-overheid-nl/skills-standaarden/commit/b6dbe9cd46d180cf6578121932594fe667dbc6ed))
+
+## [0.4.1](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.4.0...v0.4.1) (2026-04-20)
+
+
+### Opgelost
+
+* bump versies Digikoppeling en FSC naar huidige publicaties ([#515](https://github.com/developer-overheid-nl/skills-standaarden/issues/515)) ([0a79364](https://github.com/developer-overheid-nl/skills-standaarden/commit/0a79364adc68f89c093fec0c77052cf67a2f8e0b))
+
+## [0.4.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.17...v0.4.0) (2026-04-14)
+
+
+### Toegevoegd
+
+* **ls-logboek,ls-bomos:** update naar vastgestelde versies ([#483](https://github.com/developer-overheid-nl/skills-standaarden/issues/483)) ([7a5a1c7](https://github.com/developer-overheid-nl/skills-standaarden/commit/7a5a1c7593d69e6174ad12ea937cdd7faa396efd))
+* voeg datum/tijd regels en bijgewerkte Spectral linter count toe aan ls-api ([#476](https://github.com/developer-overheid-nl/skills-standaarden/issues/476)) ([b8627fb](https://github.com/developer-overheid-nl/skills-standaarden/commit/b8627fbd6af058efd409ff208d785db043613f61))
+
 ## [0.3.17](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.3.16...v0.3.17) (2026-04-07)
 
 

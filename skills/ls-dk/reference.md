@@ -71,13 +71,13 @@ ebMS2 (Electronic Business Messaging Service version 2) biedt asynchrone, betrou
 - **Berichtformaat**: SOAP 1.1 met ebMS2 headers, payload als MIME-attachment
 - **Profielen**:
   - **osb-be** (Best-effort): Asynchroon berichtverkeer zonder betrouwbaarheidsgaranties
-  - **osb-rm** (Reliable Messaging): Asynchroon berichtverkeer met MessageOrder, at-most-once delivery, duplicate-eliminatie en Message Acknowledgements
+  - **osb-rm** (Reliable Messaging): Asynchroon berichtverkeer met MessageOrder, **once-and-only-once** (exactly-once) delivery, duplicate-eliminatie en Message Acknowledgements
   - **osb-be-S** (Best-effort, Signed): Asynchroon met ondertekening op berichtniveau
   - **osb-rm-S** (Reliable, Signed): Betrouwbaar asynchroon met ondertekening
   - **osb-be-E** (Best-effort, Encrypted): Asynchroon met versleuteling op berichtniveau
   - **osb-rm-E** (Reliable, Encrypted): Betrouwbaar asynchroon met versleuteling
 - **Betrouwbaarheidsmechanismen** (rm-profielen):
-  - **At-most-once delivery**: Garandeert dat een bericht maximaal eenmaal wordt afgeleverd
+  - **Once-and-only-once delivery** (exactly-once): Garandeert end-to-end dat een bericht precies één keer wordt afgeleverd, op basis van end-to-end retransmission
   - **Duplicate-eliminatie**: Herkent en verwijdert duplicaten op basis van MessageId
   - **Message Acknowledgements**: Ontvangstbevestigingen (Message Status Response)
   - **Message Ordering**: Optionele volgordelijkheid van berichten via ConversationId en SequenceNumber
@@ -125,12 +125,20 @@ TLS (Transport Layer Security) is verplicht voor alle Digikoppeling-communicatie
 
 | Regel | Voorschrift |
 |-------|-------------|
-| **TLS001** | TLS 1.2 is minimaal vereist. Eerdere versies (SSL 3.0, TLS 1.0, TLS 1.1) zijn niet toegestaan. |
-| **TLS002** | TLS 1.3 wordt aanbevolen wanneer beide partijen dit ondersteunen. |
-| **TLS003** | Mutual TLS (mTLS) is verplicht: zowel client als server moeten zich authenticeren met een PKIoverheid-certificaat. |
-| **TLS004** | Cipher suites moeten voldoen aan de NCSC-richtlijnen voor TLS. Zwakke cipher suites zijn niet toegestaan. |
-| **TLS005** | Certificaten moeten geldig zijn en de volledige keten tot aan de PKIoverheid-root moet verifieerbaar zijn. Revocation checking (CRL/OCSP) is verplicht. |
-| **TLS006** | Het OIN van de organisatie moet opgenomen zijn in het Subject.SerialNumber-veld van het PKIoverheid-certificaat. |
+| **TLS001** | Authenticatie is verplicht met TLS en PKIoverheid-certificaten. |
+| **TLS002** | Tweezijdig TLS (two-way / mutual TLS) is verplicht voor alle vormen van berichtuitwisseling via Digikoppeling. |
+| **TLS003** | De TLS-implementatie mag niet op SSL v3 en eerdere versies terugvallen; backward compatibility mode voor SSL v3 en eerder dient te worden uitgezet. |
+| **TLS004** | Een serviceaanbieder is verplicht TLS 1.2 te ondersteunen; daarnaast is het aanbevolen om TLS 1.3 te ondersteunen. |
+| **TLS005** | Voor communicatie over HTTPS is het verplicht poort 443 te gebruiken. |
+| **TLS006** | Het is verplicht te voldoen aan de NCSC ICT-beveiligingsrichtlijnen voor TLS. |
+
+De certificaat- en OIN-eisen vallen in dk/beveilig 3.0.0 onder de PKI-regels, niet onder de TLS-regels:
+
+| Regel | Voorschrift |
+|-------|-------------|
+| **PKI001** | Het OIN van de organisatie moet opgenomen zijn in het `subject:serialNumber`-veld van het PKIoverheid-certificaat. |
+| **PKI002** | Het certificaat moet geldig zijn (niet verlopen of ingetrokken); revocation checking is vereist. |
+| **PKI005** | Certificaten moeten van het type PKIoverheid private root zijn (verplicht sinds 1-1-2021). |
 
 ### PKIoverheid Certificaten
 

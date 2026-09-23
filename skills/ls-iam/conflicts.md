@@ -1,6 +1,6 @@
 # IAM - Bronconflicten
 
-Geconstateerd: 2026-02-21
+Geconstateerd: 2026-02-21 (OIN-Stelsel sectie bijgewerkt 2026-09-17: v2.2.2; st-saml-spec sectie toegevoegd 2026-06-04: DEF v1.0.0)
 
 Dit document beschrijft bekende discrepanties in bronnen die relevant zijn voor de IAM-skill.
 
@@ -12,14 +12,16 @@ De **gepubliceerde versie op gitdocumentatie.logius.nl is leidend** voor DEF-ver
 
 | Repository | Gepubliceerde versie (DEF) | Laatste GitHub-tag | Discrepantie |
 |-----------|---------------------------|-------------------|-------------|
-| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | Tag achter: publicatie v2.2.2 vs tag 2.2.0 |
+| [OIN-Stelsel](https://github.com/logius-standaarden/OIN-Stelsel) | [v2.2.2](https://gitdocumentatie.logius.nl/publicatie/dk/oin/) | `2.2.0` | *Latest* wees naar VV-versie v3.0.1; teruggezet naar laatste DEF v2.2.2 (2026-09-15) |
 
 ### Details OIN-Stelsel
 
 - **Bekende tags:** `2.2.0`, `2.0.3`, `2.0.2`, `2.0.2r`, `2.0.1`
 - **Laatste GitHub Release:** `2.0.3` (gepubliceerd 2022-11-29) — ver achter op de laatste tag `2.2.0`
-- De tag `2.2.0` bestaat, maar de gepubliceerde versie op gitdocumentatie is `v2.2.2` — twee patchversies verder
-- Er zijn geen tags `2.2.1` of `2.2.2` in de repository
+- De *latest*-verwijzing op gitdocumentatie wees naar `v3.0.1`. Logius zette die op 2026-09-15 terug naar `v2.2.2` (publicatie-commit dc90a94): "In plaats van dat we verwijzen naar de versie ter vaststelling verwijzen we nu weer naar de laatste definitieve versie."
+- Zowel `v3.0.0` als `v3.0.1` hebben `specStatus: VV` (versie ter vaststelling), niet DEF. Ze zijn dus nooit vastgesteld geweest; de skill vermeldde v3.0.0 eerder ten onrechte als vastgestelde versie.
+- De Dezi-stelsel prefixen (Dezi-nummer voor zorgaanbieders, voorheen UZI-nummer) zijn in de 3.x-lijn geïntroduceerd en staan daarmee nog niet in een vastgestelde versie
+- Er zijn geen tags `2.2.1`, `2.2.2`, `3.0.0` of `3.0.1` in de repository
 
 **Let op:** OIN-Stelsel wordt ook gerefereerd vanuit `/ls-dk` (Digikoppeling). Dezelfde discrepantie is gedocumenteerd in [ls-dk/conflicts.md](../ls-dk/conflicts.md).
 
@@ -41,6 +43,20 @@ Voor compleetheid worden hier ook de IAM-repositories vermeld waar tags en publi
 - De repository is **gearchiveerd**
 - De gepubliceerde DEF-versie op gitdocumentatie is `v1.0`
 - De tag `0.2` is een conceptversie; de definitieve versie v1.0 is gepubliceerd zonder bijbehorende Git-tag
+
+---
+
+## 1c. Vastgestelde versie zonder GitHub-tag en zonder gitdocumentatie-pagina: st-saml-spec
+
+De SAML-specificatie is op **1 juni 2026 vastgesteld als versie 1.0.0** (repo-commit `Publiceer versie 1.0.0 (#14)`, develop weer op werkversie sinds `#16`). De gepubliceerde versie op [logius-standaarden.github.io/st-saml-spec](https://logius-standaarden.github.io/st-saml-spec/) toont sindsdien een "Vastgestelde versie" 1.0.0.
+
+| Repository | Vastgestelde versie (DEF) | Laatste GitHub-tag | gitdocumentatie-pagina | Discrepantie |
+|-----------|---------------------------|-------------------|------------------------|-------------|
+| [st-saml-spec](https://github.com/logius-standaarden/st-saml-spec) | v1.0.0 (vastgesteld 2026-06-01) | geen | nog niet aanwezig | DEF bestaat, maar zonder Git-tag/Release en zonder publicatie op gitdocumentatie.logius.nl |
+
+### Keuze in SKILL.md
+
+De skill verwijst voor de DEF-versie naar de gepubliceerde ReSpec-versie op `logius-standaarden.github.io/st-saml-spec` (toont "Vastgestelde versie 1.0.0"), omdat er nog geen pagina op `gitdocumentatie.logius.nl/publicatie/...` bestaat. Zodra de standaard daar gepubliceerd wordt, moet de DEF-link in de SKILL.md-tabel naar die gitdocumentatie-URL wijzen (conform de bron-van-waarheid-conventie).
 
 ---
 
