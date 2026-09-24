@@ -178,8 +178,10 @@ npx markdownlint-cli 'sections/**/*.md'
 
 # Link validatie (start eerst een lokale server)
 npx http-server -p 8080 . &
-muffet http://localhost:8080/index.html
+muffet --accepted-status-codes=200..300,403 http://localhost:8080/index.html
 ```
+
+> **Waarom 403 wordt geaccepteerd:** steeds meer servers blokkeren geautomatiseerd crawlen en zien de link checker als AI-crawler. Een 403 betekent dat de pagina bestaat maar niet opvraagbaar is, niet dat de link dood is. De centrale `run-muffet.sh` in de Automatisering-repo accepteert daarom `200..300,403`; gebruik dezelfde vlag lokaal, anders krijg je fouten die de CI niet geeft.
 
 ## Foutafhandeling
 
@@ -190,6 +192,7 @@ muffet http://localhost:8080/index.html
 | Geen WCAG violations gevonden | axe-core heeft geen fouten gedetecteerd | **Let op:** dit betekent niet dat het document volledig toegankelijk is. axe-core test ~30% van de WCAG 2.1 AA criteria. Toets handmatig op alle 55 succescriteria in WCAG 2.1 AA, waaronder toetsenbordnavigatie, leesbare kopstructuur en logische leesvolgorde. |
 | `markdownlint MD013: Line length` | Regel te lang | Breek af op ~120 karakters |
 | `muffet: 404 Not Found` | Dode link | Verwijder of update de link |
+| `muffet: 403 Forbidden` | Server blokkeert de checker (bot-detectie), pagina bestaat wel | Geen dode link. De centrale workflow accepteert 403; draai lokaal met `--accepted-status-codes=200..300,403` |
 | `PDF generation failed` | Puppeteer crash | Controleer of document valid HTML genereert |
 | `Zet de specStatus op DEF voor publicatie` | PR naar `main`/`master` met `specStatus: "WV"` | Zet `specStatus` in `js/config.mjs` op `"DEF"` (of `"VV"`) vóór de release-PR |
 | `Zet de specStatus op WV voor een werkversie` | PR naar `develop` met `specStatus: "DEF"` | Zet `specStatus` terug op `"WV"` in de develop-branch |
