@@ -5,6 +5,18 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.7.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.7...v0.7.0) (2026-09-24)
+
+
+### Toegevoegd
+
+* voeg MijnOverheid Zakelijk (MOZa) toe als praktijkvoorbeeld in ls-logboek ([#272](https://github.com/developer-overheid-nl/skills-standaarden/issues/272)) ([e3e1f30](https://github.com/developer-overheid-nl/skills-standaarden/commit/e3e1f304b8c394c99d2711f15d73a79096c50552))
+
+
+### Opgelost
+
+* ls-pub accepteert 403 bij muffet-linkvalidatie ([#854](https://github.com/developer-overheid-nl/skills-standaarden/issues/854)) ([ba17502](https://github.com/developer-overheid-nl/skills-standaarden/commit/ba17502ed38f4a892172bf02ca636f4424ac14c1))
+
 ## [0.6.7](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.6...v0.6.7) (2026-09-17)
 
 
