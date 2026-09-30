@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.8.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.7.0...v0.8.0) (2026-09-30)
+
+
+### Toegevoegd
+
+* Signing en Encryption modules vastgesteld als v1.0.0 ([#873](https://github.com/developer-overheid-nl/skills-standaarden/issues/873)) ([f580270](https://github.com/developer-overheid-nl/skills-standaarden/commit/f580270d5b468023b9eefa89619f983651b528a4))
+
 ## [0.7.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.6.7...v0.7.0) (2026-09-24)
 
 
