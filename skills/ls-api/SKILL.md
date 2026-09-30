@@ -53,7 +53,7 @@ De ADR kent twee publicatiekanalen (vergelijkbaar met W3C-standaarden):
 - **Vastgestelde versie (DEF)**: de officieel goedgekeurde versie, gepubliceerd op `gitdocumentatie.logius.nl`
 - **Werkversie (draft)**: de ontwikkeling richting de volgende release, gepubliceerd op `logius-standaarden.github.io`. De werkversie op GitHub Pages is de lopende ontwikkeling richting de volgende release.
 
-Modules hebben geen eigen vaststellingsproces — ze ontlenen hun status aan de standaard die ernaar verwijst. Als de ADR in een vastgestelde versie normatief naar een module verwijst, is die module daarmee ook vastgesteld. ADR v2.2.0 bundelt de modules onder één sectie *Normative modules* met eigen regels: `/core/modules/geospatial`, `/core/modules/signing` en `/core/modules/encryption`. Daarmee zijn ook Signing en Encryption normatief geworden; in v2.1.0 waren dat nog losse werkversies. De inhoud van Transport Security is sinds v2.1.0 ingebed in de hoofdspecificatie (in v2.2.0 sectie 2.11) met eigen regels (`/core/transport/*`); de GitHub-repository is gearchiveerd.
+Modules hebben geen eigen vaststellingsproces — ze ontlenen hun status aan de standaard die ernaar verwijst. Als de ADR in een vastgestelde versie normatief naar een module verwijst, is die module daarmee ook vastgesteld. ADR v2.2.0 bundelt de modules onder één sectie *Normative modules* met eigen regels: `/core/modules/geospatial`, `/core/modules/signing` en `/core/modules/encryption`. Daarmee zijn ook Signing en Encryption normatief geworden; in v2.1.0 waren dat nog losse werkversies. Sinds september 2026 hebben Signing en Encryption daarnaast een eigen vastgestelde publicatie (beide v1.0.0 met `specStatus: DEF`), dus de module-status volgt nu niet meer alleen uit de ADR-verwijzing. De inhoud van Transport Security is sinds v2.1.0 ingebed in de hoofdspecificatie (in v2.2.0 sectie 2.11) met eigen regels (`/core/transport/*`); de GitHub-repository is gearchiveerd.
 
 ## Repositories
 
@@ -64,8 +64,8 @@ Modules hebben geen eigen vaststellingsproces — ze ontlenen hun status aan de 
 | [API-Standaarden-Beheermodel](https://github.com/logius-standaarden/API-Standaarden-Beheermodel) | Overkoepelend beheermodel API-standaarden | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/API-Standaarden-Beheermodel/) |
 | [API-mod-geospatial](https://github.com/logius-standaarden/API-mod-geospatial) | Module: Geospatial (GeoJSON, CRS) — normatief in ADR v2.2.0 (`/core/modules/geospatial`) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0.3](https://gitdocumentatie.logius.nl/publicatie/api/mod-geo/1.0.3/) | [Draft](https://logius-standaarden.github.io/API-mod-geospatial/) |
 | [API-mod-transport-security](https://github.com/logius-standaarden/API-mod-transport-security) | Module: Transport Security — **gearchiveerd**; inhoud ingebed in de hoofdspecificatie sinds ADR v2.1.0 (v2.2.0 sectie 2.11) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | - |
-| [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Module: HTTP Message Signing — normatief in ADR v2.2.0 (`/core/modules/signing`) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/API-mod-signing/) |
-| [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Module: Encryption (JWE) — normatief in ADR v2.2.0 (`/core/modules/encryption`) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | [Draft](https://logius-standaarden.github.io/API-mod-encryption/) |
+| [API-mod-signing](https://github.com/logius-standaarden/API-mod-signing) | Module: HTTP Message Signing — normatief in ADR v2.2.0 (`/core/modules/signing`) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/api/mod-signing/1.0.0/) | [Draft](https://logius-standaarden.github.io/API-mod-signing/) |
+| [API-mod-encryption](https://github.com/logius-standaarden/API-mod-encryption) | Module: Encryption (JWE) — normatief in ADR v2.2.0 (`/core/modules/encryption`) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/api/mod-encryption/1.0.0/) | [Draft](https://logius-standaarden.github.io/API-mod-encryption/) |
 | [api-linter-impactanalyse](https://github.com/logius-standaarden/api-linter-impactanalyse) | Python tool: test Spectral regels tegen echte OpenAPI specs uit het API-register | Niet gespecificeerd | - | - |
 | [zaakgericht-werken-api](https://github.com/logius-standaarden/zaakgericht-werken-api) | API-specificatie voor zaakgericht werken — **gearchiveerd** september 2026; alleen een initiële werkversie (2025), nooit een DEF gepubliceerd | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | - | - |
 
@@ -162,15 +162,15 @@ Verplichte security headers in alle API-responses:
 
 Normatief onderdeel van ADR v2.2.0 (`/core/modules/geospatial`). Verplicht bij geospatiale data. Regelt GeoJSON encodering, bounding box filtering, en coördinaatsystemen (CRS). Zie de [vastgestelde versie](https://gitdocumentatie.logius.nl/publicatie/api/mod-geo/1.0.3/).
 
-### Signing Module (JAdES) — draft
+### Signing Module (JAdES) — v1.0.0 vastgesteld
 
-> **Let op:** Deze module is nog in **concept** (draft) en is nog niet goedgekeurd door het Technisch Overleg. De inhoud kan nog wijzigen.
+Vastgesteld als [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/api/mod-signing/1.0.0/) (gepubliceerd september 2026, `specStatus: DEF`). Normatief onderdeel van ADR v2.2.0 via `/core/modules/signing`.
 
 Voor end-to-end berichtintegriteit en authenticiteit. Gebruikt JAdES detached signatures met RSASSA-PSS (PS256), minimaal 256 bits. Signatures in `Payload-Signature` en `Message-Signature` HTTP headers. OpenAPI representatie met `format: jws-compact-detached`.
 
-### Encryption Module (JWE) — draft
+### Encryption Module (JWE) — v1.0.0 vastgesteld
 
-> **Let op:** Deze module is nog in **concept** (draft) en is nog niet goedgekeurd door het Technisch Overleg. De inhoud kan nog wijzigen.
+Vastgesteld als [v1.0.0](https://gitdocumentatie.logius.nl/publicatie/api/mod-encryption/1.0.0/) (gepubliceerd september 2026, `specStatus: DEF`). Normatief onderdeel van ADR v2.2.0 via `/core/modules/encryption`.
 
 Voor end-to-end versleuteling van request/response payloads wanneer transport-level encryptie niet voldoende is (bijv. bij niet-vertrouwde intermediairs).
 
