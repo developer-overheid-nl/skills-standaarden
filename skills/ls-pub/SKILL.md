@@ -1,7 +1,6 @@
 ---
 name: ls-pub
 description: "Logius publicatieworkflow voor standaardenrepos: ReSpec, GitHub Actions, markdownlint, WCAG/a11y, Muffet linkvalidatie, tech radar. Niet voor API of code linting."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)

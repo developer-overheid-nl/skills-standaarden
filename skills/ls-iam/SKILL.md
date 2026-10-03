@@ -1,7 +1,6 @@
 ---
 name: ls-iam
 description: "OAuth, OpenID Connect, AuthZEN, SAML voor authenticatie en autorisatie bij de overheid. NL GOV profielen, JWT, PKCE, private_key_jwt, OIN authenticatie."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)

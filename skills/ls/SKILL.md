@@ -1,7 +1,6 @@
 ---
 name: ls
 description: "Overzicht van Logius standaarden voor de Nederlandse overheid. Routeert naar sub-skills (Digikoppeling, API Design Rules, OAuth, FSC, BOMOS, etc.) of geeft hulp bij interoperabiliteitsvragen."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)

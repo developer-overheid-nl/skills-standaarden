@@ -1,7 +1,6 @@
 ---
 name: ls-logboek
 description: "Logboek Dataverwerkingen voor AVG/GDPR-transparantie. NEN 7513, OpenTelemetry/OTLP, dpl.core, verwerkingenlogging in overheidssystemen."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)

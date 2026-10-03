@@ -1,7 +1,6 @@
 ---
 name: ls-fsc
 description: "Federated Service Connectivity (FSC, voorheen NLX): inway, outway, service directory, peers, external contracts, Manager API."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)

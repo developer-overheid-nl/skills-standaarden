@@ -1,7 +1,6 @@
 ---
 name: test-skill
 description: Test skill voor unit tests
-model: sonnet
 ---
 
 ## Repositories

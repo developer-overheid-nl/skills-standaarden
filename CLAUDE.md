@@ -24,7 +24,7 @@ Alle content in deze repo is in het **Nederlands**: skill descriptions, body tek
 ## Conventies voor skills
 
 ### SKILL.md opbouw
-1. YAML frontmatter met `name`, `description`, `model: sonnet`, `allowed-tools`
+1. YAML frontmatter met `name`, `description`, `allowed-tools` (géén `model:` — de skills zijn referentiecontent en moeten het model van de gebruiker respecteren)
 2. Agent-instructie (2-3 zinnen, vetgedrukt: wanneer wordt deze skill gebruikt, wat moet de agent doen)
 3. Korte intro (wat is dit domein, link naar Forum Standaardisatie)
 4. Versiemodel (altijd: WV/CV/VV/DEF kanalen uitleggen + Forum Standaardisatie status)

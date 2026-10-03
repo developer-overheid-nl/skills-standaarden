@@ -1,7 +1,6 @@
 ---
 name: ls-notif
 description: "NL GOV CloudEvents profiel voor notificatieservices: abonnementen, webhooks, pub/sub tussen overheidsorganisaties."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)
