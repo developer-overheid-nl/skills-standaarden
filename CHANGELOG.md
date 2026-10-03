@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.8.1](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.8.0...v0.8.1) (2026-10-03)
+
+
+### Opgelost
+
+* ADR vastgestelde versie naar v2.2.2 ([#882](https://github.com/developer-overheid-nl/skills-standaarden/issues/882)) ([77d1137](https://github.com/developer-overheid-nl/skills-standaarden/commit/77d11377352e942fda67bb382d692075869ee5bd))
+
 ## [0.8.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.7.0...v0.8.0) (2026-09-30)
 
 
