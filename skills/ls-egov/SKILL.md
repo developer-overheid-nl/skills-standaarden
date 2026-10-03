@@ -1,7 +1,6 @@
 ---
 name: ls-egov
 description: "E-procurement bij de overheid: Peppol BIS, NLCIUS, UBL 2.1, basisfactuur, basisorder, Schematron-validatie. Ook Digimelding/Terugmelden voor basisregistraties."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)

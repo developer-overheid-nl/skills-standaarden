@@ -55,10 +55,6 @@ jobs:
               echo "FOUT: $f mist 'description' in frontmatter"
               error=1
             fi
-            if ! grep -q '^model:' "$f"; then
-              echo "FOUT: $f mist 'model' in frontmatter"
-              error=1
-            fi
           done
           if [ $error -eq 1 ]; then exit 1; fi
           echo "Alle skills hebben geldige frontmatter"

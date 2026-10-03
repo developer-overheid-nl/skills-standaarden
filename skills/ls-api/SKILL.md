@@ -1,7 +1,6 @@
 ---
 name: ls-api
 description: "NL GOV API Design Rules (ADR): normatieve regels voor REST APIs: naming, versioning, problem+json, transport security, signing, encryption, geo, Spectral ADR-ruleset."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)

@@ -1,7 +1,6 @@
 ---
 name: ls-dk
 description: "Digikoppeling koppelvlakken (ebMS2, WUS, REST-API, grote berichten) voor berichtuitwisseling tussen overheidsorganisaties. Ook OIN, PKIoverheid, CPA, routering."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)

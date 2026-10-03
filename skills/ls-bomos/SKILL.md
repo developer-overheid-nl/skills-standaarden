@@ -1,7 +1,6 @@
 ---
 name: ls-bomos
 description: "BOMOS (Beheer- en Ontwikkelmodel voor Open Standaarden): governance, RFC-proces, community management voor stelselstandaarden bij de overheid."
-model: sonnet
 allowed-tools:
   - Bash(gh api *)
   - Bash(gh issue list *)
