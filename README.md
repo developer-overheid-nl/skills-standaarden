@@ -15,7 +15,7 @@ Voeg de [overheid-plugins marketplace](https://github.com/developer-overheid-nl/
 
 ```bash
 claude plugin marketplace add developer-overheid-nl/skills-marketplace
-claude plugin install logius-standaarden@overheid-plugins
+claude plugin install standaarden@overheid-plugins
 ```
 
 ### Per sessie laden
