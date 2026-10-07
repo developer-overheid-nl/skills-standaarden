@@ -29,16 +29,10 @@ claude --plugin-dir ./skills-standaarden
 
 ### Bijwerken
 
-De plugin blijft op de versie waarmee je hem installeerde totdat je hem bijwerkt:
-
-```bash
-claude plugin update standaarden@overheid-plugins
-```
-
-Claude Code laadt de nieuwe versie bij de volgende start, of direct met `/reload-plugins`.
-
-Liever automatisch? Zet auto-update aan voor de marketplace, dan worden nieuwe
-versies op de achtergrond opgehaald:
+**Zet auto-update aan.** Een geïnstalleerde plugin blijft anders staan op de
+versie waarmee je hem installeerde, en niets wijst je erop dat er een nieuwe is.
+Met auto-update ververst Claude Code de marketplace en werkt het de plugins op
+schijf bij:
 
 - **In Claude Code:** `/plugin` → **Marketplaces** → `overheid-plugins` → **Enable auto-update**
 - **Of in `~/.claude/settings.json`:**
@@ -54,8 +48,17 @@ versies op de achtergrond opgehaald:
 }
 ```
 
-De instelling in `settings.json` gaat voor op de toggle in `/plugin`; staat daar
-`false`, dan heeft de toggle geen effect.
+De waarde in `settings.json` gaat vóór op de toggle in `/plugin`: staat daar
+`false`, dan doet de toggle niets. De nieuwe versie laadt bij de volgende start,
+of direct met `/reload-plugins`.
+
+Heb je een nieuwe versie meteen nodig, dan werkt dit los van auto-update, dat tot
+tien minuten na je eerste bericht wacht en buiten een interactieve sessie niet
+draait:
+
+```bash
+claude plugin update standaarden@overheid-plugins
+```
 
 ## Wat doet deze plugin?
 
