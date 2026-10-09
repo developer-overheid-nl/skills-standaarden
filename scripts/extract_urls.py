@@ -53,6 +53,7 @@ EXCLUDE_PATTERNS = [
 # lokaal reproduceerbaar is en dus niet met normalisatie te verhelpen.
 #
 # De URL blijft in de lychee-lijst staan, zodat een dode link nog steeds opvalt.
+# Of er een standaard bij of af is, bewaakt scripts/check_forum_standards.py.
 CONTENT_MONITORING_EXCLUDE_PATTERNS = [
     re.compile(r"https://www\.forumstandaardisatie\.nl/jsonapi/node/decision_tree"),
 ]
