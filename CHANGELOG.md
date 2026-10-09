@@ -5,6 +5,18 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.9.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.8.3...v0.9.0) (2026-10-09)
+
+
+### Toegevoegd
+
+* bewaak de standaardenlijst van de Forum-beslisboom ([#900](https://github.com/developer-overheid-nl/skills-standaarden/issues/900)) ([222cc09](https://github.com/developer-overheid-nl/skills-standaarden/commit/222cc09777870aaf861f8fbf8b412aa2e6d84973))
+
+
+### Opgelost
+
+* haal de beslisboom-API uit de content-monitoring ([#898](https://github.com/developer-overheid-nl/skills-standaarden/issues/898)) ([dd2018b](https://github.com/developer-overheid-nl/skills-standaarden/commit/dd2018b6d12455d4daa82cfbfd6b3390e5924451))
+
 ## [0.8.3](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.8.2...v0.8.3) (2026-10-07)
 
 
