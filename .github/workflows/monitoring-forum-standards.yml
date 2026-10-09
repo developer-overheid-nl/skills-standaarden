@@ -1,0 +1,66 @@
+name: Monitoring - Forum Beslisboom
+
+on:
+  schedule:
+    - cron: '45 7 * * 1'  # wekelijks, maandag 07:45 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: monitoring-forum-standards
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-forum-standards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Installeer uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Installeer dependencies
+        run: uv sync
+
+      - name: Zorg dat labels bestaan
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "monitoring" --color "0E8A16" --description "Automatische monitoring" --force 2>/dev/null || true
+          gh label create "beslisboom" --color "D93F0B" --description "Standaardenlijst van de Forum-beslisboom is gewijzigd" --force 2>/dev/null || true
+
+      - name: Vergelijk standaardenlijst met de beslisboom
+        id: check
+        run: |
+          set +e
+          uv run python scripts/check_forum_standards.py | tee /tmp/beslisboom.txt
+          echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Maak of werk issue bij
+        if: steps.check.outputs.exit_code != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          titel="[monitoring] Standaardenlijst van de Forum-beslisboom is gewijzigd"
+          body="$(printf 'De wekelijkse controle vond een verschil tussen de Beslisboom Open Standaarden en de vastgelegde lijst in `scripts/forum_standards.json`.\n\n```\n%s\n```\n\nWat te doen:\n\n- **toegevoegd** of **verwijderd**: werk het aantal en de dekkingstabel in `skills/ls/SKILL.md` bij en leg de nieuwe lijst vast met `uv run python scripts/check_forum_standards.py --update`\n- **onbereikbaar**: de API gaf geen standaarden terug; kan tijdelijk zijn\n' "$(cat /tmp/beslisboom.txt)")"
+
+          bestaand="$(gh issue list --label beslisboom --state open --json number,title --jq ".[] | select(.title == \"$titel\") | .number" | head -1)"
+          if [ -n "$bestaand" ]; then
+            gh issue comment "$bestaand" --body "$body"
+          else
+            gh issue create --title "$titel" --body "$body" --label monitoring --label beslisboom
+          fi
+
+      - name: Sluit issue als alles klopt
+        if: steps.check.outputs.exit_code == '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          titel="[monitoring] Standaardenlijst van de Forum-beslisboom is gewijzigd"
+          bestaand="$(gh issue list --label beslisboom --state open --json number,title --jq ".[] | select(.title == \"$titel\") | .number" | head -1)"
+          if [ -n "$bestaand" ]; then
+            gh issue close "$bestaand" --comment "De standaardenlijst komt weer overeen met de beslisboom."
+          fi

@@ -19,6 +19,7 @@ Alle content in deze repo is in het **Nederlands**: skill descriptions, body tek
 - `.github/workflows/monitoring-content.yml` - Dagelijkse content monitoring (07:00 UTC)
 - `.github/workflows/monitoring-links.yml` - Dagelijkse link checks met lychee (06:00 UTC)
 - `.github/workflows/monitoring-def-versions.yml` - Wekelijkse controle van DEF-versies tegen gitdocumentatie (maandag 07:30 UTC)
+- `.github/workflows/monitoring-forum-standards.yml` - Wekelijkse controle van de standaardenlijst in de Forum-beslisboom (maandag 07:45 UTC)
 - `.github/workflows/labeler.yml` - Automatische PR-labels op basis van gewijzigde bestanden
 
 ## Conventies voor skills
@@ -154,6 +155,8 @@ gh pr checkout <nr> && git commit --allow-empty -m "chore: trigger CI" && git pu
 - **status**: heeft de gelinkte pagina `specStatus: DEF`? Een `VV` (versie ter vaststelling) of `WV` hoort niet in een "Vastgesteld"-kolom
 
 Draai lokaal met `uv run python scripts/check_def_versions.py`. Aanleiding: het OIN-Stelsel stond een half jaar als vastgesteld `v3.0.0` in de skills terwijl zowel 3.0.0 als 3.0.1 `specStatus: VV` hebben; dat viel pas op toen Logius de *latest*-verwijzing terugzette naar de laatste échte DEF (v2.2.2). Een versienummer dat "nieuwer" oogt is dus geen bewijs dat het vastgesteld is.
+
+**Beslisboom-monitoring** (`scripts/check_forum_standards.py`, wekelijks via `monitoring-forum-standards.yml`) vergelijkt de titels van de standaarden in de Forum-beslisboom met `scripts/forum_standards.json` en opent een issue met label `beslisboom` als er een standaard bij of af is. De beslisboom-API zit bewust niet in de content-monitoring: de body-hash vuurde veertien keer zonder dat de lijst veranderde. Wijzigt de lijst, werk dan het aantal en de dekkingstabel in `skills/ls/SKILL.md` bij en draai `uv run python scripts/check_forum_standards.py --update`.
 
 ### Monitoring issues afhandelen
 
