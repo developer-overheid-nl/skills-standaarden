@@ -42,6 +42,21 @@ EXCLUDE_PATTERNS = [
     re.compile(r"https?://github\.com/logius-standaarden/Publicatie-Preview"),
 ]
 
+# URLs die wel een echte bron zijn (en dus in de link-check thuishoren), maar
+# ongeschikt zijn voor content-monitoring op body-hash.
+#
+# De beslisboom-API van het Forum Standaardisatie vuurde veertien keer tussen
+# 2026-09-02 en 2026-10-09 zonder één structuurwijziging: steeds 55 standaarden
+# en 121 included-items, en de respons is byte-identiek over drie fetches. Op
+# 2026-10-05 was de hash zelfs gelijk aan die van de vorige trigger. De
+# GitHub-runner ziet een variatie die een fetch uit NL niet ziet, wat niet
+# lokaal reproduceerbaar is en dus niet met normalisatie te verhelpen.
+#
+# De URL blijft in de lychee-lijst staan, zodat een dode link nog steeds opvalt.
+CONTENT_MONITORING_EXCLUDE_PATTERNS = [
+    re.compile(r"https://www\.forumstandaardisatie\.nl/jsonapi/node/decision_tree"),
+]
+
 # Markdown-extractie regex: vindt alle URLs in tekst
 URL_RE = re.compile(r"https?://[^\s\)\]\"'>]+")
 
@@ -49,6 +64,15 @@ URL_RE = re.compile(r"https?://[^\s\)\]\"'>]+")
 def is_excluded(url: str) -> bool:
     """Controleer of een URL uitgesloten moet worden."""
     return any(pattern.search(url) for pattern in EXCLUDE_PATTERNS)
+
+
+def is_content_monitoring_excluded(url: str) -> bool:
+    """Controleer of een URL buiten de content-monitoring valt.
+
+    Deze URLs blijven in de lychee-lijst (link-check), maar komen niet in het
+    JSON-manifest dat monitor_content.py op body-hash vergelijkt.
+    """
+    return any(pattern.search(url) for pattern in CONTENT_MONITORING_EXCLUDE_PATTERNS)
 
 
 def classify_url(url: str) -> str | None:
@@ -165,6 +189,8 @@ def output_json(urls: list[dict], output: Path | None) -> None:
     manifest: dict = {}
     for entry in urls:
         url = entry["url"]
+        if is_content_monitoring_excluded(url):
+            continue
         if url not in manifest:
             manifest[url] = {
                 "url": url,
