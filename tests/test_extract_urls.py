@@ -1,5 +1,6 @@
 """Tests voor scripts/extract_urls.py."""
 
+import json
 from pathlib import Path
 
 from extract_urls import (
@@ -7,8 +8,11 @@ from extract_urls import (
     clean_url,
     extract_all,
     extract_urls_from_file,
+    is_content_monitoring_excluded,
     is_excluded,
     normalize_github_url,
+    output_json,
+    output_lychee,
 )
 
 # --- clean_url() ---
@@ -229,3 +233,52 @@ class TestExtractAll:
         skill_dir = tmp_path / "skills"
         skill_dir.mkdir()
         assert extract_all(skill_dir) == []
+
+
+# --- is_content_monitoring_excluded() ---
+
+DECISION_TREE_URL = (
+    "https://www.forumstandaardisatie.nl/jsonapi/node/decision_tree"
+    "?include=decisionTreeSteps.questions.answers.standards"
+    "&fields%5Bnode--standaarden%5D=title%2Cpath"
+)
+
+
+class TestContentMonitoringExclude:
+    """De beslisboom-API blijft in de link-check, maar niet in de
+    content-monitoring: hij vuurt structureel terwijl de inhoud gelijk blijft."""
+
+    def test_beslisboom_api(self):
+        assert is_content_monitoring_excluded(DECISION_TREE_URL)
+
+    def test_andere_forum_paginas_blijven_gemonitord(self):
+        # Alleen de beslisboom-API is uitgesloten, niet het Forum als geheel.
+        assert not is_content_monitoring_excluded(
+            "https://www.forumstandaardisatie.nl/open-standaarden/cloudevents"
+        )
+        assert not is_content_monitoring_excluded(
+            "https://www.forumstandaardisatie.nl/beslisboom/beslisboom-open-standaarden"
+        )
+
+    def test_losstaand_van_is_excluded(self):
+        # De API is een echte bron, dus niet uitgesloten voor de link-check.
+        assert not is_excluded(DECISION_TREE_URL)
+
+    def test_alleen_uit_json_manifest(self, tmp_path):
+        urls = [
+            {"url": DECISION_TREE_URL, "type": "forum", "skill": "ls", "source_file": "a.md"},
+            {
+                "url": "https://www.forumstandaardisatie.nl/open-standaarden/cloudevents",
+                "type": "forum",
+                "skill": "ls-notif",
+                "source_file": "b.md",
+            },
+        ]
+        manifest_path = tmp_path / "urls.json"
+        lychee_path = tmp_path / "urls.txt"
+        output_json(urls, manifest_path)
+        output_lychee(urls, lychee_path)
+
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        assert [entry["url"] for entry in manifest["urls"]] == [urls[1]["url"]]
+        assert DECISION_TREE_URL in lychee_path.read_text(encoding="utf-8")
