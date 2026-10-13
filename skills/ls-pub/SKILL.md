@@ -109,7 +109,7 @@ Alle standaarden-repos roepen centrale workflows aan uit de `Automatisering` rep
 
 ### build.yml - Document Generatie
 
-1. Branch-check op pull requests (sinds september 2026): een directe PR van `develop` naar `main`/`master` of andersom wordt geweigerd; maak een tussenbranch. Een PR naar `main`/`master` vereist `specStatus: "DEF"` of `"VV"` in `js/config.mjs`, een PR naar `develop` vereist `"WV"`. Zo kan een werkversie niet per ongeluk als vastgestelde versie worden gepubliceerd.
+1. Branch-check op pull requests (sinds september 2026): een directe PR van `develop` naar `main`/`master` of andersom wordt geweigerd; maak een tussenbranch. Een PR naar `main`/`master` vereist `specStatus: "DEF"` of `"VV"` in `js/config.mjs`, een PR naar `develop` vereist `"WV"`. Zo kan een werkversie niet per ongeluk als vastgestelde versie worden gepubliceerd. Sinds oktober 2026 slaat de check PR's vanaf een `consultatie/*` branch over, zodat een consultatieversie gebouwd kan worden zonder `specStatus` aan te passen.
 2. Branch-detectie: `consultatie/*` branches krijgen automatisch `specStatus: "cv"` (via sed op `config.mjs`)
 3. HTML generatie: `npx respec --localhost --src index.html --out ~/static/index.html --haltonwarn`
 4. PDF generatie via Puppeteer/headless Chrome (met `scripts/pdf.js`)
