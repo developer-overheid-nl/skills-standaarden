@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.9.1](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.9.0...v0.9.1) (2026-10-13)
+
+
+### Opgelost
+
+* neem module Pagination en consultatie-uitzondering in de branch-check op ([#916](https://github.com/developer-overheid-nl/skills-standaarden/issues/916)) ([53ccb4b](https://github.com/developer-overheid-nl/skills-standaarden/commit/53ccb4b27560315a06c815d41cca743bb3db103e))
+
 ## [0.9.0](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.8.3...v0.9.0) (2026-10-09)
 
 
