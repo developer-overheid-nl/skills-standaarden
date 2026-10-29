@@ -5,6 +5,14 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.9.2](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.9.1...v0.9.2) (2026-10-29)
+
+
+### Opgelost
+
+* **ls-notif:** werkversie CloudEvents-profiel gesynchroniseerd met v1.0.2 ([#944](https://github.com/developer-overheid-nl/skills-standaarden/issues/944)) ([8e73d8f](https://github.com/developer-overheid-nl/skills-standaarden/commit/8e73d8f9d30eb8343e013a025657aeab15a0f2f6))
+* **ls-pub:** release.py zet redirects alleen nog voor DEF-versies ([#943](https://github.com/developer-overheid-nl/skills-standaarden/issues/943)) ([09de21d](https://github.com/developer-overheid-nl/skills-standaarden/commit/09de21d107f0d1ae5423a8d967fabd5602b260b7))
+
 ## [0.9.1](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.9.0...v0.9.1) (2026-10-13)
 
 
