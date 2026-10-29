@@ -67,7 +67,7 @@ Het hoofdbestand `index.html` laadt de ReSpec-engine en verwijst via `data-inclu
 
 ### ReSpec Configuratie (`js/config.mjs`)
 
-Nieuwe documenten gebruiken ES-module formaat (`config.mjs`); oudere repos kunnen nog `config.js` bevatten.
+Nieuwe documenten gebruiken ES-module formaat (`config.mjs`); oudere repos kunnen nog `config.js` bevatten. Voor een release naar gitdocumentatie is `config.mjs` sinds oktober 2026 vereist (zie [publish.yml](#publishyml---publicatie)).
 
 ```javascript
 // js/config.mjs (nieuw, aanbevolen formaat)
@@ -124,7 +124,7 @@ Alle standaarden-repos roepen centrale workflows aan uit de `Automatisering` rep
 ### publish.yml - Publicatie
 
 Bevat meerdere jobs afhankelijk van de context:
-- **Release** (push naar `main`/`master`): publiceert naar de centrale `publicatie` repo (gitdocumentatie.logius.nl)
+- **Release** (push naar `main`/`master`): publiceert naar de centrale `publicatie` repo (gitdocumentatie.logius.nl). Sinds oktober 2026 werkt `release.py` de redirects alleen bij voor `specStatus: "DEF"`: de root van de standaard (`/publicatie/<pubDomain>/<shortName>/`) en de kortere versiepaden (bijv. `2.1/` en `2/` naar `2.1.0/`). Een versie ter vaststelling (`"VV"`) wordt wel gepubliceerd onder haar eigen versiepad, maar de "laatste versie" blijft verwijzen naar de vorige vastgestelde versie. `release.py` leest daarbij alleen nog `js/config.mjs`; de fallback naar `js/config.js` is vervallen, dus een oudere repo moet eerst naar `config.mjs` voordat een release slaagt.
 - **Deploy develop** (push naar `develop`): publiceert naar GitHub Pages van de standaarden-repo zelf
 - **Preview** (pull request): publiceert een preview naar de `Publicatie-Preview` repo
 - **Consultatie** (`consultatie/*` branches): publiceert naar de `Openbare-Consultaties` repo
