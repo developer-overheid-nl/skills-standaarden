@@ -26,9 +26,24 @@ De juiste GitHub-reponaam is `NL-GOV-profile-for-CloudEvents`. De naam `CloudEve
 
 Het Forum Standaardisatie vermeldt v1.0 als de verplichte versie op de pas-toe-of-leg-uit lijst. Logius heeft inmiddels v1.1 als DEF vastgesteld. Dit is geen fout: het Forum werkt met vastgestelde lijstversies die periodiek worden bijgewerkt, terwijl Logius doorontwikkelt.
 
+## DEF v1.1 vs. werkversie (develop)
+
+Geconstateerd: 2026-10-29
+
+Op `develop` is het profiel in oktober 2026 gesynchroniseerd met CNCF CloudEvents v1.0.2 ([PR #46](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents/pull/46), 2026-10-21). DEF v1.1 is nog gebaseerd op CloudEvents v1.0.1. Inhoudelijke verschillen in de werkversie:
+
+| Onderdeel | DEF v1.1 | Werkversie (okt 2026) |
+|-----------|----------|------------------------|
+| Basis | CNCF CloudEvents v1.0.1 | CNCF CloudEvents v1.0.2 |
+| `dataref` | Optioneel attribuut in het profiel, met NLgov-toelichting (informatiearm notificeren) | Niet meer in het profiel beschreven; alleen nog een verwijzing naar de [CNCF dataref-extensie](https://github.com/cloudevents/spec/blob/main/cloudevents/extensions/dataref.md) |
+| `sequence` / `sequencetype` | Optionele attributen in het profiel (Sequence-extensie overgenomen) | Niet meer in het profiel beschreven; vallen onder de algemene regels voor extensie-attributen |
+| `specversion` | `"1.0"` | `"1.0"`, met een expliciete noot ([PR #62](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents/pull/62)) dat de profielversie losstaat van `specversion` |
+
 ## Keuze in SKILL.md
 
 De skill noemt beide versies: v1.0 als de Forum Standaardisatie-versie (verplicht) en v1.1 als de meest recente Logius DEF. Als het Forum de lijstversie bijwerkt naar v1.1, moet dit conflict opnieuw worden beoordeeld.
+
+De attributentabel volgt DEF v1.1, dus `dataref`, `sequence` en `sequencetype` blijven als optionele profielattributen staan. De skill meldt bij die attributen dat de werkversie ze uit het profiel haalt. Wordt een nieuwe DEF gepubliceerd met de v1.0.2-synchronisatie, dan moeten de tabel en het voorbeeld met `dataref` (Claim Check Pattern) opnieuw worden beoordeeld.
 
 ## Licentie-status GitHub-repositories
 

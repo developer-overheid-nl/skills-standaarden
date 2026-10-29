@@ -34,6 +34,8 @@ Het NL GOV profiel voor CloudEvents heeft een **vastgestelde versie** (v1.1 DEF)
 
 Op het Forum Standaardisatie staat CloudEvents **v1.0** als verplicht (['pas-toe-of-leg-uit'](https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-profile-cloudevents), goedgekeurd OBDO 25-11-2025). Versie v1.1 is de meest recente DEF van Logius.
 
+De werkversie van het profiel is in oktober 2026 gesynchroniseerd met CNCF CloudEvents v1.0.2 (DEF v1.1 volgt nog v1.0.1). Daarbij zijn de extensie-attributen `dataref` en `sequence`/`sequencetype` uit het profiel gehaald; ze vallen in de werkversie onder de algemene regels voor CNCF-extensies. `specversion` blijft `"1.0"`, los van de profielversie. Deze skill volgt DEF v1.1; zie [conflicts.md](conflicts.md) voor de verschillen.
+
 ## Repositories
 
 | Repository | Beschrijving | Licentie | Vastgesteld | Draft |
@@ -66,8 +68,8 @@ Het NL GOV profiel scherpt de CNCF CloudEvents specificatie aan voor gebruik bin
 | `dataschema` | URI | Verwijzing naar het schema waaraan de event data voldoet. Maakt validatie door ontvangende partijen mogelijk. |
 | `subject` | String | Het onderwerp waarop het event betrekking heeft, bijvoorbeeld een BSN (`999990342`) of zaak-ID. Hiermee kunnen afnemers filteren zonder de payload te openen. |
 | `time` | Timestamp | Tijdstip in RFC 3339 formaat. Let op: dit is het tijdstip van logging/registratie van het event, niet noodzakelijk het moment van de werkelijke gebeurtenis. Voorbeeld: `2024-01-15T10:30:00Z`. |
-| `dataref` | URI | Verwijzing naar een externe locatie waar de volledige event payload beschikbaar is. Implementeert het Claim Check Pattern voor grote payloads die niet in het event zelf passen. |
-| `sequence` | String | Geeft de relatieve volgorde van events aan. Nuttig wanneer de volgorde van verwerking van belang is voor de afnemer. Dit is een CloudEvents extensie-attribuut (CNCF Sequence-extensie, niet in de kernspec) dat het NL GOV profiel overneemt. |
+| `dataref` | URI | Verwijzing naar een externe locatie waar de volledige event payload beschikbaar is. Implementeert het Claim Check Pattern voor grote payloads die niet in het event zelf passen. Optioneel profielattribuut in DEF v1.1; in de werkversie alleen nog als CNCF-extensie. |
+| `sequence` | String | Geeft de relatieve volgorde van events aan. Nuttig wanneer de volgorde van verwerking van belang is voor de afnemer. Dit is een CloudEvents extensie-attribuut (CNCF Sequence-extensie, niet in de kernspec) dat het NL GOV profiel in DEF v1.1 overneemt; de werkversie beschrijft het niet meer in het profiel. |
 | `sequencetype` | String | Geeft het type sequentie aan (bijv. `Integer`). Optioneel; indien aanwezig MOET het een niet-lege string zijn. Dit is een CloudEvents extensie-attribuut (CNCF Sequence-extensie) dat het NL GOV profiel overneemt. |
 
 ## Notificatieservices API
