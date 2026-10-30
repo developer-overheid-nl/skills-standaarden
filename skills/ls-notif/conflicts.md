@@ -51,8 +51,8 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 
 | Repository | GitHub LICENSE | Gepubliceerde licentie | Status |
 |-----------|--------------|----------------------|--------|
-| [NL-GOV-profile-for-CloudEvents](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
-| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [NL-GOV-profile-for-CloudEvents](https://github.com/logius-standaarden/NL-GOV-profile-for-CloudEvents) | CC-BY-4.0 (sinds maart 2026) | CC-BY-4.0 (ReSpec) | Opgelost |
+| [CloudEvents-NL-Guidelines](https://github.com/logius-standaarden/CloudEvents-NL-Guidelines) | CC-BY-4.0 (sinds oktober 2026) | CC-BY-4.0 (ReSpec) | Opgelost |
 | [Notificatieservices](https://github.com/logius-standaarden/Notificatieservices) | Geen | N.v.t. | Geen licentie |
 | [Abonneren](https://github.com/logius-standaarden/Abonneren) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 
