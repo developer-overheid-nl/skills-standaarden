@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.9.3](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.9.2...v0.9.3) (2026-10-30)
+
+
+### Opgelost
+
+* **ls-notif:** licentietabel bijgewerkt naar CC-BY-4.0 voor profiel en Guidelines ([#948](https://github.com/developer-overheid-nl/skills-standaarden/issues/948)) ([95440b1](https://github.com/developer-overheid-nl/skills-standaarden/commit/95440b122e9a08bab54011ad68e4b52bd1a06d6d))
+
 ## [0.9.2](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.9.1...v0.9.2) (2026-10-29)
 
 
