@@ -46,7 +46,7 @@ De publicatie-tooling ondersteunt het versiemodel van Logius-standaarden via de 
 | [Publicatie-Preview](https://github.com/logius-standaarden/Publicatie-Preview) | Preview-omgeving voor documenten in ontwikkeling | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [Lees online](https://logius-standaarden.github.io/Publicatie-Preview/) |
 | [respec](https://github.com/logius-standaarden/respec) | Logius fork van W3C ReSpec documentatie-tool | [W3C Software License](https://www.w3.org/copyright/software-license-2023/) | - |
 | [ReSpec-template](https://github.com/logius-standaarden/ReSpec-template) | Basis template voor nieuwe ReSpec documenten | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [Lees online](https://logius-standaarden.github.io/ReSpec-template/) |
-| [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) | Logius-specifiek ReSpec template met huisstijl | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en) | [Lees online](https://logius-standaarden.github.io/ReSpec-template-Logius/) |
+| [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) | Logius-specifiek ReSpec template met huisstijl — **gearchiveerd** november 2026, opgevolgd door ReSpec-template | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en) | [Lees online](https://logius-standaarden.github.io/ReSpec-template-Logius/) |
 | [Openbare-Consultaties](https://github.com/logius-standaarden/Openbare-Consultaties) | Gepubliceerde consultatieversies (CV) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en) | [Lees online](https://logius-standaarden.github.io/Openbare-Consultaties/) |
 | [Automatisering](https://github.com/logius-standaarden/Automatisering) | Herbruikbare GitHub Actions workflows | Niet gespecificeerd | - |
 | [automatisering-test](https://github.com/logius-standaarden/automatisering-test) | Testomgeving voor de automatiseringsworkflows | [W3C Software License](https://www.w3.org/copyright/software-license-2023/) | - |
@@ -153,7 +153,7 @@ jobs:
 
 ## Nieuw Document Starten
 
-1. **Fork het template**: Gebruik [ReSpec-template-Logius](https://github.com/logius-standaarden/ReSpec-template-Logius) als basis
+1. **Fork het template**: Gebruik [ReSpec-template](https://github.com/logius-standaarden/ReSpec-template) als basis (het oudere ReSpec-template-Logius is gearchiveerd)
 2. **Configureer `js/config.mjs`**: Pas `specStatus`, `specType`, `pubDomain`, `shortName`, `title` aan. `pubDomain` accepteert alleen `api`, `bomos`, `dk`, `fsc`, `ftv`, `logboek` of `notificatieservices`. `shortName` moet in kebab-case (alleen kleine letters, gescheiden door streepjes, bijv. `rest-api`)
 3. **Schrijf content**: Maak hoofdstukken als losse Markdown-bestanden
 4. **Push naar GitHub**: CI/CD bouwt automatisch HTML en PDF

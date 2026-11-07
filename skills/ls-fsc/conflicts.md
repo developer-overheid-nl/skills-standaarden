@@ -46,7 +46,7 @@ Sommige repositories bevatten een W3C Software License (afkomstig van het ReSpec
 | [fsc-core](https://github.com/logius-standaarden/fsc-core) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [fsc-logging](https://github.com/logius-standaarden/fsc-logging) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [fsc-properties](https://github.com/logius-standaarden/fsc-properties) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
-| [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
+| [fsc-regulated-area](https://github.com/logius-standaarden/fsc-regulated-area) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend; repo **gearchiveerd** november 2026 |
 | [fsc-external-contract](https://github.com/logius-standaarden/fsc-external-contract) | Geen | CC-BY-4.0 (ReSpec) | Discrepantie |
 | [fsc-extensie-template](https://github.com/logius-standaarden/fsc-extensie-template) | W3C Software License | CC-BY-4.0 (ReSpec) | Afwijkend |
 | [fsc-test-suite](https://github.com/logius-standaarden/fsc-test-suite) | Geen | N.v.t. | Geen licentie |

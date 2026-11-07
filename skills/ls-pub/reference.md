@@ -63,7 +63,7 @@ jobs:
 gh api repos/logius-standaarden/Automatisering/contents/.github/workflows --jq '.[].name'
 
 # ReSpec configuratie van het Logius template ophalen
-gh api repos/logius-standaarden/ReSpec-template-Logius/contents/js/config.js \
+gh api repos/logius-standaarden/ReSpec-template/contents/js/config.mjs \
   -H "Accept: application/vnd.github.raw"
 
 # Publicatie repo structuur bekijken
