@@ -5,6 +5,13 @@ Alle noemenswaardige wijzigingen aan deze plugin worden hier gedocumenteerd.
 Het formaat is gebaseerd op [Keep a Changelog](https://keepachangelog.com/nl/1.1.0/)
 en dit project volgt [Semantic Versioning](https://semver.org/lang/nl/).
 
+## [0.9.4](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.9.3...v0.9.4) (2026-11-07)
+
+
+### Opgelost
+
+* markeer ReSpec-template-Logius en fsc-regulated-area als gearchiveerd ([#996](https://github.com/developer-overheid-nl/skills-standaarden/issues/996)) ([55668ed](https://github.com/developer-overheid-nl/skills-standaarden/commit/55668ed512ad03cc89a910076bf127c4b683c0ad))
+
 ## [0.9.3](https://github.com/developer-overheid-nl/skills-standaarden/compare/v0.9.2...v0.9.3) (2026-10-30)
 
 
